@@ -137,7 +137,7 @@ section, .p-noteEmbed, #chat-icon, #chat-window, .profile-columns,
     /*==bot*/
     /*ラジオボタン装飾*/
         input {
-            -webkit-appearance: none;
+            /*-webkit-appearance: none;*/
             /* remove default */
             display: block;
             color: #fff;

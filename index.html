@@ -15,6 +15,8 @@
 	<!-- body -->
     <link rel="stylesheet" href="CSS/all.css">
     <link rel="stylesheet" href="CSS/page.css">
+    <link rel="stylesheet" href="CSS/header.css">
+    <link rel="stylesheet" href="CSS/footer.css">
 <script>
   (function(d) {
     var config = {
@@ -79,10 +81,9 @@
     });
 })(jQuery);
 		</script>
-<?php wp_head(); ?>
 </head>
 
-<body <?php body_class(); ?> oncontextmenu="return false;">
+<body oncontextmenu="return false;">
 <header>
 <!-- SP Menu-->
 <div id="navArea" class="sp">
@@ -120,7 +121,7 @@
                     </a>
                 </li>
 				</ul>
-            <ul class="manu_p">
+            <ul class="manu_p">
                 <li class="bottom_line">
                     <a href="https://smilecoordinate.com/site-policy">
                         Policy
@@ -196,7 +197,7 @@
                 </li>
 				<li>
                 <a href="https://lin.ee/LvQJ1Rt">
-                    <img src="https://smilecoordinate.com/wp-content/uploads/2023/11/c7276e9bc64562866d5415c6b10d219c.png" alt="公式LINE,SmileCoordinate">
+                    <img src="https://smilecoordinate.com/wp-content/uploads/2023/11/c7276e9bc64562866d5415c6b10d219c.png" alt="公式LINE,SmileCoordinate">
                         公式Lineからもお問い合わせ、申込みができます。
                 </a>
 				</li>
@@ -501,17 +502,11 @@
                     あなたの内側にある答えを見つけ出し、少しずつ理想の自分に変化していきましょう♪
                 </p>
 			</div>
-        <?php echo do_shortcode( '[contact-form-7 id="5" title="Contact Form"]' ); ?>
         </div>
     </section>
 </main>
 <!-- HTML END -->
 
-<?php
-/*
- * Template Name: SC_footer.php
- */
-?>
 
 <!-- Footer -->
 <footer>
@@ -571,7 +566,7 @@
             </p>
     </div>
         <div class="foot">
-			Smile Coordinate / &copy; <?php echo date('Y'); ?>.
+			Smile Coordinate / &copy; <?php echo date('Y'); ?>
         </div>
 </footer>
 
