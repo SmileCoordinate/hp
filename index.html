@@ -1,1 +1,581 @@
-test
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Smile Coordinate</title>
+	<!-- jQueryの最新バージョンを使用 -->
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+	<!-- accordion -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- h1 -->
+	<link rel="stylesheet" href="https://use.typekit.net/dvs4zuf.css">
+	<!-- footer-->
+    <link rel="stylesheet" href="https://use.typekit.net/gjh0htb.css">
+	<!-- body -->
+    <link rel="stylesheet" href="CSS/all.css">
+    <link rel="stylesheet" href="CSS/page.css">
+<script>
+  (function(d) {
+    var config = {
+      kitId: 'wjy5knc',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
+<!--meta-->
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+	<meta http-equiv="Referrer-Policy" content="strict-origin">
+	<meta http-equiv="Strict-Transport-Security" content="max-age=31536000">
+		<script>
+(function($) {
+    // 画像保護
+    var customContextMenu = $('#custom-context-menu');
+    
+    if (customContextMenu.length === 0) {
+        customContextMenu = $('<div id="custom-context-menu"></div>').appendTo('body');
+        customContextMenu.css({
+            'position': 'fixed',
+            'color': '#fff',
+            'backgroundColor': 'rgba(255,255,255,0.6)',
+            'padding': '10px',
+            'display': 'none',
+            'zIndex': '1000'
+        });
+        
+        // カスタムメニューに項目を追加
+        var menuItem1 = $('<div>Nothing happens when I click.</div>').appendTo(customContextMenu);
+        menuItem1.on('click', function() {
+            // メニュー項目1のクリック時の処理
+            // ここに任意のコードを追加
+        });
+
+        var menuItem2 = $('<div>Saving images is not permitted.</div>').appendTo(customContextMenu);
+        menuItem2.on('click', function() {
+            // メニュー項目2のクリック時の処理
+            // ここに任意のコードを追加
+        });
+    }
+
+    // 右クリック時のイベントハンドラ
+    $(document).on('contextmenu', function(e) {
+        e.preventDefault(); // デフォルトの右クリックメニューを無効化
+
+        // カスタムメニューを表示
+        customContextMenu.show().css({
+            'left': e.clientX + 'px',
+            'top': e.clientY + 'px'
+        });
+    });
+
+    // ドキュメントのクリック時にカスタムメニューを非表示にするイベントハンドラ
+    $(document).on('click', function(e) {
+        // カスタムメニュー自体のクリックの場合は非表示にしない
+        if (!customContextMenu.is(e.target) && customContextMenu.has(e.target).length === 0) {
+            customContextMenu.hide();
+        }
+    });
+})(jQuery);
+		</script>
+<?php wp_head(); ?>
+</head>
+
+<body <?php body_class(); ?> oncontextmenu="return false;">
+<header>
+<!-- SP Menu-->
+<div id="navArea" class="sp">
+    <nav>
+        <div class="inner">
+            <ul>
+                <li>
+                    <a href="https://smilecoordinate.com">
+                        Home
+                        <span>/ ホーム</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://smilecoordinate.com/about-us">
+                        About US
+                        <span>/ 私たちについて</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://smilecoordinate.com/blog-info">
+                        Blog - Info
+                        <span>/ 私たちの活動</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://smilecoordinate.com/works">
+                        Works
+                        <span>/ 私たちのできること</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://smilecoordinate.com/faq-contact">
+                        Contact
+                        <span>/ 申し込み or 質問</span>
+                    </a>
+                </li>
+				</ul>
+            <ul class="manu_p">
+                <li class="bottom_line">
+                    <a href="https://smilecoordinate.com/site-policy">
+                        Policy
+                            <span>/ サイトポリシー</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://smilecoordinate.com/faq-contact#faq">
+                        FAQ
+                            <span>/ よくある質問</span>
+                    </a>
+                </li>
+                    <a href="https://lin.ee/LvQJ1Rt">
+                        <img src="https://smilecoordinate.com/wp-content/uploads/2023/11/c7276e9bc64562866d5415c6b10d219c.png" alt="公式LINE,SmileCoordinate">
+                    </a>
+        </ul>
+    </div>
+</nav>
+        <div class="toggle_btn">
+            <span></span>
+            <span></span>
+            <span></span>
+        </div>
+    <div id="mask"></div>
+</div>
+
+<!-- PC menu -->
+    <div class="pc pc_menu">
+        <ul>
+            <li>
+				<a href="https://smilecoordinate.com">
+                    ホーム
+                    <span>Home</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://smilecoordinate.com/about-us">
+                    私たちについて
+                    <span>About US</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://smilecoordinate.com/works">
+                    私たちのできること
+                    <span>Works</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://smilecoordinate.com/blog-info">
+                    私たちの活動
+                    <span>Blog / Info</span>
+                </a>
+            </li>
+            <li>
+                <a href="https://smilecoordinate.com/faq-contact">
+                    申し込み / 質問
+                    <span>Contact</span>
+                </a>
+            </li>
+			</ul>
+            <ul class="manu_p">
+                <li>
+                    <a href="https://smilecoordinate.com/site-policy">
+                            サイトポリシー
+                            <span>Policy</span>
+                    </a>
+                </li>
+                <li>
+                    <a href="https://smilecoordinate.com/faq-contact#faq">
+                            よくある質問
+                            <span>FAQ</span>
+                    </a>
+                </li>
+				<li>
+                <a href="https://lin.ee/LvQJ1Rt">
+                    <img src="https://smilecoordinate.com/wp-content/uploads/2023/11/c7276e9bc64562866d5415c6b10d219c.png" alt="公式LINE,SmileCoordinate">
+                        公式Lineからもお問い合わせ、申込みができます。
+                </a>
+				</li>
+        </ul>
+    </div>
+
+    <!-- ChatBot アイコン -->
+    <button id="chat-icon" onclick="toggleChatWindow()">Chat</button>
+    	<!-- ChatBot ウィンドウ -->
+		<div id="chat-window">
+			<div class="chatbot-container">
+				<div id="close-button" onclick="toggleChatWindow()">✖</div>
+					<p>
+						これはChatbotです。
+						<br>
+						項目を選択してください
+					</p>
+				<div id="chat" class="chat-window">
+				</div>
+				<div class="input-container">
+					<div class="chat-options">
+						<div class="radio-options">
+								<label>
+									<input type="radio" name="category" value="about">
+										私たちについて
+								</label>
+								<label>
+									<input type="radio" name="category" value="works">
+										私たちのできること
+								</label>
+								<label>
+									<input type="radio" name="category" value="その他">
+										その他
+								</label>
+						</div>
+							<div class="radio-options keyword-options">
+								<!--キーワード選択肢はカテゴリー選択後にJSで動的に生成 -->
+							</div>
+					</div>
+				<div class="button-container">
+							<button id="send-button" class="send-button panel">
+								決定
+							</button>
+							<button id="clear-button" class="clear-button panel">
+								クリア
+							</button>
+					</div>
+				</div>
+				<?php echo do_shortcode( '[contact-form-7 id="5" title="Contact Form"]' ); ?>
+			</div>
+		</div>
+</header>
+<!-- header END -->
+
+<div id="stalker" class="pc"></div>
+<!-- HTML -->
+<main class="top-text">
+    <section class="section00">
+            <h1>
+                Smile
+                <br>
+                Coordinate
+            </h1>
+            <p class="top-p">
+				こころ<span>と</span>ゆめ<span>と</span>あなた<span>と</span>わたし
+            </p>
+		<span class="scrollDown"></span>
+            <p class="fade_bottom">
+                新たな視点を手にして、
+                <br>
+                本当の自分を探し、自分らしさを見つける
+            </p>
+            <div class="catchcopy fade_bottom">
+				<p>
+                    私たちは
+                    <br>
+                    理想へ踏み出す一歩を
+                    <br>
+                    サポートします。
+				</p>
+            </div>
+		<div class="t-btn">
+		<div class="top_btn">
+            <a href="https://smilecoordinate.com/works">Works</a>
+		</div>
+		<div class="top_btn">
+			<a href="https://smilecoordinate.com/faq-contact">Contact</a>
+		</div>
+		</div>
+                <div class="ab_text">
+                    <h2 class="bgfont_h2 fade_bottom">
+                        私たちについて
+                    </h2>
+                    <div class="bgtext">
+                        About Us
+                    </div>
+                        <p class="fade_bottom">
+                            私たちは、変化を求める人々を支援したいという思いで活動しています。
+                            『自分を大切にしてほしい』、『人はいつからでも変わることができる』という信念のもと、事業を提供しています。
+                        </p>
+                            <!-- btn About -->
+                            <div class="more_btn fade_bottom">
+                                <a href="https://smilecoordinate.com/about-us" class="sc_btn sc_btn-malformation sc_btn-malformation--pastel">
+                                    About
+                                </a>
+                            </div>
+                </div>
+            <!-- catchcopy -->
+    </section>
+
+    <!--NEWS-->
+    <section class="section01">
+        <div class="bgtext">
+            News
+        </div>
+            <h2 data-en="Blog / News">
+                私たちの活動
+            </h2>
+            <p class="top-p fade_bottom">
+                これまでの実績や経験と学びを投稿しているので、ご興味があれが是非ご覧ください。
+            </p>
+            <!-- Blog / News-->
+                <div id="blog" class="news_box">
+                        <!-- 01 -->
+                <div id="news" class="notice-list">
+                    <div class="notice-item">
+                        <img src="https://smilecoordinate.com/wp-content/uploads/2024/04/9baf07cbdcae4fc4f546023fb203299d-scaled.jpg" alt="SmileCoordinate">
+                        new
+                        <a href="https://note.com/smile_coordinate/n/nd6f6142510a7">
+                            <p class="fade_bottom">ゴールデンウィーク限定セッション.</p>
+                        </a>
+                    </div>
+                    <div class="notice-item">
+                        <img src="image2.jpg" alt="Image 2">
+                        <p class="fade_bottom">This is the second notice.</p>
+                    </div>
+                    <div class="notice-item">
+                        <img src="image3.jpg" alt="Image 3">
+                        <p class="fade_bottom">This is the third notice.</p>
+                    </div>
+                </div>
+                </div>
+
+        <!-- btn 02 -->
+        <div class="more_btn02 fade_bottom">
+            <a href="https://smilecoordinate.com/blog-info" class="sc_btn sc_btn-malformation sc_btn-malformation--pastel">
+                Blog
+            </a>
+        </div>
+
+    <!-- Works -->
+        <div class="bgtext">
+            Works
+        </div>
+            <h2 class="bgfont_h2 fade_bottom">
+                私たちのできること
+            </h2>
+
+            <div class="se_card-container_1 fade_bottom">
+                <div class="se_card01">
+                    <h3>
+                    知る
+                    </h3>
+                </div>
+				<div class="se_card01">
+					<h3>
+						考える
+					</h3>
+				</div>
+				<div class="se_card01">
+					<h3>
+						行動する
+					</h3>
+				</div>
+			</div>
+                <!-- btn 03 -->
+                <div class="more_btn02 fade_bottom">
+                    <a href="https://smilecoordinate.com/works" class="sc_btn sc_btn-malformation sc_btn-malformation--pastel">
+                        Works
+                    </a>
+                </div>
+    </section>
+
+    <section class="section02">
+    <!-- Catchcopy -->
+            <h3>
+                相談してほしい人
+            </h3>
+
+        <div class="profile-columns fade_bottom">
+            <ul>
+                <li>
+                    こどもを理解したい
+                </li>
+                <li>
+                    環境を変えたい
+                </li>
+				<li>
+ストレスフリーになりたい
+</li>
+</ul>
+            <ul>
+                <li>
+自分を変えたい
+					</li>
+				<li>
+自分の人生を歩みたい
+                </li>
+                <li>
+成長、進化したい
+                </li>
+            </ul>
+        </div>
+            <p class="fade_bottom">
+				などポジティブな方向へ変わりたい
+思いがある方はぜひ私たちにご相談してください。<br>
+上記以外にも様々な悩みがあると思いますが、どのようなことでも
+                お気軽にご相談してください。
+            <br>
+                直ぐに解消できなくても、苦しさを少しでも和らげることが大切です。
+            </p>
+
+		<!-- Catchcopy -->
+            <p class="catchcopy fade_bottom">
+                これから、新しい自分で
+            </p>
+            <p class="catchcopy fade_bottom">
+                自分らしく
+            </p>
+    <!-- Page List -->
+        <div class="page_list">
+            <p class="bgtext">
+                Contents
+                <br>
+                List
+            </p>
+                <ul>
+                    <li class="image1 fade_bottom">
+                        <a href="https://smilecoordinate.com/about-us" data-alt="about-us">
+                            私たちについて
+                            <span>
+                                / About US
+                            </span>
+                        </a>
+                    </li>
+                    <li class="image2 fade_bottom">
+                        <a href="https://smilecoordinate.com/blog-info" data-alt="Blog/Info">
+                            私たちの活動
+                            <span>
+                                / Blog Information
+                            </span>
+                        </a>
+                    </li>
+                    <li class="image3 fade_bottom">
+                        <a href="https://smilecoordinate.com/works" data-alt="Works">
+                            私たちのできること
+                            <span>
+                                / Works
+                            </span>
+                        </a>
+                    </li>
+                    <li class="image4 fade_bottom">
+                        <a href="https://smilecoordinate.com/faq-contact" data-alt="Contact">
+                            お申し込み・お問い合わせ
+                            <span>
+                                / Contact
+                            </span>
+                        </a>
+                    </li>
+                    <li class="image5 fade_bottom">
+                        <a href="https://smilecoordinate.com/site-policy" data-alt="Policy">
+                            ご利用について
+                            <span>
+                                / Policy
+                            </span>
+                        </a>
+                    </li>
+                    <li class="image6 fade_bottom">
+                        <a href="https://smilecoordinate.com/faq-contact#faq" data-alt="FAQ">
+                            よくある質問
+                            <span>
+                                / FAQ
+                            </span>
+                        </a>
+                    </li>
+                </ul>
+        </div>
+    </section>
+
+    <section class="section03">
+    <!-- Contact -->
+        <div class="col-container">
+            <div class="col">
+                <h3 class="fade_bottom">
+                    伝えるだけで「こころ」は軽くなる
+                </h3>
+                <p class="fade_bottom">
+                    伝えるだけでこころが軽くなり、答えが見えてくると思います。
+                    <br>
+                    どんな些細なことでもお気軽に私たちにシェアしてください。
+                    <br>
+                    あなたの内側にある答えを見つけ出し、少しずつ理想の自分に変化していきましょう♪
+                </p>
+			</div>
+        <?php echo do_shortcode( '[contact-form-7 id="5" title="Contact Form"]' ); ?>
+        </div>
+    </section>
+</main>
+<!-- HTML END -->
+
+<?php
+/*
+ * Template Name: SC_footer.php
+ */
+?>
+
+<!-- Footer -->
+<footer>
+    <a href="#" id="page-top">></a>
+    <div class="footer_text">
+        Smile Coordinate
+    </div>
+    <p>
+        ストレスから解放された世界に行きましょう。
+        <br>
+        迷いや不安があれば私たちにご相談してください。
+    </p>
+
+    <div class="menu-columns">
+        <div class="column">
+            <div class="main-menu">
+                <a href="https://smilecoordinate.com">
+                    Home
+                </a>
+                <a href="https://smilecoordinate.com/about-us">
+                    About US
+                </a>
+                <a href="https://smilecoordinate.com/blog-info">
+                    Blog /
+                    <span>Information</span>
+                </a>
+                <a href="https://smilecoordinate.com/faq-contact">
+                    Contact
+                </a>
+                <a href="https://smilecoordinate.com/site-policy">
+                    Policy
+                </a>
+            </div>
+        </div>
+
+        <div class="column">
+                Works
+                <div class="sub_menu_s">
+                    <a href="https://smilecoordinate.com/works#coaching">
+                        -コーチング
+                    </a>
+                    <a href="https://smilecoordinate.com/works#coaching">
+                        -お悩み相談
+                    </a>
+                </div>
+                <div class="sub_menu_s">
+                    <a href="https://smilecoordinate.com/works#hp">
+                        -事業サポート
+                    </a>
+                    <a href="https://smilecoordinate.com/works#hp">
+                        -制作
+                    </a>
+                </div>
+        </div>
+            <p class="footer_text02">
+                Smile LifeDesign
+            </p>
+    </div>
+        <div class="foot">
+			Smile Coordinate / &copy; <?php echo date('Y'); ?>.
+        </div>
+</footer>
+
+<?php wp_footer(); ?>
+
+    </body>
+</html>
