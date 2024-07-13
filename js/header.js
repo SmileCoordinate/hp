@@ -28,6 +28,9 @@ $(function() {
     // フッター読み込み
     $("#footer-placeholder").load("footer.html", function() {
         // フッター内スクリプト
-        document.getElementById('year').textContent = new Date().getFullYear();
+        var yearSpan = document.getElementById('year');
+        if (yearSpan) {
+            yearSpan.textContent = new Date().getFullYear();
+        }
     });
 });
