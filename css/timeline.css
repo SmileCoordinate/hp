@@ -74,24 +74,24 @@
 	}
 	/*01*/
 	.process_p:nth-child(2)::before {
-		background-image: url('https://smilecoordinate.com/wp-content/uploads/2024/03/e899deefbc939c5601e7bbde6b28829d.png');
+		background-image: url('img/p04.png');
 	}
 	/*02*/
 	.process_p:nth-child(3)::before {
-		background-image: url('https://smilecoordinate.com/wp-content/uploads/2024/03/1d9c9b2cde0e16a8278df4eff5949758.png');
+		background-image: url('img/p06.png');
 	}
 	/*03*/
 	.process_p:nth-child(4)::before {
-		background-image: url('https://smilecoordinate.com/wp-content/uploads/2024/03/36c6785e99ceac19a894a0c0786a3ea2.png');
+		background-image: url('img/p07.png');
 	}
 	/*04*/
 	.process_p:nth-child(5)::before {
-		background-image: url('https://smilecoordinate.com/wp-content/uploads/2024/03/2aa9ae8864af140616bf0a4ea1b14470.png');
+		background-image: url('img/p08.png');
 	}
-	/*05*/
+	/*05
 	.process_p:nth-child(7)::before {
 		background-image: url('https://smilecoordinate.com/wp-content/uploads/2024/03/2aa9ae8864af140616bf0a4ea1b14470.png');
-	}
+	}*/
 /*== 偶数text アイコン Odd */
 	.process_p:nth-child(odd) {
 		padding: clamp(13%, 10%, 18%);
