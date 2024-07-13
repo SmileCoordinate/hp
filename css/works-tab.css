@@ -76,7 +76,7 @@ Version: 2023
    .container {
       display: none;
       opacity: 0;
-      animation: fadeIn 1s ease-in-out forwards;
+      animation: fadeIn 0.5s ease-in-out forwards;
    }
    #container .container p {
       width: 70vmin;
