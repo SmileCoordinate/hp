@@ -74,7 +74,7 @@
 	}
 	/*01*/
 	.process_p:nth-child(2)::before {
-		background-image: url('img/p04.png');
+		background-image: url('https://smilecoordinate.github.io/hp/img/p04.png');
 	}
 	/*02*/
 	.process_p:nth-child(3)::before {
