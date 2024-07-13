@@ -17,7 +17,62 @@
     <link rel="stylesheet" href="css/page.css">
     <link rel="stylesheet" href="css/header.css">
     <link rel="stylesheet" href="css/footer.css">
+<style>
+    /* Google Fontsから'Heebo'を読み込む（任意） */
+@import url("https://fonts.googleapis.com/css2?family=Heebo:wght@900&display=swap");
 
+/* 簡易リセットCSS */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+/* 背景 */
+.bg {
+  background-color: #000; /* 画像がない場合のフォールバック */
+  background-image: url("bg.jpg"); /* 画像のパスを指定 */
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+  width: 100%;
+  padding: 60px 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+/* ガラス本体 */
+.glass {
+  width: 100%;
+  max-width: 600px;
+  padding: 30px;
+  background-color: rgba(255, 255, 255, 0.1); /* 背景色 */
+  border: 1px solid rgba(255, 255, 255, 0.4); /* ボーダー */
+  border-right-color: rgba(255, 255, 255, 0.2);
+  border-bottom-color: rgba(255, 255, 255, 0.2);
+  border-radius: 15px;
+  -webkit-backdrop-filter: blur(20px); /* ぼかしエフェクト */
+  backdrop-filter: blur(20px);
+  box-shadow: 0 5px 20px rgba(255, 152, 79, 0.5); /* 薄い影 */
+}
+
+/* ガラス内の要素 */
+.glass h1 {
+  text-align: center;
+  color: #fff;
+  font-family: "Heebo", sans-serif;
+  font-size: 50px;
+  font-weight: bold;
+  letter-spacing: 0.06em;
+}
+
+.glass p {
+  margin-top: 20px;
+  color: #fff;
+  font-size: 16px;
+}
+</style>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/cursor.js"></script>
     <script src="js/chat.js"></script>
@@ -55,7 +110,16 @@
             <p class="top-p">
 				こころ<span>と</span>ゆめ<span>と</span>あなた<span>と</span>わたし
             </p>
+        
 		<span class="scrollDown"></span>
+
+        <div class="bg">
+            <div class="glass">
+              <h1>Glassmorphism</h1>
+              <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia laborum inventore nulla illum, eaque sint culpa. Repellat aliquid nemo vero nesciunt placeat voluptate aspernatur sapiente? Dolorum necessitatibus officiis nobis laboriosam!</p>
+            </div>
+        </div>
+
             <p class="fade_bottom">
                 新たな視点を手にして、
                 <br>
