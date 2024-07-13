@@ -78,15 +78,15 @@
 	}
 	/*02*/
 	.process_p:nth-child(3)::before {
-		background-image: url('img/p06.png');
+		background-image: url('https://smilecoordinate.github.io/hp/img/p06.png');
 	}
 	/*03*/
 	.process_p:nth-child(4)::before {
-		background-image: url('img/p07.png');
+		background-image: url('https://smilecoordinate.github.io/hp/img/p07.png');
 	}
 	/*04*/
 	.process_p:nth-child(5)::before {
-		background-image: url('img/p08.png');
+		background-image: url('https://smilecoordinate.github.io/hp/img/p08.png');
 	}
 	/*05
 	.process_p:nth-child(7)::before {
