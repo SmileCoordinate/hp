@@ -4,7 +4,7 @@
         // 遅れてついてくるストーカー要素
         var stalker = $("#stalker");
         // リンクと.accordion-wrapにホバーした時にクラス追加、離れたらクラス削除
-        $("a, .accordion-wrap, #chat-icon").hover(
+        $("a,.accordion-wrap,#chat-icon").hover(
             function () {
                 stalker.addClass('stalker--hover');
             },
@@ -59,7 +59,7 @@
 })(jQuery);
 
 
-//Fade右上ニュース
+//左上ニュース
 (function() {
     document.addEventListener('DOMContentLoaded', function() {
         var elementsToShow = document.querySelectorAll('.fade_bottom');
