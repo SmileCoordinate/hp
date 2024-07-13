@@ -1,0 +1,309 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+		<title>Smile Coordinate</title>
+	<!-- jQueryの最新バージョンを使用 -->
+    <script src="https://www.gstatic.com/dialogflow-console/fast/messenger/bootstrap.js?v=1"></script>
+	<!-- accordion -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <!-- h1 -->
+	<link rel="stylesheet" href="https://use.typekit.net/dvs4zuf.css">
+	<!-- footer-->
+    <link rel="stylesheet" href="https://use.typekit.net/gjh0htb.css">
+	<!-- body -->
+    <link rel="stylesheet" href="css/all.css">
+    <link rel="stylesheet" href="css/page.css">
+    <link rel="stylesheet" href="css/header.css">
+    <link rel="stylesheet" href="css/footer.css">
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="js/cursor.js"></script>
+    <script src="js/chat.js"></script>
+    <script src="js/menu.js"></script>
+    <script src="js/security.js"></script>
+    <script src="js/header.js"></script>
+<script>
+  (function(d) {
+    var config = {
+      kitId: 'wjy5knc',
+      scriptTimeout: 3000,
+      async: true
+    },
+    h=d.documentElement,t=setTimeout(function(){h.className=h.className.replace(/\bwf-loading\b/g,"")+" wf-inactive";},config.scriptTimeout),tk=d.createElement("script"),f=false,s=d.getElementsByTagName("script")[0],a;h.className+=" wf-loading";tk.src='https://use.typekit.net/'+config.kitId+'.js';tk.async=true;tk.onload=tk.onreadystatechange=function(){a=this.readyState;if(f||a&&a!="complete"&&a!="loaded")return;f=true;clearTimeout(t);try{Typekit.load(config)}catch(e){}};s.parentNode.insertBefore(tk,s)
+  })(document);
+</script>
+<!--meta-->
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+	<meta http-equiv="Referrer-Policy" content="strict-origin">
+	<meta http-equiv="Strict-Transport-Security" content="max-age=31536000">
+
+</head>
+
+<body oncontextmenu="return false;">
+    <div id="stalker" class="pc"></div>
+
+    <div id="header-placeholder"></div>
+<!-- HTML -->
+<main class="blog-text">
+    <section>
+        <div class="notice-bar">
+            新しいお知らせがあります。
+        </div>
+            <h1>
+                Blog
+				<br>
+				Information
+            </h1>
+            <p class="top-p">
+                    私たちの活動
+                </p>
+                    <h2 class="tate">
+                        Blog Information
+                    </h2>
+
+            <!-- block text -->
+                <div class="block">
+                    <div id="news" class="notice-list">
+                        <div class="notice-item">
+							<img src="https://smilecoordinate.com/wp-content/uploads/2024/04/9baf07cbdcae4fc4f546023fb203299d-scaled.jpg" alt="SmileCoordinate">
+							<a href="https://note.com/smile_coordinate/n/nd6f6142510a7">
+								<p class="fade_bottom">ゴールデンウィーク限定セッション.</p>
+							</a>
+                        </div>
+                        <div class="notice-item">
+                            <img src="image2.jpg" alt="Image 2">
+                            <p class="fade_bottom">This is the second notice.</p>
+                        </div>
+                        <div class="notice-item">
+                            <img src="image3.jpg" alt="Image 3">
+                            <p class="fade_bottom">This is the third notice.</p>
+                        </div>
+                    </div>
+
+                            <span class="bgtext">
+                                Blog/News
+                            </span>
+<h2 class="fade_bottom">
+お知らせ
+</h2>
+<!--NEWS-->
+<div id="blog" class="news_box">
+<?php
+// 表示済みカテゴリを管理する配列
+$categories_displayed = array();
+
+// カテゴリの表示関数
+function display_category_once($category) {
+    global $categories_displayed;
+    if (!in_array($category, $categories_displayed)) {
+        echo '<div class="news-items">';
+        echo do_shortcode('[category_posts category="' . $category . '" posts_per_page="-1"]');
+        echo '</div>';
+        $categories_displayed[] = $category;
+    }
+}
+?>
+
+<!-- Blog -->
+<?php display_category_once('blog'); ?>
+
+<!-- News -->
+<?php display_category_once('news'); ?>
+
+</div>
+
+<h2 class="fade_bottom blog">
+note投稿
+</h2>
+                        <div id="blog" class="news_box">
+                        <!-- 01 -->
+                            <div class="news-items">
+                                <div class="news-item">
+                                            <div class="news-label">
+                                                Blog
+                                            </div>
+                                            <div class="note-embed-container custom-note-container">
+                                                <iframe class="note-embed" src="https://note.com/embed/notes/n73f3643de4e8" style="border: 0; display: block; max-width: 99%; width: 494px; padding: 0px; margin: 10px 0px; position: static; visibility: visible;" height="400"></iframe>
+                                                <script async src="https://note.com/scripts/embed.js" charset="utf-8"></script>
+                                            </div>
+                                </div>
+                            </div>
+                        <!-- 02 -->
+                            <div class="news-items">
+                                <div class="news-item">
+                                            <div class="news-label">
+                                                Blog
+                                            </div>
+                                            <div class="note-embed-container custom-note-container">
+                                                <iframe class="note-embed" src="https://note.com/embed/notes/n553764125366" style="border: 0; display: block; max-width: 99%; width: 494px; padding: 0px; margin: 10px 0px; position: static; visibility: visible;" height="400"></iframe>
+                                                <script async src="https://note.com/scripts/embed.js" charset="utf-8"></script>
+                                            </div>
+                                </div>
+                            </div>
+                        <!-- 03 -->
+                            <div class="news-items">
+                                <div class="news-item">
+                                            <div class="news-label">
+                                                Blog
+                                            </div>
+                                            <div class="note-embed-container custom-note-container">
+                                                <iframe class="note-embed" src="https://note.com/embed/notes/n9d99ff049059" style="border: 0; display: block; max-width: 99%; width: 494px; padding: 0px; margin: 10px 0px; position: static; visibility: visible;" height="400"></iframe>
+                                                <script async src="https://note.com/scripts/embed.js" charset="utf-8"></script>
+                                            </div>
+                                </div>
+                            </div>
+                        <!-- 04 -->
+                            <div class="news-items">
+                                <div class="news-item">
+                                            <div class="news-label">
+                                                Blog
+                                            </div>
+                                            <div class="note-embed-container custom-note-container">
+                                                <iframe class="note-embed" src="https://note.com/embed/notes/n0a90e7bb7142" style="border: 0; display: block; max-width: 99%; width: 494px; padding: 0px; margin: 10px 0px; position: static; visibility: visible;" height="400"></iframe>
+                                                <script async src="https://note.com/scripts/embed.js" charset="utf-8"></script>
+                                            </div>
+                                </div>
+                            </div>
+                        <!-- 05 -->
+                            <div class="news-items">
+                                <div class="news-item">
+                                            <div class="news-label">
+                                                Blog
+                                            </div>
+                                            <div class="note-embed-container custom-note-container">
+                                                <iframe class="note-embed" src="https://note.com/embed/notes/n05532ca63365" style="border: 0; display: block; max-width: 99%; width: 494px; padding: 0px; margin: 10px 0px; position: static; visibility: visible;" height="400"></iframe>
+												<script async src="https://note.com/scripts/embed.js" charset="utf-8"></script>
+                                            </div>
+                                </div>
+                            </div>
+                        <!-- 06 -->
+                            <div class="news-items">
+                                <div class="news-item">
+                                            <div class="news-label">
+                                                Blog
+                                            </div>
+                                            <div class="note-embed-container custom-note-container">
+												<iframe class="note-embed" src="https://note.com/embed/notes/nb7caffbc0c32" style="border: 0; display: block; max-width: 99%; width: 494px; padding: 0px; margin: 10px 0px; position: static; visibility: visible;" height="400"></iframe>
+												<script async src="https://note.com/scripts/embed.js" charset="utf-8"></script>
+                                            </div>
+                                </div>
+                            </div>
+                        </div>
+                </div>
+    </section>
+
+                    <section class="section__bg section04">
+                        <span class="bgtext">
+                            Information
+                        </span>
+                        <h2 class="fade_bottom blog">
+                            企業理念
+                        </h2>
+                        <ol>
+                            <li class="fade_bottom">
+                                <h3>
+                                    私たちの考え
+                                </h3>
+                                自分を含め、「人に優しく、思いやりを持つ」こと、更に「こころ、想い」「自分自身の考え」などを大切にする。
+そして、人が人に優しくなれるような世界に変えていきたい。
+                            </li>
+                            <li class="fade_bottom">
+                                <h3>
+                                    私たちの取り組み
+                                </h3>
+                                変化を求めている人、自分の人生を歩みたい人に「自分を知ることや自分自身の意思を確認する」こと、
+「自分らしい生活」を送るためのサポートを行います。
+                                自分らしさを軸に、時代や流れとともに、その時に適した方法で活動をしていきます。
+                            </li>
+                            <li class="fade_bottom">
+                                <h3>
+									顧客との関係
+                                </h3>
+                                ご依頼していただいた、お客様から頂いた声を大切に受け止め、皆様のニーズに応えるための取り組みを続けています。
+                            </li>
+                                <p class="fade_bottom">
+私たちの取り組みで、理想の人生を歩みたい人々の手助けとなることを願っています。
+                                </p>
+                        </ol>
+
+                            <h2 class="fade_bottom">
+                                会社概要
+                            </h2>
+                            <table class="info fade_bottom">
+                        <!-- title -->
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            会社名
+                                        </th>
+                                        <th>
+                                            設立
+                                        </th>
+                                        <th>
+                                            拠点
+                                        </th>
+                                    </tr>
+                                </thead>
+                            <!-- 内容 -->
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            Smile Coordinate
+                                        </td>
+                                        <td>
+                                            2024年2月24日
+                                        </td>
+                                        <td>
+                                            宮城県 / オンライン
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+
+                            <table class="info fade_bottom">
+                        <!-- title -->
+                                <thead>
+                                    <tr>
+                                        <th>
+                                            問い合わせ
+                                        </th>
+                                        <th>
+                                            スタッフ
+                                        </th>
+                                        <th>
+                                            事業内容
+                                        </th>
+                                    </tr>
+                                </thead>
+                            <!-- 内容 -->
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            Contactページ
+											<br>
+											公式LINE
+                                        </td>
+                                        <td>
+											Oyama Haruko
+											<br>
+                                            Oyama Mizuki
+                                        </td>
+                                        <td>
+                                            コーチング
+											<br>
+											事業サポート
+                                        </td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                    </section>
+</main>
+<!-- HTML END -->
+
+<!-- Footer -->
+<div id="footer-placeholder"></div>
+
+    </body>
+</html>
