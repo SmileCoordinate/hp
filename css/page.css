@@ -760,7 +760,8 @@ section, .p-noteEmbed, #chat-icon, #chat-window, .profile-columns,
 		.about-text .section01 .accordion-header .fa {
 			padding: 0 2em;
 		}
-        .about-text .section01 .accordion-text p {
+
+        .about-text .section01 .accordion-wrap .accordion-text p {
             margin: 0 auto 10%;
         }
         .about-text .section01 .profile_box {
