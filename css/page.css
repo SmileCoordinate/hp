@@ -2538,10 +2538,8 @@ word-break: break-all;
         }
         .about-text .section01 .accordion-wrap .accordion-text p {
             width: 100%;
-            padding: calc(5vw - 20px);
+            padding: calc(1vw - 10px) calc(5vw - 20px) 1em;
             margin: 0 auto;
-            white-space: pre-line;
-            word-break: break-all;
         }
     /*== About END ==*/
 
