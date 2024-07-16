@@ -2529,7 +2529,7 @@ word-break: break-all;
         }
         .about-text .section01 .accordion-wrap {
             width: calc(80% - 50px);
-            padding: 2em 1em 1em;
+            padding: calc(1em - 10px) 1em;
             margin: 0 auto;
         }
         .about-text .section01 .accordion-wrap .accordion-item h4 {

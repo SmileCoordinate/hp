@@ -805,8 +805,7 @@ Version: 2023
     /* text color */
         .bgtext {
             font-size: clamp(20rem, calc(20rem + 0.5vw), 24rem);
-			filter: blur(4px);
-			opacity: 0.1;
+			filter: blur(2px);
         }
         a {
             font-family: 游明朝 Medium;
