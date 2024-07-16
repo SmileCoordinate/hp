@@ -33,6 +33,7 @@ function addMessage(sender, message) {
   chatLog.innerHTML += `<div><strong>${sender}:</strong> ${message}</div>`;
 }
 
+jQuery.noConflict();
 jQuery(document).ready(function($) {
   const chatWindow = $('#chat');
   const categoryRadio = $('input[name="category"]');
