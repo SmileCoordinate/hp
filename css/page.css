@@ -2870,7 +2870,7 @@ word-break: break-all;
             font-size: clamp(1.2rem, calc(1.2rem + 1vw), 1.4rem);
         }
         .contact-text .block p {
-            width: 60%;
+            width: 80%;
             padding: 0 0 10%;
         }
         .contact-text .block ul{
