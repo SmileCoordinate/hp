@@ -11,14 +11,10 @@
 	.about-text .block .process_h2 {
 		margin: 0 auto 15%;
 	}
-	/*WP top_cssの.boxに書き込み*/
-	.process .process_p h3 span {
-			font-size: 3rem;
-			margin-top: -0.5%;
-	}
+
 .process .process_p h3:before,
 .process .process_p h3:after {
-	margin-top: -2%;
+	margin-top: 0%;
 }
 	.block .process p {
 		font-size: clamp(1rem, calc(1rem + 0.5vw), 1.2rem);
@@ -212,10 +208,6 @@
 			margin: 0;
 			padding: 1.5em 0.5em 0;
 		}
-			.block .process .process_p h3 span {
-				font-size: clamp(1.3em, calc(1.3em + 0.5vw), 1.6em);
-				margin-top: -2px;
-			}
 .process .process_p h3:before,
 .process .process_p h3:after {
 	margin-top: -0.25vmin;
