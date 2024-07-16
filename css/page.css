@@ -760,6 +760,9 @@ section, .p-noteEmbed, #chat-icon, #chat-window, .profile-columns,
 		.about-text .section01 .accordion-header .fa {
 			padding: 0 2em;
 		}
+        .about-text .section01 .accordion-text p {
+            margin: 0 auto 10%;
+        }
         .about-text .section01 .profile_box {
             justify-content: space-between;
             width: 100%;
@@ -2531,6 +2534,7 @@ word-break: break-all;
             width: calc(80% - 50px);
             padding: calc(1em - 10px) 1em;
             margin: 0 auto;
+            border-radius: 10px;
         }
         .about-text .section01 .accordion-wrap .accordion-item h4 {
             font-size: clamp(1.2rem, calc(1.2rem + 1vw), 1.4rem);
