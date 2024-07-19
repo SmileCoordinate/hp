@@ -154,7 +154,7 @@
         height: 200px;
         margin-top: 10px;
         display: flex;
-        align-items: center;
+        align-items: flex-start;
     }
     .chat-options select,
     .chat-options input {
