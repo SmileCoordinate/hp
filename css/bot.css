@@ -240,17 +240,17 @@
             }
         /* ChatBot ウィンドウのスタイル */
             #chat-window {
-                width: calc(65% - 100px);
-                height: calc(90% - 50px);
+                width: calc(60% - 150px);
+                height: calc(85% - 100px);
                 bottom: 20px;
                 left: 20px;
-                padding: 4vh 3vw;
+                padding: 4vmin 3vw 0;
                 border-radius: 20px;
                 background: linear-gradient(25deg, rgba(211, 255, 107, 0.65)10%, rgba(252, 250, 245, 0.85));
                 animation: fadeIn_left 1.5s ease forwards;
             }
             .chat-window {
-                height: 100px;
+                height: 200px;
             }
         /* チャットメッセージのスタイル */
             #chat {
@@ -271,8 +271,7 @@
                 margin-left: 20px;
             }
             .radio-options {
-                width: 50%;
-                padding: 0 calc(5vw - 20px) 0;
+                padding: 0 calc(2vw - 20px) 0;
             }
             .radio-options label {
                 margin-top: 5px;
@@ -294,7 +293,7 @@
             .clear-button {
                 width: 95pt;
                 height: 35pt;
-                padding: 1rem 2rem 0;
+                margin: 5% auto 0;
                 padding: calc(2vw - 20px) 2rem 0;
                 transition: all .4s ease-in-out;
                 border: 2px solid;
@@ -369,7 +368,7 @@
                     }
                 /* ChatBot ウィンドウのスタイル */
                     #chat-window {
-                        width: calc(45% - 50px);
+                        width: calc(45% - 100px);
                         height: 80%;
                         left: 20px;
                         bottom: 20px;
