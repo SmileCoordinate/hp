@@ -91,8 +91,8 @@
     }
 /* ChatBot ウィンドウのスタイル */
     #chat-window {
-        width: 90%;
-        height: 60%;
+        width: 65vmin;
+        height: 80vmin;
         position: fixed;
         bottom: 20px;
         left: 20px;
@@ -204,3 +204,238 @@
     .panel {
         position: relative;
     }
+
+    @media screen and (min-width: 600px) and (max-width: 1299px) {
+            /* ChatBot アイコンのスタイル */
+            #chat-icon {
+                font-size: 1.5rem;
+                bottom: 20px;
+                width: 7em;
+                height: 5em;
+            }
+            #chat-icon::before {
+                content: "こちらで質問ができます";
+                position: absolute;
+                font-size: 0.9rem;
+                bottom: -4.5%;
+                left: 50%;
+                transform: translate(-50%, -50%);
+                white-space: nowrap;
+            }
+        /* 閉じるボタンのスタイル */
+            #close-button {
+                top: 10px;
+                right: 15px;
+                font-size: 1.5rem;
+            }
+        /*==bot*/
+        /*ラジオボタン装飾*/
+            input {
+                font-size: 1rem;
+                margin-top: 0px;
+                width: 15px;
+                height: 15px;
+                border-radius: 20px;
+                animation: fadeIn_bg 0.5s ease forwards;
+            }
+        /* ChatBot ウィンドウのスタイル */
+            #chat-window {
+                width: calc(65% - 100px);
+                height: calc(90% - 50px);
+                bottom: 20px;
+                left: 20px;
+                padding: 4vh 3vw;
+                border-radius: 20px;
+                background: linear-gradient(25deg, rgba(211, 255, 107, 0.65)10%, rgba(252, 250, 245, 0.85));
+                animation: fadeIn_left 1.5s ease forwards;
+            }
+            .chat-window {
+                height: 100px;
+            }
+        /* チャットメッセージのスタイル */
+            #chat {
+                margin: 0.85em;
+                line-height: 1.5em;
+                letter-spacing: 0.1em;
+                padding: 0.75em;
+            }
+            .bot {
+                font-size: clamp(0.8rem, calc(0.8rem + 0.5vw), 1rem);
+                line-height: 1.4em;
+            }
+            .chat-options {
+                height: 270px;
+            }
+            .input-container {
+                margin-top: 20px;
+                margin-left: 20px;
+            }
+            .radio-options {
+                width: 50%;
+                padding: 0 calc(5vw - 20px) 0;
+            }
+            .radio-options label {
+                margin-top: 5px;
+            }
+        /* キーワード選択肢 */
+            .keyword-options label {
+                margin-top: 0px;
+            }
+        /*ラジオボタン*/
+            .chat-options select,
+            .chat-options input {
+                width: 10px;
+                padding: 10px;
+                margin-right: 0;
+                margin-bottom: 10px;
+                top: 0px;
+            }
+            .send-button,
+            .clear-button {
+                width: 95pt;
+                height: 35pt;
+                padding: 1rem 2rem 0;
+                padding: calc(2vw - 20px) 2rem 0;
+                transition: all .4s ease-in-out;
+                border: 2px solid;
+            }
+            span.wpcf7-not-valid-tip:last-child {
+                top: 90%;
+            }
+        }
+
+        @media screen and (min-width: 1300px) {
+                    /* ChatBot アイコンのスタイル */
+                    #chat-icon {
+                        font-size: clamp(1.4rem, calc(1.4rem + 1vw), 1.8rem);
+                        bottom: 50px;
+                        width: 6em;
+                        height: 13vh;
+                        padding: 0 0.5em;
+                        background-size: 175%;
+                        transition: all 0.5s ease;
+                        animation: fadeIn_bg 4s ease forwards;
+                    }
+                    #chat-icon::before {
+                        content: "こちらで質問ができます";
+                        font-size: clamp(0.8rem, calc(0.8rem + 0.5vw), 0.9rem);
+                        position: absolute;
+                        bottom: -5.5%;
+                        left: 50%;
+                        transform: translate(-50%, -50%);
+                        white-space: nowrap;
+                    }
+                    #chat-icon:hover {
+                        background-color: rgba(166, 247, 141, 0.53);
+                    }
+                /* 閉じるボタンのスタイル */
+                    #close-button {
+                        display: flex;
+                        top: 10px;
+                        right: 15px;
+                        font-size: 2rem;
+                    }
+                    #close-button:hover {
+                        color: #898989;
+                    }
+                /*==bot*/
+                /*ラジオボタン装飾 */
+                    input {
+                        margin-top: 0px;
+                        width: 15px;
+                        height: 15px;
+                        border-radius: 20px;
+                        animation: fadeIn_bg 0.5s ease forwards;
+                    }
+                    input:checked {
+                        transition: background-position .2s .15s cubic-bezier(0, 0, .2, 1), transform .20s cubic-bezier(0, 0, .2, 1);
+                    }
+                /* The up/down direction logic */
+                    input,
+                    input:active {
+                        background-position: 0 20px;
+                    }
+                    input:checked {
+                        background-position: 0 0;
+                    }
+                    input:checked ~ input,
+                    input:checked ~ input:active {
+                        background-position: 0 -20px;
+                    }
+                /* ベーススタイル */
+                    .chatbot-container {
+                        width: 100%;
+                        align-items: center;
+                    }
+                /* ChatBot ウィンドウのスタイル */
+                    #chat-window {
+                        width: calc(45% - 50px);
+                        height: 80%;
+                        left: 20px;
+                        bottom: 20px;
+                        padding: 3vh 4vw;
+                        border-radius: 20px;
+                        overflow-x: hidden;
+                        animation: fadeIn_left 1.5s ease forwards;
+                        z-index: 100;
+                    }
+                    .chat-window {
+                        width: calc(100% - 30px);
+                        height: 200px;
+                        padding: 1em;
+                        background-color: rgba(252, 250, 245, 0.85);
+                    }
+                /* チャットメッセージのスタイル */
+                    #chat {
+                        letter-spacing: 0.1em;
+                    }
+                    .bot {
+                        margin-bottom: 1em;
+                    }
+                    .input-container {
+                        margin-top: 10px;
+                        margin-left: 20px;
+                    }
+                    .radio-options {
+                        font-size: clamp(1.2rem, calc(1.2rem + 1vw), 1.4rem);
+                        width: auto;
+                        margin: 0 auto 2%;
+                    }
+                    .radio-options label {
+                        margin: 10px;
+                    }
+                /* キーワード選択肢 */
+                    .keyword-options {
+                        top: 0;
+                        margin-left: 0;
+                    }
+                    .keyword-options label {
+                        font-size: clamp(1rem, calc(1rem + 1vw), 1.2rem);
+                        margin: 10px;
+                    }
+                /*ラジオボタン*/
+                    .chat-options {
+                        width: 100%;
+                        height: 300px;
+                        justify-content: center;
+                        align-items: center;
+                    }
+                    .chat-options select,
+                    .chat-options input {
+                        width: 10px;
+                        padding: 10px;
+                        margin-right: 0;
+                        margin-bottom: 2px;
+                    }
+                    .send-button,
+                    .clear-button {
+                        font-size: clamp(1rem, calc(1rem + 0.5vw), 1.2rem);
+                        width: 130pt;
+                        height: 45pt;
+                        padding: 10px 15px;
+                        transition: all .4s ease-in-out;
+                    }
+                    span.wpcf7-not-valid-tip:last-child {
+                        top: 90%;
+                    }
+                }
