@@ -240,7 +240,7 @@
             }
         /* ChatBot ウィンドウのスタイル */
             #chat-window {
-                width: calc(60% - 150px);
+                width: calc(85% - 100px);
                 height: calc(85% - 100px);
                 bottom: 20px;
                 left: 20px;
