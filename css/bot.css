@@ -91,10 +91,8 @@
     }
 /* ChatBot ウィンドウのスタイル */
     #chat-window {
-        width: 65vmin;
-        height: 80vmin;
-        width: calc(85vmin - 100px);
-        height: calc(85% - 100px);
+        width: calc(100% - 40px);
+        height: calc(75% - 100px);
         position: fixed;
         bottom: 20px;
         left: 20px;
