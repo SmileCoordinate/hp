@@ -136,7 +136,7 @@ Version: 2023
       transition: height 0.3s ease, transform 0.3s ease;
       position: relative;
    }
-   #container .se_card-container .se_card h3 {
+   .works-text .block #container .se_card-container .se_card h3 {
       font-family: 游明朝 Medium, serif;
       font-size: clamp(1.2rem, calc(1.2rem + 1vw), 1.4rem);
       font-weight: 700;
@@ -155,7 +155,7 @@ Version: 2023
       margin: -15px auto 0;
       padding: 0 1em 1em;
    }
-   #container .se_card-container .se_card00 {
+   /*#container .se_card-container .se_card00 {
 		width: calc(75% + 1em);
       height: 100%;
    }
@@ -164,7 +164,7 @@ Version: 2023
    }
    #container .se_card-container .se_card00 p {
       margin-top: -5%;
-   }
+   }*/
    #container #first .se_card-container:nth-child(n+2) .se_card:nth-child(n+1),
 	#container #second .se_card-container:nth-child(n+2) .se_card:nth-child(n+1),
    #container #third .se_card-container .se_card,
@@ -355,9 +355,9 @@ Version: 2023
       padding: 0 1em 1em;
       margin: -4vmin auto 0;
    }
-   #container .se_card-container .se_card00 p {
+   /*#container .se_card-container .se_card00 p {
       margin-top: -5%;
-   }
+   }*/
    #container #first .se_card-container:nth-child(n+2) .se_card:nth-child(n+1),
 	#container #second .se_card-container:nth-child(n+2) .se_card:nth-child(n+1),
    #container #third .se_card-container .se_card,
