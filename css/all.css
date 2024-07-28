@@ -103,7 +103,7 @@ Version: 2023
             color: var(--def);
             text-shadow: 0px 1px 5px rgba(255, 150, 48, 0.42);
             position: relative;
-			background: url('https://smilecoordinate.com/wp-content/uploads/2024/04/c5facb69a180e9394bebd5abcc5f977b.jpg') no-repeat center center / cover;
+			background: url('https://smilecoordinate.github.io/hp/img/sc-bgimg.jpg') no-repeat center center / cover;
             background-attachment: fixed;
             overflow-x: hidden;
         }
