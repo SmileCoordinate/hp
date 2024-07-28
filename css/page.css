@@ -1788,7 +1788,7 @@ word-break: break-all;
         }
 /*お知らせ一覧バー*/
 	.top-text .section01 .news_box .notice-list {
-		width: calc(80% - 10%);
+		width: 100%;
 		margin: 0 auto;
 		padding-top: 0;
 	}
@@ -1838,9 +1838,9 @@ word-break: break-all;
         }
     /* more btn */
         .top-text .section01 .more_btn02 {
-            margin-left: 50%;
+            margin-left: 75%;
             margin-top: -5%;
-            margin-top: calc(-12.5% - 5vw);
+            margin-top: calc(-11.5% - 5vw);
         }
         .top-text .section01 .more_btn02:last-child {
             margin-top: 2%;
