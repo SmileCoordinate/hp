@@ -1229,14 +1229,14 @@ word-break: break-all;
             padding: 0.5em;
             margin: 0;
         }
-/*catchcopy*/
+/*catchcopy
 		.top-text .section02 .catchcopy {
 			font-size: clamp(1.4rem, calc(1.4rem + 1vw), 1.8rem);
 			margin: 30% 0 2.5% 15%;
 		}
 		.top-text .section02 .catchcopy:nth-child(odd) {
 			margin: 0% 0 5% 65%;
-		}
+		}*/
     /*== Contents List ==*/
         .top-text .section02 .page_list .bgtext {
             font-size: clamp(10rem, calc(10rem + 0.5vw), 14rem);
@@ -1734,13 +1734,13 @@ word-break: break-all;
                     border-radius: 5px;
                     box-shadow: 0px 1px 2px var(--def);
                 }
-/*==catchcopy*/
+/*==catchcopy
         .top-text section .catchcopy p {
             font-size: clamp(1.8rem, calc(1.8rem + 0.5vw), 2rem);
             font-weight: 700;
             margin: 20% auto 0;
             letter-spacing: max(1em, min(0.85em, 1vw));
-        }
+        }*/
         .top-text .ab_text {
 			width: calc(70% - 15%);
             margin: 25% auto;
@@ -1875,14 +1875,14 @@ word-break: break-all;
             letter-spacing: .025rem;
             line-height: 2.3em;
         }
-/*==catchcopy*/
+/*==catchcopy
 		.top-text .section02 .catchcopy {
 			font-size: clamp(2rem, calc(2rem + 1vw), 2.8rem);
 			margin: 15% calc(35% - 10vw) 5%;
 		}
 		.top-text .section02 .catchcopy:nth-child(odd) {
 			margin: 5% 0 10% calc(75% - 15vw);
-		}
+		}*/
 
     /*== Contents List ==*/
         .top-text .section02 .page_list {
