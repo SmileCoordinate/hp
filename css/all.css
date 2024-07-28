@@ -774,7 +774,6 @@ Version: 2023
     /*== tate text ==*/
         .tate, .bgtext {
             text-align: left;
-            opacity: .035;
         }
         .tate {
             font-size: clamp(14rem, calc(14rem + 1vw), 16rem);
