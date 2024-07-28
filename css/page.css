@@ -1743,7 +1743,7 @@ word-break: break-all;
         }
         .top-text .ab_text {
 			width: calc(70% - 15%);
-            margin: 25% auto;
+            margin: 25% auto 15%;
             letter-spacing: 0.25rem;
             text-align: left;
         }
