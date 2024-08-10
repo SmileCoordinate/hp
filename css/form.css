@@ -126,10 +126,6 @@ input:-webkit-autofill:focus {
     text-align: center;
 }
 
-.note {
-    margin-left: -25%;
-}
-
 
 /*===================== モーダルウィンドウ =====================*/
 .modal {

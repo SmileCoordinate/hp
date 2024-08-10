@@ -61,7 +61,7 @@ section, .p-noteEmbed, #chat-icon, #chat-window, .profile-columns,
                 min-height: 500px;
             }
         /*== 背景線 ==*/
-            .col-container .accordion-wrap, .image-container img {
+            .accordion-wrap, .image-container img {
                 background-image: repeating-linear-gradient(-60deg, #fab669, #fab669 1.44px, transparent 2px, transparent 8.48px, #fab669 11px), repeating-linear-gradient(30deg, #fab669, #fab669 1.44px, transparent 2px, transparent 8.48px, #fab669 11px), repeating-linear-gradient(120deg, #fab669, #fab669 1.44px, transparent 2px, transparent 8.48px, #fab669 11px), repeating-linear-gradient(210deg, #fab669, #fab669 1.44px, transparent 2px, transparent 8.48px, #fab669 11px);
                 background-size: 3px 100%, 100% 3px, 3px 100% , 100% 3px;
                 background-position: 0 0, 0 0, 100% 0, 0 100%;
@@ -416,18 +416,7 @@ section, .p-noteEmbed, #chat-icon, #chat-window, .profile-columns,
             min-height: 500px;
 			padding: 3em 0;
         }
-        .section03 .col-container {
-            width: 100%;
-            max-width: 600px;
-        }
-        .section03 .col-container .col {
-            width: clamp(250px, 100%, 600px);
-            height: auto;
-            border-radius: 50px;
-            position: relative;
-            margin: 0 auto;
-            padding: 1.5rem;
-        }
+
         .col-text h3,
         .col-text p {
             padding: 0.4em 1em;
@@ -1264,21 +1253,17 @@ word-break: break-all;
         .top-text .section03 {
             min-height: 500px;
         }
-        .top-text .section03 .col-container {
-            width: 100%;
-            max-width: 600px;
-            margin: 0 auto;
-        }
-        .top-text .section03 .col-container .col-text {
+
+        .top-text .section03 .col-text {
             width: clamp(250px, 100%, 600px);
             border-radius: 50px;
             padding: 1rem;
         }
-        .top-text .section03 .col-container .col-text h3,
-        .top-text .section03 .col-container .col-text p {
+        .top-text .section03 .col-text h3,
+        .top-text .section03 .col-text p {
             padding: 15px;
         }
-        .top-text .section03 .col-container .col-text p {
+        .top-text .section03 .col-text p {
             letter-spacing: 0.01rem;
             line-height: 1.6em;
         }
@@ -1689,7 +1674,7 @@ word-break: break-all;
                 height: 100%;
                 overflow: visible;
             }
-            .col-container .accordion-wrap, .image-container img {
+            .accordion-wrap, .image-container img {
                 background-image: repeating-linear-gradient(-60deg, #fab669, #fab669 1.44px, transparent 2px, transparent 8.48px, #fab669 11px), repeating-linear-gradient(30deg, #fab669, #fab669 1.44px, transparent 2px, transparent 8.48px, #fab669 11px), repeating-linear-gradient(120deg, #fab669, #fab669 1.44px, transparent 2px, transparent 8.48px, #fab669 11px), repeating-linear-gradient(210deg, #fab669, #fab669 1.44px, transparent 2px, transparent 8.48px, #fab669 11px);
                 background-size: 3px 100%, 100% 3px, 3px 100% , 100% 3px;
                 background-position: 0 0, 0 0, 100% 0, 0 100%;
@@ -1963,22 +1948,19 @@ word-break: break-all;
         }
         .top-text .section03 {
             min-height: 880px;
+            padding: 7em 1em 0;
         }
-        .top-text .section03 .col-container {
-            width: 100%;
-            max-width: 1200px;
-            margin: 5% auto;
-        }
-        .top-text .section03 .col-container .col-text {
+
+        .top-text .section03 .col-text {
             width: clamp(850px, 80%, 1000px);
             border-radius: 30px;
             padding: 2em;
         }
-        .top-text .section03 .col-container .col-text h3 {
+        .top-text .section03 .col-text h3 {
             width: 100%;
             padding-top: 5%;
         }
-        .top-text .section03 .col-container .col-text p {
+        .top-text .section03 .col-text p {
             width: calc(80% - 50px);
             letter-spacing: 0.04rem;
             padding: 2em;
