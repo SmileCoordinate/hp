@@ -336,11 +336,64 @@
                 </div>
               </div>
     </section>
+    
+    <div id="footer-placeholder"></div>
+
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;" onload="if(submitted) { alert('Successfully submitted'); submitted=false; }"></iframe>
+  
+    <!-- モーダルウィンドウ -->
+    <div id="thanksModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>
+          問合せありがとうございます。
+          <br>
+          返信まで1日～2日ほどお待ちください。
+        </p>
+      </div>
+    </div>
+  
+  <script>
+      document.addEventListener('DOMContentLoaded', function () {
+        var modal = document.getElementById('thanksModal');
+        var span = document.getElementsByClassName('close')[0];
+  
+        document.getElementById('contactForm').addEventListener('submit', function (e) {
+          e.preventDefault();
+          var form = e.target;
+          var formData = new FormData(form);
+          fetch(form.action, {
+            method: 'POST',
+            body: formData
+          }).then(response => {
+            if (response.ok) {
+              modal.style.display = "block";
+              form.reset();
+              document.querySelectorAll('.input-text').forEach(input => {
+                input.classList.remove('not-empty');
+              });
+            } else {
+              alert('There was a problem with the submission.');
+            }
+          }).catch(error => {
+            alert('There was a problem with the submission.');
+          });
+        });
+  
+        span.onclick = function() {
+          modal.style.display = "none";
+        }
+  
+        window.onclick = function(event) {
+          if (event.target == modal) {
+            modal.style.display = "none";
+          }
+        }
+      });
+  </script>
+
 </main>
 <!-- HTML END -->
-
-<div id="footer-placeholder"></div>
-
 
     </body>
 </html>
