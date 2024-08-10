@@ -300,22 +300,42 @@
 
         <div class="contact-form-container">
             <h2>お問い合わせ</h2>
-            <form id="contact-form" action="https://formsubmit.co/YOUR_EMAIL@example.com" method="POST">
-              <label for="name">名前:</label>
-              <input type="text" id="name" name="name" required>
-              
-              <label for="email">メールアドレス:</label>
-              <input type="email" id="email" name="email" required>
-              
-              <label for="message">メッセージ:</label>
-              <textarea id="message" name="message" required></textarea>
-              
-              <!-- フォームスパム防止のための隠しフィールド -->
-              <input type="hidden" name="_captcha" value="false">
-              <input type="hidden" name="_next" value="https://YOUR_GITHUB_PAGES_URL/thanks.html">
-              
-              <button type="submit">送信</button>
-            </form>
+            <div class="box">
+                <div class="top-s">
+                  <h3>Contact</h3>
+                  <p class="text">問合せ、申込</p>
+        
+                  <div class="content-wrapper">
+                    <div class="get-in-touch">
+                      <!--<h3 class="c-h3">Contact Us</h3>-->
+                      
+                      <form id="contactForm" class="contact-form" action="https://script.google.com/macros/s/AKfycbx0x7x1McI0UX_Jx2JvuDCbiYwDiOpKs-1zXrnegeNXvp6HXF5Yv6XpR11tV3fkWXfJag/exec" method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+        
+                        <div class="form-field col x-50">
+                          <input type="text" id="name" name="name" class="input-text" required>
+                          <label for="name" class="label">氏名</label>
+                        </div>
+                        <div class="form-field col x-50">
+                          <input type="email" id="email" name="email" class="input-text" required>
+                          <label for="email" class="label">返信アドレス</label>
+                        </div>
+        
+                        <div class="form-field col x-100">
+                          <textarea id="message" name="message" class="input-text" required></textarea>
+                          <label for="message" class="label label-test">質問内容</label>
+                        </div>
+                        <div class="note">
+                          <p>当サイトをご利用の際は、<a href="#">SitePolicy</a>をご確認ください。</p>
+                        </div>
+                        <div class="form-field col align-center">
+                          <button type="submit" class="submit-btn">送る</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+        
+                </div>
+              </div>
     </section>
 </main>
 <!-- HTML END -->
