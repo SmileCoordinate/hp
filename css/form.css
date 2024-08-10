@@ -16,6 +16,10 @@
     width: 50%;
     margin-top: 2rem;
 }
+input {
+    
+    background-image: none;
+}
 
 .col.x-100 {
     width: 100%;
