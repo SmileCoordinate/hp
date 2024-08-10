@@ -89,6 +89,8 @@ Version: 2023
         :root {
             --def: #4d4d4d;
             --inv: #ff9630;
+            --bg-color: #fcfaf5;
+            --base-color: #ff9630;
         }
         html, body {
             margin: 0;
@@ -206,7 +208,7 @@ Version: 2023
             color: var(--inv);
             text-shadow: 0 0 1px var(--inv);
             z-index: -1;
-            opacity: 0.05;
+            opacity: 0.15;
         }
         .tate {
             font-size: clamp(3rem, calc(3rem + 1vw), 4rem);
