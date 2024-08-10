@@ -428,11 +428,11 @@ section, .p-noteEmbed, #chat-icon, #chat-window, .profile-columns,
             margin: 0 auto;
             padding: 1.5rem;
         }
-        .col h3,
-        .col p {
+        .col-text h3,
+        .col-text p {
             padding: 0.4em 1em;
         }
-        .col p {
+        .col-text p {
             margin: 0 auto;
             letter-spacing: 0.01rem;
         }
@@ -1269,16 +1269,16 @@ word-break: break-all;
             max-width: 600px;
             margin: 0 auto;
         }
-        .top-text .section03 .col-container .col {
+        .top-text .section03 .col-container .col-text {
             width: clamp(250px, 100%, 600px);
             border-radius: 50px;
             padding: 1rem;
         }
-        .top-text .section03 .col-container .col h3,
-        .top-text .section03 .col-container .col p {
+        .top-text .section03 .col-container .col-text h3,
+        .top-text .section03 .col-container .col-text p {
             padding: 15px;
         }
-        .top-text .section03 .col-container .col p {
+        .top-text .section03 .col-container .col-text p {
             letter-spacing: 0.01rem;
             line-height: 1.6em;
         }
@@ -1969,16 +1969,16 @@ word-break: break-all;
             max-width: 1200px;
             margin: 5% auto;
         }
-        .top-text .section03 .col-container .col {
+        .top-text .section03 .col-container .col-text {
             width: clamp(850px, 80%, 1000px);
             border-radius: 30px;
             padding: 2em;
         }
-        .top-text .section03 .col-container .col h3 {
+        .top-text .section03 .col-container .col-text h3 {
             width: 100%;
             padding-top: 5%;
         }
-        .top-text .section03 .col-container .col p {
+        .top-text .section03 .col-container .col-text p {
             width: calc(80% - 50px);
             letter-spacing: 0.04rem;
             padding: 2em;
