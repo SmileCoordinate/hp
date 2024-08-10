@@ -1254,11 +1254,6 @@ word-break: break-all;
             min-height: 500px;
         }
 
-        .top-text .section03 .col-text {
-            width: clamp(250px, 100%, 600px);
-            border-radius: 50px;
-            padding: 1rem;
-        }
         .top-text .section03 .col-text h3,
         .top-text .section03 .col-text p {
             padding: 15px;
@@ -1951,11 +1946,6 @@ word-break: break-all;
             padding: 7em 1em 0;
         }
 
-        .top-text .section03 .col-text {
-            width: clamp(850px, 80%, 1000px);
-            border-radius: 30px;
-            padding: 2em;
-        }
         .top-text .section03 .col-text h3 {
             width: 100%;
             padding-top: 5%;
