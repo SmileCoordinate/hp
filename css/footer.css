@@ -131,7 +131,7 @@
         .menu-columns {
             display: flex;
             justify-content: space-between;
-            align-items: baseline;
+            align-items: flex-start;
             gap: 10px;
             min-width: 100%;
             margin: 5% auto 10%;
@@ -190,12 +190,12 @@
     }
     /* Menu columns */
     .menu-columns {
+        width: fit-content;
         display: flex;
         justify-content: space-between;
-        align-items: baseline;
-        gap: 10px;
-        width: fit-content;
-        margin: 5% 10% 0;
+        align-items: flex-start;
+        margin-bottom: 10%;
+        text-align: left;
     }
     /* Columns */
     .column {
