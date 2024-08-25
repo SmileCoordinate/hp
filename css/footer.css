@@ -83,7 +83,7 @@
         }
         #page-top:focus {
             background: rgba(255, 255, 255, 0.85);
-            color: #212121;
+            color: var(--def);
         }
         footer p {
             width: 100%;
@@ -103,25 +103,11 @@
             padding: 1rem 2rem 0 1rem;
             border-bottom: 1px solid;
         }
-        .footer_text02 {
-            position: absolute;
-            font-family: 'liana', 'script', sans-serif;
-            font-weight: 400;
-            font-style: normal;
-            width: auto;
-            font-size: clamp(3rem, 3rem + 1vw, 5rem);
-            color: #fff;
-            text-align: center;
-            bottom: 5%;
-            opacity: .85;
-            z-index: -1;
-        }
         /*==cash*/
         .foot {
             align-items: center;
             text-align: center;
-            color: #ddd;
-            background: rgba(20, 20, 20);
+            color: var(--def);
         }
         /*security logo*/
         .grecaptcha-badge {
@@ -173,10 +159,6 @@
             font-size: 2rem;
             margin: 0 0 5px 10px;
             padding: 1rem 2rem 0;
-        }
-        .footer_text02 {
-            font-size: clamp(3rem, 3rem + 1vw, 5rem);
-            left: 20%;
         }
         /*==cash*/
         .foot {
@@ -275,13 +257,6 @@
 		footer p {
 			font-size: clamp(1.2rem, calc(1.2rem + 1vw), 1.8rem);
             line-height: 3rem;
-		}
-		.footer_text02 {
-			font-size: clamp(6rem, 6rem + 1vw, 10rem);
-			width: fit-content;
-			margin: 0;
-            right: 15%;
-			bottom: 10vmin;
 		}
 		/*==cash*/
 		.foot {
