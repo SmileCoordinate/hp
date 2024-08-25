@@ -99,9 +99,9 @@ section, .p-noteEmbed, #chat-icon, #chat-window, .profile-columns,
         .h1-top-p {
 			margin: 0 auto;
             text-align: center;
-            letter-spacing: .4rem;
+            letter-spacing: 0.4rem;
         }
-    /* == Top == */
+        /* == Top == */
         .top-text section {
             height: auto;
             min-height: 1900px;
@@ -1684,20 +1684,20 @@ word-break: break-all;
 			}
 
     /* == Top == */
+        /*== h1下テキスト */
+        .top-text .section00 .h1-top-p {
+			font-size: clamp(1.8rem, calc(1.8rem + 0.5vw), 2rem);
+            letter-spacing: 0.85rem;
+        }
+		.top-text .section00 .h1-top-p span {
+			font-size: clamp(1.2rem, calc(1.2rem + 0.5vw), 1.6rem);
+		}
         .top-text section {
             min-height: 2300px;
 			padding-bottom: 1em;
         }
 		.top-text .section00 p {
 			margin: 30% auto 0;
-		}
-    /*== h1下テキスト */
-        .top-text .section00 .h1-top-p {
-			font-size: clamp(1.8rem, calc(1.8rem + 0.5vw), 2rem);
-            letter-spacing: 0.85rem;
-        }
-		.top-text .section00 .top-p span {
-			font-size: clamp(1.2rem, calc(1.2rem + 0.5vw), 1.6rem);
 		}
 		.top_btn {
 			width: calc(65% - 15%);
