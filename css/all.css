@@ -727,7 +727,7 @@ Version: 2023
 			font-weight: 400;
         }
         h2 {
-            font-size: clamp(2em, calc(2em + 0.5vw), 2.4em);
+            font-size: clamp(2.4rem, calc(2.4rem + 0.5vw), 3rem);
             margin: 0 calc(50% - 50vw) 30px;
         }
         h3 {
@@ -758,10 +758,11 @@ Version: 2023
             margin: 5%;
         }
         p {
-            font-size: clamp(1.2rem, calc(1.2rem + 1vw), 1.4rem);
+            font-size: clamp(1.6rem, calc(1.6rem + 1vw), 2rem);
             width: auto;
-            letter-spacing: .095em;
-            line-height: 2.3em;
+            text-align: justify;
+            letter-spacing: 0.05em;
+            line-height: 1.65;
             word-break: auto-phrase;
             overflow-wrap: break-word;
             text-align: left;
