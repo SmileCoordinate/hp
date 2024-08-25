@@ -1687,6 +1687,7 @@ word-break: break-all;
         /*== h1下テキスト */
         .top-text .section00 .h1-top-p {
 			font-size: clamp(1.8rem, calc(1.8rem + 0.5vw), 2rem);
+            margin: 0;
             letter-spacing: 0.85rem;
         }
 		.top-text .section00 .h1-top-p span {
