@@ -194,7 +194,7 @@
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
-        margin-bottom: 10%;
+        margin-bottom: 5%;
         text-align: left;
     }
     /* Columns */
@@ -283,7 +283,7 @@
 			font-size: clamp(8rem, 8rem + 1vw, 12rem);
 			width: fit-content;
 			margin: 0;
-			bottom: 5%;
+			bottom: 8%;
 		}
 		/*==cash*/
 		.foot {
