@@ -15,7 +15,6 @@
             backdrop-filter: blur(5px);
         }
         .menu-columns {
-            gap: 10px;
             min-width: 100%;
             margin: 0 auto;
         }
@@ -132,7 +131,6 @@
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            gap: 10px;
             min-width: 100%;
             margin: 5% auto 10%;
         }
@@ -212,7 +210,7 @@
     /*== Main */
     .column .main-menu a {
         display: flex;
-        font-size: clamp(3rem, calc(3rem + 1vw), 4rem);
+        font-size: clamp(3.8rem, calc(3.8rem + 1vw), 4.8rem);
         gap: 10px;
         margin: -1% 0 2%;
     }
@@ -232,7 +230,6 @@
     }
     /*== Sub */
     .column {
-        font-size: 3rem;
 			padding: 0;
 			margin-left: -5%;
 		}
@@ -240,7 +237,7 @@
 			margin: 1.5em 0% 0 0;
 		}
 		.column .sub_menu_s a {
-			font-size: 1.25rem;
+			font-size: clamp(1.4rem, calc(1.4rem + 1vw), 1.8rem);
 		}
 		.sub_menu_s::before {
 			content: '';
@@ -271,19 +268,20 @@
 		}
 		/*==cash*/
 		.footer_text {
-			font-size: 2.4rem;
+			font-size: clamp(3rem, calc(3rem + 1vw), 3.8rem);
 			margin-left: 5%;
-			padding: 0.5em 1em 0;
+			padding: 0.5em 5rem 0 1rem;
 		}
 		footer p {
-			font-size: 1.2rem;
-			margin-left: 5%;
+			font-size: clamp(1.2rem, calc(1.2rem + 1vw), 1.8rem);
+            line-height: 3rem;
 		}
 		.footer_text02 {
-			font-size: clamp(8rem, 8rem + 1vw, 12rem);
+			font-size: clamp(6rem, 6rem + 1vw, 10rem);
 			width: fit-content;
 			margin: 0;
-			bottom: 8%;
+            right: 15%;
+			bottom: 10vmin;
 		}
 		/*==cash*/
 		.foot {
