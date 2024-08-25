@@ -342,8 +342,7 @@ Version: 2023
         button.sc_btn:after {
             content: "もっとみる";
             display: block;
-            margin-top: -5px;
-            font-size: clamp(0.65rem, calc(0.65rem + 0.5vw), 0.75rem);
+            font-size: clamp(0.8rem, calc(0.8rem + 0.5vw), 1.2rem);
         }
         a.sc_btn-malformation,
         a.sc_btn-malformation--pastel {
@@ -731,7 +730,7 @@ Version: 2023
             margin: 0 calc(50% - 50vw) 30px;
         }
         h3 {
-            font-size: clamp(1.6rem, calc(1.6rem + 1vw), 2rem);
+            font-size: clamp(2rem, calc( 2rem + 1vw), 3.4rem);
         }
         h3::before,
         h3::after {
@@ -754,7 +753,7 @@ Version: 2023
             margin: 0;
         }
         li {
-            font-size: clamp(1rem, calc(1rem + 0.5vw), 1.4rem);
+            font-size: clamp(1.2rem, calc( 1.2rem + 1vw), 1.8rem);
             margin: 5%;
         }
         p {
@@ -883,11 +882,12 @@ Version: 2023
         .sc_btn:after,
         a.sc_btn:after,
         button.sc_btn:after {
-            font-size: clamp(0.8rem, calc(0.8rem + 0.5vw), 1rem);
+            font-size: clamp(1rem, calc(1rem + 1vw), 1.4rem);
+            margin-top: 2.5%;
         }
         a.sc_btn-malformation,
         a.sc_btn-malformation--pastel {
-            font-size: clamp(1.8rem, calc(1.8rem + 0.5vw), 2.4rem);
+            font-size: clamp(2.4rem, calc(2.4rem + 1vw), 3rem);
             width: 170px;
             height: 170px;
             padding: 1.6em 0em;

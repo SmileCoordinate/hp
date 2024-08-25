@@ -1800,8 +1800,8 @@ word-break: break-all;
             margin-top: 10px;
 			box-shadow: inset 0px 0px 5px var(--inv);
         }
-        .top-text .section01 .se_card-container_1 .se_card01 h3 {
-            font-size: 2rem;
+        .top-text .section01 .se_card01 h3 {
+            font-size: clamp(2rem, calc( 2rem + 1vw), 2.4rem);
             margin: 0;
 			line-height: 280px;
             top: 0;
