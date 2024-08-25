@@ -242,7 +242,6 @@ Version: 2023
         footer a, header a {
             font-family: Helvetica, serif;
             width: fit-content;
-            font-size: 1rem;
             font-weight: bold;
             color: var(--def);
             text-align: left;
@@ -546,10 +545,6 @@ Version: 2023
         a {
             padding: .25rem .5rem;
         }
-        footer a, header a {
-            font-size: 1rem;
-            padding: 1%;
-        }
         footer a::before, header a::before {
             bottom: 0;
             left: 0;
@@ -795,11 +790,6 @@ Version: 2023
             font-family: 游明朝 Medium;
             color: var(--def);
             transition: all 0.2s ease;
-        }
-        footer a, header a {
-            font-family: Arial, Helvetica, sans-serif;
-            font-size: 1rem;
-            padding: 1%;
         }
         footer a::before, header a::before {
             content: '';

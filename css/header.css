@@ -319,7 +319,7 @@ Version: 2023
 			padding: 0.025rem 0.1rem;
 			display: block;
 			font-weight: bold;
-			transition: color 0.33s ease;
+			transition: color 0.3s ease;
 		}
 		a span {
 			font-size: clamp(1.4rem, calc(1.4rem + 0.5vw), 1.8rem);
@@ -328,7 +328,7 @@ Version: 2023
 			margin: 0 auto;
 			padding: 0.025rem 0.1rem;
 			display: block;
-			transition: color 0.63s ease;
+			transition: color 0.3s ease;
 		}
 		.manu_p {
 			letter-spacing: 0.15rem;
@@ -339,7 +339,7 @@ Version: 2023
 				margin: calc(5% + 10%) auto 0;
 				width: 30%;
 				height: auto;
-				transition: all .75s;
+				transition: all 0.35s;
 			}
 			img:hover {
 				transform: scale(1.2);
