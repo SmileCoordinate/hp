@@ -95,7 +95,8 @@ section, .p-noteEmbed, #chat-icon, #chat-window, .profile-columns,
             z-index: -1;
         }
 
-        .top-p {
+        /*== h1下テキスト */
+        .h1-top-p {
 			margin: 0 auto;
             text-align: center;
             letter-spacing: .4rem;
@@ -112,10 +113,7 @@ section, .p-noteEmbed, #chat-icon, #chat-window, .profile-columns,
             margin: 45% auto 0;
             padding: 0;
 		}
-    /*== h1下テキスト */
-        .top-text .section00 .top-p {
-			margin: 0 auto;
-        }
+
 .t-btn {
 	display: flex;
 	width: fit-content;
@@ -1072,10 +1070,7 @@ word-break: break-all;
             font-size: clamp(1rem, calc(1rem + 1vw), 1.2rem);
             margin: 30% auto 0;
         }
-    /*== h1下テキスト */
-        .top-text .section00 .top-p {
-            width: fit-content;
-        }
+
 .top_btn {
 	font-size: clamp(2.4rem, calc(2.4rem + 0.5vw), 2.8rem);
 	width: clamp(40%, 40%, 50%);
@@ -1694,15 +1689,15 @@ word-break: break-all;
 			padding-bottom: 1em;
         }
 		.top-text .section00 p {
-			font-size: clamp(1.4rem, calc(1.4rem + 0.5vw), 1.6rem);
 			margin: 30% auto 0;
 		}
     /*== h1下テキスト */
-        .top-text .section00 .top-p {
-            letter-spacing: .85rem;
+        .top-text .section00 .h1-top-p {
+			font-size: clamp(1.8rem, calc(1.8rem + 0.5vw), 2rem);
+            letter-spacing: 0.85rem;
         }
 		.top-text .section00 .top-p span {
-			font-size: 1rem;
+			font-size: clamp(1.2rem, calc(1.2rem + 0.5vw), 1.6rem);
 		}
 		.top_btn {
 			width: calc(65% - 15%);
