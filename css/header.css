@@ -394,7 +394,7 @@ Version: 2023
 	}
 	.top-text .scrollDown {
 		height: 200px;
-		top: clamp(20%, 0.5vw, 25%);
+		top: clamp(25%, 0.5vw, 30%);
 	}
 	.scrollDown::before {
 		content: '';

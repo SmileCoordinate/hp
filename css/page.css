@@ -1691,7 +1691,7 @@ word-break: break-all;
             letter-spacing: 0.85rem;
         }
 		.top-text .section00 .h1-top-p span {
-			font-size: clamp(1.2rem, calc(1.2rem + 0.5vw), 1.6rem);
+			font-size: clamp(1.2rem, calc(1.2rem + 0.5vw), 1.4rem);
 		}
         .top-text section {
             min-height: 2300px;
