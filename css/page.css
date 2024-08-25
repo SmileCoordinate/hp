@@ -189,7 +189,6 @@ section, .p-noteEmbed, #chat-icon, #chat-window, .profile-columns,
 	margin: 35% auto 0;
 }
 		.top-text .section01 h2 {
-			font-size: clamp(2em, calc( 2em + 0.5vw), 2.4em);
 			padding: 5px;
 			margin-top: 0%;
 		}
@@ -1725,7 +1724,6 @@ word-break: break-all;
 			margin: 0 auto 5%;
 		}
         .ab_text h2 {
-            gap: 10px;
             width: fit-content;
             padding: 0 2em;
             margin: 0;

@@ -727,7 +727,7 @@ Version: 2023
 			font-weight: 400;
         }
         h2 {
-            font-size: clamp(2.4rem, calc(2.4rem + 0.5vw), 3rem);
+            font-size: clamp(3.4rem, calc( 3.4rem + 1vw), 4rem);
             margin: 0 calc(50% - 50vw) 30px;
         }
         h3 {
