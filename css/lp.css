@@ -121,7 +121,7 @@ h3 {
 .coaching-details,
 .contact {
     width: 70%;
-    height: 80vmin;
+    height: 100vmin;
     margin: 0 auto;
     position: relative;
     text-align: center;
@@ -134,7 +134,7 @@ h3 {
 .bg-line {
     border-top: 1px solid var(--accent-color);
     border-bottom: 1px solid var(--accent-color);
-    height: 600px;
+    height: 65%;
 }
 
 /*====TOP*/
@@ -207,7 +207,7 @@ h3 {
 }
 
 .coaching-details .step {
-    width: 30%;
+    width: 220px;
     height: 300px;
     padding: 1rem;
     border: 1px solid #fff;
