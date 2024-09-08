@@ -29,6 +29,7 @@ body::before {
     width: auto;
     height: 100%;
     position: absolute;
+    top: 0;
 }
 
 body::after {
@@ -38,6 +39,7 @@ body::after {
 body::before {
     right: 10%;
     border-right: 1px solid var(--accent-color);
+    z-index: 1;
 }
 
 /* ヘッダー */
@@ -47,7 +49,7 @@ header {
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background: linear-gradient(63deg, #7CF2FF, #7CF2FF33, #FFFFFF, #81FF8F33, #FFAFD8);
+    background: linear-gradient(63deg, #92f4ffb0, #7CF2FF33, #FFFFFF, #81FF8F33, #FFAFD8);
     background-size: 1000% 1000%;
     animation: GradientBackground 22s ease infinite;
   }
@@ -88,20 +90,22 @@ nav ul li a {
 }
 
 /* メインビジュアルセクション */
-section {
-    width: 1300px;
+.about-us,
+.services,
+.coaching-details,
+.contact {
+    width: 70%;
+    margin: 0 auto;
     position: relative;
     text-align: center;
     background-color: rgba(255, 255, 255, 0.2);
     backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border-radius: 20px;
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 2px 4px rgba(46, 46, 46, 0.2);
+    border-radius: 10px 0 0 0;
 }
 
 .main-visual {
-    border-radius: 10px 0 0 0;
 }
 
 .main-visual img {
@@ -111,24 +115,24 @@ section {
 
 .main-visual .overlay {
     position: absolute;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
+    top: 30%;
+    left: 20%;
+    /*transform: translate(-50%, -50%);*/
 }
 
 .main-visual h1 {
-    font-size: 36px;
+    font-size: clamp(6rem, calc(6rem + 0.5vw), 8rem);
     margin: 0;
 }
 
 .main-visual p {
-    font-size: 18px;
-    margin-top: 10px;
+    font-size: clamp(1.4rem, calc(1.4rem + 0.5vw), 1.8rem);
+    margin-top: 10rem;
 }
 
 /* About Us セクション */
 .about-us {
-    padding: 50px 20px;
+    padding: 1rem;
     background-color: #faf3ef;
     text-align: center;
 }
