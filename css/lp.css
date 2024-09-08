@@ -1,0 +1,154 @@
+/* 全体のスタイル */
+body {
+    font-family: 'Arial', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #fdf7f1;
+}
+
+/* ヘッダー */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 20px;
+    background-color: #fff;
+}
+
+header .logo {
+    font-size: 24px;
+    font-weight: bold;
+}
+
+nav ul {
+    display: flex;
+    list-style: none;
+}
+
+nav ul li {
+    margin-left: 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: #333;
+    font-size: 18px;
+}
+
+/* メインビジュアルセクション */
+.main-visual {
+    position: relative;
+    text-align: center;
+    color: #fff;
+}
+
+.main-visual img {
+    width: 100%;
+    height: auto;
+}
+
+.main-visual .overlay {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.main-visual h1 {
+    font-size: 36px;
+    margin: 0;
+}
+
+.main-visual p {
+    font-size: 18px;
+    margin-top: 10px;
+}
+
+/* About Us セクション */
+.about-us {
+    padding: 50px 20px;
+    background-color: #faf3ef;
+    text-align: center;
+}
+
+.about-us h2 {
+    font-size: 32px;
+}
+
+.about-us ol {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin-top: 20px;
+}
+
+.about-us ol li {
+    margin-top: 10px;
+}
+
+/* Service セクション */
+.services {
+    padding: 50px 20px;
+    background-color: #fff;
+    text-align: center;
+}
+
+.services h3 {
+    margin-top: 20px;
+    font-size: 24px;
+}
+
+/* Coaching Details セクション */
+.coaching-details {
+    padding: 50px 20px;
+    background-color: #faf3ef;
+    text-align: center;
+}
+
+.coaching-details h2 {
+    font-size: 32px;
+}
+
+.coaching-details .steps {
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+}
+
+.coaching-details .step {
+    width: 30%;
+    background-color: #fff;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.coaching-details .step h3 {
+    font-size: 22px;
+    margin-bottom: 10px;
+}
+
+.coaching-details .step p {
+    font-size: 16px;
+}
+
+/* フッター */
+footer {
+    padding: 50px 20px;
+    text-align: center;
+    background-color: #fff;
+}
+
+footer button {
+    padding: 10px 20px;
+    font-size: 18px;
+    background-color: #f8b88b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+footer p {
+    margin-top: 20px;
+    font-size: 14px;
+}
