@@ -103,6 +103,18 @@ nav ul li a {
     text-decoration: none;
 }
 
+
+/*====Section*/
+h1 {
+    font-size: clamp(3rem, calc(3rem + 0.5vw), 6rem);
+}
+h2 {
+    font-size: clamp(2rem, calc(2rem + 0.5vw), 2.4rem);
+}
+h3 {
+    font-size: clamp(1.8rem, calc(1.8rem + 0.5vw), 2rem);
+}
+
 /*====Section*/
 .about-us,
 .services,
@@ -117,22 +129,18 @@ nav ul li a {
     backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 2px 4px rgba(46, 46, 46, 0.2);
-    border-radius: 10px 0 0 0;
 }
 
-h1 {
-    font-size: clamp(3rem, calc(3rem + 0.5vw), 6rem);
-}
-h2 {
-    font-size: clamp(2rem, calc(2rem + 0.5vw), 2.4rem);
-}
-h3 {
-    font-size: clamp(1.8rem, calc(1.8rem + 0.5vw), 2rem);
+.bg-line {
+    border-top: 1px solid var(--accent-color);
+    border-bottom: 1px solid var(--accent-color);
+    height: 600px;
 }
 
 /*====TOP*/
 .main-visual {
     height: 80vmin;
+    border-radius: 10px 0 0 0;
 }
 
 .main-visual img {
@@ -148,6 +156,7 @@ h3 {
 }
 
 .main-visual h1 {
+
     margin: 0;
 }
 .main-visual p:first-child {
@@ -159,7 +168,7 @@ h3 {
 
 /* About Us セクション */
 .about-us {
-    padding: 2rem 4rem;
+    
 }
 
 .about-us h2 {
