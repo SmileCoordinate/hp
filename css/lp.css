@@ -107,6 +107,7 @@ nav ul li a {
 .coaching-details,
 .contact {
     width: 70%;
+    height: 80vmin;
     margin: 0 auto;
     position: relative;
     text-align: center;
@@ -119,6 +120,7 @@ nav ul li a {
 
 /*====TOP*/
 .main-visual {
+    height: 80vmin;
 }
 
 .main-visual img {
