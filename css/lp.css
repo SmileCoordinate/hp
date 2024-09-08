@@ -26,8 +26,9 @@ body {
     margin: 0;
     padding: 0;
     width: 100%;
-    color: var(--text-color);
     font-family: "Zen Maru Gothic", serif;
+    font-size: clamp(1.4rem, calc(1.4rem + 0.5vw), 1.6rem);
+    color: var(--text-color);
     font-weight: 300;
     background: url('https://smilecoordinate.github.io/hp/img/sc-bgimg.jpg') no-repeat center center / cover;
     background-attachment: fixed;
@@ -64,6 +65,7 @@ header {
     background: linear-gradient(63deg, #92f4ffb0, #7CF2FF33, #FFFFFF, #81FF8F33, #FFAFD8);
     background-size: 1000% 1000%;
     animation: GradientBackground 22s ease infinite;
+    z-index: 100;
   }
 
   @keyframes GradientBackground {
@@ -118,6 +120,16 @@ nav ul li a {
     border-radius: 10px 0 0 0;
 }
 
+h1 {
+    font-size: clamp(3rem, calc(3rem + 0.5vw), 6rem);
+}
+h2 {
+    font-size: clamp(2rem, calc(2rem + 0.5vw), 2.4rem);
+}
+h3 {
+    font-size: clamp(1.8rem, calc(1.8rem + 0.5vw), 2rem);
+}
+
 /*====TOP*/
 .main-visual {
     height: 80vmin;
@@ -136,31 +148,29 @@ nav ul li a {
 }
 
 .main-visual h1 {
-    font-size: clamp(3rem, calc(3rem + 0.5vw), 6rem);
     margin: 0;
 }
-
+.main-visual p:first-child {
+    font-size: clamp(1.6rem, calc(1.6rem + 0.5vw), 1.8rem);
+}
 .main-visual p:last-child {
-    font-size: clamp(1.4rem, calc(1.4rem + 0.5vw), 1.8rem);
     margin-top: 30rem;
 }
 
 /* About Us セクション */
 .about-us {
-    padding: 1rem;
-    background-color: #faf3ef;
-    text-align: center;
+    padding: 2rem 4rem;
 }
 
 .about-us h2 {
-    font-size: 32px;
+    font-size: clamp(2rem, calc(2rem + 0.5vw), 2.4rem);
 }
 
 .about-us ol {
     list-style: none;
     padding: 0;
     text-align: left;
-    margin-top: 20px;
+    margin-top: 2rem;
 }
 
 .about-us ol li {
@@ -169,25 +179,16 @@ nav ul li a {
 
 /* Service セクション */
 .services {
-    padding: 50px 20px;
-    background-color: #fff;
     text-align: center;
 }
 
 .services h3 {
     margin-top: 20px;
-    font-size: 24px;
 }
 
 /* Coaching Details セクション */
 .coaching-details {
-    padding: 50px 20px;
-    background-color: #faf3ef;
-    text-align: center;
-}
-
-.coaching-details h2 {
-    font-size: 32px;
+    
 }
 
 .coaching-details .steps {
@@ -198,19 +199,20 @@ nav ul li a {
 
 .coaching-details .step {
     width: 30%;
-    background-color: #fff;
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
 }
 
 .coaching-details .step h3 {
-    font-size: 22px;
     margin-bottom: 10px;
 }
 
-.coaching-details .step p {
-    font-size: 16px;
+
+button {
+    padding: 1rem 2rem;
+    font-size: clamp(2.8rem, calc(2.8rem + 0.5vw), 3rem);
+    background-color: #f8b88b;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
 }
 
 /* フッター */
@@ -218,15 +220,6 @@ footer {
     padding: 50px 20px;
     text-align: center;
     background-color: #fff;
-}
-
-footer button {
-    padding: 10px 20px;
-    font-size: 18px;
-    background-color: #f8b88b;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
 }
 
 footer p {
