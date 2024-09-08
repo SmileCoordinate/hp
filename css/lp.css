@@ -1,22 +1,74 @@
 /* 全体のスタイル */
+:root {
+    font-size: 62.5%;
+    --root-font-size: 16;
+    /*text border main*/
+    --text-color: #2e2e2e;
+    /*sub black*/
+    --hover-color: #FF9630;
+    /*bg base (217, 217, 217)*/
+    --bg-color: #FDF6EA;
+    /*link accent*/
+    --accent-color: #FEAFFF;
+}
+
 body {
-    font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #fdf7f1;
+    width: 100%;
+    color: var(--text-color);
+    font-family: "Zen Maru Gothic", serif;
+    font-weight: 300;
+    background: url('https://smilecoordinate.github.io/hp/img/sc-bgimg.jpg') no-repeat center center / cover;
+    background-attachment: fixed;
+    overflow-x: hidden;
+}
+body::after,
+body::before {
+    content: "";
+    width: auto;
+    height: 100%;
+    position: absolute;
+}
+
+body::after {
+    left: 10%;
+    border-left: 1px solid var(--accent-color);
+}
+body::before {
+    right: 10%;
+    border-right: 1px solid var(--accent-color);
 }
 
 /* ヘッダー */
+
 header {
     display: flex;
     justify-content: space-between;
     align-items: center;
     padding: 20px;
-    background-color: #fff;
-}
+    background: linear-gradient(63deg, #7CF2FF, #7CF2FF33, #FFFFFF, #81FF8F33, #FFAFD8);
+    background-size: 1000% 1000%;
+    animation: GradientBackground 22s ease infinite;
+  }
+
+  @keyframes GradientBackground {
+    0% {
+      background-position: 0% 50%;
+    }
+
+    50% {
+      background-position: 100% 50%;
+    }
+
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
 
 header .logo {
-    font-size: 24px;
+    font-size: 1.4rem;
     font-weight: bold;
 }
 
@@ -26,20 +78,30 @@ nav ul {
 }
 
 nav ul li {
-    margin-left: 20px;
+    margin-left: 2rem;
 }
 
 nav ul li a {
     text-decoration: none;
-    color: #333;
-    font-size: 18px;
+    color: var(--text-color);
+    font-size: 1.2rem;
 }
 
 /* メインビジュアルセクション */
-.main-visual {
+section {
+    width: 1300px;
     position: relative;
     text-align: center;
-    color: #fff;
+    background-color: rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-radius: 20px;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 2px 4px rgba(46, 46, 46, 0.2);
+}
+
+.main-visual {
+    border-radius: 10px 0 0 0;
 }
 
 .main-visual img {
