@@ -31,7 +31,7 @@ body {
     font-size: clamp(1.4rem, calc(1.4rem + 0.5vw), 1.6rem);
     color: var(--text-color);
     font-weight: 300;
-    background: url('https://smilecoordinate.github.io/hp/img/sc-bgimg.jpg') no-repeat center center / cover;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.4)),url('https://smilecoordinate.github.io/hp/img/sc-bgimg.jpg') no-repeat center center / cover;
     background-attachment: fixed;
     overflow-x: hidden;
 }
@@ -163,7 +163,7 @@ img {
     position: relative;
     display: flex;
     justify-content: center;
-    background-color: rgba(255, 255, 255, 0.2);
+    background-color: rgba(255, 255, 255, 0.455);
     backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 2px 4px rgba(46, 46, 46, 0.2);
