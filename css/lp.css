@@ -148,9 +148,13 @@ img {
 }
 
 .bg-line {
+    position: relative;
+    height: 65%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
     border-top: 1px solid var(--accent-color);
     border-bottom: 1px solid var(--accent-color);
-    height: 65%;
 }
 
 .h2-bg {
