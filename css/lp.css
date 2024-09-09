@@ -12,7 +12,8 @@
     --accent-color: #FEAFFF;
 }
 
-body,header,p,ul,td,th {
+body,header,p,ul,td,th,
+h1,h2,h3,h4 {
     margin: 0;
     padding: 0;
 }
@@ -119,6 +120,11 @@ h3 {
     font-size: clamp(1.8rem, calc(1.8rem + 0.5vw), 2rem);
 }
 
+p {
+    width: 70%;
+    text-align: justify;
+}
+
 img {
     width: 30%;
     max-width: 100%;
@@ -151,6 +157,7 @@ img {
     position: relative;
     height: 65%;
     display: flex;
+    justify-content: center;
     align-items: center;
     flex-direction: column;
     border-top: 1px solid var(--accent-color);
