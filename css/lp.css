@@ -247,21 +247,16 @@ img {
 
 button {
     padding: 1rem 2rem;
-    font-size: clamp(2.8rem, calc(2.8rem + 0.5vw), 3rem);
+    font-size: clamp(2rem, calc(2rem + 0.5vw), 2.4rem);
     background-color: #f8b88b;
     border: none;
-    border-radius: 5px;
+    border-radius: 4rem;
     cursor: pointer;
 }
 
 /* フッター */
 footer {
-    padding: 50px 20px;
+    padding: 0.5rem 0;
     text-align: center;
     background-color: #fff;
-}
-
-footer p {
-    margin-top: 20px;
-    font-size: 14px;
 }
