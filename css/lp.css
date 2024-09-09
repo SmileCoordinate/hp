@@ -265,7 +265,7 @@ img {
     padding: 1rem;
     border: 1px solid #fff;
     border-radius: 10px;
-    background:linear-gradient(0deg, rgba(250, 107, 255, 0.35), rgba(253, 246, 234, 0.3) 50%, rgba(255, 150, 48, 0.35));
+    background: linear-gradient(180deg, rgba(250, 107, 255, 0.15), rgba(253, 246, 234, 0.1) 50%, rgba(255, 150, 48, 0.15));
 }
 
 .coaching-details .step img {
