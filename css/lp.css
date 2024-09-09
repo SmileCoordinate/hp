@@ -62,6 +62,9 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 2px 4px rgba(46, 46, 46, 0.2);
     background: linear-gradient(63deg, #92f4ffb0, #7CF2FF33, #FFFFFF, #81FF8F33, #FFAFD8);
     background-size: 1000% 1000%;
     animation: GradientBackground 22s ease infinite;
@@ -129,6 +132,7 @@ h3 {
     backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 2px 4px rgba(46, 46, 46, 0.2);
+    align-items: center;
 }
 
 .bg-line {
