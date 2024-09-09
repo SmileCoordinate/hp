@@ -12,7 +12,7 @@
     --accent-color: #FEAFFF;
 }
 
-body,,header,p,ul,td,th {
+body,header,p,ul,td,th {
     margin: 0;
     padding: 0;
 }
@@ -68,6 +68,7 @@ header {
     background: linear-gradient(63deg, #92f4ffb0, #7CF2FF33, #FFFFFF, #81FF8F33, #FFAFD8);
     background-size: 1000% 1000%;
     animation: GradientBackground 22s ease infinite;
+    mix-blend-mode: color;
     z-index: 100;
   }
 
@@ -118,6 +119,16 @@ h3 {
     font-size: clamp(1.8rem, calc(1.8rem + 0.5vw), 2rem);
 }
 
+img {
+    max-width: 100%;
+    height: auto;
+    object-fit: cover;
+    vertical-align: middle;
+    font-style: italic;
+    background-repeat: no-repeat;
+    background-size: cover;
+    shape-margin: 0.75rem;
+}
 /*====Section*/
 .about-us,
 .services,
@@ -145,11 +156,6 @@ h3 {
 .main-visual {
     height: 80vmin;
     border-radius: 10px 0 0 0;
-}
-
-.main-visual img {
-    width: 100%;
-    height: auto;
 }
 
 .main-visual .overlay {
