@@ -31,7 +31,7 @@ body {
     font-size: clamp(1.4rem, calc(1.4rem + 0.5vw), 1.6rem);
     color: var(--text-color);
     font-weight: 300;
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.4)),url('https://smilecoordinate.github.io/hp/img/sc-bgimg.jpg') no-repeat center center / cover;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.48), rgba(255, 255, 255, 0.48)),url('https://smilecoordinate.github.io/hp/img/sc-bgimg.jpg') no-repeat center center / cover;
     background-attachment: fixed;
     overflow-x: hidden;
 }
