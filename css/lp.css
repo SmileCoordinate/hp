@@ -277,7 +277,8 @@ img {
 }
 
 .coaching-details .step:last-child img {
-    width: 16vmin;
+    width: 18vmin;
+    bottom: -6%;
 }
 
 .coaching-details .step h3 {
