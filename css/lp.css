@@ -272,7 +272,7 @@ img {
     padding: 1rem;
     border: 1px solid #fff;
     border-radius: 10px;
-    background: linear-gradient(180deg, rgba(250, 107, 255, 0.15), rgba(253, 246, 234, 0.1) 50%, rgba(255, 150, 48, 0.15));
+    background: linear-gradient(180deg, rgba(250, 107, 255, 0.07), rgba(253, 246, 234, 0) 50%, rgba(255, 150, 48, 0.05));
 }
 
 .coaching-details .step img {
@@ -287,17 +287,21 @@ img {
 }
 
 .coaching-details .step h3 span {
-    font-size: clamp(3.8rem, calc(3.8rem + 0.5vw), 4rem);
+    font-size: clamp(6.4rem, calc(6.4rem + 0.5vw), 7rem);
     font-family: "Monsieur La Doulaise", cursive;
     font-weight: 400;
+    line-height: 6rem;
+    position: absolute;
+    top: 2%;
+    left: 15%;
 }
 
 .coaching-details .step h3 {
-    width: fit-content;
-    margin: 5% auto;
+    margin: 6% auto 3%;
 }
 .coaching-details .step p {
     font-weight: 500;
+    width: 85%;
     margin: 0 auto;
 }
 
