@@ -128,7 +128,7 @@ p {
 }
 
 img {
-    width: 30%;
+    width: 25vmin;
     max-width: 100%;
     height: auto;
     position: absolute;
@@ -188,9 +188,9 @@ img {
     position: absolute;
     top: 0;
     left: 0;
-    width: 30%;
-    height: auto;
-    border-radius: 0 0 50px;
+    width: 18vmin;
+    height: 8vmin;
+    border-radius: 0 0 30px;
     border-right: 1px solid var(--accent-color);
     border-bottom: 1px solid var(--accent-color);
 }
@@ -235,6 +235,8 @@ img {
 }
 
 .about-us ol li {
+    font-size: clamp(1.8rem, calc(1.8rem + 0.5vw), 2rem);
+    font-weight: 400;
     margin-top: 10px;
 }
 
@@ -269,9 +271,13 @@ img {
 }
 
 .coaching-details .step img {
-    width: 30%;
+    width: 12vmin;
     right: 1%;
     bottom: 1%;
+}
+
+.coaching-details .step:last-child img {
+    width: 16vmin;
 }
 
 .coaching-details .step h3 {
