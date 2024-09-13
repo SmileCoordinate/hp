@@ -1,4 +1,9 @@
 /* 全体のスタイル */
+/*h3 span*/
+
+/*h3 span*/
+@import url('https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap');
+
 :root {
     font-size: 62.5%;
     --root-font-size: 16;
@@ -114,16 +119,16 @@ h1 {
     font-size: clamp(3rem, calc(3rem + 0.5vw), 6rem);
 }
 h2 {
-    font-size: clamp(2rem, calc(2rem + 0.5vw), 2.4rem);
+    font-size: clamp(3rem, calc(3rem + 0.5vw), 3.4rem);
     width: fit-content;
     margin: 0 auto;
 }
 h3 {
-    font-size: clamp(1.8rem, calc(1.8rem + 0.5vw), 2rem);
+    font-size: clamp(2rem, calc(2rem + 0.5vw), 2.4rem);
 }
 
 p {
-    width: 70%;
+    width: 60%;
     text-align: justify;
 }
 
@@ -281,8 +286,19 @@ img {
     bottom: -7.5%;
 }
 
+.coaching-details .step h3 span {
+    font-size: clamp(3.8rem, calc(3.8rem + 0.5vw), 4rem);
+    font-family: "Monsieur La Doulaise", cursive;
+    font-weight: 400;
+}
+
 .coaching-details .step h3 {
-    margin-bottom: 10px;
+    width: fit-content;
+    margin: 5% auto;
+}
+.coaching-details .step p {
+    font-weight: 500;
+    margin: 0 auto;
 }
 
 .contact {
