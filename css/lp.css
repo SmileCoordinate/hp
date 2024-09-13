@@ -69,12 +69,6 @@ header {
     display: flex;
     justify-content: space-between;
     align-items: center;
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 2px 4px rgba(46, 46, 46, 0.2);
-    background: linear-gradient(63deg, #92f4ffb0, #7CF2FF33, #FFFFFF, #81FF8F33, #FFAFD8);
-    background-size: 1000% 1000%;
-    animation: GradientBackground 22s ease infinite;
     z-index: 100;
   }
 
@@ -97,7 +91,15 @@ header .logo {
     font-size: 1.4rem;
     font-weight: bold;
 }
-
+nav {
+    width: 70%;
+    backdrop-filter: blur(8px);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    box-shadow: 0 2px 4px rgba(46, 46, 46, 0.2);
+    background: linear-gradient(63deg, #92f4ffb0, #7CF2FF33, #FFFFFF, #81FF8F33, #FFAFD8);
+    background-size: 1000% 1000%;
+    animation: GradientBackground 22s ease infinite;
+}
 nav ul {
     display: flex;
     list-style: none;
@@ -105,6 +107,9 @@ nav ul {
 
 nav ul li {
     margin: 0 2rem;
+}
+nav ul li:last-child {
+    margin-left: 20%;
 }
 
 nav ul li a {
@@ -125,6 +130,7 @@ h2 {
 }
 h3 {
     font-size: clamp(2rem, calc(2rem + 0.5vw), 2.4rem);
+    text-align: center;
 }
 
 p {
