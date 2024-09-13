@@ -93,6 +93,9 @@ header .logo {
 }
 nav {
     width: 70%;
+    height: 35px;
+    display: flex;
+    align-items: center;
     backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 2px 4px rgba(46, 46, 46, 0.2);
@@ -103,6 +106,7 @@ nav {
 nav ul {
     display: flex;
     list-style: none;
+    justify-content: center;
 }
 
 nav ul li {
