@@ -115,6 +115,8 @@ h1 {
 }
 h2 {
     font-size: clamp(2rem, calc(2rem + 0.5vw), 2.4rem);
+    width: fit-content;
+    margin: 0 auto;
 }
 h3 {
     font-size: clamp(1.8rem, calc(1.8rem + 0.5vw), 2rem);
@@ -192,6 +194,10 @@ img {
     border-right: 1px solid var(--accent-color);
     border-bottom: 1px solid var(--accent-color);
 }
+.h2-bg p {
+    width: fit-content;
+    margin: 0 auto;
+}
 
 /*====TOP*/
 .main-visual {
@@ -207,7 +213,6 @@ img {
 }
 
 .main-visual h1 {
-
     margin: 0;
 }
 .main-visual p:first-child {
@@ -220,10 +225,6 @@ img {
 /* About Us セクション */
 .about-us {
     
-}
-
-.about-us h2 {
-    font-size: clamp(2rem, calc(2rem + 0.5vw), 2.4rem);
 }
 
 .about-us ol {
@@ -293,6 +294,9 @@ button {
 /* フッター */
 footer {
     padding: 0.5rem 0;
+    background-color: rgba(200, 200, 200, 0.7);
+}
+footer p {
+    width: fit-content;
     text-align: center;
-    background-color: #fff;
 }
