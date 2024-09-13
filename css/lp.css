@@ -101,7 +101,8 @@ nav {
     backdrop-filter: blur(8px);
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 2px 4px rgba(46, 46, 46, 0.2);
-    background: linear-gradient(63deg, #92f4ffb0, #7CF2FF33, #FFFFFF, #81FF8F33, #FFAFD8);
+    /*7CF2FF FFFFFF 81FF8F FFAFD8*/
+    background: linear-gradient(63deg, rgba(124, 242, 255, 0.37), rgba(255, 255, 255, 0.13) 22%, rgba(129, 255, 143, 0.3)49%, #81FF8F33, rgba(255, 175, 216, 0.3)100%);
     background-size: 1000% 1000%;
     animation: GradientBackground 22s ease infinite;
 }
@@ -222,11 +223,11 @@ img {
     font-weight: 600;
     position: absolute;
     top: 30%;
-    left: 20%;
+    left: 15%;
     /*transform: translate(-50%, -50%);*/
 }
 .main-visual .overlay p {
-    margin-left: 5%;
+    margin-left: 1.5%;
 }
 
 .main-visual h1 {
