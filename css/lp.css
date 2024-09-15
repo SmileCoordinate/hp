@@ -3,6 +3,8 @@
 
 /*h3 span*/
 @import url('https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap');
+/* a */
+@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
 
 :root {
     font-size: 62.5%;
@@ -142,6 +144,8 @@ p {
 }
 
 a {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
     padding: .25rem .5rem;
 }
 a::before, a::before {
