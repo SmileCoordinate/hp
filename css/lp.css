@@ -148,12 +148,13 @@ a {
     font-weight: 400;
     color: var(--accent-color);
     padding: .25rem .5rem;
+    transition: all 0.3s ease;
 }
 a:hover {
     color: var(--accent-color);
 }
 a::before {
-    color: var(--accent-color);
+    background: var(--accent-color);
     bottom: 0;
     left: 0;
     width: 0;
@@ -236,7 +237,7 @@ img {
 
 /*====TOP*/
 .main-visual {
-    height: 80vmin;
+    height: 83vmin;
     border-radius: 10px 0 0 0;
 }
 
