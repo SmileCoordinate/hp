@@ -146,9 +146,14 @@ p {
 a {
     font-family: "Inter", sans-serif;
     font-weight: 400;
+    color: var(--accent-color);
     padding: .25rem .5rem;
 }
-a::before, a::before {
+a:hover {
+    color: var(--accent-color);
+}
+a::before {
+    color: var(--accent-color);
     bottom: 0;
     left: 0;
     width: 0;
