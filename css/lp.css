@@ -129,7 +129,7 @@ h1 {
 h2 {
     font-size: clamp(3rem, calc(3rem + 0.5vw), 3.4rem);
     width: fit-content;
-    margin: 0 auto;
+    margin: 0 auto -5%;
 }
 h3 {
     font-size: clamp(2rem, calc(2rem + 0.5vw), 2.4rem);
@@ -137,7 +137,7 @@ h3 {
 }
 
 p {
-    width: 60%;
+    width: 45%;
     text-align: justify;
 }
 
@@ -268,8 +268,8 @@ img {
 }
 
 /* Coaching Details セクション */
-.coaching-details {
-    
+.coaching-details h2 {
+    margin-bottom: 2%;
 }
 
 .coaching-details .steps {
@@ -306,7 +306,7 @@ img {
     line-height: 6rem;
     position: absolute;
     top: 2%;
-    left: 15%;
+    left: 10%;
 }
 
 .coaching-details .step h3 {
