@@ -244,8 +244,8 @@ img {
 .main-visual .overlay {
     font-weight: 600;
     position: absolute;
-    top: 25%;
-    left: 15%;
+    top: 15%;
+    left: 1%;
     /*transform: translate(-50%, -50%);*/
 }
 .main-visual .overlay p {
@@ -259,8 +259,8 @@ img {
     font-size: clamp(1.6rem, calc(1.6rem + 0.5vw), 1.8rem);
 }
 .main-visual p:last-child {
-    width: 32%;
-    margin-top: 30rem;
+    width: 52%;
+    margin-top: 40rem;
 }
 
 /* About Us セクション */
