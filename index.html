@@ -2,17 +2,49 @@
 <html lang="ja">
 
 <head>
+    <!-- 基本のメタタグ -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- SEOのためのメタタグ -->
+    <meta name="description" content="Smile Coordinateのウェブサイトへようこそ。私たちの活動や目的、サービスについてご紹介します。">
+    <meta name="keywords" content="Smile Coordinate, コーチング, カウンセリング, 事業サポート">
+    <meta name="author" content="Smile Coordinate">
+
+    <!-- ソーシャルメディア用のメタタグ (OGP) -->
+    <meta property="og:title" content="Smile Coordinate">
+    <meta property="og:description" content="私たちの活動やサービスについてご紹介します。">
+    <meta property="og:image" content="path/to/image.jpg"> <!-- 共有時に使われる画像のパス -->
+    <meta property="og:url" content="https://yourwebsite.com">
+    <meta property="og:type" content="website">
+    <meta property="og:locale" content="ja_JP">
+
+    <!-- Twitterカードのメタタグ -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Smile Coordinate">
+    <meta name="twitter:description" content="私たちの活動やサービスについてご紹介します。">
+    <meta name="twitter:image" content="path/to/image.jpg"> <!-- 共有時に使われる画像のパス -->
+
+    <!-- セキュリティとパフォーマンス向上のためのメタタグ -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- 古いIEブラウザ対応 -->
+    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://code.jquery.com;"> <!-- セキュリティポリシー -->
+    
+    <!-- ページタイトル -->
     <title>Smile Coordinate</title>
-    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap"
-        rel="stylesheet">
+    
+    <!-- フォントとCSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="css/lp.css">
     <link rel="stylesheet" href="css/bot.css">
 
+    <!-- ファビコン -->
+    <link rel="icon" href="path/to/favicon.ico"> <!-- ファビコンのパス -->
+
+    <!-- JavaScriptファイル -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js/cursor.js"></script>
-    <script src="js/chat.js"></script>
+    <script src="js/cursor.js" defer></script> <!-- deferを追加してページのレンダリングをブロックしない -->
+    <script src="js/chat.js" defer></script> <!-- deferを追加 -->
+
 		<script>
 (function($) {
     // 画像保護

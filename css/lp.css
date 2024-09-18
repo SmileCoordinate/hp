@@ -351,8 +351,7 @@ button {
     height: 65px;
     padding: 1rem 2rem;
     font-size: clamp(2rem, calc(2rem + 0.5vw), 2.4rem);
-    background-color: #f8b88b;
-    background: linear-gradient(90deg, rgba(253, 246, 234, 0.1), rgba(255, 150, 48, 0.3));
+    background: linear-gradient(180deg, rgba(253, 246, 234, 0.1), rgba(255, 150, 48, 0.15));
     border: none;
     border-radius: 3rem;
     box-shadow: 0px 2px 1px 0px rgba(46, 46, 46, 0.5);
