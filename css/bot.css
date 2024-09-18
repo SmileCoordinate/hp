@@ -1,7 +1,5 @@
     /* ChatBot アイコンのスタイル */
     #chat-icon {
-        font-family: "ff-providence-sans-web-pro", "kinuta-shin-enpitsu-it-stdn", sans-serif;
-        font-weight: bold;
         font-size: 1.5rem;
         bottom: 15px;
         width: clamp(20%, 25%, 30%);
@@ -356,8 +354,8 @@
         #chat-icon {
             font-size: clamp(1.4rem, calc(1.4rem + 1vw), 1.8rem);
             bottom: 50px;
-            width: 6em;
-            height: 13vh;
+            width: 15vmin;
+            height: 14vmin;
             padding: 0 0.5em;
             background-size: 175%;
             transition: all 0.5s ease;
