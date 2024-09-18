@@ -19,12 +19,67 @@
     --accent-color: #FEAFFF;
 }
 
-body,header,p,ul,td,th,
-h1,h2,h3,h4 {
+/*== Scrollbar ==*/
+::-webkit-scrollbar {
+    width: 3px;
+    height: 8px;
+}
+
+::-webkit-scrollbar-thumb {
+    border: thick double var(--inv);
+    border-radius: 5px;
+}
+
+/*== Scrollbar END ==*/
+
+/*== fade ==*/
+.fade_bottom {
+    opacity: 0;
+    transition: opacity 1.2s ease, transform 1.2s ease, filter 1.2s ease;
+    filter: blur(4px);
+    transform: translateY(18px);
+}
+
+.fade_bottom.visible {
+    opacity: 1;
+    filter: blur(0);
+    transform: translateY(0);
+}
+
+@keyframes fadeIn_left {
+    0% {
+        opacity: 0;
+        transform: translateX(-200px);
+        filter: blur(4px);
+    }
+
+    100% {
+        opacity: 1;
+        transform: translateX(0);
+        filter: blur(0px);
+    }
+}
+
+/*== fade END ==*/
+
+body,
+header,
+p,
+ul,
+td,
+th,
+h1,
+h2,
+h3,
+h4 {
     margin: 0;
     padding: 0;
 }
-input, button, select, textarea {
+
+input,
+button,
+select,
+textarea {
     -webkit-appearance: none;
     -moz-appearance: none;
     appearance: none;
@@ -38,10 +93,11 @@ body {
     font-size: clamp(1.4rem, calc(1.4rem + 0.5vw), 1.6rem);
     color: var(--text-color);
     font-weight: 400;
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.48), rgba(255, 255, 255, 0.48)),url('https://smilecoordinate.github.io/hp/img/202409new_sc.png') no-repeat center center / cover;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.48), rgba(255, 255, 255, 0.48)), url('https://smilecoordinate.github.io/hp/img/202409new_sc.png') no-repeat center center / cover;
     background-attachment: fixed;
     overflow-x: hidden;
 }
+
 body::after,
 body::before {
     content: "";
@@ -55,6 +111,7 @@ body::after {
     left: 10%;
     border-left: 1px solid var(--accent-color);
 }
+
 body::before {
     right: 10%;
     border-right: 1px solid var(--accent-color);
@@ -73,29 +130,30 @@ header {
     justify-content: space-between;
     align-items: center;
     z-index: 100;
-  }
+}
 
-  @keyframes GradientBackground {
+@keyframes GradientBackground {
     0% {
-      background-position: 0% 80%;
+        background-position: 0% 80%;
     }
 
     50% {
-      background-position: 100% 50%;
+        background-position: 100% 50%;
     }
 
     100% {
-      background-position: 0% 80%;
+        background-position: 0% 80%;
     }
-  }
+}
 
 
 header .logo {
     font-size: 1.4rem;
     margin-left: 1.5%;
 }
+
 nav {
-    width: 75%;
+    width: 55vmin;
     height: 50px;
     display: flex;
     align-items: center;
@@ -108,6 +166,7 @@ nav {
     background-size: 500% 500%;
     animation: GradientBackground 22s ease infinite;
 }
+
 nav ul {
     display: flex;
     list-style: none;
@@ -128,11 +187,13 @@ nav ul li a {
 h1 {
     font-size: clamp(6rem, calc(6rem + 0.5vw), 8rem);
 }
+
 h2 {
     font-size: clamp(3rem, calc(3rem + 0.5vw), 3.4rem);
     width: fit-content;
     margin: 0 auto -5%;
 }
+
 h3 {
     font-size: clamp(2rem, calc(2rem + 0.5vw), 2.4rem);
     text-align: center;
@@ -150,9 +211,11 @@ a {
     padding: .25rem .5rem;
     transition: all 0.3s ease;
 }
+
 a:hover {
     color: var(--accent-color);
 }
+
 a::before {
     background: var(--accent-color);
     bottom: 0;
@@ -229,6 +292,7 @@ img {
     border-right: 1px solid var(--accent-color);
     border-bottom: 1px solid var(--accent-color);
 }
+
 .h2-bg p {
     font-weight: 700;
     width: fit-content;
@@ -248,6 +312,7 @@ img {
     left: 1%;
     /*transform: translate(-50%, -50%);*/
 }
+
 .main-visual .overlay p {
     margin-left: 1.5%;
 }
@@ -255,18 +320,18 @@ img {
 .main-visual h1 {
     margin: 0;
 }
+
 .main-visual p:first-child {
     font-size: clamp(1.6rem, calc(1.6rem + 0.5vw), 1.8rem);
 }
+
 .main-visual p:last-child {
     width: 52%;
     margin-top: 40rem;
 }
 
 /* About Us セクション */
-.about-us {
-    
-}
+.about-us {}
 
 .about-us ol {
     list-style: none;
@@ -336,6 +401,7 @@ img {
 .coaching-details .step h3 {
     margin: 6% auto 3%;
 }
+
 .coaching-details .step p {
     font-weight: 500;
     width: 85%;
@@ -358,6 +424,7 @@ button {
     cursor: pointer;
     transition: all 0.5s ease;
 }
+
 button:hover {
     font-size: clamp(2.4rem, calc(2.4rem + 0.5vw), 2.8rem);
     width: 280px;
@@ -369,9 +436,52 @@ footer {
     padding: 0.5rem 0;
     background-color: rgba(255, 255, 255, 0.7);
 }
+
 footer p {
     font-weight: bold;
     width: fit-content;
     margin: 0 auto;
     text-align: center;
+}
+
+@media screen and (min-width: 1300px) {
+
+    /*== cursor ==*/
+    *,
+    *::before,
+    *::after {
+        /*cursor: none !important;*/
+        -webkit-box-sizing: inherit;
+        box-sizing: inherit;
+    }
+
+    #stalker {
+        position: fixed;
+        top: 0;
+        left: 0;
+        margin: -15px 0 0 -15px;
+        width: 30px;
+        height: 30px;
+        border: 1px solid;
+        border-radius: 50%;
+        border-color: rgba(61, 78, 236, 0.76);
+        pointer-events: none;
+        transition: transform 0.2s ease;
+        z-index: 100;
+    }
+
+    /* ホバー時のスタイル */
+    .stalker--hover {
+        background-color: rgba(61, 78, 236, 0.76);
+        filter: blur(1);
+        transform: scale(2);
+    }
+
+    /*== Scrollbar ==*/
+    ::-webkit-scrollbar {
+        width: 6px;
+        height: 8px;
+    }
+
+    /*== Scrollbar END ==*/
 }
