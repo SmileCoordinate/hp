@@ -21,15 +21,16 @@
 
     <!-- セキュリティとパフォーマンス向上のためのメタタグ -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- 古いIEブラウザ対応 -->
-	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-	<meta http-equiv="Referrer-Policy" content="strict-origin">
-	<meta http-equiv="Strict-Transport-Security" content="max-age=31536000">
-    
+    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+    <meta http-equiv="Referrer-Policy" content="strict-origin">
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000">
+
     <!-- ページタイトル -->
     <title>Smile Coordinate</title>
-    
+
     <!-- フォントとCSS -->
-    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap"
+        rel="stylesheet">
     <link rel="stylesheet" href="css/lp.css">
     <link rel="stylesheet" href="css/bot.css">
 
@@ -45,7 +46,7 @@
 
 <body oncontextmenu="return false;">
     <div id="stalker" class="pc"></div>
-    
+
     <!-- Header -->
     <header>
         <div class="logo">Smile Coordinate</div>
@@ -74,10 +75,10 @@
     <section class="about-us" id="tab-1">
         <img src="https://smilecoordinate.github.io/hp/img/p14.png" class="img01" alt="sc,SmileCoordinate,スマイルコーディネイト">
         <div class="bg-line">
-        <div class="h2-bg">
-            <h2>About Us</h2>
-            <p>私たちについて</p>
-        </div>
+            <div class="h2-bg">
+                <h2>About Us</h2>
+                <p>私たちについて</p>
+            </div>
             <p>私たちは、変化を求める人々の手助けがしたい、という思いでコーチング、お悩み相談を行っています。
                 「自分を大切にしてほしい」、「人はいつからでも変わることができる」という想いで、
                 皆さまを支援しています。</p>
@@ -94,10 +95,10 @@
     <!-- Service Section -->
     <section class="services" id="tab-2">
         <div class="bg-line">
-        <div class="h2-bg">
-            <h2>Service</h2>
-            <p>提供しているもの</p>
-        </div>
+            <div class="h2-bg">
+                <h2>Service</h2>
+                <p>提供しているもの</p>
+            </div>
             <h3>コーチング & お悩み相談</h3>
             <p>人はいつからでも変われるということ実感してほしい。
                 少しでも悩みを解消して心を軽くして楽しい日々を過ごせるように。
@@ -137,19 +138,40 @@
     </section>
     <section class="contact" id="tab-4">
         <div class="bg-line">
-        <img src="https://smilecoordinate.github.io/hp/img/p09.png" class="img03" alt="">
-        <button>お申し込み</button>
+            <img src="https://smilecoordinate.github.io/hp/img/p09.png" class="img03" alt="">
+            <button>お申し込み</button>
         </div>
     </section>
     <!-- Footer -->
+
+    <script>
+        <script>
+            jQuery(document).ready(function($) {
+                // アニメーション付きでページ内ジャンプ
+                $('a[href^="#"]').on('click', function (event) {
+                    // クリックしたリンクのハッシュを取得
+                    var target = $(this.getAttribute('href'));
+                    if (target.length) {
+                        // デフォルトの動作を防ぐ
+                        event.preventDefault();
+                        // アニメーションでスクロール
+                        $('html, body').animate({
+                            scrollTop: target.offset().top
+                        }, 1000); // 1000ミリ秒（1秒）でアニメーション
+                    }
+                });
+    });
+    </script>
+
+    </script>
     <footer>
         <div class="foot">
-            <div class="foot">&copy; <span id="year"></span> 
-			Smile Coordinate
-        </div>
-        <script>
-           document.getElementById('year').textContent = new Date().getFullYear();
-        </script>
+            <div class="foot">&copy; <span id="year"></span>
+                Smile Coordinate
+            </div>
+            <script>
+            document.getElementById('year').textContent = new Date().getFullYear();
+            </script>
     </footer>
 
 </body>
