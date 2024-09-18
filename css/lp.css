@@ -189,13 +189,13 @@ h1 {
 }
 
 h2 {
-    font-size: clamp(3rem, calc(3rem + 0.5vw), 3.4rem);
+    font-size: clamp(4rem, calc(4rem + 0.5vw), 4.8rem);
     width: fit-content;
     margin: 0 auto -5%;
 }
 
 h3 {
-    font-size: clamp(2rem, calc(2rem + 0.5vw), 2.4rem);
+    font-size: clamp(3rem, calc(3rem + 0.5vw), 3.4rem);
     text-align: center;
 }
 
@@ -287,8 +287,8 @@ img {
     position: absolute;
     top: 0;
     left: 0;
-    width: 18vmin;
-    height: 8vmin;
+    width: 28vmin;
+    height: 10vmin;
     border-radius: 0 0 30px;
     border-right: 1px solid var(--accent-color);
     border-bottom: 1px solid var(--accent-color);
@@ -353,10 +353,6 @@ img {
 /* Service セクション */
 .services {
     text-align: center;
-}
-
-.services h3 {
-    margin-top: 20px;
 }
 
 /* Coaching Details セクション */
