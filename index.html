@@ -145,23 +145,21 @@
     <!-- Footer -->
 
     <script>
-        <script>
-            jQuery(document).ready(function($) {
-                // アニメーション付きでページ内ジャンプ
-                $('a[href^="#"]').on('click', function (event) {
-                    // クリックしたリンクのハッシュを取得
-                    var target = $(this.getAttribute('href'));
-                    if (target.length) {
-                        // デフォルトの動作を防ぐ
-                        event.preventDefault();
-                        // アニメーションでスクロール
-                        $('html, body').animate({
-                            scrollTop: target.offset().top
-                        }, 1000); // 1000ミリ秒（1秒）でアニメーション
-                    }
-                });
-    });
-    </script>
+        jQuery(document).ready(function ($) {
+            // アニメーション付きでページ内ジャンプ
+            $('a[href^="#"]').on('click', function (event) {
+                // クリックしたリンクのハッシュを取得
+                var target = $(this.getAttribute('href'));
+                if (target.length) {
+                    // デフォルトの動作を防ぐ
+                    event.preventDefault();
+                    // アニメーションでスクロール
+                    $('html, body').animate({
+                        scrollTop: target.offset().top
+                    }, 1000); // 1000ミリ秒（1秒）でアニメーション
+                }
+            });
+        });
 
     </script>
     <footer>
@@ -170,7 +168,7 @@
                 Smile Coordinate
             </div>
             <script>
-            document.getElementById('year').textContent = new Date().getFullYear();
+                document.getElementById('year').textContent = new Date().getFullYear();
             </script>
     </footer>
 
