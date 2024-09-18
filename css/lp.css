@@ -263,9 +263,10 @@ img {
     position: relative;
     display: flex;
     justify-content: center;
-    background-color: rgba(255, 255, 255, 0.455);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.15));
     backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
+    border-left: 1px solid var(--accent-color);
+    border-right: 1px solid var(--accent-color);
     box-shadow: 0 2px 4px rgba(46, 46, 46, 0.2);
     align-items: center;
 }
@@ -302,9 +303,7 @@ img {
 /*====TOP*/
 .main-visual {
     height: 88vmin;
-    border: 1px solid var(--accent-color);
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    border-bottom: 1px solid var(--accent-color);
 }
 
 .main-visual .overlay {
@@ -333,7 +332,11 @@ img {
 }
 
 /* About Us セクション */
-.about-us {}
+.about-us {
+    border-top: 1px solid var(--accent-color);
+    border-top-left-radius: 5px;
+    border-top-right-radius: 5px;
+}
 
 .about-us ol {
     list-style: none;
@@ -358,6 +361,11 @@ img {
 }
 
 /* Coaching Details セクション */
+.coaching-details {
+    border-bottom-left-radius: 5px;
+    border-bottom-right-radius: 5px;
+    border-top: 1px solid var(--accent-color);
+}
 .coaching-details h2 {
     margin-bottom: 2%;
 }
