@@ -417,7 +417,7 @@ img {
     margin-bottom: 5rem;
 }
 
-button {
+.btn {
     width: 300px;
     height: 65px;
     padding: 1rem 2rem;
@@ -430,7 +430,7 @@ button {
     transition: all 0.5s ease;
 }
 
-button:hover {
+.btn:hover {
     font-size: clamp(2.4rem, calc(2.4rem + 0.5vw), 2.8rem);
     width: 280px;
     background: linear-gradient(0deg, rgba(250, 107, 255, 0.07), rgba(253, 246, 234, 0) 50%, rgba(255, 150, 48, 0.05));
