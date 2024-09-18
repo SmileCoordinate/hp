@@ -303,7 +303,6 @@ img {
 /*====TOP*/
 .main-visual {
     height: 88vmin;
-    border-bottom: 1px solid var(--accent-color);
 }
 
 .main-visual .overlay {
@@ -334,8 +333,8 @@ img {
 /* About Us セクション */
 .about-us {
     border-top: 1px solid var(--accent-color);
-    border-top-left-radius: 5px;
-    border-top-right-radius: 5px;
+    border-top-left-radius: 8px;
+    border-top-right-radius: 8px;
 }
 
 .about-us ol {
@@ -361,11 +360,6 @@ img {
 }
 
 /* Coaching Details セクション */
-.coaching-details {
-    border-bottom-left-radius: 5px;
-    border-bottom-right-radius: 5px;
-    border-top: 1px solid var(--accent-color);
-}
 .coaching-details h2 {
     margin-bottom: 2%;
 }
@@ -419,6 +413,9 @@ img {
 }
 
 .contact {
+    border-bottom-left-radius: 8px;
+    border-bottom-right-radius: 8px;
+    border-bottom: 1px solid var(--accent-color);
     margin-bottom: 5rem;
 }
 
