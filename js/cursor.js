@@ -4,7 +4,7 @@
         // 遅れてついてくるストーカー要素
         var stalker = $("#stalker");
         // リンクと.accordion-wrapにホバーした時にクラス追加、離れたらクラス削除
-        $("a,.accordion-wrap,#chat-icon").hover(
+        $("a,button,#chat-icon").hover(
             function () {
                 stalker.addClass('stalker--hover');
             },
@@ -26,7 +26,7 @@
                     "top": y + "px",
                     "left": x + "px"
                 });
-            }, 150);
+            }, 50);
         });
 
         // キーを押したとき
