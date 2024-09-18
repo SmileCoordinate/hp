@@ -5,7 +5,7 @@
     <!-- 基本のメタタグ -->
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+
     <!-- SEOのためのメタタグ -->
     <meta name="description" content="Smile Coordinateのウェブサイトへようこそ。私たちの活動や目的、サービスについてご紹介します。">
     <meta name="keywords" content="Smile Coordinate, コーチング, カウンセリング, 事業サポート">
@@ -19,15 +19,11 @@
     <meta property="og:type" content="website">
     <meta property="og:locale" content="ja_JP">
 
-    <!-- Twitterカードのメタタグ -->
-    <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Smile Coordinate">
-    <meta name="twitter:description" content="私たちの活動やサービスについてご紹介します。">
-    <meta name="twitter:image" content="path/to/image.jpg"> <!-- 共有時に使われる画像のパス -->
-
     <!-- セキュリティとパフォーマンス向上のためのメタタグ -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- 古いIEブラウザ対応 -->
-    <meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' https://code.jquery.com;"> <!-- セキュリティポリシー -->
+	<meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
+	<meta http-equiv="Referrer-Policy" content="strict-origin">
+	<meta http-equiv="Strict-Transport-Security" content="max-age=31536000">
     
     <!-- ページタイトル -->
     <title>Smile Coordinate</title>
@@ -44,61 +40,12 @@
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="js/cursor.js" defer></script> <!-- deferを追加してページのレンダリングをブロックしない -->
     <script src="js/chat.js" defer></script> <!-- deferを追加 -->
-
-		<script>
-(function($) {
-    // 画像保護
-    var customContextMenu = $('#custom-context-menu');
-    
-    if (customContextMenu.length === 0) {
-        customContextMenu = $('<div id="custom-context-menu"></div>').appendTo('body');
-        customContextMenu.css({
-            'position': 'fixed',
-            'color': '#fff',
-            'backgroundColor': 'rgba(255,255,255,0.6)',
-            'padding': '10px',
-            'display': 'none',
-            'zIndex': '1000'
-        });
-        
-        // カスタムメニューに項目を追加
-        var menuItem1 = $('<div>Nothing happens when I click.</div>').appendTo(customContextMenu);
-        menuItem1.on('click', function() {
-            // メニュー項目1のクリック時の処理
-            // ここに任意のコードを追加
-        });
-
-        var menuItem2 = $('<div>Saving images is not permitted.</div>').appendTo(customContextMenu);
-        menuItem2.on('click', function() {
-            // メニュー項目2のクリック時の処理
-            // ここに任意のコードを追加
-        });
-    }
-
-    // 右クリック時のイベントハンドラ
-    $(document).on('contextmenu', function(e) {
-        e.preventDefault(); // デフォルトの右クリックメニューを無効化
-
-        // カスタムメニューを表示
-        customContextMenu.show().css({
-            'left': e.clientX + 'px',
-            'top': e.clientY + 'px'
-        });
-    });
-
-    // ドキュメントのクリック時にカスタムメニューを非表示にするイベントハンドラ
-    $(document).on('click', function(e) {
-        // カスタムメニュー自体のクリックの場合は非表示にしない
-        if (!customContextMenu.is(e.target) && customContextMenu.has(e.target).length === 0) {
-            customContextMenu.hide();
-        }
-    });
-})(jQuery);
-		</script>
+    <script src="js/security.js"></script>
 </head>
 
 <body oncontextmenu="return false;">
     <div id="stalker" class="pc"></div>
+    
     <!-- Header -->
     <header>
         <div class="logo">Smile Coordinate</div>
@@ -196,7 +143,13 @@
     </section>
     <!-- Footer -->
     <footer>
-        <p>&copy; Smile Coordinate 2024</p>
+        <div class="foot">
+            <div class="foot">&copy; <span id="year"></span> 
+			Smile Coordinate
+        </div>
+        <script>
+           document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
     </footer>
 
 </body>
