@@ -26,7 +26,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    border: thick double var(--inv);
+    border: thick double var(--hover-color);
     border-radius: 5px;
 }
 
@@ -467,7 +467,7 @@ footer p {
         height: 30px;
         border: 1px solid;
         border-radius: 50%;
-        border-color: rgba(61, 78, 236, 0.76);
+        border-color: rgba(61, 78, 236, 0.36);
         pointer-events: none;
         transition: transform 0.2s ease;
         z-index: 100;
@@ -482,7 +482,7 @@ footer p {
 
     /*== Scrollbar ==*/
     ::-webkit-scrollbar {
-        width: 6px;
+        width: 5px;
         height: 8px;
     }
 
