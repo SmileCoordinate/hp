@@ -10,6 +10,12 @@ function loadChatBotTemplate() {
     .catch(error => console.error('Error loading chatbot template:', error));
 }
 
+// toggleChatWindow関数をグローバルスコープに移動
+function toggleChatWindow() {
+  const chatWindow = document.getElementById('chat-window');
+  chatWindow.style.display = chatWindow.style.display === 'block' ? 'none' : 'block';
+}
+
 function initializeChatBot() {
   // ChatBotのスクリプト
   function toggleChatWindow() {
