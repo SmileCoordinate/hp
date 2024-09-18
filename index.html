@@ -39,8 +39,8 @@
 
     <!-- JavaScriptファイル -->
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js/cursor.js" defer></script> <!-- deferを追加してページのレンダリングをブロックしない -->
-    <script src="js/chat.js" defer></script> <!-- deferを追加 -->
+    <script src="js/cursor.js"></script> <!-- deferを追加してページのレンダリングをブロックしない -->
+    <script src="js/chat.js"></script> <!-- deferを追加 -->
     <script src="js/security.js"></script>
 </head>
 
@@ -52,7 +52,7 @@
         <div class="logo">Smile Coordinate</div>
         <nav>
             <ul>
-                <li><a href="#">Top</a></li>
+                <li><a href="#tab-0">Top</a></li>
                 <li><a href="#tab-1">About</a></li>
                 <li><a href="#tab-2">Service</a></li>
             </ul>
@@ -63,7 +63,7 @@
     </header>
 
     <!-- Main Visual Section -->
-    <section class="main-visual">
+    <section class="main-visual" id="tab-0">
         <div class="overlay">
             <h1>Smile Coordinate</h1>
             <p>自分らしく、優しい心を</p>
