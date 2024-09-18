@@ -162,7 +162,7 @@ nav {
     border: 1px solid rgba(255, 255, 255, 0.2);
     box-shadow: 0 2px 4px rgba(46, 46, 46, 0.2);
     /*7CF2FF FFFFFF 81FF8F FFAFD8*/
-    background: linear-gradient(120deg, rgba(124, 242, 255, 0.37), rgba(255, 255, 255, 0.13) 22%, rgba(129, 255, 143, 0.3)49%, rgba(255, 175, 216, 0.3)100%);
+    background: linear-gradient(120deg, rgba(124, 242, 255, 0.37), rgba(255, 255, 255, 0.13) 22%, rgba(129, 255, 143, 0.3)38%, rgba(255, 255, 255, 0.13) 74%, rgba(255, 175, 216, 0.3)100%);
     background-size: 500% 500%;
     animation: GradientBackground 22s ease infinite;
 }
