@@ -640,33 +640,31 @@ img {
     
     .coaching-details .step {
         width: 380px;
-        height: 120px;
-        padding: 1rem;
+        height: 100px;
+        padding: 0.5rem;
         border-radius: 10px;
         background: linear-gradient(180deg, rgba(250, 107, 255, 0.07), rgba(253, 246, 234, 0) 50%, rgba(255, 150, 48, 0.05));
     }
     
     .coaching-details .step img {
         width: 15vmin;
-        right: -12%;
-        bottom: -5%;
-    }
-    
-    .coaching-details .step:last-child img {
-        width: 21vmin;
+        right: -15%;
         bottom: -15%;
     }
     
+    .coaching-details .step:last-child img {
+        width: 23vmin;
+        bottom: -30%;
+    }
+    
     .coaching-details .step h3 span {
-        font-size: clamp(5rem, calc(5rem + 0.5vw), 6.4rem);
-        line-height: 6rem;
-        position: absolute;
-        top: -6%;
+        font-size: clamp(4.8rem, calc(4.8rem + 0.5vw), 6rem);
+        top: -10%;
         left: 30%;
     }
     
     .coaching-details .step h3 {
-        margin: 0% auto 3%;
+        margin: 0% auto;
     }
     
     .coaching-details .step p {
