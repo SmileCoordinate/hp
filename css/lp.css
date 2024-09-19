@@ -525,7 +525,7 @@ h3 {
 
 p {
     font-size: clamp(1.2rem, calc(1.2rem + 0.5vw), 1.4rem);
-    width: 85%;
+    width: 90%;
 }
 
 a {
@@ -593,7 +593,7 @@ img {
 .bg-line {
     position: relative;
     width: 85%;
-    height: 85%;
+    height: 100%;
     justify-content: center;
     align-items: center;
     flex-direction: column;
@@ -618,7 +618,7 @@ img {
     top: 0;
     left: 0;
     width: 28vmin;
-    height: 10vmin;
+    height: 12vmin;
     border-radius: 0 0 30px;
 }
 
@@ -631,6 +631,20 @@ img {
 .main-visual {
     height: 110vmin;
 }
+
+.about-us ol {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    margin: 0 auto 3%;
+}
+
+.about-us ol li {
+    font-size: clamp(1.8rem, calc(1.8rem + 0.5vw), 2rem);
+    font-weight: 400;
+    margin-top: 5px;
+}
+
     .coaching-details .steps {
         display: flex;
         justify-content: center;
