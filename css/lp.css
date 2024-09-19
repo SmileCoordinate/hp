@@ -116,7 +116,6 @@ body::after {
 body::before {
     right: 10%;
     border-right: 1px solid var(--accent-color);
-    z-index: 1;
 }
 
 /* ヘッダー */
