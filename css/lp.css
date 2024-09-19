@@ -579,6 +579,20 @@ img {
     flex-direction: column;
 }
 
+.about-us .bg-line,
+.coaching-details .bg-line {
+    position: absolute;
+    left: 0;
+    border-right: 1px solid var(--accent-color);
+}
+
+.services .bg-line,
+.contact .bg-line {
+    position: absolute;
+    right: 0;
+    border-left: 1px solid var(--accent-color);
+}
+
 .h2-bg {
     position: absolute;
     top: 0;
