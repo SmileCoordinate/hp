@@ -239,6 +239,7 @@ img {
     background-repeat: no-repeat;
     background-size: cover;
     shape-margin: 0.75rem;
+    z-index: 1;
 }
 
 .img01 {
@@ -547,6 +548,11 @@ img {
     shape-margin: 0.75rem;
 }
 
+.main-visual p:last-child {
+    width: 52%;
+    margin-top: 30rem;
+}
+
 .img01 {
     width: 33vmin;
     top: -4%;
@@ -554,7 +560,7 @@ img {
 
 .img02 {
     right: 2%;
-    bottom: 0%;
+    bottom: 5%;
 }
 
 .img03 {
@@ -572,7 +578,7 @@ img {
 
 .bg-line {
     position: relative;
-    width: 100%;
+    width: 85%;
     height: 85%;
     justify-content: center;
     align-items: center;
@@ -619,38 +625,34 @@ img {
     }
     
     .coaching-details .step {
-        position: relative;
-        width: 220px;
-        height: 300px;
+        width: 380px;
+        height: 120px;
         padding: 1rem;
         border-radius: 10px;
         background: linear-gradient(180deg, rgba(250, 107, 255, 0.07), rgba(253, 246, 234, 0) 50%, rgba(255, 150, 48, 0.05));
     }
     
     .coaching-details .step img {
-        width: 12vmin;
-        right: 1%;
-        bottom: 1%;
+        width: 15vmin;
+        right: -12%;
+        bottom: -5%;
     }
     
     .coaching-details .step:last-child img {
-        width: 19vmin;
-        bottom: -7.5%;
+        width: 21vmin;
+        bottom: -15%;
     }
     
     .coaching-details .step h3 span {
-        font-size: clamp(6.4rem, calc(6.4rem + 0.5vw), 7rem);
-        font-family: "Monsieur La Doulaise", cursive;
-        font-weight: 400;
-        color: var(--hover-color);
+        font-size: clamp(5rem, calc(5rem + 0.5vw), 6.4rem);
         line-height: 6rem;
         position: absolute;
-        top: 2%;
-        left: 10%;
+        top: -6%;
+        left: 30%;
     }
     
     .coaching-details .step h3 {
-        margin: 6% auto 3%;
+        margin: 0% auto 3%;
     }
     
     .coaching-details .step p {
