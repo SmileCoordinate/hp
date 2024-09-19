@@ -1,11 +1,11 @@
     /* ChatBot アイコンのスタイル */
     #chat-icon {
-        font-size: clamp(1.2rem, calc(1.2rem + 0.1vw), 1.4rem);
+        font-size: clamp(2rem, calc(2rem + 0.1vw), 2.4rem);
         font-weight: bold;
         bottom: 15px;
         width: clamp(20%, 25%, 30%);
-        height: clamp(4em, 2em, 10em);
-        backdrop-filter: blur(8px);
+        height: clamp(10rem, 1vw, 12rem);
+        backdrop-filter: blur(4px);
         border: 0;
         border-radius: 0 30px 30px 0;
         background-image: linear-gradient(0deg, rgba(255, 180, 225, 0.18), rgba(255, 255, 255, 0.01)),url('https://smilecoordinate.github.io/hp/img/Chat.png');
@@ -27,12 +27,12 @@
 
     /* 閉じるボタンのスタイル */
     #close-button {
+        font-size: clamp(1.8rem, calc(1.8rem + 0.1vw), 2rem);
         font-family: Arial, Helvetica, sans-serif;
         position: absolute;
         top: 10px;
         right: 15px;
         cursor: pointer;
-        font-size: 1.5rem;
         color: var(--def);
     }
 
@@ -103,12 +103,13 @@
 
     /* ChatBot ウィンドウのスタイル */
     #chat-window {
-        width: calc(100% - 40px);
-        height: calc(75% - 100px);
+        width: calc(100% - 100px);
+        height: calc(75% - 130px);
         position: fixed;
         bottom: 20px;
         left: 20px;
         padding: 4vw 5vw;
+        backdrop-filter: blur(3px);
         background: linear-gradient(25deg, rgba(211, 255, 107, 0.5)10%, rgba(252, 250, 245, 0.5));
         box-shadow: 0px 2px 5px 1px rgba(0, 0, 0, 0.4);
         border-radius: 20px;
