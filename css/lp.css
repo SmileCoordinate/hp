@@ -98,7 +98,6 @@ body {
     overflow-x: hidden;
 }
 
-body::after,
 body::before {
     content: "";
     width: auto;
@@ -107,14 +106,10 @@ body::before {
     top: 0;
     z-index: -1;
 }
-
-body::after {
+body::before {
+    width: 90%;
     left: 10%;
     border-left: 1px solid var(--accent-color);
-}
-
-body::before {
-    right: 10%;
     border-right: 1px solid var(--accent-color);
 }
 
@@ -493,6 +488,12 @@ footer p {
 }
 
 @media screen and (max-width: 600px) {
+    body::before {
+        width: 94%;
+        left: 3%;
+        border-left: 1px solid var(--accent-color);
+        border-right: 1px solid var(--accent-color);
+    }
     header {
         height: 55px;
     }
