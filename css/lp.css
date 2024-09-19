@@ -491,3 +491,157 @@ footer p {
 
     /*== Scrollbar END ==*/
 }
+
+@media screen and (max-width: 600px) {
+    /*====Section*/
+h1 {
+    font-size: clamp(3rem, calc(3rem + 0.5vw), 6rem);
+}
+
+h2 {
+    font-size: clamp(2.4rem, calc(2.4rem + 0.5vw), 2.8rem);
+    width: fit-content;
+    margin: 0 auto -4%;
+}
+
+h3 {
+    font-size: clamp(2rem, calc(2rem + 0.5vw), 2.4rem);
+}
+
+p {
+    font-size: clamp(1.2rem, calc(1.2rem + 0.5vw), 1.4rem);
+    width: 85%;
+}
+
+a {
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    color: var(--accent-color);
+    padding: .25rem .5rem;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: var(--accent-color);
+}
+
+a::before {
+    background: var(--accent-color);
+    bottom: 0;
+    left: 0;
+    width: 0;
+    height: 1px;
+    transition: width 0.5s ease;
+}
+
+img {
+    width: 25vmin;
+    max-width: 100%;
+    height: auto;
+    position: absolute;
+    object-fit: cover;
+    vertical-align: middle;
+    font-style: italic;
+    background-repeat: no-repeat;
+    background-size: cover;
+    shape-margin: 0.75rem;
+}
+
+.img01 {
+    width: 33vmin;
+    top: -4%;
+}
+
+.img02 {
+    right: 2%;
+    bottom: 0%;
+}
+
+.img03 {
+    top: 2%;
+}
+
+/*====Section*/
+.about-us,
+.services,
+.coaching-details,
+.contact {
+    width: 95%;
+    height: 100vmin;
+}
+
+.bg-line {
+    position: relative;
+    width: 100%;
+    height: 85%;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.h2-bg {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 28vmin;
+    height: 10vmin;
+    border-radius: 0 0 30px;
+}
+
+.h2-bg p {
+    font-weight: 700;
+    width: fit-content;
+    margin: 0 auto;
+}
+    /*====TOP*/
+.main-visual {
+    height: 110vmin;
+}
+    .coaching-details .steps {
+        display: flex;
+        justify-content: center;
+        flex-direction: column;
+        gap: 20px;
+    }
+    
+    .coaching-details .step {
+        position: relative;
+        width: 220px;
+        height: 300px;
+        padding: 1rem;
+        border-radius: 10px;
+        background: linear-gradient(180deg, rgba(250, 107, 255, 0.07), rgba(253, 246, 234, 0) 50%, rgba(255, 150, 48, 0.05));
+    }
+    
+    .coaching-details .step img {
+        width: 12vmin;
+        right: 1%;
+        bottom: 1%;
+    }
+    
+    .coaching-details .step:last-child img {
+        width: 19vmin;
+        bottom: -7.5%;
+    }
+    
+    .coaching-details .step h3 span {
+        font-size: clamp(6.4rem, calc(6.4rem + 0.5vw), 7rem);
+        font-family: "Monsieur La Doulaise", cursive;
+        font-weight: 400;
+        color: var(--hover-color);
+        line-height: 6rem;
+        position: absolute;
+        top: 2%;
+        left: 10%;
+    }
+    
+    .coaching-details .step h3 {
+        margin: 6% auto 3%;
+    }
+    
+    .coaching-details .step p {
+        font-weight: 500;
+        width: 85%;
+        margin: 0 auto;
+    }
+}
