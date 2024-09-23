@@ -93,27 +93,23 @@ body {
     font-size: clamp(1.4rem, calc(1.4rem + 0.5vw), 1.6rem);
     color: var(--text-color);
     font-weight: 400;
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('https://smilecoordinate.github.io/hp/img/202409new_sc.png') no-repeat center center / cover;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.48), rgba(255, 255, 255, 0.48)), url('https://smilecoordinate.github.io/hp/img/202409new_sc.png') no-repeat center center / cover;
     background-attachment: fixed;
     overflow-x: hidden;
 }
 
 body::before {
     content: "";
-    width: auto;
+    width: 85%;
     height: 100%;
     position: fixed;
     top: 0;
-}
-body::before {
-    width: 85%;
     left: 7.5%;
     border-left: 1px solid var(--accent-color);
     border-right: 1px solid var(--accent-color);
 }
 
 /* ヘッダー */
-
 header {
     font-weight: bold;
     width: 100%;
@@ -486,11 +482,15 @@ footer p {
 }
 
 @media screen and (max-width: 600px) {
+    body {
+        background: linear-gradient(0deg, rgba(255, 255, 255, 0.8), rgba(255, 255, 255, 0.8)), url('https://smilecoordinate.github.io/hp/img/sc_mobaile_bg.png') no-repeat center center / cover;
+    }
     body::before {
         width: 94%;
         left: 2.5%;
         border-left: 1px solid var(--accent-color);
         border-right: 1px solid var(--accent-color);
+
         z-index: 1;
     }
     header {
