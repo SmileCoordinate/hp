@@ -607,6 +607,10 @@ img {
     right: 0;
     border-left: 1px solid var(--accent-color);
 }
+.contact .bg-line {
+    right: 5%;
+    border-right: 1px solid var(--accent-color);
+}
 
 .h2-bg {
     width: 28vmin;
