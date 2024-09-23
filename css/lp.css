@@ -517,7 +517,7 @@ h1 {
 h2 {
     font-size: clamp(2.4rem, calc(2.4rem + 0.5vw), 2.8rem);
     width: fit-content;
-    margin: 0 auto -4%;
+    margin: 0 auto;
 }
 
 h3 {
@@ -564,8 +564,8 @@ img {
 }
 
 .img01 {
-    width: 33vmin;
-    top: -4%;
+    width: 50vmin;
+    top: -5vmin;
 }
 
 .img02 {
@@ -588,6 +588,17 @@ img {
     box-shadow: 0 2px 4px rgba(255, 255, 255, 0.3);
 }
 
+.about-us {
+    border-top-left-radius: 40px;
+    border-top-right-radius: 40px;
+}
+
+.contact {
+    border-bottom-left-radius: 40px;
+    border-bottom-right-radius: 40px;
+    margin-bottom: 10rem;
+}
+
 .bg-line {
     position: relative;
     width: 90%;
@@ -597,6 +608,7 @@ img {
 .about-us .bg-line,
 .coaching-details .bg-line {
     position: absolute;
+    top: 15%;
     left: 0;
     border-right: 1px solid var(--accent-color);
 }
@@ -613,15 +625,19 @@ img {
 }
 
 .h2-bg {
-    width: 28vmin;
-    height: 12vmin;
-    border-radius: 0 0 30px;
+    width: 45vmin;
+    height: 20vmin;
+    border-radius: 0 0 20px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
 }
 
 .h2-bg p {
     font-weight: 700;
     width: fit-content;
-    margin: 0 auto;
+    margin: -4% auto 0;
 }
     /*====TOP*/
 .main-visual {
