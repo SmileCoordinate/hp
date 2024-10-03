@@ -423,7 +423,7 @@ img {
 }
 
 .btn {
-    font-family: "Inter", sans-serif;
+    font-family: "Monsieur La Doulaise", cursive;
     font-size: clamp(2rem, calc(2rem + 0.5vw), 2.4rem);
     width: 280px;
     height: 60px;
@@ -447,13 +447,12 @@ img {
     height: 65px;
     border: 1px solid #fff;
     border-radius: 45px;
-    background: linear-gradient(180deg, rgba(253, 246, 234, 0.1), rgba(255, 150, 48, 0.15));
+    background: linear-gradient(0deg, rgba(253, 246, 234, 0.1), rgba(255, 150, 48, 0.15));
     box-shadow: 0px 2px 1px 0px rgba(46, 46, 46, 0.5);
     position: absolute;
 }
 
-.btn:hover,
-.btn::before:hover {
+.btn:hover {
     width: 280px;
     box-shadow: 0px 1px 1px 0px rgba(46, 46, 46, 0.75);
     background: linear-gradient(0deg, rgba(250, 107, 255, 0.07), rgba(253, 246, 234, 0) 50%, rgba(255, 150, 48, 0.05));
