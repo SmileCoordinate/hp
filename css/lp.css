@@ -580,7 +580,7 @@ img {
 }
 
 .img03 {
-    top: 2%;
+    top: -11vmin;
 }
 
 /*====Section*/
@@ -609,6 +609,10 @@ img {
     position: relative;
     width: 90%;
     height: 550px;
+}
+
+.contact .bg-line {
+    height: 280px;
 }
 
 .about-us .bg-line,
