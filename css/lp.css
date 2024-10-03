@@ -203,6 +203,7 @@ a {
     color: var(--accent-color);
     padding: .25rem .5rem;
     transition: all 0.3s ease;
+    z-index: 10;
 }
 
 a:hover {
