@@ -247,12 +247,13 @@ img {
 }
 
 .img04 {
-    right: 0;
+    right: -10.5vmin;
     bottom: 0;
 }
 
 .img05 {
-    right: -5vmin;
+    width: 14%;
+    right: -19.75%;
     bottom: 0;
 }
 
