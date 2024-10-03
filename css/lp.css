@@ -412,10 +412,11 @@ img {
 }
 
 .btn {
+    font-family: "Inter", sans-serif;
+    font-size: clamp(2rem, calc(2rem + 0.5vw), 2.4rem);
     width: 300px;
     height: 65px;
     padding: 1rem 2rem;
-    font-size: clamp(2rem, calc(2rem + 0.5vw), 2.4rem);
     background: linear-gradient(180deg, rgba(253, 246, 234, 0.1), rgba(255, 150, 48, 0.15));
     border: none;
     border-radius: 3rem;
@@ -434,9 +435,7 @@ img {
 /* フッター */
 footer {
     font-weight: bold;
-    width: fit-content;
     text-align: center;
-    margin: 0 auto;
     padding: 0.5rem 0;
     background-color: rgba(255, 255, 255, 0.7);
 }
@@ -712,10 +711,10 @@ img {
     }
 
     .btn {
+        font-size: clamp(2rem, calc(2rem + 0.5vw), 2.4rem);
         width: 75vmin;
         height: 65px;
         padding: 1rem 2rem;
-        font-size: clamp(2rem, calc(2rem + 0.5vw), 2.4rem);
         background: linear-gradient(180deg, rgba(253, 246, 234, 0.1), rgba(255, 150, 48, 0.15));
         border: none;
         border-radius: 3rem;
@@ -726,7 +725,7 @@ img {
     
     .btn:hover {
         font-size: clamp(2.4rem, calc(2.4rem + 0.5vw), 2.8rem);
-        width: 70vmin;
+        width: 80vmin;
         background: linear-gradient(0deg, rgba(250, 107, 255, 0.07), rgba(253, 246, 234, 0) 50%, rgba(255, 150, 48, 0.05));
     }
 }
