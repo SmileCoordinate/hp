@@ -243,7 +243,7 @@ img {
 }
 
 .img03 {
-    top: 2%;
+    top: -22.5%;
 }
 
 /*====Section*/
@@ -276,6 +276,10 @@ img {
     border-top: 1px solid var(--accent-color);
     border-bottom: 1px solid var(--accent-color);
     z-index: 10;
+}
+
+.contact .bg-line {
+    height: 50%;
 }
 
 .h2-bg {
