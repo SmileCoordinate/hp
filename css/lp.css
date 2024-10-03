@@ -456,6 +456,9 @@ img {
 .btn a {
     color: var(--text-color);
 }
+.btn a:hover {
+    color: var(--bg-color);
+}
 
 .btn::before {
     content: '';
