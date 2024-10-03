@@ -232,6 +232,18 @@ img {
     z-index: 11;
 }
 
+.top-img01 {
+    width: 33vmin;
+    top: 10%;
+    right: 0;
+}
+
+.top-img02 {
+    width: 25vmin;
+    top: 20%;
+    right: 0;
+}
+
 .img01 {
     width: 33vmin;
     top: -4%;
