@@ -233,14 +233,14 @@ img {
 }
 
 .top-img01 {
-    width: 33vmin;
-    top: 10%;
+    width: 35vmin;
+    top: 35%;
     right: 0;
 }
 
 .top-img02 {
     width: 25vmin;
-    top: 20%;
+    bottom: -20%;
     right: 0;
 }
 
