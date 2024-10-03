@@ -471,7 +471,8 @@ img {
     position: absolute;
 }
 
-.btn:hover {
+.btn:hover,
+.btn::before:hover {
     width: 280px;
     box-shadow: none;
     background: linear-gradient(0deg, rgba(250, 107, 255, 0.07), rgba(253, 246, 234, 0) 50%, rgba(255, 150, 48, 0.05));
