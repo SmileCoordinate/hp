@@ -515,6 +515,7 @@ footer {
 
     nav ul li a {
         font-size: clamp(1.2rem, calc(1.2rem + 0.5vw), 1.6rem);
+        margin-right: 0.75rem;
     }
 
     /*====Section*/
