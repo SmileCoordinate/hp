@@ -178,7 +178,7 @@ nav ul li a {
 h1 {
     font-size: clamp(6rem, calc(6rem + 0.5vw), 8rem);
     font-family: "Kite One", sans-serif;
-    font-weight: 400;  
+    font-weight: 400;
 }
 
 h2 {
@@ -488,15 +488,18 @@ footer {
         background-size: contain;
         background-position: center;
     }
+
     body::before {
         width: 94%;
         left: 2.5%;
         border-left: 1px solid var(--accent-color);
         border-right: 1px solid var(--accent-color);
     }
+
     header {
         height: 55px;
     }
+
     nav {
         width: fit-content;
         height: 40px;
@@ -505,168 +508,174 @@ footer {
         border: 1px solid rgba(255, 255, 255, 0.62);
         box-shadow: 0 1px 2px rgba(46, 46, 46, 0.2);
     }
+
     nav ul li {
-        margin: 0 0.5rem;
+        margin: 0;
     }
+
     nav ul li a {
         font-size: clamp(1.2rem, calc(1.2rem + 0.5vw), 1.6rem);
     }
+
     /*====Section*/
-h1 {
-    font-size: clamp(3rem, calc(3rem + 0.5vw), 6rem);
-}
+    h1 {
+        font-size: clamp(3rem, calc(3rem + 0.5vw), 6rem);
+    }
 
-h2 {
-    font-size: clamp(2.4rem, calc(2.4rem + 0.5vw), 2.8rem);
-    width: fit-content;
-    margin: 0 auto;
-}
+    h2 {
+        font-size: clamp(2.4rem, calc(2.4rem + 0.5vw), 2.8rem);
+        width: fit-content;
+        margin: 0 auto;
+    }
 
-h3 {
-    font-size: clamp(2rem, calc(2rem + 0.5vw), 2.4rem);
-}
+    h3 {
+        font-size: clamp(2rem, calc(2rem + 0.5vw), 2.4rem);
+    }
 
-p {
-    font-size: clamp(1.2rem, calc(1.2rem + 0.5vw), 1.4rem);
-    width: 90%;
-}
+    p {
+        font-size: clamp(1.2rem, calc(1.2rem + 0.5vw), 1.4rem);
+        width: 90%;
+    }
 
-a {
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
-    color: var(--accent-color);
-    padding: .25rem .5rem;
-    transition: all 0.3s ease;
-}
+    a {
+        font-family: "Inter", sans-serif;
+        font-weight: 400;
+        color: var(--accent-color);
+        padding: .25rem .5rem;
+        transition: all 0.3s ease;
+    }
 
-a:hover {
-    color: var(--accent-color);
-}
+    a:hover {
+        color: var(--accent-color);
+    }
 
-a::before {
-    background: var(--accent-color);
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 1px;
-    transition: width 0.5s ease;
-}
+    a::before {
+        background: var(--accent-color);
+        bottom: 0;
+        left: 0;
+        width: 0;
+        height: 1px;
+        transition: width 0.5s ease;
+    }
 
-img {
-    width: 25vmin;
-    max-width: 100%;
-    height: auto;
-    position: absolute;
-    object-fit: cover;
-    vertical-align: middle;
-    font-style: italic;
-    background-repeat: no-repeat;
-    background-size: cover;
-    shape-margin: 0.75rem;
-}
+    img {
+        width: 25vmin;
+        max-width: 100%;
+        height: auto;
+        position: absolute;
+        object-fit: cover;
+        vertical-align: middle;
+        font-style: italic;
+        background-repeat: no-repeat;
+        background-size: cover;
+        shape-margin: 0.75rem;
+    }
 
-.img01 {
-    width: 50vmin;
-    top: -5vmin;
-}
+    .img01 {
+        width: 50vmin;
+        top: -5vmin;
+    }
 
-.img02 {
-    right: 2%;
-    bottom: 5%;
-}
+    .img02 {
+        right: 2%;
+        bottom: 5%;
+    }
 
-.img03 {
-    top: -11vmin;
-}
+    .img03 {
+        top: -11vmin;
+    }
 
-/*====Section*/
-.about-us,
-.services,
-.coaching-details,
-.contact {
-    width: 100%;
-    height: 650px;
-    backdrop-filter: blur(8px);
-    box-shadow: none;
-}
+    /*====Section*/
+    .about-us,
+    .services,
+    .coaching-details,
+    .contact {
+        width: 100%;
+        height: 650px;
+        backdrop-filter: blur(8px);
+        box-shadow: none;
+    }
 
-.about-us {
-    border-top-left-radius: 40px;
-    border-top-right-radius: 40px;
-}
+    .about-us {
+        border-top-left-radius: 40px;
+        border-top-right-radius: 40px;
+    }
 
-.contact {
-    border-bottom-left-radius: 40px;
-    border-bottom-right-radius: 40px;
-    margin-bottom: 10rem;
-}
+    .contact {
+        border-bottom-left-radius: 40px;
+        border-bottom-right-radius: 40px;
+        margin-bottom: 10rem;
+    }
 
-.bg-line {
-    position: relative;
-    width: 90%;
-    height: 550px;
-}
+    .bg-line {
+        position: relative;
+        width: 90%;
+        height: 550px;
+    }
 
-.contact .bg-line {
-    height: 280px;
-}
+    .contact .bg-line {
+        height: 280px;
+    }
 
-.about-us .bg-line,
-.coaching-details .bg-line {
-    position: absolute;
-    top: 15%;
-    left: 0;
-    border-right: 1px solid var(--accent-color);
-}
+    .about-us .bg-line,
+    .coaching-details .bg-line {
+        position: absolute;
+        top: 15%;
+        left: 0;
+        border-right: 1px solid var(--accent-color);
+    }
 
-.services .bg-line,
-.contact .bg-line {
-    position: absolute;
-    right: 0;
-    border-left: 1px solid var(--accent-color);
-}
-.contact .bg-line {
-    right: 5%;
-    border-right: 1px solid var(--accent-color);
-}
+    .services .bg-line,
+    .contact .bg-line {
+        position: absolute;
+        right: 0;
+        border-left: 1px solid var(--accent-color);
+    }
 
-.h2-bg {
-    width: 45vmin;
-    height: 20vmin;
-    border-radius: 0 0 20px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
-}
+    .contact .bg-line {
+        right: 5%;
+        border-right: 1px solid var(--accent-color);
+    }
 
-.h2-bg p {
-    font-weight: 700;
-    width: fit-content;
-    margin: -4% auto 0;
-}
+    .h2-bg {
+        width: 45vmin;
+        height: 20vmin;
+        border-radius: 0 0 20px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+
+    .h2-bg p {
+        font-weight: 700;
+        width: fit-content;
+        margin: -4% auto 0;
+    }
+
     /*====TOP*/
-.main-visual {
-    height: 100vmin;
-    margin-bottom: 50vmin;
-}
-.main-visual p:last-child {
-    width: 60%;
-    margin-top: 0;
-}
+    .main-visual {
+        height: 100vmin;
+        margin-bottom: 50vmin;
+    }
 
-.about-us ol {
-    list-style: none;
-    padding: 0;
-    text-align: left;
-    margin: 0 auto 3%;
-}
+    .main-visual p:last-child {
+        width: 60%;
+        margin-top: 0;
+    }
 
-.about-us ol li {
-    font-size: clamp(1.8rem, calc(1.8rem + 0.5vw), 2rem);
-    font-weight: 400;
-    margin-top: 5px;
-}
+    .about-us ol {
+        list-style: none;
+        padding: 0;
+        text-align: left;
+        margin: 0 auto 3%;
+    }
+
+    .about-us ol li {
+        font-size: clamp(1.8rem, calc(1.8rem + 0.5vw), 2rem);
+        font-weight: 400;
+        margin-top: 5px;
+    }
 
     .coaching-details .steps {
         display: flex;
@@ -674,7 +683,7 @@ img {
         flex-direction: column;
         gap: 20px;
     }
-    
+
     .coaching-details .step {
         width: 85vmin;
         height: fit-content;
@@ -682,28 +691,28 @@ img {
         border-radius: 10px;
         background: linear-gradient(180deg, rgba(250, 107, 255, 0.07), rgba(253, 246, 234, 0) 50%, rgba(255, 150, 48, 0.05));
     }
-    
+
     .coaching-details .step img {
         width: 17vmin;
         right: -10%;
         bottom: -18%;
     }
-    
+
     .coaching-details .step:last-child img {
         width: 25vmin;
         bottom: -20%;
     }
-    
+
     .coaching-details .step h3 span {
         font-size: clamp(4.8rem, calc(4.8rem + 0.5vw), 6rem);
         top: -10%;
         left: 30%;
     }
-    
+
     .coaching-details .step h3 {
         margin: 0% auto;
     }
-    
+
     .coaching-details .step p {
         font-weight: 500;
         width: 85%;
@@ -722,7 +731,7 @@ img {
         cursor: pointer;
         transition: all 0.5s ease;
     }
-    
+
     .btn:hover {
         font-size: clamp(2.4rem, calc(2.4rem + 0.5vw), 2.8rem);
         width: 80vmin;
