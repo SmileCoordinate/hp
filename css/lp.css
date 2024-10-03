@@ -590,7 +590,7 @@ footer {
     .services,
     .coaching-details,
     .contact {
-        width: 100%;
+        width: 99%;
         height: 650px;
         backdrop-filter: blur(8px);
         box-shadow: none;
