@@ -473,7 +473,7 @@ img {
 
 .btn:hover {
     width: 280px;
-    box-shadow: 0px 1px 1px 0px rgba(46, 46, 46, 0.75);
+    box-shadow: none;
     background: linear-gradient(0deg, rgba(250, 107, 255, 0.07), rgba(253, 246, 234, 0) 50%, rgba(255, 150, 48, 0.05));
 }
 
