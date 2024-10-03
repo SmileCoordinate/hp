@@ -246,6 +246,16 @@ img {
     top: -22.5%;
 }
 
+.img04 {
+    right: 0;
+    bottom: 0;
+}
+
+.img05 {
+    right: -5vmin;
+    bottom: 0;
+}
+
 /*====Section*/
 .about-us,
 .services,
