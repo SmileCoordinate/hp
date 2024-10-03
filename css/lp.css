@@ -639,6 +639,13 @@ footer {
         top: -11vmin;
     }
 
+    .img04 {
+        width: 13vmin;
+        right: -5.5vmin;
+        bottom: 0;
+    }
+    
+
     /*====Section*/
     .about-us,
     .services,
