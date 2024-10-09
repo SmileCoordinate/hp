@@ -193,7 +193,7 @@ h3 {
 }
 
 p {
-    width: 60%;
+    width: 70%;
     line-height: 2.8rem;
     text-align: justify;
 }
@@ -267,7 +267,7 @@ img {
 
 .img05 {
     width: 14%;
-    right: -19.75%;
+    right: -15.75%;
     bottom: 0;
 }
 
@@ -276,7 +276,7 @@ img {
 .services,
 .coaching-details,
 .contact {
-    width: 70%;
+    width: 75%;
     height: 100vmin;
     margin: 0 auto;
     position: relative;
@@ -362,16 +362,18 @@ img {
 }
 
 .about-us ol {
-    list-style: none;
+    font-size: clamp(2rem, calc(2rem + 0.5vw), 2.4rem);
+    font-weight: 600;
+    width: 70%;
     padding: 0;
-    text-align: left;
-    margin-top: 2rem;
+    list-style: none;
+    margin: 0.5rem 0;
 }
 
 .about-us ol li {
     font-size: clamp(1.8rem, calc(1.8rem + 0.5vw), 2rem);
     font-weight: 400;
-    margin-top: 10px;
+    margin-bottom: 10px;
 }
 
 /* Service セクション */
