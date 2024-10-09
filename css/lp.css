@@ -184,7 +184,8 @@ h1 {
 h2 {
     font-size: clamp(4rem, calc(4rem + 0.5vw), 4.8rem);
     width: fit-content;
-    margin: 0 auto -5%;
+    margin: 0 auto;
+    line-height: 5rem;
 }
 
 h3 {
@@ -193,8 +194,9 @@ h3 {
 }
 
 p {
-    width: 70%;
-    line-height: 2.8rem;
+    font-size: clamp(1.6rem, calc(1.6rem + 0.1vw), 2rem);
+    width: 65%;
+    line-height: 4rem;
     text-align: justify;
 }
 
@@ -248,7 +250,7 @@ img {
 
 .img01 {
     width: 33vmin;
-    top: -10%;
+    top: -4%;
 }
 
 .img02 {
@@ -364,16 +366,16 @@ img {
 .about-us ol {
     font-size: clamp(2rem, calc(2rem + 0.5vw), 2.4rem);
     font-weight: 600;
-    width: 70%;
+    width: 65%;
     padding: 0;
     list-style: none;
-    margin: 0.5rem 0;
+    margin: 2rem 0;
 }
 
 .about-us ol li {
     font-size: clamp(1.8rem, calc(1.8rem + 0.5vw), 2rem);
     font-weight: 400;
-    margin-bottom: 10px;
+    margin-bottom: 4rem;
 }
 
 /* Service セクション */
