@@ -456,7 +456,7 @@ img {
     transition: all 0.5s ease;
 }
 .btn:hover {
-    color: var(--bg-color);
+    color: var(--accent-color);
 }
 
 .btn::before {
