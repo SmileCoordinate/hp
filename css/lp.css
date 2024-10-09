@@ -200,10 +200,10 @@ p {
 a {
     font-family: "Inter", sans-serif;
     font-weight: 400;
-    color: var(--accent-color);
     padding: .25rem .5rem;
     transition: all 0.3s ease;
     z-index: 10;
+    text-decoration: none;
 }
 
 a:hover {
@@ -453,9 +453,6 @@ img {
     justify-content: center;
     align-items: center;
 }
-.btn a {
-    color: var(--text-color);
-}
 .btn a:hover {
     color: var(--bg-color);
 }
@@ -470,8 +467,8 @@ img {
     box-shadow: 0px 2px 1px 0px rgba(46, 46, 46, 0.5);
     position: absolute;
 }
-
-.btn:hover {
+.btn:hover,
+.btn::before:hover {
     width: 280px;
     box-shadow: none;
     background: linear-gradient(0deg, rgba(250, 107, 255, 0.07), rgba(253, 246, 234, 0) 50%, rgba(255, 150, 48, 0.05));
