@@ -462,6 +462,7 @@ img {
     align-items: center;
     transition: all 0.35s ease;
 }
+
 .btn:hover {
     color: var(--accent-color);
 }
@@ -543,14 +544,15 @@ footer {
 }
 
 @media screen and (max-width: 600px) {
-.pc {
-    display: none;
-}
+    .pc {
+        display: none;
+    }
 
     body {
         background: linear-gradient(0deg, rgba(255, 255, 255, 0.38), rgba(255, 255, 255, 0.38)), url('https://smilecoordinate.github.io/hp/img/sc_mobaile_bg.png');
         background-size: contain;
         background-position: center;
+        background-repeat: no-repeat;
     }
 
     body::before {
@@ -584,7 +586,7 @@ footer {
 
     /*====Section*/
     h1 {
-        font-size: clamp(3rem, calc(3rem + 0.5vw), 6rem);
+        font-size: clamp(3rem, calc(3rem + 0.5vw), 4rem);
     }
 
     h2 {
@@ -600,6 +602,7 @@ footer {
     p {
         font-size: clamp(1.2rem, calc(1.2rem + 0.5vw), 1.4rem);
         width: 90%;
+        line-height: 2rem;
     }
 
     a {
@@ -655,7 +658,7 @@ footer {
         right: -5.5vmin;
         bottom: 0;
     }
-    
+
 
     /*====Section*/
     .about-us,
