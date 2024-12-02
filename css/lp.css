@@ -749,7 +749,7 @@ footer {
     }
 
     .about-us ol li {
-        font-size: clamp(1.8rem, calc(1.8rem + 0.5vw), 2rem);
+        font-size: clamp(1.2rem, calc(1.2rem + 0.5vw), 1.6rem);
         font-weight: 400;
         margin-top: 5px;
     }
