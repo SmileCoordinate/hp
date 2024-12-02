@@ -551,7 +551,7 @@ footer {
     body {
         background: linear-gradient(0deg, rgba(255, 255, 255, 0.38), rgba(255, 255, 255, 0.38)), url('https://smilecoordinate.github.io/hp/img/sc_mobaile_bg.png');
         background-size: contain;
-        background-position: center;
+        background-position: top;
         background-repeat: no-repeat;
     }
 
@@ -725,6 +725,7 @@ footer {
     .h2-bg p {
         font-weight: 700;
         width: fit-content;
+        line-height: 1.4rem;
         margin: -4% auto 0;
     }
 
