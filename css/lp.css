@@ -741,6 +741,8 @@ footer {
     }
 
     .about-us ol {
+        font-size: clamp(1.4rem, calc(1.4rem + 0.5vw), 2rem);
+        width: 90%;
         list-style: none;
         padding: 0;
         text-align: left;
