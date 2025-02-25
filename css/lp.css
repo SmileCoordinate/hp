@@ -281,7 +281,6 @@ img {
 .contact {
     width: 75%;
     height: 100vh;
-    margin: 0 auto;
     position: relative;
     display: flex;
     justify-content: center;
