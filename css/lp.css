@@ -285,7 +285,7 @@ img {
 
 .img--one {
     width: 33vmin;
-    bottom: 5%;
+    bottom: 15%;
 }
 
 .img--two {
@@ -314,8 +314,11 @@ main {
 }
 
 /*====Section*/
+section:first-child {
+    border-radius: 10px 0 0 10px;
+}
 section {
-    width: 85%;
+    width: 75%;
     height: 100vh;
     position: relative;
     /*display: flex;
@@ -324,7 +327,6 @@ section {
     align-content: center;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.15));
     backdrop-filter: blur(8px);
-    border-radius: 10px 0 0 10px;
     border-left: 0.5px solid var(--accent);
     border-right: 0.5px solid var(--accent);
     box-shadow: 0 2px 4px rgba(255, 255, 255, 0.3);
