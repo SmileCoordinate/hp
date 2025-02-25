@@ -328,31 +328,32 @@ img {
 }
 
 /*====TOP*/
-.main-visual {
-    height: 88vmin;
+section {
+    width: 60%;
+    height: 100vmin;
 }
 
-.main-visual .overlay {
+section .overlay {
     font-weight: 600;
     position: absolute;
-    top: 15%;
+    top: 0;
     left: 2.5%;
     /*transform: translate(-50%, -50%);*/
 }
 
-.main-visual .overlay p {
+section .overlay p {
     margin-left: 1.5%;
 }
 
-.main-visual h1 {
+section h1 {
     margin: 0;
 }
 
-.main-visual p:first-child {
+section p:first-child {
     font-size: clamp(1.6rem, calc(1.6rem + 0.5vw), 1.8rem);
 }
 
-.main-visual p:last-child {
+section p:last-child {
     width: 52%;
     margin-top: 40rem;
 }
@@ -729,12 +730,12 @@ footer {
     }
 
     /*====TOP*/
-    .main-visual {
+    section {
         height: 100vmin;
         margin-bottom: 50vmin;
     }
 
-    .main-visual p:last-child {
+    section p:last-child {
         width: 60%;
         margin-top: 0;
     }
