@@ -313,7 +313,7 @@ section {
 }
 
 /*====TOP section*/
-#tab-first {
+.main-visual {
     font-weight: 600;
     position: absolute;
     width: 50%;
