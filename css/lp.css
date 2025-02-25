@@ -244,14 +244,14 @@ img {
 
 .top-img--one {
     width: 35vmin;
-    top: 35%;
-    right: 0;
+    top: 10%;
+    right: -10%;
 }
 
 .top-img--two {
     width: 25vmin;
-    bottom: -20%;
-    right: 0;
+    bottom: 5%;
+    right: -10%;
 }
 
 .img--one {
