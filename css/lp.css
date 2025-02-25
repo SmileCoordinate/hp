@@ -199,6 +199,11 @@ p {
     width: 65%;
     line-height: 4rem;
     text-align: justify;
+    margin: 0 auto;
+}
+
+ul {
+    margin: 0 auto;
 }
 
 a {
