@@ -256,7 +256,7 @@ img {
 
 .img--one {
     width: 33vmin;
-    top: -4%;
+    bottom: 5%;
 }
 
 .img--two {
@@ -302,16 +302,16 @@ section {
     align-items: center;
 }
 
-.h2-bg {
+/*.h2-bg {
     position: absolute;
     top: 0;
     left: 0;
     width: 28vmin;
     height: 10vmin;
-    /*border-radius: 0 0 30px;
+    border-radius: 0 0 30px;
     border-right: 1px solid var(--accent-color);
-    border-bottom: 1px solid var(--accent-color);*/
-}
+    border-bottom: 1px solid var(--accent-color);
+}*/
 
 .h2-bg p {
     font-weight: 700;
