@@ -292,6 +292,7 @@ section {
     /*display: flex;
     justify-content: center;*/
     display: grid;
+    align-content: center;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.15));
     backdrop-filter: blur(8px);
     border-radius: 10px 0 0 10px;
@@ -353,7 +354,7 @@ section {
     width: 65%;
     padding: 0;
     list-style: none;
-    margin: 2rem 0;
+    margin: 2rem auto;
 }
 
 .about-us ol li {
