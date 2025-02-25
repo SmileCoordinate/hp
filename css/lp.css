@@ -184,8 +184,9 @@ h1 {
 h2 {
     font-size: clamp(4rem, calc(4rem + 0.5vw), 4.8rem);
     width: fit-content;
-    margin: 0 auto;
     line-height: 5rem;
+    top: -2%;
+    left: 17%;
 }
 
 h3 {
