@@ -202,7 +202,7 @@ p {
     margin: 0 auto;
 }
 
-ul {
+ul,ol {
     margin: 0 auto;
 }
 
@@ -294,8 +294,9 @@ section {
     display: grid;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.15));
     backdrop-filter: blur(8px);
-    border-left: 1px solid var(--accent-color);
-    border-right: 1px solid var(--accent-color);
+    border-radius: 10px 0 0 10px;
+    border-left: 0.5px solid var(--accent-color);
+    border-right: 0.5px solid var(--accent-color);
     box-shadow: 0 2px 4px rgba(255, 255, 255, 0.3);
     align-items: center;
 }
@@ -651,9 +652,6 @@ footer {
     .services,
     .coaching-details,
     .contact {
-        width: 99%;
-        height: 650px;
-        backdrop-filter: blur(8px);
         box-shadow: none;
     }
 
