@@ -280,7 +280,7 @@ img {
 .coaching-details,
 .contact {
     width: 75%;
-    height: 100vmin;
+    height: 100vh;
     margin: 0 auto;
     position: relative;
     display: flex;
@@ -327,36 +327,33 @@ img {
     margin: 0 auto;
 }
 
-/*====TOP*/
-section {
-    width: 60%;
-    height: 100vmin;
-}
-
-section .overlay {
+/*====TOP section*/
+.main-visual .overlay {
     font-weight: 600;
     position: absolute;
-    top: 0;
-    left: 2.5%;
-    /*transform: translate(-50%, -50%);*/
+    width: 50%;
+    height: 100vh;
+    transform: translate(25%, 50%)
 }
 
-section .overlay p {
+.main-visual .overlay p {
     margin-left: 1.5%;
 }
 
-section h1 {
+.main-visual h1 {
     margin: 0;
 }
 
-section p:first-child {
+.main-visual p:first-child {
     font-size: clamp(1.6rem, calc(1.6rem + 0.5vw), 1.8rem);
 }
 
-section p:last-child {
+.main-visual p:last-child {
     width: 52%;
     margin-top: 40rem;
 }
+
+
 
 /* About Us セクション */
 .about-us {
