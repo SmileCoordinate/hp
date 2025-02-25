@@ -323,7 +323,7 @@ section {
     position: absolute;
     width: 50%;
     height: 100vh;
-    transform: translate(25%, 50%)
+    transform: translate(25%, 15%)
 }
 
 .main-visual .overlay p {
@@ -634,6 +634,12 @@ footer {
     }
 
     .img--four {
+        width: 13vmin;
+        right: -5.5vmin;
+        bottom: 0;
+    }
+
+    .img--five {
         width: 13vmin;
         right: -5.5vmin;
         bottom: 0;
