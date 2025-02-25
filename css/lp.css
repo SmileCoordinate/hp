@@ -274,6 +274,11 @@ img {
     bottom: 0;
 }
 
+
+main {
+    padding-left: 35%;
+}
+
 /*====Section*/
 section {
     width: 60%;
@@ -296,9 +301,9 @@ section {
     left: 0;
     width: 28vmin;
     height: 10vmin;
-    border-radius: 0 0 30px;
+    /*border-radius: 0 0 30px;
     border-right: 1px solid var(--accent-color);
-    border-bottom: 1px solid var(--accent-color);
+    border-bottom: 1px solid var(--accent-color);*/
 }
 
 .h2-bg p {
