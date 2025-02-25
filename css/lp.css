@@ -10,13 +10,13 @@
     font-size: 62.5%;
     --root-font-size: 16;
     /*text border main rgba(46, 46, 46)*/
-    --text-color: #2e2e2e;
+    --text: #2e2e2e;
     /*sub black rgba(255, 150, 48)*/
-    --hover-color: #FF9630;
+    --hover: #FF9630;
     /*bg base rgba(253, 246, 234)*/
-    --bg-color: #FDF6EA;
+    --bg: #FDF6EA;
     /*link accent rgba(250, 107, 255)*/
-    --accent-color: #FEAFFF;
+    --accent: #FEAFFF;
 }
 
 /*== Scrollbar ==*/
@@ -26,7 +26,7 @@
 }
 
 ::-webkit-scrollbar-thumb {
-    border: thick double var(--hover-color);
+    border: thick double var(--hover);
     border-radius: 5px;
 }
 
@@ -91,7 +91,7 @@ body {
     width: 100%;
     font-family: "Zen Maru Gothic", serif;
     font-size: clamp(1.4rem, calc(1.4rem + 0.5vw), 1.6rem);
-    color: var(--text-color);
+    color: var(--text);
     font-weight: 400;
     background: linear-gradient(0deg, rgba(255, 255, 255, 0.48), rgba(255, 255, 255, 0.48)), url('https://smilecoordinate.github.io/hp/img/2--two409new_sc.png') no-repeat center center / cover;
     background-attachment: fixed;
@@ -105,8 +105,8 @@ body::before {
     position: fixed;
     top: 0;
     left: 7.5%;
-    border-left: 1px solid var(--accent-color);
-    border-right: 1px solid var(--accent-color);
+    border-left: 1px solid var(--accent);
+    border-right: 1px solid var(--accent);
     z-index: -1;
 }
 
@@ -169,7 +169,7 @@ nav ul li {
 
 nav ul li a {
     font-size: clamp(1.8rem, calc(1.8rem + 0.5vw), 2rem);
-    color: var(--text-color);
+    color: var(--text);
     text-decoration: none;
 }
 
@@ -219,11 +219,11 @@ a {
 }
 
 a:hover {
-    color: var(--accent-color);
+    color: var(--accent);
 }
 
 a::before {
-    background: var(--accent-color);
+    background: var(--accent);
     bottom: 0;
     left: 0;
     width: 0;
@@ -261,14 +261,14 @@ img {
     transform: rotate(-5deg);
     top: -40%;
     left: 20%;
-    color: var(--inv);
+    color: var(--accent);
     font-size: 2rem;
     font-family: "ff-providence-sans-web-pro", "kinuta-shin-enpitsu-it-stdn", sans-serif;
     font-weight: 400;
     font-style: italic;
     opacity: 0.45;
     filter: blur(1px);
-    z-index: -1;
+    z-index: 0;
 }
 /*===== h2 bg ======*/
 
@@ -326,8 +326,8 @@ section {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.15));
     backdrop-filter: blur(8px);
     border-radius: 10px 0 0 10px;
-    border-left: 0.5px solid var(--accent-color);
-    border-right: 0.5px solid var(--accent-color);
+    border-left: 0.5px solid var(--accent);
+    border-right: 0.5px solid var(--accent);
     box-shadow: 0 2px 4px rgba(255, 255, 255, 0.3);
     align-items: center;
 }
@@ -339,8 +339,8 @@ section {
     width: 28vmin;
     height: 10vmin;
     border-radius: 0 0 30px;
-    border-right: 1px solid var(--accent-color);
-    border-bottom: 1px solid var(--accent-color);
+    border-right: 1px solid var(--accent);
+    border-bottom: 1px solid var(--accent);
 }*/
 
 .h2-bg p {
@@ -431,7 +431,7 @@ section {
     font-size: clamp(6.4rem, calc(6.4rem + 0.5vw), 7rem);
     font-family: "Monsieur La Doulaise", cursive;
     font-weight: 400;
-    color: var(--hover-color);
+    color: var(--hover);
     line-height: 6rem;
     position: absolute;
     top: 5%;
@@ -452,7 +452,7 @@ section {
 .contact {
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
-    border-bottom: 1px solid var(--accent-color);
+    border-bottom: 1px solid var(--accent);
     margin-bottom: 5rem;
 }
 
@@ -477,7 +477,7 @@ section {
 }
 
 .btn:hover {
-    color: var(--accent-color);
+    color: var(--accent);
 }
 
 .btn::before {
@@ -570,8 +570,8 @@ footer {
     body::before {
         width: 94%;
         left: 2.5%;
-        border-left: 1px solid var(--accent-color);
-        border-right: 1px solid var(--accent-color);
+        border-left: 1px solid var(--accent);
+        border-right: 1px solid var(--accent);
     }
 
     header {
@@ -620,17 +620,17 @@ footer {
     a {
         font-family: "Inter", sans-serif;
         font-weight: 400;
-        color: var(--accent-color);
+        color: var(--accent);
         padding: .25rem .5rem;
         transition: all 0.3s ease;
     }
 
     a:hover {
-        color: var(--accent-color);
+        color: var(--accent);
     }
 
     a::before {
-        background: var(--accent-color);
+        background: var(--accent);
         bottom: 0;
         left: 0;
         width: 0;
@@ -712,19 +712,19 @@ footer {
         position: absolute;
         top: 15%;
         left: 0;
-        border-right: 1px solid var(--accent-color);
+        border-right: 1px solid var(--accent);
     }
 
     .services .bg-line,
     .contact .bg-line {
         position: absolute;
         right: 0;
-        border-left: 1px solid var(--accent-color);
+        border-left: 1px solid var(--accent);
     }
 
     .contact .bg-line {
         right: 5%;
-        border-right: 1px solid var(--accent-color);
+        border-right: 1px solid var(--accent);
     }
 
     .h2-bg {
