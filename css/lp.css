@@ -205,6 +205,9 @@ p {
 ul,ol {
     margin: 0 auto;
 }
+li {
+    list-style: none;
+}
 
 a {
     font-family: "Inter", sans-serif;
@@ -241,6 +244,33 @@ img {
     shape-margin: 0.75rem;
     z-index: 11;
 }
+
+/*===== h2 bg ======*/
+.bgfont_h2 {
+    align-items: center;
+    position: relative;
+}
+.bgfont_h2 span {
+    position: relative;
+    z-index: 2;
+}
+.bgfont_h2::before {
+    content: attr(data-en);
+    position: absolute;
+    width: fit-content;
+    transform: rotate(-5deg);
+    top: -40%;
+    left: 20%;
+    color: var(--inv);
+    font-size: 2rem;
+    font-family: "ff-providence-sans-web-pro", "kinuta-shin-enpitsu-it-stdn", sans-serif;
+    font-weight: 400;
+    font-style: italic;
+    opacity: 0.45;
+    filter: blur(1px);
+    z-index: -1;
+}
+/*===== h2 bg ======*/
 
 .top-img--one {
     width: 35vmin;
