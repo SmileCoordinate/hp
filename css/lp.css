@@ -260,15 +260,13 @@ img {
     width: fit-content;
     transform: rotate(-5deg);
     top: -40%;
-    left: 20%;
+    left: -10%;
     color: var(--accent);
-    font-size: 2rem;
-    font-family: "ff-providence-sans-web-pro", "kinuta-shin-enpitsu-it-stdn", sans-serif;
+    font-size: 5rem;
     font-weight: 400;
     font-style: italic;
-    opacity: 0.45;
-    filter: blur(1px);
-    z-index: 0;
+    opacity: 0.55;
+    z-index: -1;
 }
 /*===== h2 bg ======*/
 
