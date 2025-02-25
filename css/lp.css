@@ -275,13 +275,13 @@ img {
 .top-img--one {
     width: 35vmin;
     top: 10%;
-    right: -10%;
+    right: 0%;
 }
 
 .top-img--two {
     width: 25vmin;
     bottom: 5%;
-    right: -10%;
+    right: 0%;
 }
 
 .img--one {
@@ -359,20 +359,16 @@ section {
 }
 
 .main-visual .overlay p {
-    margin-left: 1.5%;
+    font-size: clamp(1.6rem, calc(1.6rem + 0.5vw), 1.8rem);
+    margin-left: 1%;
 }
 
 .main-visual h1 {
     margin: 0;
 }
 
-.main-visual p:first-child {
-    font-size: clamp(1.6rem, calc(1.6rem + 0.5vw), 1.8rem);
-}
-
 .main-visual p:last-child {
     width: 52%;
-    margin-top: 40rem;
 }
 
 
