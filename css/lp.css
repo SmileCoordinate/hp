@@ -93,7 +93,7 @@ body {
     font-size: clamp(1.4rem, calc(1.4rem + 0.5vw), 1.6rem);
     color: var(--text-color);
     font-weight: 400;
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.48), rgba(255, 255, 255, 0.48)), url('https://smilecoordinate.github.io/hp/img/202409new_sc.png') no-repeat center center / cover;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.48), rgba(255, 255, 255, 0.48)), url('https://smilecoordinate.github.io/hp/img/2--two409new_sc.png') no-repeat center center / cover;
     background-attachment: fixed;
     overflow-x: hidden;
 }
@@ -237,38 +237,38 @@ img {
     z-index: 11;
 }
 
-.top-img01 {
+.top-img--one {
     width: 35vmin;
     top: 35%;
     right: 0;
 }
 
-.top-img02 {
+.top-img--two {
     width: 25vmin;
     bottom: -20%;
     right: 0;
 }
 
-.img01 {
+.img--one {
     width: 33vmin;
     top: -4%;
 }
 
-.img02 {
+.img--two {
     right: 2%;
     bottom: 0%;
 }
 
-.img03 {
+.img--three {
     top: -22.5%;
 }
 
-.img04 {
+.img--four {
     right: -10.5vmin;
     bottom: 0;
 }
 
-.img05 {
+.im--five {
     width: 14%;
     right: -15.75%;
     bottom: 0;
@@ -639,21 +639,21 @@ footer {
         shape-margin: 0.75rem;
     }
 
-    .img01 {
+    .img--one {
         width: 50vmin;
         top: -5vmin;
     }
 
-    .img02 {
+    .img--two {
         right: 2%;
         bottom: 5%;
     }
 
-    .img03 {
+    .img--three {
         top: -11vmin;
     }
 
-    .img04 {
+    .img--four {
         width: 13vmin;
         right: -5.5vmin;
         bottom: 0;
