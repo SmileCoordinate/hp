@@ -93,20 +93,16 @@ body {
     font-size: clamp(1.4rem, calc(1.4rem + 0.5vw), 1.6rem);
     color: var(--text);
     font-weight: 400;
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.48), rgba(255, 255, 255, 0.48)), url('img/hp-bg.jpg') no-repeat center center / cover;
+    background: linear-gradient(0deg, rgba(255, 255, 255, 0.48), rgba(255, 255, 255, 0.48)), url('https://smilecoordinate.github.io/hp/img/hp-bg.jpg') no-repeat center center / cover;
     background-attachment: fixed;
     overflow-x: hidden;
 }
 
 body::before {
     content: "";
-    width: 85%;
     height: 100%;
     position: fixed;
-    top: 0;
-    left: 7.5%;
-    border-left: 1px solid var(--accent);
-    border-right: 1px solid var(--accent);
+    background: url("https://smilecoordinate.github.io/hp/img/flower of life.png") no-repeat center center / cover;
     z-index: -1;
 }
 
