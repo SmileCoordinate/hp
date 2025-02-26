@@ -42,7 +42,7 @@
 
     /*==bot*/
     /*ラジオボタン装飾*/
-    input {
+    #chat-window input {
         /*-webkit-appearance: none;*/
         /* remove default */
         display: block;
@@ -62,28 +62,28 @@
         animation: fadeIn_bg 0.5s ease forwards;
     }
 
-    input:checked {
+    #chat-window input:checked {
         transition: background-position .2s .15s cubic-bezier(0, 0, .2, 1), transform .20s cubic-bezier(0, 0, .2, 1);
     }
 
-    input:active {
+    #chat-window input:active {
         -webkit-transform: scale(1.5);
         transform: scale(1);
         transition: transform .1s cubic-bezier(0, 0, .2, 1);
     }
 
     /* The up/down direction logic */
-    input,
-    input:active {
+    #chat-window input,
+    #chat-window input:active {
         background-position: 0 20px;
     }
 
-    input:checked {
+    #chat-window input:checked {
         background-position: 0 0;
     }
 
-    input:checked~input,
-    input:checked~input:active {
+    #chat-window input:checked~input,
+    #chat-window input:checked~input:active {
         background-position: 0 -20px;
     }
 
@@ -391,7 +391,7 @@
 
         /*==bot*/
         /*ラジオボタン装飾 */
-        input {
+        #chat-window input {
             margin-top: 0px;
             width: 15px;
             height: 15px;
@@ -399,22 +399,22 @@
             animation: fadeIn_bg 0.5s ease forwards;
         }
 
-        input:checked {
+        #chat-window input:checked {
             transition: background-position .2s .15s cubic-bezier(0, 0, .2, 1), transform .20s cubic-bezier(0, 0, .2, 1);
         }
 
         /* The up/down direction logic */
-        input,
-        input:active {
+        #chat-window input,
+        #chat-window input:active {
             background-position: 0 20px;
         }
 
-        input:checked {
+        #chat-window input:checked {
             background-position: 0 0;
         }
 
-        input:checked~input,
-        input:checked~input:active {
+        #chat-window input:checked~input,
+        #chat-window input:checked~input:active {
             background-position: 0 -20px;
         }
 
