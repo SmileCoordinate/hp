@@ -313,7 +313,8 @@ main {
 section:first-child {
     border-radius: 10px 0 0 10px;
 }
-section {
+section,
+.sentence {
     width: 75%;
     height: 100vh;
     position: relative;
@@ -369,7 +370,6 @@ section {
 }
 
 
-
 /* About Us セクション */
 .about-us ol {
     font-size: clamp(2rem, calc(2rem + 0.5vw), 2.4rem);
@@ -387,6 +387,9 @@ section {
 }
 
 /* Service セクション */
+.services {
+    background: var(--bg);
+}
 
 /* Coaching Details セクション */
 .coaching-details h2 {
