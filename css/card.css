@@ -1,8 +1,15 @@
+.steps {
+    display: grid;
+    grid-auto-flow: column;
+    gap: 20px;
+}
+
 .step {
     position: relative;
     min-width: 250px;
     cursor: pointer;
     margin: 5%;
+    background: linear-gradient(180deg, rgba(250, 107, 255, 0.07), rgba(253, 246, 234, 0) 50%, rgba(255, 150, 48, 0.05));
 }
 
 .step .tab {
@@ -30,6 +37,7 @@
     top: -40px;
     left: -6.5%;
     transition: max-height 0.3s ease, padding 0.3s ease;
+    background: linear-gradient(180deg, rgba(250, 107, 255, 0.07), rgba(253, 246, 234, 0) 50%, rgba(255, 150, 48, 0.05));
     width: 265px;
     height: 50%;
     margin: 0 auto;

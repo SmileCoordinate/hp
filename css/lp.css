@@ -395,23 +395,6 @@ section,
     margin-bottom: 2%;
 }
 
- .steps {
-    display: grid;
-    grid-auto-flow: column;
-    gap: 20px;
-}
-
- .step {
-    position: relative;
-    width: 280px;
-    height: 340px;
-    padding: 1rem;
-    border: 1px solid #fff;
-    border-radius: 8px;
-    box-shadow: 1px 3px 4px 0 rgba(46, 46, 46, 0.5);
-    background: linear-gradient(180deg, rgba(250, 107, 255, 0.07), rgba(253, 246, 234, 0) 50%, rgba(255, 150, 48, 0.05));
-}
-
  .step img {
     width: 12vmin;
     right: 1%;
