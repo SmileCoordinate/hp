@@ -10,7 +10,7 @@
         border-radius: 0 30px 30px 0;
         background-image: linear-gradient(0deg, rgba(255, 180, 225, 0.18), rgba(255, 255, 255, 0.01)),url('https://smilecoordinate.github.io/hp/img/Chat.png');
         background-size: calc(200% - 10vw);
-        box-shadow: 1px 2px 3px var(--text-color);
+        box-shadow: 1px 2px 3px var(--text);
         background-position: center;
         background-repeat: no-repeat;
         position: fixed;
@@ -33,7 +33,7 @@
         top: 10px;
         right: 15px;
         cursor: pointer;
-        color: var(--def);
+        color: var(--text);
     }
 
     #close-button:focus {
@@ -43,8 +43,7 @@
     /*==bot*/
     /*ラジオボタン装飾*/
     #chat-window input {
-        /*-webkit-appearance: none;*/
-        /* remove default */
+        -webkit-appearance: none;
         display: block;
         color: #fff;
         font-size: 1rem;
@@ -58,18 +57,24 @@
         background-image: -webkit-radial-gradient(rgb(255, 246, 204) 0%, rgb(255, 189, 102) 15%, hsla(29, 100%, 60%, 0.3) 28%, hsla(200, 100%, 30%, 0) 70%);
         background-repeat: no-repeat;
         transition: background-position .15s cubic-bezier(.8, 0, 1, 1), transform .20s cubic-bezier(.8, 0, 1, 1);
+        vertical-align: middle;
+        -webkit-transition: background-position .15s cubic-bezier(.8, 0, 1, 1),
+        -webkit-transform .25s cubic-bezier(.8, 0, 1, 1);
         outline: none;
         animation: fadeIn_bg 0.5s ease forwards;
     }
 
     #chat-window input:checked {
         transition: background-position .2s .15s cubic-bezier(0, 0, .2, 1), transform .20s cubic-bezier(0, 0, .2, 1);
+        -webkit-transition: background-position .2s .15s cubic-bezier(0, 0, .2, 1),
+        -webkit-transform .25s cubic-bezier(0, 0, .2, 1);
     }
 
     #chat-window input:active {
         -webkit-transform: scale(1.5);
         transform: scale(1);
         transition: transform .1s cubic-bezier(0, 0, .2, 1);
+        -webkit-transition: -webkit-transform .1s cubic-bezier(0, 0, .2, 1);
     }
 
     /* The up/down direction logic */
@@ -208,7 +213,7 @@
         border-radius: 5px;
         cursor: pointer;
         outline: none;
-        border: double 4px var(--accent-color);
+        border: double 4px var(--accent);
         transition: all .4s ease-in-out;
     }
 
@@ -222,7 +227,7 @@
     }
 
     .send-button {
-        background: var(--bg-color);
+        background: var(--bg);
     }
 
     .send-button:hover,
