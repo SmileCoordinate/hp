@@ -160,23 +160,7 @@
                     <form id="contactForm" class="contact-form"
                       action="https://script.google.com/macros/s/AKfycbyN2Gl35qjTCreWck6ZkWL2Nf9wrxUD7ZWyQ0yEtPqqGnfcJmMDyaozg90feIz6z51P/exec"
                       method="POST" target="hidden_iframe" onsubmit="submitted=true;">
-                
-                      <div class="form-row">
-                        <div class="form-col">
-                          <div class="form-field col x-50">
-                            <input type="text" id="name" name="name" class="input-text" required>
-                            <label for="name" class="label">お名前</label>
-                          </div>
-                          <div class="form-field col x-50">
-                            <input type="email" id="email" name="email" class="input-text" required>
-                            <label for="email" class="label">メールアドレス</label>
-                          </div>
-                          <div class="form-field col x-50">
-                            <input type="text" id="companyName" name="companyName" class="input-text" required>
-                            <label for="companyName" class="label">Business</label>
-                          </div>
-                        </div>
-                
+
                         <!-- ラジオボタンの追加 -->
                         <div class="form-field col x-100">
                           <label class="label">お問い合わせ種別</label>
@@ -189,7 +173,19 @@
                             </label>
                           </div>
                         </div>
-                
+
+                      <div class="form-row">
+                        <div class="form-col">
+                          <div class="form-field col x-50">
+                            <input type="text" id="name" name="name" class="input-text" required>
+                            <label for="name" class="label">お名前</label>
+                          </div>
+                          <div class="form-field col x-50">
+                            <input type="email" id="email" name="email" class="input-text" required>
+                            <label for="email" class="label">メールアドレス</label>
+                          </div>
+                        </div>
+                                
                         <div class="form-field col x-100">
                           <textarea id="message" name="message" class="input-text" required></textarea>
                           <label for="message" class="label label-test">お問い合わせ内容</label>

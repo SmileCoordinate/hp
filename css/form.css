@@ -1,6 +1,5 @@
 .form-row {
-    display: flex;
-    justify-content: space-between;
+    display: grid;
  }
  
  .col {
