@@ -33,7 +33,8 @@
         rel="stylesheet">
     <link rel="stylesheet" href="css/lp.css">
     <link rel="stylesheet" href="css/bot.css">
-    <link rel="stylesheet" href="css/">
+    <link rel="stylesheet" href="css/card.css">
+    <link rel="stylesheet" href="css/form.css">
 
     <!-- ファビコン -->
     <link rel="icon" href="img/sc_logo_w600.ico"> <!-- ファビコンのパス -->
@@ -43,6 +44,7 @@
     <script src="js/cursor.js"></script> <!-- deferを追加してページのレンダリングをブロックしない -->
     <script src="js/chat.js"></script> <!-- deferを追加 -->
     <script src="js/security.js"></script>
+    <script src="js/form.js"></script>
 </head>
 
 <body oncontextmenu="return false;">
@@ -77,7 +79,7 @@
     </div>
 
     <main>
-        <!-- About Us Section -->
+        <!-- About Section -->
         <div class="sentence" id="tab--one">
             <img src="https://smilecoordinate.github.io/hp/img/p18.png" class="top-img--one pc"
             alt="sc,SmileCoordinate,スマイルコーディネート">
@@ -146,31 +148,50 @@
             <img src="https://smilecoordinate.github.io/hp/img/p15.png" class="img--two" alt="">
         </section>
 
-        <!-- Coaching Details Section -->
-        <section class="coaching-details" id="tab--three">
-            
-                <h2>コーチングでできること</h2>
-                <div class="steps">
-                    <div class="step">
-                        <h3><span>1</span>知る</h3>
-                        <p>あなたの「考え方」「価値観」「大切にしていること」「思考の癖」などを知り、向き合うこと、今やることを明確に。</p>
-                        <img src="https://smilecoordinate.github.io/hp/img/p01.png" alt="">
-                    </div>
-                    <div class="step">
-                        <h3><span>2</span>考える</h3>
-                        <p>今、これから「何をしたいのか」「どの様になりたい」のかを自身に問いかけ、曖昧でも良いので「目標」に向かうためのルーツを考える。</p>
-                        <img src="https://smilecoordinate.github.io/hp/img/p02.png" alt="">
-                    </div>
-                    <div class="step">
-                        <h3><span>3</span>行動</h3>
-                        <p>これからの「目標」に向かうために、どのような行動で達成できるか。自分に「合った計画」で、「目標の達成」に繋がる行動をしていく。</p>
-                        <img src="https://smilecoordinate.github.io/hp/img/p03.png" alt="">
-                    </div>
-                </div>
-        </section>
+        <!-- contact -->
         <section class="contact" id="tab--four">
             
                 <img src="https://smilecoordinate.github.io/hp/img/p09.png" class="img--three" alt="">
+                <div class="content-wrapper">
+                    <div class="get-in-touch">
+          
+                      <form id="contactForm" class="contact-form"
+                        action="https://script.google.com/macros/s/AKfycbyN2Gl35qjTCreWck6ZkWL2Nf9wrxUD7ZWyQ0yEtPqqGnfcJmMDyaozg90feIz6z51P/exec"
+                        method="POST" target="hidden_iframe" onsubmit="submitted=true;">
+          
+                        <div class="form-row">
+                          <div class="form-col">
+                            <div class="form-field col x-50">
+                              <input type="text" id="name" name="name" class="input-text" required>
+                              <label for="name" class="label">Name</label>
+                            </div>
+                            <div class="form-field col x-50">
+                              <input type="email" id="email" name="email" class="input-text" required>
+                              <label for="email" class="label">Address</label>
+                            </div>
+                            <div class="form-field col x-50">
+                              <input type="text" id="companyName" name="companyName" class="input-text" required>
+                              <label for="companyName" class="label">Business</label>
+                            </div>
+                          </div>
+                          <div class="form-field col x-100">
+                            <textarea id="message" name="message" class="input-text" required></textarea>
+                            <label for="message" class="label label-test">Text</label>
+                          </div>
+                        </div>
+          
+                        <div class="form-field col align-center">
+                          <div>
+                            お問合せ、お申込み前にFAQ「よくある質問」をご覧ください。<br>
+                            当サイトをご利用の際は、<a href="https://pdmizuki.github.io/website/policy.html">SitePolicy</a>
+                            をご確認ください。
+                          </div>
+                          <button type="submit" class="submit-btn">Send</button>
+                        </div>
+                      </form>
+                    </div>
+                  </div>
+
                 <a href="https://forms.gle/SpYuYiSHdgaJdh7G9">
                     <button class="btn">
                         お申し込み
@@ -178,6 +199,10 @@
                 </a>
                 <img src="https://smilecoordinate.github.io/hp/img/p10.png" class="img--four" alt="">
                 <img src="https://smilecoordinate.github.io/hp/img/p11.png" class="img--five pc" alt="">
+        </section>
+
+        <!-- voice -->
+        <section class="voice" id="tab--five">
         </section>
 
     </main>

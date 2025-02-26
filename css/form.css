@@ -1,195 +1,439 @@
-.contact-form-container {
-    position: relative;
-    width: 70%;
-    height: 100vh;
-    margin: 0 auto;
-}
-
-.box {
+.form-row {
     display: flex;
-    justify-content: center;
-    align-items: center;
-    width: 75%;
-    height: 700px;
-    margin: 5% auto;
-    padding: 2em 1em;
-    border-radius: 10px;
-    box-shadow: hsla(0, 0%, 10%, 0.2) 0px 0px 0px, inset hsla(0, 0%, 0%, 0.5) 0px 1px 3px 1px;
-}
-
-.col input {
-    color: #2e2e2e;
-}
-
-.col {
-    padding: 0 2.5rem;
-    float: left;
-    box-sizing: border-box;
-}
-
-.col.x-50 {
-    width: 50%;
-    margin-top: 2rem;
-}
-
-.col.x-100 {
-    width: 100%;
-    margin-top: 4rem;
-    margin-bottom: 0.3rem;
-}
-
-input:-internal-autofill-selected,
-.contact-form .input-text {
+    justify-content: space-between;
+ }
+ 
+ .col {
+    /*float: left;*/
+    flex: 1;
+ }
+ 
+ .col.x-50 {
+    padding: 0 1.5rem 0;
+    margin-top: 1.5rem;
+ }
+ 
+ .col.x-100 {
+    padding-right: 1.5rem;
+    margin-top: 1.5rem;
+ }
+ 
+ /*input:-internal-autofill-selected,
+ .contact-form .input-text {
     background-color: rgba(46, 46, 46, 0.25);
-}
-
-input:-webkit-autofill,
-input:-webkit-autofill:focus {
+ }*/
+ 
+ input:-webkit-autofill,
+ input:-webkit-autofill:focus {
     transition: background-color 0s 600000s, color 0s 600000s !important;
-}
-
-.content-wrapper {
-    position: relative;
-}
-
-.get-in-touch {
-    width: 100%;
+ }
+ 
+ .content-wrapper {
+    width: calc(60% - 100px);
+    position: absolute;
+    top: 25%;
+    right: 17.5%;
+    border: 1px solid rgba(217, 217, 217, 0.2);
+    mix-blend-mode: difference;
+    backdrop-filter: blur(3px);
+ }
+ 
+ .get-in-touch {
     margin: 0 auto;
     position: relative;
-}
-
-.get-in-touch .c-h3 {
-    font-size: clamp(1.8rem, calc(1.8rem + 0.5vw), 2rem);
-    font-family: Raleway, sans-serif;
-    text-align: center;
-    text-transform: uppercase;
-    letter-spacing: 1rem;
-    line-height: 4rem;
-    padding-bottom: 2rem;
-}
-
-.contact-form .form-field {
+ }
+ 
+ .contact-form .form-field {
     position: relative;
-}
-
-.contact-form .input-text {
-    font-size: clamp(1.2rem, calc(1.2rem + 0.5vw), 1.4rem);
-    font-family: Lusitana, serif;
+ }
+ 
+ .contact-form .input-text {
+    font-size: clamp(2.4rem, 1.733rem + 0.89vw, 2.8rem);
+    font-family: sans-serif;
     font-weight: 400;
+    color: var(--bg);
     display: block;
+    padding-left: 2rem;
+    width: 270px;
+    height: 75px;
+    border-width: 0;
+    background-color: var(--text);
+    border: 1px solid var(--text);
+    box-shadow: inset 0px 0px 5.5px rgba(0, 0, 0, 0.95);
+    backdrop-filter: blur(3px);
+    mix-blend-mode: difference;
+ }
+ 
+ .contact-form #message {
     width: 100%;
-    height: 80px;
-    padding: 1rem;
-    border-width: 0 0 2px 0;
-    background-color: rgba(0, 0, 0, 0);
-    background-image: none;
-    border-radius: 8px;
-    box-shadow: hsla(0, 0%, 10%, 0.2) 0px 0px 0px, inset hsla(0, 0%, 0%, 0.5) 0px 1px 3px 1px;
-}
-
-.contact-form .input-text:focus {
+    height: 251.3px;
+    margin: 0 auto;
+    padding-top: 1rem;
+ }
+ 
+ .contact-form .input-text:focus {
     outline: none;
-}
-
-.contact-form .input-text:focus+.label,
-.contact-form .input-text.not-empty+.label {
+ }
+ 
+ .contact-form .input-text:focus+.label,
+ .contact-form .input-text.not-empty+.label {
     transform: translateY(-3.5rem);
-}
-
-.contact-form .label {
-    font-size: clamp(1.4rem, calc(1.4rem + 0.1vw), 1.8rem);
+    color: rgba(200, 200, 200, 0.95);
+ }
+ 
+ .contact-form .label {
+    font-family: sans-serif;
+    font-size: clamp(1.8rem, 1.467rem + 0.44vw, 2rem);
     font-weight: 400;
-    color: rgba(0, 58, 66, 0.5);
+    color: rgba(10, 10, 10, 0.65);
+    /*-webkit-text-stroke: 0.5px rgba(50, 50, 50, 0.5);*/
     position: absolute;
-    left: 15%;
-    bottom: 35%;
-    line-height: 1.5rem;
-    transition: transform 0.3s ease-in-out;
-}
-
-.contact-form .label-test {
-    left: 7%;
-}
-
-.contact-form .submit-btn {
-    font-family: zen-maru-gothic, sans-serif;
-    font-size: clamp(1.2rem, calc(1.2rem + 0.5vw), 1.4rem);
-    width: 70pt;
+    left: 1.4em;
+    top: 0.5rem;
+    transition: transform 0.2s ease-in-out;
+ }
+ 
+ .contact-form .label-test {
+    left: 0.5em;
+ }
+ 
+ .contact-form .submit-btn {
+    font-family: sans-serif;
+    font-size: clamp(1.8rem, 1.467rem + 0.44vw, 2rem);
+    width: 42.5%;
     height: 35pt;
     display: inline-block;
-    color: var(--def);
-    background-color: var(--bg-color);
+    color: rgba(200, 200, 200, 0.5);
+    background-color: rgba(75, 75, 75, 0.5);
     text-transform: uppercase;
     letter-spacing: 0.2rem;
     line-height: 1.5rem;
-    padding: 0.35rem 0.8rem 0.5rem 1.2rem;
-    margin: 0% auto;
-    border: none;
-    cursor: pointer;
-    transition: all 0.5s ease;
-}
-.contact-form .submit-btn:hover {
-    color: var(--bg-color);
-    background: var(--inv);
-}
-
-.align-center {
-    width: 100%;
+    padding-top: 0.5rem;
     margin-top: 1.5rem;
-    text-align: center;
-}
-
-.note p {
-    margin: 0 auto;
-}
-
-
-/*===================== モーダルウィンドウ =====================*/
-.modal {
+    margin-bottom: 1.5rem;
+    border: none;
+    border: 1px solid rgba(217, 217, 217, 0.2);
+    cursor: pointer;
+    transition: all 0.35s ease;
+ }
+ 
+ .contact-form .submit-btn:hover {
+    color: var(--text);
+    background: rgba(160, 113, 113, 0.6);
+    border: none;
+ }
+ 
+ .align-center {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    padding-right: 1.5rem;
+ }
+ 
+ .align-center div {
+    font-size: clamp(1rem, 0.667rem + 0.44vw, 1.2rem);
+    font-family: sans-serif;
+    color: var(--bg);
+    width: 39vmin;
+    line-height: 1;
+    z-index: 1;
+ }
+ 
+ /*===================== モーダルウィンドウ =====================*/
+ /*未*/
+ form .modal {
     display: none;
     position: fixed;
-    z-index: 1;
-    left: 0;
+    z-index: 1000;
     top: 0;
     width: 100%;
     height: 100%;
     overflow: auto;
-    padding-top: 20%;
-}
-
-.modal-content {
-    width: 55%;
-    height: 350px;
+    margin-top: 25vmin;
+ }
+ 
+ form .modal-content {
+    width: 70vmin;
+    height: 45vmin;
     margin: 0 auto;
     padding: 20px;
-    color: var(--def);
-    background: rgba(245, 252, 246, 0.13);
-    box-shadow: 0 3px 5px 0 rgba(46, 46, 46, 0.67);
+    color: var(--text);
+    background: rgba(255, 255, 255, 0.25);
+    box-shadow: 0 2px 3px 0 rgba(46, 46, 46, 0.57);
     backdrop-filter: blur(6.5px);
-    border: 1px solid var(--bg-color);
-    border-radius: 20px;
+    border: 1px solid var(--border);
+    border-radius: 10px;
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-}
-
-.close {
-    color: var(--base-color);
+ }
+ 
+ form .modal-content p {
+    font-size: clamp(1.6rem, calc(1.6rem + 0.5vw), 1.8rem);
+    color: var(--bg);
+ }
+ 
+ form .close {
+    color: var(--text);
     font-size: 25pt;
     font-weight: bold;
     float: right;
     position: absolute;
     top: 20%;
     right: 20%;
-}
-
-.close:hover,
-.close:focus {
-    color: var(--main-color);
-    text-shadow: 0 1px 2px var(--base-color);
+ }
+ 
+ form .close:hover,
+ form .close:focus {
+    color: var(--accent);
+    text-shadow: 0 1px 2px var(--text);
     text-decoration: none;
     cursor: pointer;
-}
-
-/*===================== モーダルウィンドウ =====================*/
+ }
+ 
+ /*===================== モーダルウィンドウ =====================*/
+ 
+ @media screen and (min-width: 600px) and (max-width: 1299px) {
+    .form-row {
+       display: block;
+    }
+ 
+    .col {
+       padding: 0;
+    }
+ 
+    .col.x-50 {
+       padding: 0;
+       margin: 0.5rem auto 1rem;
+    }
+ 
+    .col.x-100 {
+       padding: 0;
+       margin-top: 1.5rem;
+    }
+ 
+    .contact-form .input-text:focus+.label,
+    .contact-form .input-text.not-empty+.label {
+       transform: translateY(-2rem);
+    }
+ 
+    .content-wrapper {
+       width: 95%;
+       padding: 0.5rem 1rem;
+       margin: 0 auto;
+       position: relative;
+       right: 0;
+       top: 5%;
+    }
+    .contact-form .input-text {
+       font-size: clamp(1.8rem, 1.343rem + 2.29vw, 2.2rem);
+       width: 100%;
+       height: 35pt;
+       padding-left: 1rem;
+       background-color: var(--bg);
+       border: 1px solid var(--border);
+    }
+ 
+    .contact-form #message {
+       height: 70pt;
+    }
+ 
+    .contact-form .label {
+       font-size: clamp(1.4rem, 1.171rem + 1.14vw, 1.6rem);
+       color: rgba(217, 217, 217, 0.75);
+       left: 2.75%;
+       top: 13.75%;
+       line-height: 2rem;
+    }
+ 
+    .contact-form .label-test {
+       top: 6.5%;
+    }
+ 
+    .contact-form .submit-btn {
+       font-size: clamp(2rem, 1.771rem + 1.14vw, 2.2rem);
+       width: 100%;
+       height: 30pt;
+       padding: 0;
+       margin: 0;
+       margin-bottom: 0.5rem;
+       margin-top: 1rem;
+    }
+ 
+    .contact-form .submit-btn:active {
+       color: var(--text);
+       background: var(--accent);
+    }
+ 
+    .align-center {
+       display: grid;
+       align-items: center;
+       justify-content: flex-start;
+    }
+ 
+    .align-center p {
+       font-size: clamp(1rem, 0.771rem + 1.14vw, 1.2rem);
+       width: 100%;
+       margin: 0;
+       margin-top: 1rem;
+       line-height: 1.2;
+       text-align: left;
+    }
+ 
+    .align-center p a {
+       font-size: clamp(1.6rem, 1.143rem + 2.29vw, 2rem);
+       margin-top: 0;
+       padding: 0.5rem;
+       border: 0;
+    }
+ 
+ }
+ 
+ 
+ @media screen and (max-width: 599px) {
+    .form-row {
+       display: block;
+    }
+ 
+    .col {
+       padding: 0;
+    }
+ 
+    .col.x-50 {
+       padding: 0;
+       margin: 0.5rem auto 1rem;
+    }
+ 
+    .col.x-100 {
+       padding: 0;
+       margin-top: 1.5rem;
+    }
+ 
+    .contact-form .input-text:focus+.label,
+    .contact-form .input-text.not-empty+.label {
+       transform: translateY(-2rem);
+    }
+ 
+    .content-wrapper {
+       width: 95%;
+       padding: 0.5rem 1rem;
+       margin: 0 auto;
+       position: relative;
+       right: 0;
+       top: 5%;
+    }
+ 
+    .contact-form .input-text {
+       font-size: clamp(1.8rem, 1.343rem + 2.29vw, 2.2rem);
+       color: var(--text);
+       width: 100%;
+       height: 38  pt;
+       padding-left: 1rem;
+       background: rgba(217, 217, 217, 0.5);
+    }
+ 
+    .contact-form #message {
+       height: 70pt;
+    }
+ 
+    .contact-form .label {
+       font-size: clamp(1.4rem, 1.171rem + 1.14vw, 1.6rem);
+       color: rgba(217, 217, 217, 0.75);
+       left: 2.75%;
+       top: 13.75%;
+       line-height: 2rem;
+    }
+ 
+    .contact-form .label-test {
+       top: 6.5%;
+    }
+ 
+    .contact-form .submit-btn {
+       font-size: clamp(2rem, 1.771rem + 1.14vw, 2.2rem);
+       width: 100%;
+       height: 30pt;
+       padding: 0;
+       margin: 0;
+       margin-bottom: 0.5rem;
+       margin-top: 1rem;
+    }
+ 
+    .contact-form .submit-btn:active {
+       color: var(--text);
+       background: var(--accent);
+    }
+ 
+    .align-center {
+       display: grid;
+       align-items: center;
+       justify-content: flex-end;
+    }
+ 
+    .align-center p {
+       font-size: clamp(1rem, 0.771rem + 1.14vw, 1.2rem);
+       width: 85%;
+       margin: 0;
+       margin-top: 1rem;
+       line-height: 1.2;
+       text-align: left;
+    }
+ 
+    .align-center p a {
+       font-size: clamp(1.6rem, 1.143rem + 2.29vw, 2rem);
+       margin-top: 0;
+       padding: 0.5rem;
+       border: 0;
+    }
+ 
+    /*===================== モーダルウィンドウ =====================*/
+    .modal {
+       display: none;
+       position: fixed;
+       z-index: 1;
+       left: 0;
+       top: 0;
+       width: 100%;
+       height: 100%;
+       overflow: auto;
+       padding-top: 20%;
+    }
+ 
+    .modal-content {
+       width: 55%;
+       height: 350px;
+       margin: 0 auto;
+       padding: 20px;
+       color: var(--text);
+       background: rgba(245, 252, 246, 0.13);
+       box-shadow: 0 3px 5px 0 rgba(46, 46, 46, 0.67);
+       backdrop-filter: blur(6.5px);
+       border: 1px solid var(--bg);
+       border-radius: 20px;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       flex-direction: column;
+    }
+ 
+    .close {
+       color: var(--base);
+       font-size: 25pt;
+       font-weight: bold;
+       float: right;
+       position: absolute;
+       top: 20%;
+       right: 20%;
+    }
+ 
+    .close:hover,
+    .close:focus {
+       color: var(--main);
+       text-shadow: 0 1px 2px var(--base);
+       text-decoration: none;
+       cursor: pointer;
+    }
+ 
+    /*===================== モーダルウィンドウ =====================*/
+ 
+ }

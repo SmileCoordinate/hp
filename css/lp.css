@@ -391,18 +391,17 @@ section,
     background: var(--bg);
 }
 
-/* Coaching Details セクション */
-.coaching-details h2 {
+ h2 {
     margin-bottom: 2%;
 }
 
-.coaching-details .steps {
+ .steps {
     display: grid;
     grid-auto-flow: column;
     gap: 20px;
 }
 
-.coaching-details .step {
+ .step {
     position: relative;
     width: 280px;
     height: 340px;
@@ -413,18 +412,18 @@ section,
     background: linear-gradient(180deg, rgba(250, 107, 255, 0.07), rgba(253, 246, 234, 0) 50%, rgba(255, 150, 48, 0.05));
 }
 
-.coaching-details .step img {
+ .step img {
     width: 12vmin;
     right: 1%;
     bottom: 1%;
 }
 
-.coaching-details .step:last-child img {
+ .step:last-child img {
     width: 19vmin;
     bottom: -7.5%;
 }
 
-.coaching-details .step h3 span {
+ .step h3 span {
     font-size: clamp(6.4rem, calc(6.4rem + 0.5vw), 7rem);
     font-family: "Monsieur La Doulaise", cursive;
     font-weight: 400;
@@ -435,11 +434,11 @@ section,
     left: 15%;
 }
 
-.coaching-details .step h3 {
+ .step h3 {
     margin: 6% auto 3%;
 }
 
-.coaching-details .step p {
+ .step p {
     font-weight: 500;
     width: 80%;
     margin: 0 auto;
@@ -676,12 +675,11 @@ footer {
 
 
     /*====Section*/
-    .about-us,
+    /*.about-us,
     .services,
-    .coaching-details,
     .contact {
         box-shadow: none;
-    }
+    }*/
 
     .about-us {
         border-top-left-radius: 40px;
@@ -705,7 +703,7 @@ footer {
     }
 
     .about-us .bg-line,
-    .coaching-details .bg-line {
+     .bg-line {
         position: absolute;
         top: 15%;
         left: 0;
@@ -767,14 +765,14 @@ footer {
         margin-top: 5px;
     }
 
-    .coaching-details .steps {
+     .steps {
         display: flex;
         justify-content: center;
         flex-direction: column;
         gap: 20px;
     }
 
-    .coaching-details .step {
+     .step {
         width: 85vmin;
         height: fit-content;
         padding: 0.5rem 0 1rem;
@@ -782,28 +780,28 @@ footer {
         background: linear-gradient(180deg, rgba(250, 107, 255, 0.07), rgba(253, 246, 234, 0) 50%, rgba(255, 150, 48, 0.05));
     }
 
-    .coaching-details .step img {
+     .step img {
         width: 17vmin;
         right: -10%;
         bottom: -18%;
     }
 
-    .coaching-details .step:last-child img {
+     .step:last-child img {
         width: 25vmin;
         bottom: -20%;
     }
 
-    .coaching-details .step h3 span {
+     .step h3 span {
         font-size: clamp(4.8rem, calc(4.8rem + 0.5vw), 6rem);
         top: -10%;
         left: 30%;
     }
 
-    .coaching-details .step h3 {
+     .step h3 {
         margin: 0% auto;
     }
 
-    .coaching-details .step p {
+     .step p {
         font-weight: 500;
         width: 85%;
         margin: 0 auto;
