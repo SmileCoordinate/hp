@@ -41,63 +41,47 @@
     }
 
     /*==bot*/
-    @keyframes fadeIn_bg {
-        from {
-            opacity: 0;
-            transform: scale(0.8);
-        }
-        to {
-            opacity: 1;
-            transform: scale(1);
-        }
-    }
-    
-    /*== bot */
     #chat-window input {
-        -webkit-appearance: none; /* remove default */
+        -webkit-appearance: none;
         display: block;
-        margin: 5px 0;
-        width: 15px;
-        height: 15px;
-        border-radius: 50%;
+        margin: 10px;
+        width: 24px;
+        height: 24px;
+        border-radius: 12px;
         cursor: pointer;
-        box-shadow: hsla(0, 0%, 10%, 0.2) 0px 0px 0px, inset hsla(0, 0%, 0%, 0.5) 0px 1px 3px 1px;
-        background-image: -webkit-radial-gradient(rgb(255, 246, 204) 0%, rgb(255, 189, 102) 15%, hsla(29, 100%, 60%, 0.3) 28%, hsla(200, 100%, 30%, 0) 70%);
+        vertical-align: middle;
+        box-shadow: hsla(0, 0%, 100%, 0.15) 0 1px 1px, inset hsla(0, 0%, 0%, 0.5) 0 0 0 1px;
+        background-color: hsla(0, 0%, 0%, 0.2);
+        background-image: -webkit-radial-gradient(hsla(200, 100%, 90%, 1) 0%, hsla(200, 100%, 70%, 1) 15%, hsla(200, 100%, 60%, 0.3) 28%, hsla(200, 100%, 30%, 0) 70%);
         background-repeat: no-repeat;
-        background-position: center 20px;
-        transition: background-position 0.15s cubic-bezier(0.8, 0, 1, 1), 
-                    transform 0.25s cubic-bezier(0.8, 0, 1, 1);
+        background-position: 0 24px;
+        -webkit-transition: background-position 0.15s cubic-bezier(0.8, 0, 1, 1),
+          -webkit-transform 0.25s cubic-bezier(0.8, 0, 1, 1);
         outline: none;
-        animation: fadeIn_bg 0.5s ease forwards;
-    }
-    
-    /* The up/down direction logic */
-    #chat-window input,
-    #chat-window input:active {
-        background-position: center 24px;
-        transform: translateY(10);
-    }
-    
-    #chat-window input:checked {
-        background-position: center 0;
-        transform: translateY(0);
-    }
-    
-    #chat-window input:checked ~ input,
-    #chat-window input:checked ~ input:active {
-        background-position: center -24px;
-        transform: translateY(-10);
-    }
-    
-    #chat-window input:checked {
-        transition: background-position 0.2s 0.15s cubic-bezier(0, 0, 0.2, 1), 
-                    transform 0.25s cubic-bezier(0, 0, 0.2, 1);
-    }
-    
-    #chat-window input:active {
-        transform: scale(1.5);
-        transition: transform 0.1s cubic-bezier(0, 0, 0.2, 1);
-    }
+      }
+      
+      /* The up/down direction logic */
+      #chat-window input,
+      #chat-window input:active {
+        background-position: 0 24px;
+      }
+      
+      #chat-window input:checked {
+        background-position: 0 0;
+        -webkit-transition: background-position 0.2s 0.15s cubic-bezier(0, 0, 0.2, 1),
+          -webkit-transform 0.25s cubic-bezier(0, 0, 0.2, 1);
+      }
+      
+      #chat-window input:checked ~ input,
+      #chat-window input:checked ~ input:active {
+        background-position: 0 -24px;
+      }
+      
+      /* クリック時の拡大アニメーション */
+      #chat-window input:active {
+        -webkit-transform: scale(1.5);
+        -webkit-transition: -webkit-transform 0.1s cubic-bezier(0, 0, 0.2, 1);
+      }
 
     /* ベーススタイル */
     .chatbot-container {

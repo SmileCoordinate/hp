@@ -428,12 +428,12 @@ section,
     letter-spacing: -0.15rem;
 }
 
-.contact {
+/*.contact {
     border-bottom-left-radius: 8px;
     border-bottom-right-radius: 8px;
     border-bottom: 1px solid var(--accent);
     margin-bottom: 5rem;
-}
+}*/
 
 .btn {
     font-family: "Monsieur La Doulaise", cursive;
