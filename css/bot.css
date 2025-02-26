@@ -10,7 +10,7 @@
         border-radius: 0 30px 30px 0;
         background-image: linear-gradient(0deg, rgba(255, 180, 225, 0.18), rgba(255, 255, 255, 0.01)),url('https://smilecoordinate.github.io/hp/img/Chat.png');
         background-size: calc(200% - 10vw);
-        box-shadow: 1px 2px 3px var(--text-color);
+        box-shadow: 1px 2px 3px var(--text);
         background-position: center;
         background-repeat: no-repeat;
         position: fixed;
@@ -33,7 +33,7 @@
         top: 10px;
         right: 15px;
         cursor: pointer;
-        color: var(--def);
+        color: var(--bg);
     }
 
     #close-button:focus {
@@ -208,7 +208,7 @@
         border-radius: 5px;
         cursor: pointer;
         outline: none;
-        border: double 4px var(--accent-color);
+        border: double 4px var(--accent);
         transition: all .4s ease-in-out;
     }
 
@@ -222,7 +222,7 @@
     }
 
     .send-button {
-        background: var(--bg-color);
+        background: var(--bg);
     }
 
     .send-button:hover,
