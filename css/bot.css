@@ -41,50 +41,51 @@
     }
 
     /*==bot*/
+    /*ラジオボタン装飾*/
     #chat-window input {
-        -webkit-appearance: none;
+        /*-webkit-appearance: none;*/
+        /* remove default */
         display: block;
-        margin: 10px;
-        width: 24px;
-        height: 24px;
-        border-radius: 12px;
+        color: #fff;
+        font-size: 1rem;
+        margin-top: 0px;
+        width: 15px;
+        height: 15px;
+        border-radius: 20px;
         cursor: pointer;
-        vertical-align: middle;
-        box-shadow: hsla(0, 0%, 100%, 0.15) 0 1px 1px, inset hsla(0, 0%, 0%, 0.5) 0 0 0 1px;
-        background-color: hsla(0, 0%, 0%, 0.2);
-        position: relative;
-        transition: transform 0.25s cubic-bezier(0.8, 0, 1, 1), opacity 0.3s ease;
-      }
-      
-      /* 疑似要素でチェックのエフェクトを作成 */
-      #chat-window input::before {
-        content: "";
-        display: block;
-        width: 100%;
-        height: 100%;
-        border-radius: 50%;
-        background: radial-gradient(hsla(200, 100%, 90%, 1) 0%, hsla(200, 100%, 70%, 1) 15%, hsla(200, 100%, 60%, 0.3) 28%, hsla(200, 100%, 30%, 0) 70%);
-        position: absolute;
-        top: 0;
-        left: 0;
-        opacity: 0;
-        transition: opacity 0.3s ease;
-      }
-      
-      /* チェック時のアニメーション */
-      #chat-window input:checked {
-        transform: scale(1.1);
-      }
-      
-      #chat-window input:checked::before {
-        opacity: 1;
-      }
-      
-      /* クリック時のアニメーション */
-      #chat-window input:active {
-        transform: scale(1.5);
-        transition: transform 0.1s cubic-bezier(0, 0, 0.2, 1);
-      }
+        /*vertical-align: middle;*/
+        box-shadow: hsla(0, 0%, 10%, 0.2) 0px 0px 0px, inset hsla(0, 0%, 0%, 0.5) 0px 1px 3px 1px;
+        background-image: -webkit-radial-gradient(rgb(255, 246, 204) 0%, rgb(255, 189, 102) 15%, hsla(29, 100%, 60%, 0.3) 28%, hsla(200, 100%, 30%, 0) 70%);
+        background-repeat: no-repeat;
+        transition: background-position .15s cubic-bezier(.8, 0, 1, 1), transform .20s cubic-bezier(.8, 0, 1, 1);
+        outline: none;
+        animation: fadeIn_bg 0.5s ease forwards;
+    }
+
+    #chat-window input:checked {
+        transition: background-position .2s .15s cubic-bezier(0, 0, .2, 1), transform .20s cubic-bezier(0, 0, .2, 1);
+    }
+
+    #chat-window input:active {
+        -webkit-transform: scale(1.5);
+        transform: scale(1);
+        transition: transform .1s cubic-bezier(0, 0, .2, 1);
+    }
+
+    /* The up/down direction logic */
+    #chat-window input,
+    #chat-window input:active {
+        background-position: 0 20px;
+    }
+
+    #chat-window input:checked {
+        background-position: 0 0;
+    }
+
+    #chat-window input:checked~input,
+    #chat-window input:checked~input:active {
+        background-position: 0 -20px;
+    }
 
     /* ベーススタイル */
     .chatbot-container {
