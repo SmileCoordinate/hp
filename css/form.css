@@ -14,7 +14,7 @@
  }
  
  .col.x-100 {
-    padding-right: 1.5rem;
+    padding-right: 4rem;
     margin-top: 1.5rem;
  }
  
@@ -32,8 +32,6 @@
     width: 90%;
     margin: 0 auto;
     border: 1px solid rgba(217, 217, 217, 0.2);
-    background: #fffdf9;
-    backdrop-filter: blur(3px);
  }
  
  .get-in-touch {
@@ -55,10 +53,8 @@
     width: 270px;
     height: 75px;
     border-width: 0;
-    background-color: #abe7af;
-    border: 1px solid var(--text);
-    box-shadow: inset 0px 0px 5.5px rgba(0, 0, 0, 0.95);
-    backdrop-filter: blur(3px);
+    background-color: #e1ebe2;
+    box-shadow: inset 0px 0px 5.5px rgb(23 65 37 / 95%);
  }
  
  .contact-form #message {
