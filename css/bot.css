@@ -72,8 +72,6 @@
     }
     
     #chat-window input:checked {
-        background-position: 0 0;
-        transform: scale(1.1);
         transition: background-position 0.2s 0.15s cubic-bezier(0, 0, 0.2, 1), 
                     transform 0.25s cubic-bezier(0, 0, 0.2, 1);
     }
@@ -86,7 +84,7 @@
     /* The up/down direction logic */
     #chat-window input,
     #chat-window input:active {
-        background-position: 0 20px;
+        background-position: 0 24px;
     }
     
     #chat-window input:checked {
@@ -95,7 +93,7 @@
     
     #chat-window input:checked ~ input,
     #chat-window input:checked ~ input:active {
-        background-position: 0 -20px;
+        background-position: 0 -24px;
     }
     
 
