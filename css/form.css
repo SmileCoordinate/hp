@@ -29,12 +29,11 @@
  }
  
  .content-wrapper {
-    width: calc(60% - 100px);
-    position: absolute;
-    top: 25%;
-    right: 17.5%;
+    width: 90%;
+    margin: 0 auto;
     border: 1px solid rgba(217, 217, 217, 0.2);
     mix-blend-mode: difference;
+    background: #fffdf9;
     backdrop-filter: blur(3px);
  }
  
@@ -57,7 +56,7 @@
     width: 270px;
     height: 75px;
     border-width: 0;
-    background-color: var(--text);
+    background-color: #abe7af;
     border: 1px solid var(--text);
     box-shadow: inset 0px 0px 5.5px rgba(0, 0, 0, 0.95);
     backdrop-filter: blur(3px);
@@ -130,10 +129,10 @@
     padding-right: 1.5rem;
  }
  
- .align-center div {
+ .align-center p {
     font-size: clamp(1rem, 0.667rem + 0.44vw, 1.2rem);
     font-family: sans-serif;
-    color: var(--bg);
+    color: var(--text);
     width: 39vmin;
     line-height: 1;
     z-index: 1;

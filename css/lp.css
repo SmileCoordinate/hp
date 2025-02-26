@@ -388,7 +388,7 @@ section,
 
 /* Service セクション */
 .services {
-    background: var(--bg);
+    background: #fffdf9;
 }
 
  h2 {
