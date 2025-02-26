@@ -41,52 +41,53 @@
     }
 
     /*==bot*/
-    /*ラジオボタン装飾*/
     #chat-window input {
+<<<<<<< HEAD
+=======
         -webkit-appearance: none;
+>>>>>>> bda17de7c7253cd020a93eb45c9b7bed47fb0906
         display: block;
         color: #fff;
         font-size: 1rem;
-        margin-top: 0px;
         width: 15px;
         height: 15px;
-        border-radius: 20px;
+        margin-top: 0px;
+        border-radius: 50%;
         cursor: pointer;
-        /*vertical-align: middle;*/
         box-shadow: hsla(0, 0%, 10%, 0.2) 0px 0px 0px, inset hsla(0, 0%, 0%, 0.5) 0px 1px 3px 1px;
         background-image: -webkit-radial-gradient(rgb(255, 246, 204) 0%, rgb(255, 189, 102) 15%, hsla(29, 100%, 60%, 0.3) 28%, hsla(200, 100%, 30%, 0) 70%);
         background-repeat: no-repeat;
+<<<<<<< HEAD
+        background-position: 0 20px;
+        transition: background-position .2s cubic-bezier(.4, 0, .2, 1), transform .2s cubic-bezier(.4, 0, .2, 1);
+=======
         transition: background-position .15s cubic-bezier(.8, 0, 1, 1), transform .20s cubic-bezier(.8, 0, 1, 1);
         vertical-align: middle;
         -webkit-transition: background-position .15s cubic-bezier(.8, 0, 1, 1),
         -webkit-transform .25s cubic-bezier(.8, 0, 1, 1);
+>>>>>>> bda17de7c7253cd020a93eb45c9b7bed47fb0906
         outline: none;
         animation: fadeIn_bg 0.5s ease forwards;
     }
-
+    
     #chat-window input:checked {
+<<<<<<< HEAD
+        background-position: 0 0;
+        transform: scale(1.1);
+        transition: background-position .2s .15s cubic-bezier(0, 0, .2, 1), transform .2s cubic-bezier(0, 0, .2, 1);
+=======
         transition: background-position .2s .15s cubic-bezier(0, 0, .2, 1), transform .20s cubic-bezier(0, 0, .2, 1);
         -webkit-transition: background-position .2s .15s cubic-bezier(0, 0, .2, 1),
         -webkit-transform .25s cubic-bezier(0, 0, .2, 1);
+>>>>>>> bda17de7c7253cd020a93eb45c9b7bed47fb0906
     }
-
+    
     #chat-window input:active {
-        -webkit-transform: scale(1.5);
-        transform: scale(1);
+        transform: scale(1.2);
         transition: transform .1s cubic-bezier(0, 0, .2, 1);
         -webkit-transition: -webkit-transform .1s cubic-bezier(0, 0, .2, 1);
     }
-
-    /* The up/down direction logic */
-    #chat-window input,
-    #chat-window input:active {
-        background-position: 0 20px;
-    }
-
-    #chat-window input:checked {
-        background-position: 0 0;
-    }
-
+    
     #chat-window input:checked~input,
     #chat-window input:checked~input:active {
         background-position: 0 -20px;
