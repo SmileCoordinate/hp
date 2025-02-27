@@ -474,6 +474,7 @@ section,
     top: 5px;
     left: 10px;
     transition: all 0.3s ease;
+    z-index: 99;
 }
 
 .btn:hover::after {
