@@ -204,6 +204,7 @@ ul,ol {
     margin: 0 auto;
 }
 li {
+    width: fit-content;
     list-style: none;
 }
 
