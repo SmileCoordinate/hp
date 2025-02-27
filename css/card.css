@@ -1,8 +1,8 @@
 .steps {
     display: grid;
     grid-auto-flow: column;
-    gap: 20px;
-    width: 100%;
+    gap: 7rem;
+    margin-left: 15%;
     overflow-y: scroll;
 }
 
@@ -19,7 +19,7 @@
     padding: 15px 30px;
     font-size: 20px;
     font-weight: bold;
-    color: white;
+    color: var(--bg);
     text-align: center;
     border-radius: 10px;
     background: linear-gradient(135deg,
@@ -33,7 +33,7 @@
 }
 
 .step .content-wrapper {
-    background: rgba(255, 255, 255, 0.2);
+    background: rgba(25, 255, 255, 0.2);
     border-radius: 10px;
     position: relative;
     top: -40px;
@@ -51,8 +51,7 @@
 }
 
 .step .content {
-    padding: 15px 30px;
-    color: white;
+    padding: 3rem 2rem;
     opacity: 0;
     transition: opacity 0.3s ease;
 }
