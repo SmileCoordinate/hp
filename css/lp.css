@@ -352,7 +352,6 @@ section,
 .main-visual {
     font-weight: 600;
     position: absolute;
-    width: 50%;
     height: 100vh;
     transform: translate(25%, 15%)
 }
