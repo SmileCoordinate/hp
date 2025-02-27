@@ -1,432 +1,435 @@
 .form-row {
-    display: grid;
- }
- 
- .col {
-    /*float: left;*/
-    flex: 1;
- }
- 
- .col.x-50 {
-    /*padding: 0 1.5rem 0;*/
-    margin-top: 1.5rem;
- }
- 
- .col.x-100 {
-    /*padding-right: 4rem;*/
-    margin-top: 1.5rem;
- }
- 
- /*input:-internal-autofill-selected,
+   display: grid;
+}
+
+.col {
+   /*float: left;*/
+   flex: 1;
+}
+
+.col.x-50 {
+   /*padding: 0 1.5rem 0;*/
+   margin-top: 1.5rem;
+}
+
+.col.x-100 {
+   /*padding-right: 4rem;*/
+   margin-top: 1.5rem;
+}
+
+/*input:-internal-autofill-selected,
  .contact-form .input-text {
     background-color: rgba(46, 46, 46, 0.25);
  }*/
- 
- input:-webkit-autofill,
- input:-webkit-autofill:focus {
-    transition: background-color 0s 600000s, color 0s 600000s !important;
- }
- 
- .content-wrapper {
-    width: 65%;
-    margin: 0 auto;
-    /*border: 1px solid rgba(217, 217, 217, 0.2);*/
- }
- 
- .get-in-touch {
-    margin: 0 auto;
-    position: relative;
- }
- 
- .contact-form .form-field {
-    position: relative;
- }
- 
- .contact-form .input-text {
-    font-size: clamp(2.4rem, 1.733rem + 0.89vw, 2.8rem);
-    font-family: sans-serif;
-    font-weight: 400;
-    color: var(--text);
-    display: block;
-    width: 90%;
-    height: 55px;
-    border-width: 0;
-    margin: 0 auto;
-    /*background-color: #e1ebe2;*/
-    background-color: #fffdfb;
-    /*box-shadow: inset 0px 0px 5.5px rgb(23 65 37 / 95%);*/
-    box-shadow: 0px 1px 3px rgba(46, 46, 46, 0.5);
-    border-radius: 10px;
- }
- 
- .contact-form #message {
-    width: 90%;
-    height: 130px;
-    margin: 0 auto;
-    padding-top: 1rem;
- }
- 
- .contact-form .input-text:focus {
-    outline: none;
- }
- 
- .contact-form .input-text:focus+.label,
- .contact-form .input-text.not-empty+.label {
-    transform: translateY(-3.5rem);
-    color: rgba(200, 200, 200, 0.95);
- }
- 
- .contact-form .label {
-    font-family: sans-serif;
-    font-size: clamp(1.8rem, 1.467rem + 0.44vw, 2rem);
-    font-weight: 400;
-    color: rgba(10, 10, 10, 0.65);
-    /*-webkit-text-stroke: 0.5px rgba(50, 50, 50, 0.5);*/
-    position: absolute;
-    left: 3.5rem;
-    top: 0.5rem;
-    transition: transform 0.2s ease-in-out;
- }
-  
- .contact-form .submit-btn {
-    font-family: sans-serif;
-    font-size: clamp(1.8rem, 1.467rem + 0.44vw, 2rem);
-    width: 15vmin;
-    height: 30pt;
-    display: inline-block;
-    color: var(--bg);
-    background-color: var(--text);
-    text-transform: uppercase;
-    letter-spacing: 0.2rem;
-    line-height: 1.5rem;
-    padding-top: 0.5rem;
-    margin-top: 1.5rem;
-    margin-bottom: 1.5rem;
-    border: none;
-    border-radius: 10px;
-    cursor: pointer;
-    transition: all 0.35s ease;
- }
- 
- .contact-form .submit-btn:hover {
-    color: var(--text);
-    background: rgba(160, 113, 113, 0.6);
-    border: none;
- }
- 
- .align-center {
+
+input:-webkit-autofill,
+input:-webkit-autofill:focus {
+   transition: background-color 0s 600000s, color 0s 600000s !important;
+}
+
+.content-wrapper {
+   width: 60%;
+   margin: 0 auto;
+   /*border: 1px solid rgba(217, 217, 217, 0.2);*/
+}
+
+.get-in-touch {
+   margin: 0 auto;
+   position: relative;
+}
+
+.contact-form .form-field {
+   position: relative;
+}
+
+.contact-form .input-text {
+   font-size: clamp(2.4rem, 1.733rem + 0.89vw, 2.8rem);
+   font-family: sans-serif;
+   font-weight: 400;
+   color: var(--text);
+   display: block;
    width: 90%;
-    display: grid;
-    align-items: center;
-    justify-content: flex-start;
-    grid-auto-flow: column;
-    margin: 0 auto;
- }
- 
- .align-center p {
-    font-size: clamp(1rem, 0.667rem + 0.44vw, 1.2rem);
-    font-family: sans-serif;
-    color: var(--text);
-    width: 90%;
-    line-height: 1.5;
-    z-index: 1;
- }
- 
- /*===================== モーダルウィンドウ =====================*/
- /*未*/
- form .modal {
-    display: none;
-    position: fixed;
-    z-index: 1000;
-    top: 0;
-    width: 100%;
-    height: 100%;
-    overflow: auto;
-    margin-top: 25vmin;
- }
- 
- form .modal-content {
-    width: 70vmin;
-    height: 45vmin;
-    margin: 0 auto;
-    padding: 20px;
-    color: var(--text);
-    background: rgba(255, 255, 255, 0.25);
-    box-shadow: 0 2px 3px 0 rgba(46, 46, 46, 0.57);
-    backdrop-filter: blur(6.5px);
-    border: 1px solid var(--border);
-    border-radius: 10px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    flex-direction: column;
- }
- 
- form .modal-content p {
-    font-size: clamp(1.6rem, calc(1.6rem + 0.5vw), 1.8rem);
-    color: var(--bg);
- }
- 
- form .close {
-    color: var(--text);
-    font-size: 25pt;
-    font-weight: bold;
-    float: right;
-    position: absolute;
-    top: 20%;
-    right: 20%;
- }
- 
- form .close:hover,
- form .close:focus {
-    color: var(--accent);
-    text-shadow: 0 1px 2px var(--text);
-    text-decoration: none;
-    cursor: pointer;
- }
- 
- /*===================== モーダルウィンドウ =====================*/
- 
- @media screen and (min-width: 600px) and (max-width: 1299px) {
-    .form-row {
-       display: block;
-    }
- 
-    .col {
-       padding: 0;
-    }
- 
-    .col.x-50 {
-       padding: 0;
-       margin: 0.5rem auto 1rem;
-    }
- 
-    .col.x-100 {
-       padding: 0;
-       margin-top: 1.5rem;
-    }
- 
-    .contact-form .input-text:focus+.label,
-    .contact-form .input-text.not-empty+.label {
-       transform: translateY(-2rem);
-    }
- 
-    .content-wrapper {
-       width: 95%;
-       padding: 0.5rem 1rem;
-       margin: 0 auto;
-       position: relative;
-       right: 0;
-       top: 5%;
-    }
-    .contact-form .input-text {
-       font-size: clamp(1.8rem, 1.343rem + 2.29vw, 2.2rem);
-       width: 100%;
-       height: 35pt;
-       padding-left: 1rem;
-       background-color: var(--bg);
-       border: 1px solid var(--border);
-    }
- 
-    .contact-form #message {
-       height: 70pt;
-    }
- 
-    .contact-form .label {
-       font-size: clamp(1.4rem, 1.171rem + 1.14vw, 1.6rem);
-       color: rgba(217, 217, 217, 0.75);
-       left: 2.75%;
-       top: 13.75%;
-       line-height: 2rem;
-    }
- 
-    .contact-form .label-test {
-       top: 6.5%;
-    }
- 
-    .contact-form .submit-btn {
-       font-size: clamp(2rem, 1.771rem + 1.14vw, 2.2rem);
-       width: 100%;
-       height: 30pt;
-       padding: 0;
-       margin: 0;
-       margin-bottom: 0.5rem;
-       margin-top: 1rem;
-    }
- 
-    .contact-form .submit-btn:active {
-       color: var(--text);
-       background: var(--accent);
-    }
- 
-    .align-center {
-       display: grid;
-       align-items: center;
-       justify-content: flex-start;
-    }
- 
-    .align-center p {
-       font-size: clamp(1rem, 0.771rem + 1.14vw, 1.2rem);
-       width: 100%;
-       margin: 0;
-       margin-top: 1rem;
-       line-height: 1.2;
-       text-align: left;
-    }
- 
-    .align-center p a {
-       font-size: clamp(1.6rem, 1.143rem + 2.29vw, 2rem);
-       margin-top: 0;
-       padding: 0.5rem;
-       border: 0;
-    }
- 
- }
- 
- 
- @media screen and (max-width: 599px) {
-    .form-row {
-       display: block;
-    }
- 
-    .col {
-       padding: 0;
-    }
- 
-    .col.x-50 {
-       padding: 0;
-       margin: 0.5rem auto 1rem;
-    }
- 
-    .col.x-100 {
-       padding: 0;
-       margin-top: 1.5rem;
-    }
- 
-    .contact-form .input-text:focus+.label,
-    .contact-form .input-text.not-empty+.label {
-       transform: translateY(-2rem);
-    }
- 
-    .content-wrapper {
-       width: 95%;
-       padding: 0.5rem 1rem;
-       margin: 0 auto;
-       position: relative;
-       right: 0;
-       top: 5%;
-    }
- 
-    .contact-form .input-text {
-       font-size: clamp(1.8rem, 1.343rem + 2.29vw, 2.2rem);
-       color: var(--text);
-       width: 100%;
-       height: 38  pt;
-       padding-left: 1rem;
-       background: rgba(217, 217, 217, 0.5);
-    }
- 
-    .contact-form #message {
-       height: 70pt;
-    }
- 
-    .contact-form .label {
-       font-size: clamp(1.4rem, 1.171rem + 1.14vw, 1.6rem);
-       color: rgba(217, 217, 217, 0.75);
-       left: 2.75%;
-       top: 13.75%;
-       line-height: 2rem;
-    }
- 
-    .contact-form .label-test {
-       top: 6.5%;
-    }
- 
-    .contact-form .submit-btn {
-       font-size: clamp(2rem, 1.771rem + 1.14vw, 2.2rem);
-       width: 100%;
-       height: 30pt;
-       padding: 0;
-       margin: 0;
-       margin-bottom: 0.5rem;
-       margin-top: 1rem;
-    }
- 
-    .contact-form .submit-btn:active {
-       color: var(--text);
-       background: var(--accent);
-    }
- 
-    .align-center {
-       display: grid;
-       align-items: center;
-       justify-content: flex-end;
-    }
- 
-    .align-center p {
-       font-size: clamp(1rem, 0.771rem + 1.14vw, 1.2rem);
-       width: 85%;
-       margin: 0;
-       margin-top: 1rem;
-       line-height: 1.2;
-       text-align: left;
-    }
- 
-    .align-center p a {
-       font-size: clamp(1.6rem, 1.143rem + 2.29vw, 2rem);
-       margin-top: 0;
-       padding: 0.5rem;
-       border: 0;
-    }
- 
-    /*===================== モーダルウィンドウ =====================*/
-    .modal {
-       display: none;
-       position: fixed;
-       z-index: 1;
-       left: 0;
-       top: 0;
-       width: 100%;
-       height: 100%;
-       overflow: auto;
-       padding-top: 20%;
-    }
- 
-    .modal-content {
-       width: 55%;
-       height: 350px;
-       margin: 0 auto;
-       padding: 20px;
-       color: var(--text);
-       background: rgba(245, 252, 246, 0.13);
-       box-shadow: 0 3px 5px 0 rgba(46, 46, 46, 0.67);
-       backdrop-filter: blur(6.5px);
-       border: 1px solid var(--bg);
-       border-radius: 20px;
-       display: flex;
-       justify-content: center;
-       align-items: center;
-       flex-direction: column;
-    }
- 
-    .close {
-       color: var(--base);
-       font-size: 25pt;
-       font-weight: bold;
-       float: right;
-       position: absolute;
-       top: 20%;
-       right: 20%;
-    }
- 
-    .close:hover,
-    .close:focus {
-       color: var(--main);
-       text-shadow: 0 1px 2px var(--base);
-       text-decoration: none;
-       cursor: pointer;
-    }
- 
-    /*===================== モーダルウィンドウ =====================*/
- 
- }
+   height: 35pt;
+   border-width: 0;
+   margin: 0 auto;
+   padding-left: 2rem;
+   /*background-color: #e1ebe2;*/
+   background-color: #fffdfb;
+   /*box-shadow: inset 0px 0px 5.5px rgb(23 65 37 / 95%);*/
+   box-shadow: 0px 1px 3px rgba(46, 46, 46, 0.5);
+   border-radius: 10px;
+}
+
+.contact-form #message {
+   width: 90%;
+   height: 130px;
+   margin: 0 auto;
+   padding-top: 1rem;
+}
+
+.contact-form .input-text:focus {
+   outline: none;
+}
+
+.contact-form .input-text:focus+.label,
+.contact-form .input-text.not-empty+.label {
+   font-size: 1.4rem;
+   transform: translateY(-1.5rem);
+   color: rgba(200, 200, 200, 0.95);
+}
+
+.contact-form .label {
+   font-family: sans-serif;
+   font-size: clamp(1.8rem, 1.467rem + 0.44vw, 2rem);
+   font-weight: 400;
+   color: rgba(10, 10, 10, 0.65);
+   /*-webkit-text-stroke: 0.5px rgba(50, 50, 50, 0.5);*/
+   position: absolute;
+   left: 3.5rem;
+   top: 0.5rem;
+   transition: transform 0.2s ease-in-out;
+}
+
+.contact-form .submit-btn {
+   font-family: sans-serif;
+   font-size: clamp(1.8rem, 1.467rem + 0.44vw, 2rem);
+   width: 45%;
+   height: 22pt;
+   display: inline-block;
+   color: var(--bg);
+   background-color: var(--text);
+   text-transform: uppercase;
+   letter-spacing: 0.2rem;
+   line-height: 1.5rem;
+   padding-top: 0.5rem;
+   margin: 1.5rem auto;
+   border: none;
+   border-radius: 10px;
+   cursor: pointer;
+   transition: all 0.35s ease;
+}
+
+.contact-form .submit-btn:hover {
+   color: var(--text);
+   background: rgba(160, 113, 113, 0.6);
+   border: none;
+}
+
+.align-center {
+   width: 100%;
+   display: grid;
+   align-items: center;
+   justify-content: flex-start;
+   /*grid-auto-flow: column;*/
+   margin: 0.5rem auto;
+}
+
+.radio-group,
+.align-center p {
+   font-size: clamp(1rem, 0.667rem + 0.44vw, 1.2rem);
+   font-family: sans-serif;
+   color: var(--text);
+   width: 90%;
+   line-height: 1.5;
+   z-index: 1;
+}
+
+/*===================== モーダルウィンドウ =====================*/
+/*未*/
+form .modal {
+   display: none;
+   position: fixed;
+   z-index: 1000;
+   top: 0;
+   width: 100%;
+   height: 100%;
+   overflow: auto;
+   margin-top: 25vmin;
+}
+
+form .modal-content {
+   width: 70vmin;
+   height: 45vmin;
+   margin: 0 auto;
+   padding: 20px;
+   color: var(--text);
+   background: rgba(255, 255, 255, 0.25);
+   box-shadow: 0 2px 3px 0 rgba(46, 46, 46, 0.57);
+   backdrop-filter: blur(6.5px);
+   border: 1px solid var(--border);
+   border-radius: 10px;
+   display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
+form .modal-content p {
+   font-size: clamp(1.6rem, calc(1.6rem + 0.5vw), 1.8rem);
+   color: var(--bg);
+}
+
+form .close {
+   color: var(--text);
+   font-size: 25pt;
+   font-weight: bold;
+   float: right;
+   position: absolute;
+   top: 20%;
+   right: 20%;
+}
+
+form .close:hover,
+form .close:focus {
+   color: var(--accent);
+   text-shadow: 0 1px 2px var(--text);
+   text-decoration: none;
+   cursor: pointer;
+}
+
+/*===================== モーダルウィンドウ =====================*/
+
+@media screen and (min-width: 600px) and (max-width: 1299px) {
+   .form-row {
+      display: block;
+   }
+
+   .col {
+      padding: 0;
+   }
+
+   .col.x-50 {
+      padding: 0;
+      margin: 0.5rem auto 1rem;
+   }
+
+   .col.x-100 {
+      padding: 0;
+      margin-top: 1.5rem;
+   }
+
+   .contact-form .input-text:focus+.label,
+   .contact-form .input-text.not-empty+.label {
+      transform: translateY(-2rem);
+   }
+
+   .content-wrapper {
+      width: 95%;
+      padding: 0.5rem 1rem;
+      margin: 0 auto;
+      position: relative;
+      right: 0;
+      top: 5%;
+   }
+
+   .contact-form .input-text {
+      font-size: clamp(1.8rem, 1.343rem + 2.29vw, 2.2rem);
+      width: 100%;
+      height: 35pt;
+      padding-left: 1rem;
+      background-color: var(--bg);
+      border: 1px solid var(--border);
+   }
+
+   .contact-form #message {
+      height: 70pt;
+   }
+
+   .contact-form .label {
+      font-size: clamp(1.4rem, 1.171rem + 1.14vw, 1.6rem);
+      color: rgba(217, 217, 217, 0.75);
+      left: 2.75%;
+      top: 13.75%;
+      line-height: 2rem;
+   }
+
+   .contact-form .label-test {
+      top: 6.5%;
+   }
+
+   .contact-form .submit-btn {
+      font-size: clamp(2rem, 1.771rem + 1.14vw, 2.2rem);
+      width: 100%;
+      height: 30pt;
+      padding: 0;
+      margin: 0;
+      margin-bottom: 0.5rem;
+      margin-top: 1rem;
+   }
+
+   .contact-form .submit-btn:active {
+      color: var(--text);
+      background: var(--accent);
+   }
+
+   .align-center {
+      display: grid;
+      align-items: center;
+      justify-content: flex-start;
+   }
+
+   .align-center p {
+      font-size: clamp(1rem, 0.771rem + 1.14vw, 1.2rem);
+      width: 100%;
+      margin: 0;
+      margin-top: 1rem;
+      line-height: 1.2;
+      text-align: left;
+   }
+
+   .align-center p a {
+      font-size: clamp(1.6rem, 1.143rem + 2.29vw, 2rem);
+      margin-top: 0;
+      padding: 0.5rem;
+      border: 0;
+   }
+
+}
+
+
+@media screen and (max-width: 599px) {
+   .form-row {
+      display: block;
+   }
+
+   .col {
+      padding: 0;
+   }
+
+   .col.x-50 {
+      padding: 0;
+      margin: 0.5rem auto 1rem;
+   }
+
+   .col.x-100 {
+      padding: 0;
+      margin-top: 1.5rem;
+   }
+
+   .contact-form .input-text:focus+.label,
+   .contact-form .input-text.not-empty+.label {
+      transform: translateY(-2rem);
+   }
+
+   .content-wrapper {
+      width: 95%;
+      padding: 0.5rem 1rem;
+      margin: 0 auto;
+      position: relative;
+      right: 0;
+      top: 5%;
+   }
+
+   .contact-form .input-text {
+      font-size: clamp(1.8rem, 1.343rem + 2.29vw, 2.2rem);
+      color: var(--text);
+      width: 100%;
+      height: 38 pt;
+      padding-left: 1rem;
+      background: rgba(217, 217, 217, 0.5);
+   }
+
+   .contact-form #message {
+      height: 70pt;
+   }
+
+   .contact-form .label {
+      font-size: clamp(1.4rem, 1.171rem + 1.14vw, 1.6rem);
+      color: rgba(217, 217, 217, 0.75);
+      left: 2.75%;
+      top: 13.75%;
+      line-height: 2rem;
+   }
+
+   .contact-form .label-test {
+      top: 6.5%;
+   }
+
+   .contact-form .submit-btn {
+      font-size: clamp(2rem, 1.771rem + 1.14vw, 2.2rem);
+      width: 100%;
+      height: 30pt;
+      padding: 0;
+      margin: 0;
+      margin-bottom: 0.5rem;
+      margin-top: 1rem;
+   }
+
+   .contact-form .submit-btn:active {
+      color: var(--text);
+      background: var(--accent);
+   }
+
+   .align-center {
+      display: grid;
+      align-items: center;
+      justify-content: flex-end;
+   }
+
+   .align-center p {
+      font-size: clamp(1rem, 0.771rem + 1.14vw, 1.2rem);
+      width: 85%;
+      margin: 0;
+      margin-top: 1rem;
+      line-height: 1.2;
+      text-align: left;
+   }
+
+   .align-center p a {
+      font-size: clamp(1.6rem, 1.143rem + 2.29vw, 2rem);
+      margin-top: 0;
+      padding: 0.5rem;
+      border: 0;
+   }
+
+   /*===================== モーダルウィンドウ =====================*/
+   .modal {
+      display: none;
+      position: fixed;
+      z-index: 1;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      overflow: auto;
+      padding-top: 20%;
+   }
+
+   .modal-content {
+      width: 55%;
+      height: 350px;
+      margin: 0 auto;
+      padding: 20px;
+      color: var(--text);
+      background: rgba(245, 252, 246, 0.13);
+      box-shadow: 0 3px 5px 0 rgba(46, 46, 46, 0.67);
+      backdrop-filter: blur(6.5px);
+      border: 1px solid var(--bg);
+      border-radius: 20px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+   }
+
+   .close {
+      color: var(--base);
+      font-size: 25pt;
+      font-weight: bold;
+      float: right;
+      position: absolute;
+      top: 20%;
+      right: 20%;
+   }
+
+   .close:hover,
+   .close:focus {
+      color: var(--main);
+      text-shadow: 0 1px 2px var(--base);
+      text-decoration: none;
+      cursor: pointer;
+   }
+
+   /*===================== モーダルウィンドウ =====================*/
+
+}
