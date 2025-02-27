@@ -73,7 +73,7 @@ input:-webkit-autofill:focus {
 
 .contact-form .input-text:focus+.label,
 .contact-form .input-text.not-empty+.label {
-   font-size: 1.4rem;
+   font-size: 1.6rem;
    transform: translateY(-1.5rem);
    color: rgba(200, 200, 200, 0.95);
 }
@@ -119,7 +119,6 @@ input:-webkit-autofill:focus {
    width: 100%;
    display: grid;
    align-items: center;
-   justify-content: flex-start;
    /*grid-auto-flow: column;*/
    margin: 0.5rem auto;
 }
@@ -129,7 +128,8 @@ input:-webkit-autofill:focus {
    font-size: clamp(1rem, 0.667rem + 0.44vw, 1.2rem);
    font-family: sans-serif;
    color: var(--text);
-   width: 90%;
+   width: fit-content;
+   margin-left: 2rem;
    line-height: 1.5;
    z-index: 1;
 }

@@ -441,7 +441,7 @@ section,
     width: 280px;
     height: 60px;
     padding: 1rem 2rem;
-    background: linear-gradient(0deg, #7DFFD6 10%, #F1FFC1 50%);
+    background: linear-gradient(0deg, #CFDEFF 10%, #C0FC6D 50%);
     border: none;
     border-radius: 45px;
     border: 0.5px solid #fff;
@@ -453,6 +453,7 @@ section,
     justify-content: center;
     align-items: center;
     transition: all 0.35s ease;
+    position: relative;
 }
 
 .btn:hover {
