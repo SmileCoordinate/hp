@@ -93,7 +93,8 @@ body {
     font-size: clamp(1.4rem, calc(1.4rem + 0.5vw), 1.6rem);
     color: var(--text);
     font-weight: 400;
-    background: linear-gradient(0deg, rgba(255, 255, 255, 0.48), rgba(255, 255, 255, 0.48)), url('https://smilecoordinate.github.io/hp/img/hp-bg.jpg') no-repeat center center / cover;
+    /*background: linear-gradient(0deg, rgba(255, 255, 255, 0.48), rgba(255, 255, 255, 0.48)), url('https://smilecoordinate.github.io/hp/img/hp-bg.jpg') no-repeat center center / cover;*/
+    background: url('https://smilecoordinate.github.io/hp/img/bg-img.jpg') no-repeat center center / cover;
     background-attachment: fixed;
     overflow-x: hidden;
 }
@@ -322,8 +323,8 @@ section,
     justify-content: center;*/
     display: grid;
     align-content: center;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.3), rgba(255, 255, 255, 0.15));
-    backdrop-filter: blur(8px);
+    background: rgba(255, 255, 255, 0.15);
+    backdrop-filter: blur(15px);
     border-left: 0.5px solid var(--accent);
     border-right: 0.5px solid var(--accent);
     box-shadow: 0 2px 4px rgba(255, 255, 255, 0.3);

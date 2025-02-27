@@ -30,7 +30,7 @@
  .content-wrapper {
     width: 90%;
     margin: 0 auto;
-    border: 1px solid rgba(217, 217, 217, 0.2);
+    /*border: 1px solid rgba(217, 217, 217, 0.2);*/
  }
  
  .get-in-touch {
@@ -46,14 +46,16 @@
     font-size: clamp(2.4rem, 1.733rem + 0.89vw, 2.8rem);
     font-family: sans-serif;
     font-weight: 400;
-    color: var(--bg);
+    color: var(--text);
     display: block;
     width: 90%;
     height: 55px;
     border-width: 0;
     margin: 0 auto;
-    background-color: #e1ebe2;
-    box-shadow: inset 0px 0px 5.5px rgb(23 65 37 / 95%);
+    /*background-color: #e1ebe2;*/
+    background-color: var(--bg);
+    /*box-shadow: inset 0px 0px 5.5px rgb(23 65 37 / 95%);*/
+    box-shadow: 0px 0.5px 2px var(--text);
     border-radius: 10px;
  }
  
@@ -93,7 +95,7 @@
     height: 35pt;
     display: inline-block;
     color: var(--bg);
-    background-color: rgb(113 171 119);
+    background-color: var(--text);
     text-transform: uppercase;
     letter-spacing: 0.2rem;
     line-height: 1.5rem;
