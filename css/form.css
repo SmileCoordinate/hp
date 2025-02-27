@@ -4,7 +4,7 @@
    margin: 0;
    block-size: 1.5em;
    inline-size: 1.5em;
-   vertical-align: middle;
+   vertical-align: text-bottom;
  }
 
 input {
@@ -141,7 +141,7 @@ input:-webkit-autofill:focus {
 
 .radio-group,
 .align-center p {
-   font-size: clamp(1rem, 0.667rem + 0.44vw, 1.2rem);
+   font-size: 1.6rem;
    font-family: sans-serif;
    color: var(--text);
    width: fit-content;
