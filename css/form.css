@@ -28,7 +28,7 @@
  }
  
  .content-wrapper {
-    width: 90%;
+    width: 65%;
     margin: 0 auto;
     /*border: 1px solid rgba(217, 217, 217, 0.2);*/
  }
@@ -55,13 +55,13 @@
     /*background-color: #e1ebe2;*/
     background-color: #fffdfb;
     /*box-shadow: inset 0px 0px 5.5px rgb(23 65 37 / 95%);*/
-    box-shadow: 0px 0.5px 2px var(--text);
+    box-shadow: 0px 1px 3px rgba(46, 46, 46, 0.5);
     border-radius: 10px;
  }
  
  .contact-form #message {
     width: 90%;
-    height: 140px;
+    height: 130px;
     margin: 0 auto;
     padding-top: 1rem;
  }
@@ -83,7 +83,7 @@
     color: rgba(10, 10, 10, 0.65);
     /*-webkit-text-stroke: 0.5px rgba(50, 50, 50, 0.5);*/
     position: absolute;
-    left: 4.5rem;
+    left: 3.5rem;
     top: 0.5rem;
     transition: transform 0.2s ease-in-out;
  }
@@ -91,8 +91,8 @@
  .contact-form .submit-btn {
     font-family: sans-serif;
     font-size: clamp(1.8rem, 1.467rem + 0.44vw, 2rem);
-    width: 25vmin;
-    height: 35pt;
+    width: 15vmin;
+    height: 30pt;
     display: inline-block;
     color: var(--bg);
     background-color: var(--text);
@@ -118,7 +118,7 @@
    width: 90%;
     display: grid;
     align-items: center;
-    justify-content: space-between;
+    justify-content: flex-start;
     grid-auto-flow: column;
     margin: 0 auto;
  }
@@ -127,7 +127,7 @@
     font-size: clamp(1rem, 0.667rem + 0.44vw, 1.2rem);
     font-family: sans-serif;
     color: var(--text);
-    width: auto;
+    width: 90%;
     line-height: 1.5;
     z-index: 1;
  }
