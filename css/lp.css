@@ -1,10 +1,8 @@
 /* 全体のスタイル */
 /*h1*/
-@import url('https://fonts.googleapis.com/css2?family=Kite+One&display=swap');
-/*h3 span*/
-@import url('https://fonts.googleapis.com/css2?family=Monsieur+La+Doulaise&display=swap');
-/* a */
-@import url('https://fonts.googleapis.com/css2?family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap');
+
+@import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
+
 
 :root {
     font-size: 62.5%;
@@ -61,7 +59,7 @@
 }
 
 /*== fade END ==*/
-
+*,
 body,
 header,
 p,
@@ -74,6 +72,11 @@ h3,
 h4 {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
+}
+
+.sp {
+    display: none;
 }
 
 input,
@@ -88,6 +91,7 @@ textarea {
 body {
     margin: 0;
     padding: 0;
+    display: flex;
     width: 100%;
     font-family: "Zen Maru Gothic", serif;
     font-size: clamp(1.4rem, calc(1.4rem + 0.5vw), 1.6rem);
@@ -107,75 +111,13 @@ body::before {
     z-index: -1;
 }
 
-/* ヘッダー */
-header {
-    font-weight: bold;
-    width: 100%;
-    height: 80px;
-    position: fixed;
-    top: 0;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    z-index: 100;
-}
-
-@keyframes GradientBackground {
-    0% {
-        background-position: 0% 80%;
-    }
-
-    50% {
-        background-position: 100% 50%;
-    }
-
-    100% {
-        background-position: 0% 80%;
-    }
-}
-
-
-header .logo {
-    font-size: 1.4rem;
-    margin-left: 1.5%;
-}
-
-nav {
-    width: 55vmin;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-    backdrop-filter: blur(8px);
-    border: 1px solid rgba(255, 255, 255, 0.2);
-    box-shadow: 0 2px 4px rgba(46, 46, 46, 0.2);
-    /*7CF2FF FFFFFF 81FF8F FFAFD8*/
-    background: linear-gradient(120deg, rgba(124, 242, 255, 0.37), rgba(255, 255, 255, 0.13) 22%, rgba(129, 255, 143, 0.3)38%, rgba(255, 255, 255, 0.13) 74%, rgba(255, 175, 216, 0.3)100%);
-    background-size: 500% 500%;
-    animation: GradientBackground 22s ease infinite;
-}
-
-nav ul {
-    display: flex;
-    list-style: none;
-}
-
-nav ul li {
-    margin: 0 2rem;
-}
-
-nav ul li a {
-    font-size: clamp(1.8rem, calc(1.8rem + 0.5vw), 2rem);
-    color: var(--text);
-    text-decoration: none;
-}
-
-
 /*====Section*/
 h1 {
     font-size: clamp(6rem, calc(6rem + 0.5vw), 8rem);
-    font-family: "Kite One", sans-serif;
+    font-family: "Dongle", serif;
     font-weight: 400;
+    font-style: normal;
+    width: fit-content;
 }
 
 h2 {
@@ -184,6 +126,13 @@ h2 {
     line-height: 5rem;
     top: -2%;
     left: 17%;
+    margin-bottom: 2%;
+}
+
+h2,a {
+    font-family: "Hachi Maru Pop", serif;
+    font-weight: bold;
+    font-style: normal;
 }
 
 h3 {
@@ -191,11 +140,20 @@ h3 {
     text-align: center;
 }
 
+h3, li {
+    font-family: "Yusei Magic", sans-serif;
+    font-weight: 400;
+    font-style: normal;
+}
+
 p {
-    font-size: clamp(1.8rem, calc(1.8rem + 0.1vw), 2rem);
+    font-family: "Zen Maru Gothic", serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: clamp(1.6rem, calc(1.8rem + 0.1vw), 1.8rem);
     font-weight: 500;
     width: 65%;
-    line-height: 4rem;
+    line-height: 2.2;
     text-align: justify;
     margin: 0 auto;
 }
@@ -204,24 +162,23 @@ ul,ol {
     margin: 0 auto;
 }
 li {
+    font-size: 2rem;
     width: fit-content;
     list-style: none;
 }
 
-a {
-    font-family: "Inter", sans-serif;
-    font-weight: 400;
+main a {
     padding: .25rem .5rem;
     transition: all 0.3s ease;
     z-index: 10;
     text-decoration: none;
 }
 
-a:hover {
+main a:hover {
     color: var(--accent);
 }
 
-a::before {
+main a::before {
     background: var(--accent);
     bottom: 0;
     left: 0;
@@ -255,30 +212,32 @@ img {
     z-index: 2;
 }
 .bgfont_h2::before {
+    font-family: "Satisfy", serif;
+    font-size: 3rem;
+    font-weight: 400;
+    font-style: italic;
     content: attr(data-en);
     position: absolute;
     width: fit-content;
     transform: rotate(-5deg);
-    top: -40%;
+    top: -30%;
     left: -10%;
     color: var(--accent);
-    font-size: 5rem;
-    font-weight: 400;
-    font-style: italic;
-    opacity: 0.55;
+    opacity: 0.45;
+    z-index: -1;
 }
 /*===== h2 bg ======*/
 
 .top-img--one {
-    width: 35vmin;
-    top: 10%;
-    right: 0%;
+    width: 40vmin;
+    top: 2%;
+    right: -15%;
 }
 
 .top-img--two {
     width: 25vmin;
-    bottom: 5%;
-    right: 0%;
+    bottom: 0%;
+    right: -11%;
 }
 
 .img--one {
@@ -287,32 +246,56 @@ img {
 }
 
 .img--two {
-    right: 2%;
-    bottom: 0%;
+    left: -20%;
+    bottom: 5%;
+    transform: scale(-1, 1);
 }
 
 .img--three {
-    top: -22.5%;
+    top: 0;
+    transform: translate(70%, 5%);
 }
 
 .img--four {
-    right: -10.5vmin;
+    left: -14.6vmin;
     bottom: 0;
 }
 
 .img--five {
-    width: 14%;
-    right: -15.75%;
+    width: 22%;
+    right: -14%;
     bottom: 0;
+    z-index: -1;
+}
+
+.img--six {
+    width: 25%;
+    right: 2%;
+    bottom: 3%;
+}
+
+.main--top--img {
+    width: 40vmin;
+    position: fixed;
+    transform: translate(65%, 75%);
+    z-index: -1;
+    opacity: 0.5;
+}
+
+.img--start {
+    width: 45vmin;
+    bottom: 5%;
 }
 
 
+
 main {
-    width: 45%;
-    margin-left: 40%;
+    position: relative;
+    width: 40%;
+    margin-left: 5vmin;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    background: rgba(255, 255, 255, 0.3);
+    background: rgba(255, 255, 255, 0.15);
     backdrop-filter: blur(15px);
     border-left: 0.5px solid var(--accent);
     border-right: 0.5px solid var(--accent);
@@ -351,22 +334,20 @@ section,
 /*====TOP section*/
 .main-visual {
     font-weight: 600;
-    position: absolute;
+    position: relative;
+    width: 45%;
     height: 100vh;
-    transform: translate(25%, 15%)
+    transform: translate(25%, 10%)
 }
 
 .main-visual .overlay p {
     font-size: clamp(1.6rem, calc(1.6rem + 0.5vw), 1.8rem);
+    margin: 0;
     margin-left: 1%;
 }
 
 .main-visual h1 {
     margin: 0;
-}
-
-.main-visual p:last-child {
-    width: 52%;
 }
 
 
@@ -390,42 +371,27 @@ section,
 .services {
     background: #fffdf9;
 }
-
- h2 {
-    margin-bottom: 2%;
-}
-
- .step img {
-    width: 12vmin;
-    right: 1%;
-    bottom: 1%;
-}
-
- .step:last-child img {
-    width: 19vmin;
-    bottom: -7.5%;
-}
-
- .step h3 span {
-    font-size: clamp(6.4rem, calc(6.4rem + 0.5vw), 7rem);
-    font-family: "Monsieur La Doulaise", cursive;
-    font-weight: 400;
-    color: var(--hover);
-    line-height: 6rem;
-    position: absolute;
-    top: 5%;
-    left: 15%;
-}
-
- .step h3 {
-    margin: 6% auto 3%;
-}
-
- .step p {
-    font-weight: 500;
-    width: 80%;
+.services .point {
+    font-weight: 600;
     margin: 0 auto;
-    letter-spacing: -0.15rem;
+}
+
+
+.voice ul {
+    width: 75%;
+    height: 400px;
+    overflow-y: scroll;
+    padding: 1rem;
+    background-color: var(--bg);
+    border: 1px solid var(--hover);
+}
+.voice li {
+    font-family: "Zen Maru Gothic", serif;
+    font-size: 1.6rem;
+    font-weight: bold;
+    margin-bottom: 3rem;
+    border-bottom: 1px solid;
+    padding: 1rem;
 }
 
 /*.contact {
@@ -436,10 +402,10 @@ section,
 }*/
 
 .btn {
-    font-family: "Monsieur La Doulaise", cursive;
     font-size: clamp(2rem, calc(2rem + 0.5vw), 2.4rem);
     width: 225px;
     height: 50px;
+    color: var(--text);
     background: linear-gradient(0deg, rgb(207,222,255, 0.3) 0%, rgb(192,252,109, 0.2) 100%);
     border: none;
     border-radius: 45px;
@@ -449,6 +415,7 @@ section,
     transition: all 0.5s ease;
     z-index: 100;
     display: flex;
+    margin: 5% auto 0;
     justify-content: center;
     align-items: center;
     transition: all 0.35s ease;
@@ -466,13 +433,13 @@ section,
     height: 60px;
     border: 1px solid #fff;
     border-radius: 45px;
-    background: linear-gradient(0deg, rgba(253, 246, 234, 0.1), rgba(255, 150, 48, 0.15));
+    background: linear-gradient(0deg, rgb(207,222,255, 0.3) 0%, rgb(192,252,109, 0.2) 100%);
     box-shadow: 0px 2px 1px 0px rgba(46, 46, 46, 0.5);
     position: absolute;
-    top: 5px;
-    left: 10px;
+    top: -5px;
+    left: -10px;
     transition: all 0.3s ease;
-    z-index: 99;
+    z-index: -1;
 }
 
 .btn:hover::before {
@@ -484,10 +451,10 @@ section,
 footer {
     font-weight: bold;
     text-align: center;
+    width: 100%;
     padding: 0.5rem 0;
     position: absolute;
-    left: 60%;
-    margin-top: -1.5%;
+    bottom: 0;
 }
 
 @media screen and (min-width: 1300px) {
@@ -656,8 +623,6 @@ footer {
         right: -5.5vmin;
         bottom: 0;
     }
-
-
     /*====Section*/
     /*.about-us,
     .services,

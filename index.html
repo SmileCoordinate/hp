@@ -2,55 +2,82 @@
 <html lang="ja">
 
 <head>
-    <!-- 基本のメタタグ -->
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- 基本のメタタグ -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <!-- SEOのためのメタタグ -->
-    <meta name="description" content="Smile Coordinateのウェブサイトへようこそ。私たちの活動や目的、サービスについてご紹介します。">
-    <meta name="keywords" content="Smile Coordinate, コーチング, カウンセリング, 事業サポート">
-    <meta name="author" content="Smile Coordinate">
+  <!-- SEO -->
+  <meta name="google-site-verification" content="arT_wWeQn_KLlT4yLyz2Q-Lsv5wn0i6WnakFwjAATbM" />
+  <meta name="description" content="Smile Coordinateのウェブサイトへようこそ。私たちの活動や目的、サービスについてご紹介します。">
+  <meta name="keywords" content="Smile Coordinate, コーチング, カウンセリング, 事業サポート">
+  <meta name="author" content="Smile Coordinate">
 
-    <!-- ソーシャルメディア用のメタタグ (OGP) -->
-    <meta property="og:title" content="Smile Coordinate">
-    <meta property="og:description" content="私たちの活動やサービスについてご紹介します。">
-    <meta property="og:image" content="path/to/image.jpg"> <!-- 共有時に使われる画像のパス -->
-    <meta property="og:url" content="https://yourwebsite.com">
-    <meta property="og:type" content="website">
-    <meta property="og:locale" content="ja_JP">
+  <!-- ソーシャルメディア用のメタタグ (OGP) -->
+  <meta property="og:title" content="Smile Coordinate">
+  <meta property="og:description" content="私たちの活動やサービスについてご紹介します。">
+  <meta property="og:image" content="path/to/image.jpg"> <!-- 共有時に使われる画像のパス -->
+  <meta property="og:url" content="https://smilecoordinate.github.io/hp/">
+  <meta property="og:type" content="website">
+  <meta property="og:locale" content="ja_JP">
+  <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "WebSite",
+      "name": "Smile Coordinate",
+      "url": "https://smilecoordinate.github.io/hp/",
+      "description": "Smile Coordinate,SC,スマイルコーディネート、コーチング、相談、変化、思考"
+    }
+    </script>
 
-    <!-- セキュリティとパフォーマンス向上のためのメタタグ -->
-    <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!-- 古いIEブラウザ対応 -->
+  <!-- セキュリティとパフォーマンス向上のためのメタタグ
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
     <meta http-equiv="Referrer-Policy" content="strict-origin">
-    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000">
+    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000">-->
 
-    <!-- ページタイトル -->
-    <title>Smile Coordinate</title>
+  <!-- ページタイトル -->
+  <title>Smile Coordinate</title>
 
-    <!-- フォントとCSS -->
-    <link href="https://fonts.googleapis.com/css2?family=Zen+Maru+Gothic:wght@300;400;500;700;900&display=swap"
-        rel="stylesheet">
-    <link rel="stylesheet" href="css/lp.css">
-    <link rel="stylesheet" href="css/bot.css">
-    <link rel="stylesheet" href="css/card.css">
-    <link rel="stylesheet" href="css/form.css">
+  <!-- font
+    h1
+    https://fonts.google.com/share?selection.family=Dongle
+    h2,h3,a,h2-bg
+    https://fonts.google.com/share?selection.family=Hachi+Maru+Pop|Satisfy|Yusei+Magic|Zen+Maru+Gothic
+    -->
+  <!-- font zen gothic -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link
+    href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Satisfy&family=Yusei+Magic&family=Zen+Maru+Gothic&display=swap"
+    rel="stylesheet">
 
-    <!-- ファビコン -->
-    <link rel="icon" href="img/sc_logo_w600.ico"> <!-- ファビコンのパス -->
+  <!-- css -->
+  <link rel="stylesheet" href="css/lp.css">
+  <link rel="stylesheet" href="css/bot.css">
+  <link rel="stylesheet" href="css/card.css">
+  <link rel="stylesheet" href="css/form.css">
+  <link rel="stylesheet" href="css/nav.css">
+  <link rel="stylesheet" href="css/acdion.css">
 
-    <!-- JavaScriptファイル -->
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="js/cursor.js"></script> <!-- deferを追加してページのレンダリングをブロックしない -->
-    <script src="js/chat.js"></script> <!-- deferを追加 -->
-    <script src="js/security.js"></script>
-    <script src="js/form.js"></script>
+  <!-- ファビコン -->
+  <link rel="icon" href="img/sc_logo_w600.ico"> <!-- ファビコンのパス -->
+
+  <!-- JavaScriptファイル -->
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="js/cursor.js"></script> <!-- deferを追加してページのレンダリングをブロックしない -->
+  <script src="js/chat.js"></script> <!-- deferを追加 -->
+  <script src="js/security.js"></script>
+  <script src="js/form.js"></script>
+  <script src="js/header.js"></script>
+  <script src="js/card.js"></script>
+  <script src="js/accordion.js"></script>
+
 </head>
 
 <body oncontextmenu="return false;">
-    <div id="stalker" class="pc"></div>
+  <div id="stalker" class="pc"></div>
 
-    <!-- Header -->
+  <!-- Header
     <header>
         <div class="logo">Smile Coordinate</div>
         <nav>
@@ -62,236 +89,324 @@
                 <li><a href="#tab--five">Voice</a></li>
             </ul>
         </nav>
-    </header>
+    </header>-->
 
-    <!-- Main Visual Section -->
-    <div class="main-visual" id="tab--start">
-        <div class="overlay">
-            <h1>Smile Coordinate</h1>
-            <p>
-                自分らしく、優しい心を。
-                <br>
-                人はいつからでも変われる。もっと自分を解放して、笑顔でいられるように。
-            </p>
-        </div>
-        <img src="https://smilecoordinate.github.io/hp/img/p14.png" class="img--one"
+  <div id="header-placeholder"></div>
+
+  <!-- Main Visual Section -->
+  <div class="main-visual" id="tab--start">
+    <div class="overlay">
+      <h1>Smile Coordinate</h1>
+      <p>
+        自分らしく、優しい心を。
+        <br>
+        人はいつからでも変われる。もっと自分を解放して、笑顔でいられるように。
+      </p>
+    </div>
+    <img src="https://smilecoordinate.github.io/hp/img/p14.png" class="img--start" alt="sc,SmileCoordinate,スマイルコーディネート">
+  </div>
+
+  <img src="img/flower-of-life.png" alt="" class="main--top--img">
+
+  <main>
+    <!-- About Section -->
+    <div class="sentence" id="tab--one">
+      <img src="https://smilecoordinate.github.io/hp/img/p18.png" class="top-img--one pc"
+        alt="sc,SmileCoordinate,スマイルコーディネート">
+      <ul>
+        <li>あなたが大切にしていることはなんですか？</li>
+        <li>あなたはどんな人生をおくりたいですか？</li>
+        <li>あなたは今を変えたいと思いますか？</li>
+        <li>あなたは自分を変えたいと思いますか？</li>
+      </ul>
+      <img src="https://smilecoordinate.github.io/hp/img/p19.png" class="top-img--two pc"
         alt="sc,SmileCoordinate,スマイルコーディネート">
     </div>
-
-    <main>
-        <!-- About Section -->
-        <div class="sentence" id="tab--one">
-            <img src="https://smilecoordinate.github.io/hp/img/p18.png" class="top-img--one pc"
-            alt="sc,SmileCoordinate,スマイルコーディネート">
-            <img src="https://smilecoordinate.github.io/hp/img/p19.png" class="top-img--two pc"
-            alt="sc,SmileCoordinate,スマイルコーディネート">
-            <ul>
-            <li>あなたが大切にしていることはなんですか？</li>
-            <li>あなたはどんな人生をおくりたいですか？</li>
-            <li>あなたは今を変えたいと思いますか？</li>
-            <li>あなたは自分を変えたいと思いますか？</li>
-            </ul>
-
-        </div>
-        <section class="about-us" id="tab--one">
-            <h2 class="bgfont_h2" data-en="About">
-                私たちについて
-            </h2>
-            <p>
-                私たちは、あなたが人生にポジティブな変化を起こし、理想の自分に近づくお手伝いをしたいと心から願っています。
-                誰でも、どんなときからでも変わることができる——私たちはその可能性を信じ、コーチングやお悩み相談を通じて、あなたの内に眠っている力を引き出すサポートをしています。
-                これまで、多くの方が私たちのコーチングを受けて、キャリアや人生の大きな転機を乗り越え、自信を持って新しい一歩を踏み出してきました。
-                <br>
-                例えば、仕事や人間関係に悩んでいた方が、自分の本当の強みを見つけ、目標に向かって具体的な行動を取り始めたことで、理想の生活を手に入れることができたんです。
-                このような実現のプロセスを、私たちはずっとサポートしてきました。
-            </p>
-            </div>
-        </section>
-        <!-- Service Section -->
-        <section class="services" id="tab--two">
-                    <h2 class="bgfont_h2" data-en="Service">
-                        提供しているもの
-                    </h2>
-                </div>
-                <h3>・コーチング / ・お悩み相談</h3>
-                <p>
-                    コーチングとお悩み相談では、スタート地点、目的が異なります。
-                    コーチングは「今を良い方向へ変化していく」、お悩み相談は「今の悩みを和らげるもしくは解消する」ことが目的です。どちらも今を変えることに変わらないのですが、先があるのと無いのでは大きな差があります。
-                    ・現在自分を変えたい方はコーチング
-                    ・現在変化を求めていない方はお悩み相談
-                </p>
-                <!-- card カードをアコーディオンに変更？-->
-                 
-    <div class="steps">
-      <div class="step" onclick="toggleAccordion(this)">
-        <div class="tab">
+    <section class="about-us" id="tab--one-second">
+      <h2 class="bgfont_h2" data-en="About">
+        私たちについて
+      </h2>
+      <p>
+        私たちSmile Coordinateは『自分を大切にしてほしい』、『人はいつからでも変わることができる』ことを伝えていくことを目的に活動しています。
+        <br>
+        現在を変えるために必要なことは「本当に求めていること」に気づいて、それに向かって「行動すること」だと思います。
+        <br>
+        私は、それに気づくためのキッカケを作ります。
+        <br>
+        大事なのはタイミングとあなたの意識です。
+        <br>
+        今のあなたが気づけることに、気づいて受け止めていくことで、少しづつ変化していく私は思います。
+        <br>
+        人生は自分で選んだ道を進むもの。
+        <br>
+        無駄な思考から解放されることで、大きく日常が変化していきます。
+        <br>
+        Smile Coordinateは「コーチングやお悩み相談」で、バゲージ（不要な荷物、過剰な感情、無くて良い思考、他人の念やエネルギー）などを見つけ出して、捨てていく思考に変えていくキッカケをお渡しします。
+      </p>
+      </div>
+    </section>
+    <!-- Service Section -->
+    <section class="services" id="tab--two">
+      <h2 class="bgfont_h2" data-en="Service">
+        提供しているもの
+      </h2>
+      </div>
+      <h3>
+        ・コーチング ・お悩み相談
+      </h3>
+      <p>
+        コーチングとお悩み相談では、スタート地点や目的が異なります。
+        <br>
+        コーチングは「今を良い方向へ変化していく」、お悩み相談は「今の悩みを和らげるもしくは解消する」ことが目的です。どちらも今を変えることに変わらないのですが、先があるのと無いのでは大きな差があります。
+        <br>
+      </p>
+      <div class="point">
+        ※選ぶポイント
+        <br>
+        ・現在の自分を変えたい方はコーチング
+        <br>
+        ・現在変化を求めていない方はお悩み相談
+      </div>
+      <!-- card カードをアコーディオンに変更？-->
+      <div class="steps">
+        <div class="step" onclick="toggleAccordion(this)">
+          <div class="tab">
             STEP.01
-        </div>
-        <div class="content-wrapper">
-          <p class="content">テキストの表示テキストの表示</p>
-        </div>
-      </div>
-      <div class="step" onclick="toggleAccordion(this)">
-        <div class="tab">
-            STEP.02
-        </div>
-        <div class="content-wrapper">
-          <p class="content">テキストの表示テキストの表示</p>
-        </div>
-      </div>
-      <div class="step" onclick="toggleAccordion(this)">
-        <div class="tab">
-          STEP.03
-        </div>
-        <div class="content-wrapper">
-          <p class="content">テキストの表示テキストの表示</p>
-        </div>
-      </div>
-    </div>
-            <img src="https://smilecoordinate.github.io/hp/img/p15.png" class="img--two" alt="">
-        </section>
-
-        <!-- contact -->
-        <section class="contact" id="tab--four">
-            <h2 class="bgfont_h2" data-en="Contact">
-              お問い合わせ
-            </h2>
-                <img src="https://smilecoordinate.github.io/hp/img/p09.png" class="img--three" alt="">
-                <div class="content-wrapper">
-                  <div class="get-in-touch">
-                    <form id="contactForm" class="contact-form"
-                      action="https://script.google.com/macros/s/AKfycbxWnG-Ll6ydxzfxQCrx1vV0yY6L-Nd71smtrghVv5SULaooqwWDXQsiIUXsku1u2OrEYw/exec"
-                      method="POST" target="hidden_iframe" onsubmit="submitted=true;">
-
-                        <!-- ラジオボタンの追加 -->
-                        <div class="form-field col align-center">
-                          <div class="radio-group">
-                            <label>
-                              <input type="radio" name="inquiryType" value="相談" required> 相談
-                            </label>
-                            <label>
-                              <input type="radio" name="inquiryType" value="申込" required> 申込
-                            </label>
-                          </div>
-                        </div>
-
-                      <div class="form-row">
-                        <div class="form-col">
-                          <div class="form-field col x-50">
-                            <input type="text" id="name" name="name" class="input-text" required>
-                            <label for="name" class="label">お名前</label>
-                          </div>
-                          <div class="form-field col x-50">
-                            <input type="email" id="email" name="email" class="input-text" required>
-                            <label for="email" class="label">メールアドレス</label>
-                          </div>
-                        </div>
-                                
-                        <div class="form-field col x-100">
-                          <textarea id="message" name="message" class="input-text" required></textarea>
-                          <label for="message" class="label label-test">お問い合わせ内容</label>
-                        </div>
-                      </div>
-                
-                      <div class="form-field col align-center">
-                        <p>
-                          当サイトをご利用の際は、<a href="https://pdmizuki.github.io/website/policy.html">SitePolicy</a>
-                          をご確認ください。
-                        </p>
-                        <button type="submit" class="submit-btn">送信</button>
-                      </div>
-                    </form>
-                  </div>
-                </div>
-                
-
-                <img src="https://smilecoordinate.github.io/hp/img/p10.png" class="img--four" alt="">
-                <img src="https://smilecoordinate.github.io/hp/img/p11.png" class="img--five pc" alt="">
-        </section>
-
-        <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
-        <!-- モーダルウィンドウ -->
-        <div id="thanksModal" class="modal">
-          <div class="modal-content">
-            <span class="close">&times;</span>
-            <p>
-              問合せありがとうございます。
-              <br>
-              返信まで1日～2日ほどお待ちください。
-            </p>
+          </div>
+          <div class="content-wrapper">
+            <p class="content">テキストの表示テキストの表示</p>
           </div>
         </div>
-
-        <!-- contact -->
-        <section class="contact" id="tab--four">
-          <h2 class="bgfont_h2" data-en="Self Diagnosis">
-            自分診断
-          </h2>
-          <p>
-            自分に必要か分からない方や必要かどうか見極めたい方は、下にある「自分診断」をクリックしてみてください！
-今のあなたに「コーチングやお悩み相談」が必要かどうかを診断します。
-診断の最後に無料相談を希望される方限定で、約1時間の無料相談をお申込みいただけます。
-無料相談が終わった後に「コーチング」か「お悩み相談」を本申し込みするかどうか決めていただけます。
-<br>
-少しでも思考がクリーンになと思うので、診断をしてみて良ければ無料相談を受けてみてください！
-<br>
-・無料相談の注意事項
-※通常時間：30分  / 毎月先着3名：1時間（一人 1回まで）
-          </p>
-          <a href="https://forms.gle/SpYuYiSHdgaJdh7G9" class="btn" target="_blank">
-            自分診断
-          </a>
-        </section>
-        <!-- voice -->
-        <section class="voice" id="tab--five">
-          <h3>
-            これまでの感想
-          </h3>
-          <ul>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-            <li></li>
-          </ul>
-        </section>
-
-    </main>
-    <!-- Footer -->
-
-    <script>
-        jQuery(document).ready(function ($) {
-            // アニメーション付きでページ内ジャンプ
-            $('a[href^="#"]').on('click', function (event) {
-                // クリックしたリンクのハッシュを取得
-                var target = $(this.getAttribute('href'));
-                if (target.length) {
-                    // デフォルトの動作を防ぐ
-                    event.preventDefault();
-                    // アニメーションでスクロール
-                    $('html, body').animate({
-                        scrollTop: target.offset().top
-                    }, 800); // 1000ミリ秒（1秒）でアニメーション
-                }
-            });
-        });
-
-    </script>
-    <footer>
-        <div class="foot">&copy; <span id="year"></span>
-            Smile Coordinate
+        <div class="step" onclick="toggleAccordion(this)">
+          <div class="tab">
+            STEP.02
+          </div>
+          <div class="content-wrapper">
+            <p class="content">テキストの表示テキストの表示</p>
+          </div>
         </div>
-        <script>
-        function toggleAccordion(element) {
-            element.classList.toggle("active");
-        }
+        <div class="step" onclick="toggleAccordion(this)">
+          <div class="tab">
+            STEP.03
+          </div>
+          <div class="content-wrapper">
+            <p class="content">テキストの表示テキストの表示</p>
+          </div>
+        </div>
+      </div>
+      <img src="https://smilecoordinate.github.io/hp/img/p15.png" class="img--two" alt="">
+    </section>
 
-            document.getElementById('year').textContent = new Date().getFullYear();
-        </script>
-    </footer>
+    <!-- contact -->
+    <section class="contact" id="tab--four">
+      <h2 class="bgfont_h2" data-en="Contact">
+        お問い合わせ
+      </h2>
+      <img src="https://smilecoordinate.github.io/hp/img/p09.png" class="img--three" alt="">
+      <p>
+        お問い合わせいただいた内容は1カ月間保存いたします。
+        <br>
+        ※アドレスは連絡の取れるものを入力してください。
+      </p>
+      <div class="content-wrapper">
+        <div class="get-in-touch">
+          <form id="contactForm" class="contact-form"
+            action="https://script.google.com/macros/s/AKfycbxWnG-Ll6ydxzfxQCrx1vV0yY6L-Nd71smtrghVv5SULaooqwWDXQsiIUXsku1u2OrEYw/exec"
+            method="POST" target="hidden_iframe" onsubmit="submitted=true;">
 
+            <!-- ラジオボタンの追加 -->
+            <div class="form-field col align-center">
+              <h3>問い合せフォーム</h3>
+              <div class="radio-group">
+                <label>
+                  <input type="radio" name="inquiryType" value="相談" required>
+                  相談
+                </label>
+                <label>
+                  <input type="radio" name="inquiryType" value="申込" required>
+                  申込
+                </label>
+              </div>
+            </div>
+
+            <div class="form-row">
+              <div class="form-col">
+                <div class="form-field col x-50">
+                  <input type="text" id="name" name="name" class="input-text" required>
+                  <label for="name" class="label">お名前</label>
+                </div>
+                <div class="form-field col x-50">
+                  <input type="email" id="email" name="email" class="input-text" required>
+                  <label for="email" class="label">メールアドレス</label>
+                </div>
+              </div>
+
+              <div class="form-field col x-100">
+                <textarea id="message" name="message" class="input-text" required></textarea>
+                <label for="message" class="label label-test">お問い合わせ内容</label>
+              </div>
+            </div>
+
+            <div class="form-field col align-center">
+              <label>
+                <input type="checkbox" name="inquiryType" value="チェック" required>
+                当サイトをご利用の際は、<a href="https://pdmizuki.github.io/website/policy.html">SitePolicy</a>
+                をご確認ください。
+              </label>
+              <button type="submit" class="submit-btn">送信</button>
+            </div>
+          </form>
+        </div>
+      </div>
+
+    </section>
+    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+    <!-- モーダルウィンドウ -->
+    <div id="thanksModal" class="modal">
+      <div class="modal-content">
+        <span class="close">&times;</span>
+        <p>
+          問合せありがとうございます。
+          <br>
+          返信まで1日～2日ほどお待ちください。
+        </p>
+      </div>
+    </div>
+
+    <!-- 自己分析 -->
+    <section class="contact" id="tab--five">
+      <h2 class="bgfont_h2" data-en="Self Diagnosis">
+        自分診断
+      </h2>
+      <p>
+        自分に「必要か分からない方」や「必要かどうか見極めたい方」は、下にある「自分診断」をクリックしてみてください！
+        <br>
+        今のあなたに「コーチングやお悩み相談」が必要かどうかを診断いたします。
+        <br>
+        診断の最後に無料相談を希望される方限定で、約1時間の無料相談をお申込みいただけます。
+      </p>
+      <p>
+        無料相談が終わった後に本申し込みに進むかご検討ください。
+        <br>
+        診断するだけでも、思考がクリーンになると思うので、まずは、診断をしてみて無料相談を受けていただけると嬉しいです！
+        <br>
+        ・無料相談の注意事項
+      </p>
+      <p>
+        ※通常時間：30分 / 毎月先着3名：1時間（一人 1回まで）
+      </p>
+      <a href="https://forms.gle/SpYuYiSHdgaJdh7G9" class="btn" target="_blank">
+        自分診断
+      </a>
+
+      <img src="https://smilecoordinate.github.io/hp/img/p10.png" class="img--four" alt="">
+      <img src="https://smilecoordinate.github.io/hp/img/p11.png" class="img--five pc" alt="">
+    </section>
+
+    <!-- FAQ -->
+    <section class="voice" id="tab--six">
+      <h2 class="bgfont_h2" data-en="Q&A">
+        よくある質問
+      </h2>
+      <!-- アコーディオン -->
+      <div class="accordion-wrap fade_bottom">
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            項目の選択とご相談内容
+            <ion-icon class="fa fa-angle-down" name="chevron-forward-outline"></ion-icon>
+          </h3>
+        </div>
+        <div class="accordion-text">
+          <p>
+            質問 / 無料相談 のどちらかにチェックをお忘れずに選択してください。
+            問い合わせいただいた内容について、しっかりとお答えできるように、「今お悩みされていること、考えていること」についてできるだけ具体的に教えてください。
+          </p>
+        </div>
+      </div>
+
+      <div class="accordion-wrap fade_bottom">
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            お申し込み時に記載してほしいこと
+            <ion-icon class="fa fa-angle-down" name="chevron-forward-outline"></ion-icon>
+          </h3>
+        </div>
+        <div class="accordion-text">
+          <p>
+            質問の場合は質問したいこと。無料相談ご希望の場合は、相談したい事の簡単な内容を記入してください。
+            お問い合わせの確認ができ次第、予約フォームをお送りします。また、公式LINEでもご予約ができますので是非ご利用ください。
+            ※予約日について：ご希望される日時で予約ができない場合があるので、予備日の選択もお願いいたします。
+            ※体調不良やご都合が悪くなった場合は、できるだけ早めにご連絡をお願いいたします。
+          </p>
+        </div>
+      </div>
+
+      <div class="accordion-wrap fade_bottom">
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            質問について
+            <ion-icon class="fa fa-angle-down" name="chevron-forward-outline"></ion-icon>
+          </h3>
+        </div>
+        <div class="accordion-text">
+          <p>
+            知りたい事や分からないことについてのご連絡もお気軽にお問い合わせください。
+            こちらで確認でき次第お答えさせていただきます。
+            ・事業の〇〇について
+            ・相談の申し込みの〇〇について
+            ・コーチングの〇〇について
+            ・事業サポートの〇〇について
+            など記入をお願いします。
+          </p>
+        </div>
+      </div>
+    </section>
+
+    <!-- voice -->
+    <section class="voice" id="tab--seven">
+      <h3>
+        みなさまの感想
+      </h3>
+      <p>
+        変化や気づきは個々で異なりますが、（どのように変化して、どんな気づき）があったのか共有していただきましたので、ご覧ください！
+      </p>
+      <ul class="voice">
+        <li>
+        〇〇さん
+        <br>
+        自分の特徴や癖を知れたことで、これまでやらなくてよいことをしなくなり時間に余裕ができて
+        心も体もゆったりできるようになった。
+        </li>
+        <li>
+        〇〇さん
+        <br>
+        これまでは自覚がなく、無意識にしていたことに気づき、人と関わることが楽になり、人間関係
+        でのストレスが減りました。
+        </li>
+        <li>
+        〇〇さん
+        <br>
+        これまでは自覚がなく、無意識にしていたことに気づき、人と関わることが楽になり、人間関係
+        でのストレスが減りました。
+        </li>
+        <li>
+        〇〇さん
+        <br>
+        これまでは自覚がなく、無意識にしていたことに気づき、人と関わることが楽になり、人間関係
+        でのストレスが減りました。
+        </li>
+        <li>
+        〇〇さん
+        <br>
+        これまでは自覚がなく、無意識にしていたことに気づき、人と関わることが楽になり、人間関係
+        でのストレスが減りました。
+        </li>
+      </ul>
+      <img src="https://smilecoordinate.github.io/hp/img/p04.png" class="img--six" alt="">
+    </section>
+
+    <div id="footer-placeholder"></div>
+  </main>
 </body>
 
 </html>

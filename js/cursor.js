@@ -1,10 +1,10 @@
 //cursor
-(function($) {
-    $(document).ready(function() {
+(function ($) {
+    $(document).ready(function () {
         // 遅れてついてくるストーカー要素
         var stalker = $("#stalker");
         // リンクと.accordion-wrapにホバーした時にクラス追加、離れたらクラス削除
-        $("a,button,#chat-icon").hover(
+        $("a,button,.accordion-wrap,.step").hover(
             function () {
                 stalker.addClass('stalker--hover');
             },
@@ -24,7 +24,8 @@
                 stalker.css({
                     "opacity": "1",
                     "top": y + "px",
-                    "left": x + "px"
+                    "left": x + "px",
+                    "z-index": "10000"
                 });
             }, 50);
         });
@@ -45,10 +46,10 @@
         });
     });
 
-    $(document).ready(function() {
+    $(document).ready(function () {
         var noticeBar = $('.notice-bar');
 
-        $(window).scroll(function() {
+        $(window).scroll(function () {
             if ($(this).scrollTop() > 100) { // スクロール位置が100ピクセルを超えたら
                 noticeBar.addClass('hidden'); // バーを非表示にするためのクラスを追加
             } else {
@@ -60,8 +61,8 @@
 
 
 //左上ニュース
-(function() {
-    document.addEventListener('DOMContentLoaded', function() {
+(function () {
+    document.addEventListener('DOMContentLoaded', function () {
         var elementsToShow = document.querySelectorAll('.fade_bottom');
 
         function isVisible(element) {
@@ -74,7 +75,7 @@
         }
 
         function checkScroll() {
-            elementsToShow.forEach(function(element) {
+            elementsToShow.forEach(function (element) {
                 if (isVisible(element)) {
                     element.classList.add('visible');
                 }
@@ -83,9 +84,9 @@
 
         // requestAnimationFrameを使ってスクロールイベントを最適化
         let ticking = false;
-        window.addEventListener('scroll', function() {
+        window.addEventListener('scroll', function () {
             if (!ticking) {
-                window.requestAnimationFrame(function() {
+                window.requestAnimationFrame(function () {
                     checkScroll();
                     ticking = false;
                 });

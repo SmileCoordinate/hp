@@ -1,0 +1,19 @@
+git remote add origin https://github.com/SmileCoordinate/hp.git
+
+
+cd /c/sc-hp/
+git clone git remote add origin https://github.com/SmileCoordinate/hp.git
+
+
+rm -rf c/sc-hp/
+git clone https://github.com/SmileCoordinate/hp.git c/sc-hp/
+
+
+npm run build
+git add docs
+git commit -m "html  "
+git push origin gh-pages
+
+menu デザイン修正
+STEP 横スクロール js
+送信後モーダル

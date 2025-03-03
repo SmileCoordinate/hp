@@ -1,8 +1,5 @@
     /* ChatBot アイコンのスタイル */
-    #chat-icon {
-        font-size: clamp(2rem, calc(2rem + 0.1vw), 2.4rem);
-        font-weight: bold;
-        bottom: 15px;
+    #bot-icon {
         width: clamp(20%, 25%, 30%);
         height: clamp(10rem, 1vw, 12rem);
         backdrop-filter: blur(4px);
@@ -106,7 +103,7 @@
         width: calc(100% - 100px);
         height: calc(75% - 130px);
         position: fixed;
-        bottom: 20px;
+        bottom: 10px;
         left: 20px;
         padding: 4vw 5vw;
         backdrop-filter: blur(3px);
@@ -116,7 +113,7 @@
         display: none;
         overflow-y: scroll;
         animation: fadeIn_left 1.5s ease forwards;
-        z-index: 200;
+        z-index: 9999;
     }
 
     .chat-window {
@@ -238,7 +235,7 @@
     @media screen and (min-width: 600px) and (max-width: 1299px) {
 
         /* ChatBot アイコンのスタイル */
-        #chat-icon {
+        #bot-icon {
             font-size: 1.5rem;
             bottom: 20px;
             width: 7em;
@@ -352,30 +349,7 @@
     @media screen and (min-width: 1300px) {
 
         /* ChatBot アイコンのスタイル */
-        #chat-icon {
-            font-size: clamp(2.8rem, calc(2.8rem + 0.1vw), 3.4rem);
-            bottom: 50px;
-            width: 15vmin;
-            height: 14vmin;
-            padding: 0 1rem;
-            background-size: 175%;
-            transition: all 0.5s ease;
-            animation: fadeIn_bg 4s ease forwards;
-        }
 
-        #chat-icon::before {
-            content: "こちらで質問ができます";
-            font-size: clamp(0.8rem, calc(0.8rem + 0.5vw), 0.9rem);
-            position: absolute;
-            bottom: -5.5%;
-            left: 50%;
-            transform: translate(-50%, -50%);
-            white-space: nowrap;
-        }
-
-        #chat-icon:hover {
-            background-color: rgba(166, 247, 141, 0.53);
-        }
 
         /* 閉じるボタンのスタイル */
         #close-button {
@@ -413,7 +387,6 @@
             border-radius: 20px;
             overflow-x: hidden;
             animation: fadeIn_left 1.5s ease forwards;
-            z-index: 100;
         }
 
         .chat-window {

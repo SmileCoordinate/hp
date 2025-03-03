@@ -64,60 +64,80 @@
 </div>
 
 <!-- PC menu -->
-    <div class="pc pc_menu">
-        <ul>
-            <li>
-				<a href="https://smilecoordinate.github.io/hp/index.html">
-                    ホーム
-                    <span>Home</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://smilecoordinate.github.io/hp/about.html">
-                    私たちについて
-                    <span>About US</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://smilecoordinate.github.io/hp/works.html">
-                    私たちのできること
-                    <span>Works</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://smilecoordinate.github.io/hp/blog.html">
-                    私たちの活動
-                    <span>Blog / Info</span>
-                </a>
-            </li>
-            <li>
-                <a href="https://smilecoordinate.github.io/hp/contact.html">
-                    申し込み / 質問
-                    <span>Contact</span>
-                </a>
-            </li>
-			</ul>
-            <ul class="manu_p">
-                <li>
-                    <a href="https://smilecoordinate.github.io/hp/policy.html">
-                            サイトポリシー
-                            <span>Policy</span>
-                    </a>
-                </li>
-                <li>
-                    <a href="https://smilecoordinate.github.io/hp/contact.html#faq">
-                            よくある質問
-                            <span>FAQ</span>
-                    </a>
-                </li>
-				<li>
-                <a href="https://lin.ee/LvQJ1Rt">
-                    <img src="https://smilecoordinate.github.io/hp/img/line-icon.png" alt="公式LINE,SmileCoordinate">
-                        公式Lineからもお問い合わせ、申込みができます。
-                </a>
-				</li>
-        </ul>
-    </div>
+<div class="navigation">
+    <ul>
+      <li class="list active">
+        <a href="#tab--one">
+          <span class="icon">
+            <ion-icon name="home-outline"></ion-icon>
+          </span>
+          <span class="title">ホーム</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="#tab--one-second">
+          <span class="icon">
+            <ion-icon name="person-circle-outline"></ion-icon>
+          </span>
+          <span class="title">私たちについて</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="#tab--two">
+          <span class="icon">
+            <ion-icon name="tv-outline"></ion-icon>
+          </span>
+          <span class="title">サービス</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="#tab--four">
+          <span class="icon">
+            <ion-icon name="mail-outline"></ion-icon>
+        </span>
+          <span class="title">お問い合わせ</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="#tab--five">
+          <span class="icon">
+            <ion-icon name="id-card-outline"></ion-icon>
+          </span>
+          <span class="title">自分診断</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="#tab--six">
+          <span class="icon">
+            <ion-icon name="help-circle-outline"></ion-icon>
+        </span>
+          <span class="title">よくある質問</span>
+        </a>
+      </li>
+      <li class="list">
+        <a href="#tab--seven">
+          <span class="icon">
+            <!--<ion-icon name="mic-outline"></ion-icon>-->
+            <ion-icon name="star-outline"></ion-icon>
+        </span>
+          <span class="title">みなさまの感想</span>
+        </a>
+      </li>
+      <li class="list">
+        <div class="nav-bot">
+          <span class="icon">
+            <ion-icon name="chatbubble-ellipses-outline"></ion-icon>
+        </span>
+        <span onclick="toggleChatWindow()" class="title">チャットボット</span>
+        </div>
+      </li>
+    </ul>
+  </div>
 
+<script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js">
+</script>
+<script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js">
+</script>
+<script src="js/nav.js"></script>
 </header>
 <!-- header END -->
