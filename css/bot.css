@@ -30,11 +30,11 @@
         top: 10px;
         right: 15px;
         cursor: pointer;
-        color: var(--bg);
+        color: var(--text);
     }
 
     #close-button:focus {
-        color: #636363;
+        color: #9b9b9b;
     }
 
     /*==bot*/
@@ -51,7 +51,7 @@
         border-radius: 20px;
         cursor: pointer;
         /*vertical-align: middle;*/
-        box-shadow: hsla(0, 0%, 10%, 0.2) 0px 0px 0px, inset hsla(0, 0%, 0%, 0.5) 0px 1px 3px 1px;
+        box-shadow: hsla(0, 0%, 10%, 0.2) 0px 0px 0px, inset hsla(0, 0%, 0%, 0.5) 0px 1px 3px 0px;
         background-image: -webkit-radial-gradient(rgb(255, 246, 204) 0%, rgb(255, 189, 102) 15%, hsla(29, 100%, 60%, 0.3) 28%, hsla(200, 100%, 30%, 0) 70%);
         background-repeat: no-repeat;
         transition: background-position .15s cubic-bezier(.8, 0, 1, 1), transform .20s cubic-bezier(.8, 0, 1, 1);
@@ -88,6 +88,8 @@
     .chatbot-container {
         width: 100%;
         margin: 0 auto;
+        display: grid;
+        
     }
 
 /*    .chatbot-container p {
@@ -104,7 +106,7 @@
         height: calc(75% - 130px);
         position: fixed;
         bottom: 10px;
-        left: 20px;
+        left: 10px;
         padding: 4vw 5vw;
         backdrop-filter: blur(3px);
         background: linear-gradient(25deg, rgba(211, 255, 107, 0.5)10%, rgba(252, 250, 245, 0.5));
@@ -123,15 +125,23 @@
         background-color: rgba(252, 250, 245, 0.85);
     }
 
+    .bot-text {
+        margin: 0;
+        line-height: 1.4;
+        margin-bottom: 1rem;
+    }
+
     /* チャットメッセージのスタイル */
     #chat {
-        margin: 0.85em;
-        line-height: 1.5em;
-        letter-spacing: 0.1em;
-        padding: 0.75em;
+        width: 100%;
+        line-height: 1.5rem;
+        letter-spacing: 0.1rem;
+        padding: 0.75rem;
     }
 
     .bot {
+        font-size: 1.8rem;
+        line-height: 1.6;
         margin-bottom: 0.8em;
         border-bottom: 1px solid;
     }
@@ -161,6 +171,12 @@
         top: 3%;
         margin-left: 0;
     }
+    .keyword-options::before {
+        content: "キーワード";
+        font-size: 2rem;
+        position: relative;
+        left: 0;
+    }
 
     .keyword-options label {
         width: fit-content;
@@ -170,7 +186,7 @@
     /*ラジオボタン*/
     .chat-options {
         width: 100%;
-        height: 240px;
+        height: 25vmin;
         margin-top: 10px;
         display: flex;
         align-items: flex-start;
@@ -209,23 +225,20 @@
         transition: all .4s ease-in-out;
     }
 
-    span.wpcf7-not-valid-tip:last-child {
-        color: red;
-        top: 90%;
-    }
-
     .clear-button {
+        color: var(--bg);
+        border-color: var(--bg);
         background: rgb(0, 209, 171);
     }
 
     .send-button {
-        background: var(--bg);
+        background: #fffdfb;
     }
 
     .send-button:hover,
     .clear-button:hover {
         color: #777777;
-        background-color: rgba(252, 250, 245, 0.7);
+        background: #fffdfbcc;
     }
 
     .panel {
@@ -274,8 +287,6 @@
         #chat-window {
             width: calc(85vmin - 100px);
             height: calc(85% - 100px);
-            bottom: 20px;
-            left: 20px;
             padding: 4vmin 5vmin 0;
             border-radius: 20px;
             background: linear-gradient(25deg, rgba(211, 255, 107, 0.65)10%, rgba(252, 250, 245, 0.85));
@@ -297,10 +308,6 @@
         .bot {
             font-size: clamp(0.8rem, calc(0.8rem + 0.5vw), 1rem);
             line-height: 1.4em;
-        }
-
-        .chat-options {
-            height: 270px;
         }
 
         .input-container {
@@ -381,8 +388,6 @@
         #chat-window {
             width: calc(70vmin - 100px);
             height: 70vmin;
-            left: 20px;
-            bottom: 20px;
             padding: 3vh 4vw;
             border-radius: 20px;
             overflow-x: hidden;
@@ -433,8 +438,6 @@
 
         /*ラジオボタン*/
         .chat-options {
-            width: 100%;
-            height: 300px;
             justify-content: center;
             align-items: center;
         }

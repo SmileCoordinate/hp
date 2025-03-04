@@ -3,10 +3,20 @@
     grid-auto-flow: column;
     gap: 7rem;
     margin-left: 15%;
-    overflow: hidden;
-    overflow-x: auto;
+    overflow-x: auto; /* 横スクロールを有効化 */
+    overflow-y: hidden; /* 縦スクロールを無効化 */
     scroll-behavior: smooth;
+    /*white-space: nowrap;折り返し防止 */
+    scrollbar-width: none; /* Firefoxのスクロールバー非表示 */
+    -ms-overflow-style: none; /* IEでスクロールバー非表示 */
+    touch-action: pan-y; /* 縦スクロールのみ許可 */
 }
+
+/* Chrome, Safariのスクロールバー非表示 */
+.steps::-webkit-scrollbar {
+    display: none;
+}
+
 
 .step {
     position: relative;
@@ -61,7 +71,7 @@
 .step.active .content-wrapper {
     height: 350px;
     max-height: 500px;
-    padding: 4.4rem 1.5rem 0;
+    padding: 6rem 1.5rem 0;
 }
 
 .step.active .content {

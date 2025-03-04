@@ -2,35 +2,36 @@
    font-size: inherit;
    line-height: inherit;
    margin: 0;
-   block-size: 1.95rem;
+   block-size: 1rem;
    inline-size: 1rem;
    /*vertical-align: text-bottom;*/
 }
 
-input {
+form input {
    position: relative;
    appearance: none;
-   width: 1.25rem;
-   height: 1.25rem;
+   width: 1.6rem;
+   height: 1.6rem;
    border: 1px solid var(--accent);
    border-radius: 50%;
    background: #fffdfb;
+   box-shadow: inset hsla(0, 0%, 0%, 0.5) 0px 0px 2px 0px;
 }
 
-input[type="checkbox"] {
+form input[type="checkbox"] {
    border-radius: 2px;
 }
 
 /* チェックされたらラジオボタン内側を表示 */
-input[type="checkbox"]:checked::before,
-input[type="radio"]:checked::before {
+form input[type="checkbox"]:checked::before,
+form input[type="radio"]:checked::before {
    opacity: 1;
 }
 
-input[type="checkbox"]::before,
-input[type="radio"]::before {
-   background-color: #FEAFFF;
-   box-shadow: 0 0 5px 0 #FEAFFF;
+form input[type="checkbox"]::before,
+form input[type="radio"]::before {
+   background-color: rgba(254, 175, 255);
+   box-shadow: 0 1px 2px 0px rgba(46, 46, 46, 0.45);
    border-radius: 50%;
    bottom: 0;
    content: "";
@@ -181,8 +182,9 @@ input:-webkit-autofill:focus {
 
 .radio-group,
 .align-center h3 {
-   font-size: 1.4rem;
-   font-family: sans-serif;
+   font-size: 2rem;
+   font-family: 'Hachi Maru Pop';
+   font-weight: 700;
    color: var(--text);
    width: fit-content;
    line-height: 1.5;
@@ -194,7 +196,7 @@ input:-webkit-autofill:focus {
 }
 
 .align-center h3 {
-   font-size: 2rem;
+   font-size: 2.4rem;
 }
 
 /*===================== モーダルウィンドウ =====================*/

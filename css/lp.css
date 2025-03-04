@@ -10,10 +10,10 @@
     /*text border main rgba(46, 46, 46)*/
     --text: #2e2e2e;
     /*sub black rgba(255, 150, 48)*/
-    --hover: #FF9630;
+    --hover: #fda144;
     /*bg base rgba(253, 246, 234)*/
     --bg: #FDF6EA;
-    /*link accent rgba(250, 107, 255)*/
+    /*link accent rgba(254, 175, 255)*/
     --accent: #FEAFFF;
 }
 
@@ -246,7 +246,7 @@ img {
 }
 
 .img--two {
-    left: -20%;
+    left: -25%;
     bottom: 5%;
     transform: scale(-1, 1);
 }
@@ -257,15 +257,15 @@ img {
 }
 
 .img--four {
-    left: -14.6vmin;
+    width: 20vmin;
+    left: -11.8vmin;
     bottom: 0;
 }
 
 .img--five {
-    width: 22%;
-    right: -14%;
+    width: 15vmin;
+    right: -12.5%;
     bottom: 0;
-    z-index: -1;
 }
 
 .img--six {
@@ -278,8 +278,8 @@ img {
     width: 40vmin;
     position: fixed;
     transform: translate(65%, 75%);
-    z-index: -1;
     opacity: 0.5;
+    z-index: -1;
 }
 
 .img--start {
@@ -382,8 +382,7 @@ section,
     height: 400px;
     overflow-y: scroll;
     padding: 1rem;
-    background-color: var(--bg);
-    border: 1px solid var(--hover);
+    background: #fffdf9;
 }
 .voice li {
     font-family: "Zen Maru Gothic", serif;

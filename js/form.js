@@ -75,3 +75,6 @@ document.addEventListener("DOMContentLoaded", function () {
     }
   };
 });
+
+
+//モーダル非表示にする
