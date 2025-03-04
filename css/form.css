@@ -45,9 +45,8 @@ form input[type="radio"]::before {
    height: 0.8rem;
 }
 
-input[type="radio" i] {
-
-}
+/*input[type="radio" i] {
+}*/
 
 .form-row {
    display: grid;

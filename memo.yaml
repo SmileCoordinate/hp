@@ -20,11 +20,9 @@ https://github.com/SmileCoordinate/hp.git
 
 git push origin main
 Password
-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
+
 
 git remote set-url origin git@github.com:SmileCoordinate/hp.git
-git push origin main
-
 git push origin main
 
 git push
@@ -32,8 +30,31 @@ git push
 ssh-keygen -t ed25519 -C "sc.smilecoordinate@gmail.com"
 cat ~/.ssh/id_ed25519.pub
 
-
 git pull origin main
+
+# ブランチ名を main に統一（必要に応じて）
+git branch -M main
+git push -u origin main
+
+git config --global commit.gpgsign true
+
+git commit --amend -S -m "修正プル"
+git push origin main --force-with-lease
+
+git add memo.yaml
+git commit --amend --no-edit
+git push origin main --force-with-lease
+
+
+履歴削除
+git filter-repo --path memo.yaml --invert-paths
+git push origin main --force
+
+git reset --soft HEAD~1
+git restore --staged memo.yaml
+git add memo.yaml
+git commit -m "機密情報を削除"
+git push origin main --force-with-lease
 
 
 menu デザイン修正
