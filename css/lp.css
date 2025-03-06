@@ -13,6 +13,8 @@
     --hover: #fda144;
     /*bg base rgba(253, 246, 234)*/
     --bg: #FDF6EA;
+    /*sub bg*/
+    --sub: #fffdf9;
     /*link accent rgba(254, 175, 255)*/
     --accent: #FEAFFF;
 }
@@ -34,15 +36,14 @@
 .fade_bottom {
     opacity: 0;
     transition: opacity 1.2s ease, transform 1.2s ease, filter 1.2s ease;
-    filter: blur(4px);
-    transform: translateY(18px);
+    filter: blur(3px);
 }
 
 .fade_bottom.visible {
     opacity: 1;
     filter: blur(0);
-    transform: translateY(0);
 }
+
 
 @keyframes fadeIn_left {
     0% {
@@ -101,6 +102,9 @@ body {
     background: url('https://smilecoordinate.github.io/hp/img/bg-img.jpg') no-repeat center center / cover;
     background-attachment: fixed;
     overflow-x: hidden;
+    border: 10px solid var(--sub);
+    border-bottom: none;
+    border-left: none;
 }
 
 body::before {
@@ -136,7 +140,8 @@ h2,a {
 }
 
 h3 {
-    font-size: clamp(3rem, calc(3rem + 0.5vw), 3.4rem);
+    font-size: clamp(2rem, calc(3rem + 0.5vw), 2.4rem);
+    width: 100%;
     text-align: center;
 }
 
@@ -252,26 +257,26 @@ img {
 }
 
 .img--three {
-    top: 0;
+    top: -10vmin;
     transform: translate(70%, 5%);
 }
 
 .img--four {
     width: 20vmin;
     left: -11.8vmin;
-    bottom: 0;
+    bottom: 30vmin;
 }
 
 .img--five {
     width: 15vmin;
-    right: -12.5%;
-    bottom: 0;
+    right: -9.7vmin;
+    bottom: 32vmin;
 }
 
 .img--six {
     width: 25%;
     right: 2%;
-    bottom: 3%;
+    bottom: 10%;
 }
 
 .main--top--img {
@@ -283,8 +288,8 @@ img {
 }
 
 .img--start {
-    width: 45vmin;
-    bottom: 5%;
+    width: 40vmin;
+    bottom: 0%;
 }
 
 
@@ -299,7 +304,7 @@ main {
     backdrop-filter: blur(15px);
     border-left: 0.5px solid var(--accent);
     border-right: 0.5px solid var(--accent);
-    box-shadow: 0 2px 5px var(--text);
+    box-shadow: 0 2px 5px rgba(46, 46, 46, 0.5);
 }
 
 /*====Section*/
@@ -310,8 +315,9 @@ section,
     /*display: flex;
     justify-content: center;*/
     display: grid;
-    align-content: center;
+    align-content: flex-start;
     align-items: center;
+    padding-top: 10rem;
 }
 
 /*.h2-bg {
@@ -337,7 +343,7 @@ section,
     position: relative;
     width: 45%;
     height: 100vh;
-    transform: translate(25%, 10%)
+    transform: translate(25%, 0%)
 }
 
 .main-visual .overlay p {
@@ -348,10 +354,28 @@ section,
 
 .main-visual h1 {
     margin: 0;
+    margin-top: 20vmin;
+}
+
+.overlay--tow {
+    position: absolute;
+    top: 10%;
+    left: -100%;
+    margin-top: 10rem;
+}
+
+.overlay--tow p {
+    font-size: 2rem;
+    margin: 0;
+    margin-left: 1%;
 }
 
 
+
 /* About Us セクション */
+.sentence {
+    align-content: center;
+}
 .about-us ol {
     font-size: clamp(2rem, calc(2rem + 0.5vw), 2.4rem);
     font-weight: 600;
@@ -369,20 +393,26 @@ section,
 
 /* Service セクション */
 .services {
-    background: #fffdf9;
+    background: var(--sub);
 }
 .services .point {
     font-weight: 600;
-    margin: 0 auto;
+    width: 65%;
+    margin: 2vmin auto;
 }
-
+.services h3 {
+    width: 65%;
+    text-align: left;
+    margin: 0 auto;
+    position: relative;
+}
 
 .voice ul {
     width: 75%;
-    height: 400px;
+    height: 480px;
     overflow-y: scroll;
     padding: 1rem;
-    background: #fffdf9;
+    background: var(--sub);
 }
 .voice li {
     font-family: "Zen Maru Gothic", serif;

@@ -16,7 +16,7 @@
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-535E0J09ZN"></script>
   <script>
     window.dataLayer = window.dataLayer || [];
-    function gtag(){dataLayer.push(arguments);}
+    function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
 
     gtag('config', 'G-535E0J09ZN');
@@ -68,6 +68,7 @@
   <link rel="stylesheet" href="css/form.css">
   <link rel="stylesheet" href="css/nav.css">
   <link rel="stylesheet" href="css/acdion.css">
+  <link rel="stylesheet" href="css/modal.css">
 
   <!-- ファビコン -->
   <link rel="icon" href="img/sc_logo_w600.ico"> <!-- ファビコンのパス -->
@@ -81,6 +82,7 @@
   <script src="js/header.js"></script>
   <script src="js/card.js"></script>
   <script src="js/accordion.js"></script>
+  <script src="js/modal.js"></script>
 
 </head>
 
@@ -104,7 +106,7 @@
   <div id="header-placeholder"></div>
 
   <!-- Main Visual Section -->
-  <div class="main-visual" id="tab--start">
+  <div class="main-visual fade_bottom" id="tab--start">
     <div class="overlay">
       <h1>Smile Coordinate</h1>
       <p>
@@ -113,15 +115,16 @@
         人はいつからでも変われる。もっと自分を解放して、笑顔でいられるように。
       </p>
     </div>
-    <img src="https://smilecoordinate.github.io/hp/img/p14.png" class="img--start" alt="sc,SmileCoordinate,スマイルコーディネート">
+    <img src="https://smilecoordinate.github.io/hp/img/p14.png" class="img--start "
+      alt="sc,SmileCoordinate,スマイルコーディネート">
   </div>
 
   <img src="img/flower-of-life.png" alt="" class="main--top--img">
 
   <main>
     <!-- About Section -->
-    <div class="sentence" id="tab--one">
-      <img src="https://smilecoordinate.github.io/hp/img/p18.png" class="top-img--one pc"
+    <div class="sentence fade_bottom" id="tab--one">
+      <img src="https://smilecoordinate.github.io/hp/img/p18.png" class="top-img--one pc "
         alt="sc,SmileCoordinate,スマイルコーディネート">
       <ul>
         <li>あなたが大切にしていることはなんですか？</li>
@@ -129,11 +132,12 @@
         <li>あなたは今を変えたいと思いますか？</li>
         <li>あなたは自分を変えたいと思いますか？</li>
       </ul>
-      <img src="https://smilecoordinate.github.io/hp/img/p19.png" class="top-img--two pc"
+      <img src="https://smilecoordinate.github.io/hp/img/p19.png" class="top-img--two pc "
         alt="sc,SmileCoordinate,スマイルコーディネート">
     </div>
-    <section class="about-us" id="tab--one-second">
-      <h2 class="bgfont_h2" data-en="About">
+
+    <section class="fade_bottom about-us" id="tab--one-second">
+      <h2 class="bgfont_h2 " data-en="About">
         私たちについて
       </h2>
       <p>
@@ -153,11 +157,19 @@
         <br>
         Smile Coordinateは「コーチングやお悩み相談」で、バゲージ（不要な荷物、過剰な感情、無くて良い思考、他人の念やエネルギー）などを見つけ出して、捨てていく思考に変えていくキッカケをお渡しします。
       </p>
+
+      <div class="overlay--tow fade_bottom">
+        <p>
+          自分らしく、優しい心を。
+          <br>
+          人はいつからでも変われる。もっと自分を解放して、笑顔でいられるように。
+        </p>
       </div>
     </section>
+
     <!-- Service Section -->
-    <section class="services" id="tab--two">
-      <h2 class="bgfont_h2" data-en="Service">
+    <section class="fade_bottom services" id="tab--two">
+      <h2 class="bgfont_h2 " data-en="Service">
         提供しているもの
       </h2>
       </div>
@@ -180,10 +192,10 @@
       <!-- card カードをアコーディオンに変更？-->
       <div class="steps">
         <div class="step" onclick="toggleAccordion(this)">
-          <div class="tab">
+          <div class="tab  card--first">
             STEP.01
           </div>
-          <div class="content-wrapper">
+          <div class="content-wrapper tab-bg--first">
             <p class="content">
               「知る」
               <br>
@@ -193,10 +205,10 @@
           </div>
         </div>
         <div class="step" onclick="toggleAccordion(this)">
-          <div class="tab">
+          <div class="tab card--tow">
             STEP.02
           </div>
-          <div class="content-wrapper">
+          <div class="content-wrapper tab-bg--tow">
             <p class="content">
               「考える」
               <br>
@@ -207,10 +219,10 @@
           </div>
         </div>
         <div class="step" onclick="toggleAccordion(this)">
-          <div class="tab">
+          <div class="tab card--three">
             STEP.03
           </div>
-          <div class="content-wrapper">
+          <div class="content-wrapper tab-bg--three">
             <p class="content">
               「行動」
               <br>
@@ -221,12 +233,109 @@
           </div>
         </div>
       </div>
+
+      <div class="overlay--tow fade_bottom">
+        <p>
+          自分らしく、優しい心を。
+          <br>
+          人はいつからでも変われる。もっと自分を解放して、笑顔でいられるように。
+        </p>
+      </div>
+
+      <a href="#" class="button" data-modal="modal--first">料金プラン</a>
+
       <img src="https://smilecoordinate.github.io/hp/img/p15.png" class="img--two" alt="">
     </section>
 
-    <!-- contact -->
-    <section class="contact" id="tab--four">
-      <h2 class="bgfont_h2" data-en="Contact">
+    <!-- モーダルと背景 -->
+    <div class="modal-overlay"></div>
+
+    <div class="modal site-p" id="modal--first">
+      <button class="close">&times;</button>
+      <p>
+        コーチングセッション目安時間 初回2~2.5時間 / 2回目以降（2時間）
+        <br>
+        ※得られるものは人それぞれ異なります。今気づけた自分を褒めてあげてください。
+      </p>
+      <div class="price">
+        <div class="price-card--first">
+          <h2>通常プラン</h2>
+          <p>
+            2時間 15,000円 ~
+            <br>
+            <span>（初回のみ2時間30分）</span>
+          </p>
+          <p></p>
+        </div>
+
+        <div class="price-card--second">
+          <h2>単発プラン</h2>
+          <p>3回 40,000円</p>
+          <p>7回 90,000円</p>
+          <p>10回 125,000円</p>
+        </div>
+
+        <div class="price-card--third">
+          <h2>長期プラン</h2>
+          <p>1カ月 <span>(4回)</span>/ 50,000円</p>
+          <p>2カ月 <span>(8回)</span>/ 130,000円</p>
+          <p>3カ月 <span>(12回)</span>/ 180,000円</p>
+        </div>
+      </div>
+      <p>
+        ※セッションはオンラインで行います。
+        <br>
+        ※ご予約やお申込みはコンタクトフォームもしくは自分診断から行えます。
+        <br>
+        ※急な予定が入ってしまった場合には、当日の12時までにご連絡をいただければ、日時の調整をいたします。
+        <br>
+        ※お支払いについてはよくある質問をご覧ください。
+        <br>
+        よくある質問以外に知りたいことがありましたらお気軽にお問い合わせください。
+      </p>
+    </div>
+
+    <!-- 自己分析 -->
+    <section class="fade_bottom contact" id="tab--four">
+      <h2 class="bgfont_h2 " data-en="Self Diagnosis">
+        自分診断
+      </h2>
+      <p>
+        自分に「必要か分からない方」や「必要かどうか見極めたい方」は、下にある「自分診断」をクリックしてみてください！
+        <br>
+        今のあなたに「コーチングやお悩み相談」が必要かどうかを診断いたします。
+        <br>
+        診断の最後に無料相談を希望される方限定で、約1時間の無料相談をお申込みいただけます。
+      </p>
+      <p>
+        無料相談が終わった後に本申し込みに進むかご検討ください。
+        <br>
+        診断するだけでも、思考がクリーンになると思うので、まずは、診断をしてみて無料相談を受けていただけると嬉しいです！
+        <br>
+        ・無料相談の注意事項
+      </p>
+      <p>
+        ※通常時間：30分 / 毎月先着3名：1時間（一人 1回まで）
+      </p>
+      <a href="matching.html" class="btn " target="_blank">
+        自分診断
+      </a>
+
+      <div class="overlay--tow fade_bottom">
+        <p>
+          自分らしく、優しい心を。
+          <br>
+          人はいつからでも変われる。もっと自分を解放して、笑顔でいられるように。
+        </p>
+      </div>
+
+      <img src="https://smilecoordinate.github.io/hp/img/p10.png" class="img--four " alt="">
+      <img src="https://smilecoordinate.github.io/hp/img/p11.png" class="img--five " alt="">
+    </section>
+
+        <!-- contact -->
+    <section class="fade_bottom contact" id="tab--five">
+      <h2 class="bgfont_h2 " data-en="Contact">
         お問い合わせ
       </h2>
       <img src="https://smilecoordinate.github.io/hp/img/p09.png" class="img--three" alt="">
@@ -235,7 +344,7 @@
         <br>
         ※アドレスは連絡の取れるものを入力してください。
       </p>
-      <div class="content-wrapper">
+      <div class="content-wrapper ">
         <div class="get-in-touch">
           <form id="contactForm" class="contact-form"
             action="https://script.google.com/macros/s/AKfycbxWnG-Ll6ydxzfxQCrx1vV0yY6L-Nd71smtrghVv5SULaooqwWDXQsiIUXsku1u2OrEYw/exec"
@@ -286,57 +395,35 @@
         </div>
       </div>
 
-    </section>
-    <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
-    <!-- モーダルウィンドウ -->
-    <div id="thanksModal" class="modal">
-      <div class="modal-content">
-        <span class="close">&times;</span>
+      <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
+      <!-- モーダルウィンドウ -->
+      <div id="thanksModal" class="modal ">
+        <div class="modal-content">
+          <span class="close">&times;</span>
+          <p>
+            問合せありがとうございます。
+            <br>
+            返信まで1日～2日ほどお待ちください。
+          </p>
+        </div>
+      </div>
+
+      <div class="overlay--tow fade_bottom">
         <p>
-          問合せありがとうございます。
+          自分らしく、優しい心を。
           <br>
-          返信まで1日～2日ほどお待ちください。
+          人はいつからでも変われる。もっと自分を解放して、笑顔でいられるように。
         </p>
       </div>
-    </div>
-
-    <!-- 自己分析 -->
-    <section class="contact" id="tab--five">
-      <h2 class="bgfont_h2" data-en="Self Diagnosis">
-        自分診断
-      </h2>
-      <p>
-        自分に「必要か分からない方」や「必要かどうか見極めたい方」は、下にある「自分診断」をクリックしてみてください！
-        <br>
-        今のあなたに「コーチングやお悩み相談」が必要かどうかを診断いたします。
-        <br>
-        診断の最後に無料相談を希望される方限定で、約1時間の無料相談をお申込みいただけます。
-      </p>
-      <p>
-        無料相談が終わった後に本申し込みに進むかご検討ください。
-        <br>
-        診断するだけでも、思考がクリーンになると思うので、まずは、診断をしてみて無料相談を受けていただけると嬉しいです！
-        <br>
-        ・無料相談の注意事項
-      </p>
-      <p>
-        ※通常時間：30分 / 毎月先着3名：1時間（一人 1回まで）
-      </p>
-      <a href="https://forms.gle/SpYuYiSHdgaJdh7G9" class="btn" target="_blank">
-        自分診断
-      </a>
-
-      <img src="https://smilecoordinate.github.io/hp/img/p10.png" class="img--four" alt="">
-      <img src="https://smilecoordinate.github.io/hp/img/p11.png" class="img--five pc" alt="">
     </section>
 
     <!-- FAQ -->
-    <section class="voice" id="tab--six">
-      <h2 class="bgfont_h2" data-en="Q&A">
+    <section class="fade_bottom voice" id="tab--six">
+      <h2 class="bgfont_h2 " data-en="Q&A">
         よくある質問
       </h2>
       <!-- アコーディオン -->
-      <div class="accordion-wrap fade_bottom">
+      <div class="accordion-wrap ">
         <div class="accordion-item">
           <h3 class="accordion-header">
             項目の選択とご相談内容
@@ -351,7 +438,7 @@
         </div>
       </div>
 
-      <div class="accordion-wrap fade_bottom">
+      <div class="accordion-wrap ">
         <div class="accordion-item">
           <h3 class="accordion-header">
             お申し込み時に記載してほしいこと
@@ -368,7 +455,7 @@
         </div>
       </div>
 
-      <div class="accordion-wrap fade_bottom">
+      <div class="accordion-wrap ">
         <div class="accordion-item">
           <h3 class="accordion-header">
             質問について
@@ -387,49 +474,65 @@
           </p>
         </div>
       </div>
+
+      <div class="overlay--tow fade_bottom">
+        <p>
+          自分らしく、優しい心を。
+          <br>
+          人はいつからでも変われる。もっと自分を解放して、笑顔でいられるように。
+        </p>
+      </div>
     </section>
 
     <!-- voice -->
-    <section class="voice" id="tab--seven">
+    <section class="fade_bottom voice" id="tab--seven">
       <h3>
         みなさまの感想
       </h3>
       <p>
         変化や気づきは個々で異なりますが、（どのように変化して、どんな気づき）があったのか共有していただきましたので、ご覧ください！
       </p>
-      <ul class="voice">
+      <ul class="voice ">
         <li>
-        〇〇さん
-        <br>
-        自分の特徴や癖を知れたことで、これまでやらなくてよいことをしなくなり時間に余裕ができて
-        心も体もゆったりできるようになった。
+          〇〇さん
+          <br>
+          自分の特徴や癖を知れたことで、これまでやらなくてよいことをしなくなり時間に余裕ができて
+          心も体もゆったりできるようになった。
         </li>
         <li>
-        〇〇さん
-        <br>
-        これまでは自覚がなく、無意識にしていたことに気づき、人と関わることが楽になり、人間関係
-        でのストレスが減りました。
+          〇〇さん
+          <br>
+          これまでは自覚がなく、無意識にしていたことに気づき、人と関わることが楽になり、人間関係
+          でのストレスが減りました。
         </li>
         <li>
-        〇〇さん
-        <br>
-        これまでは自覚がなく、無意識にしていたことに気づき、人と関わることが楽になり、人間関係
-        でのストレスが減りました。
+          〇〇さん
+          <br>
+          これまでは自覚がなく、無意識にしていたことに気づき、人と関わることが楽になり、人間関係
+          でのストレスが減りました。
         </li>
         <li>
-        〇〇さん
-        <br>
-        これまでは自覚がなく、無意識にしていたことに気づき、人と関わることが楽になり、人間関係
-        でのストレスが減りました。
+          〇〇さん
+          <br>
+          これまでは自覚がなく、無意識にしていたことに気づき、人と関わることが楽になり、人間関係
+          でのストレスが減りました。
         </li>
         <li>
-        〇〇さん
-        <br>
-        これまでは自覚がなく、無意識にしていたことに気づき、人と関わることが楽になり、人間関係
-        でのストレスが減りました。
+          〇〇さん
+          <br>
+          これまでは自覚がなく、無意識にしていたことに気づき、人と関わることが楽になり、人間関係
+          でのストレスが減りました。
         </li>
       </ul>
-      <img src="https://smilecoordinate.github.io/hp/img/p04.png" class="img--six" alt="">
+      <img src="https://smilecoordinate.github.io/hp/img/p04.png" class="img--six " alt="">
+
+      <div class="overlay--tow fade_bottom">
+        <p>
+          自分らしく、優しい心を。
+          <br>
+          人はいつからでも変われる。もっと自分を解放して、笑顔でいられるように。
+        </p>
+      </div>
     </section>
 
     <div id="footer-placeholder"></div>

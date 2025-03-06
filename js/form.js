@@ -25,56 +25,57 @@ document.addEventListener("DOMContentLoaded", function () {
   const modal = document.getElementById('thanksModal');
   const closeButton = document.getElementsByClassName('close')[0];
 
+  // 初期状態でモーダルを非表示
+  modal.classList.remove("show");
+
   document.getElementById('contactForm').addEventListener('submit', function (e) {
     e.preventDefault();
     const form = e.target;
     const formData = new FormData(form);
 
-    // 送信処理
     fetch(form.action, {
       method: 'POST',
       body: formData
     }).then(response => {
       if (response.ok) {
-        submitted = true;  // 送信成功時に submitted を true にする
-        modal.style.display = "block";  // モーダルを表示
-        form.reset();  // フォームをリセット
+        submitted = true;
+        modal.classList.add("show"); // モーダルをフェードイン
+        form.reset();
         document.querySelectorAll('.input-text').forEach(input => {
           input.classList.remove('not-empty');
         });
+
+        // 3秒後にフェードアウト
+        setTimeout(() => {
+          modal.classList.remove("show");
+          setTimeout(() => {
+            modal.style.display = "none"; // 完全に非表示にする
+          }, 400); // フェードアウトの時間
+        }, 3000);
+
       } else {
-        alert('送信に問題が発生しました。サーバーからエラーが返されました。');
-        console.error('送信エラー:', response);
+        alert('送信に問題が発生しました。');
       }
     }).catch(error => {
-      alert('送信に問題が発生しました。ネットワークエラーの可能性があります。');
-      console.error('ネットワークエラー:', error);  // エラーをコンソールに出力
+      alert('送信に問題が発生しました。');
     });
   });
 
-  // iframe の onload イベントを別途設定
-  const hiddenIframe = document.getElementById('hidden_iframe');
-  if (hiddenIframe) {
-    hiddenIframe.onload = function () {
-      if (submitted) {
-        alert('送信が完了しました。');
-        submitted = false;  // リセット
-      }
-    };
-  }
-
   // モーダルのクローズボタン
   closeButton.onclick = function () {
-    modal.style.display = "none";
+    modal.classList.remove("show");
+    setTimeout(() => {
+      modal.style.display = "none";
+    }, 400);
   };
 
-  // モーダル外をクリックしたときの閉じる処理
+  // モーダル外をクリックで閉じる
   window.onclick = function (event) {
     if (event.target == modal) {
-      modal.style.display = "none";
+      modal.classList.remove("show");
+      setTimeout(() => {
+        modal.style.display = "none";
+      }, 400);
     }
   };
 });
-
-
-//モーダル非表示にする

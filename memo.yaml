@@ -38,7 +38,7 @@ git push -u origin main
 
 git config --global commit.gpgsign true
 
-git commit --amend -S -m "修正プル"
+git commit --amend -S -m "修正 matching html"
 git push origin main --force-with-lease
 
 git add memo.yaml
@@ -46,17 +46,7 @@ git commit --amend --no-edit
 git push origin main --force-with-lease
 
 
-履歴削除
-git filter-repo --path memo.yaml --invert-paths
-git push origin main --force
-
-git reset --soft HEAD~1
-git restore --staged memo.yaml
-git add memo.yaml
-git commit -m "機密情報を削除"
-git push origin main --force-with-lease
-
-
-menu デザイン修正
-STEP 横スクロール js
+STEP 横スクロール js 後で
 送信後モーダル
+
+自分診断 デザイン、内容

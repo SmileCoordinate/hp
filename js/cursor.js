@@ -66,18 +66,19 @@
         var elementsToShow = document.querySelectorAll('.fade_bottom');
 
         function isVisible(element) {
-            // 要素が表示されるかどうかをチェック
             var elementRect = element.getBoundingClientRect();
             var elementTop = elementRect.top;
             var elementBottom = elementRect.bottom;
 
-            return (elementTop < window.innerHeight * 0.7) && (elementBottom > 0);
+            return (elementTop < window.innerHeight * 0.75) && (elementBottom > window.innerHeight * 0.25);
         }
 
         function checkScroll() {
             elementsToShow.forEach(function (element) {
                 if (isVisible(element)) {
                     element.classList.add('visible');
+                } else {
+                    element.classList.remove('visible'); // 画面外に出たらフェードアウト
                 }
             });
         }

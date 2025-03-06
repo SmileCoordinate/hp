@@ -3,13 +3,19 @@
     grid-auto-flow: column;
     gap: 7rem;
     margin-left: 15%;
-    overflow-x: auto; /* 横スクロールを有効化 */
-    overflow-y: hidden; /* 縦スクロールを無効化 */
+    overflow-x: auto;
+    padding: 2rem 4rem;
+    /* 横スクロールを有効化 */
+    overflow-y: hidden;
+    /* 縦スクロールを無効化 */
     scroll-behavior: smooth;
-    /*white-space: nowrap;折り返し防止 */
-    scrollbar-width: none; /* Firefoxのスクロールバー非表示 */
-    -ms-overflow-style: none; /* IEでスクロールバー非表示 */
-    touch-action: pan-y; /* 縦スクロールのみ許可 */
+    /*white-space: nowrap; 折り返し防止 */
+    scrollbar-width: none;
+    /* Firefoxのスクロールバー非表示 */
+    -ms-overflow-style: none;
+    /* IEでスクロールバー非表示 */
+    touch-action: pan-y;
+    /* 縦スクロールのみ許可 */
 }
 
 /* Chrome, Safariのスクロールバー非表示 */
@@ -17,42 +23,55 @@
     display: none;
 }
 
-
 .step {
     position: relative;
     min-width: 250px;
-    width: 280px;
+    width: 300px;
+    height: 400px;
     cursor: pointer;
     margin: 5%;
-    height: 400px;
 }
 
 .step .tab {
     width: 235px;
+    height: 66px;
     padding: 15px 30px;
     font-size: 20px;
     font-weight: bold;
-    color: var(--bg);
+    color: var(--sub);
     text-align: center;
     margin: 0 auto;
-    border-radius: 10px;
-    background: linear-gradient(135deg,
+    /*background: linear-gradient(135deg,
             rgba(180, 200, 255, 0.8),
-            rgba(100, 120, 200, 0.6));
-    border: 2px solid rgba(255, 255, 255, 0.5);
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3);
-    backdrop-filter: blur(8px);
+            rgba(100, 120, 200, 0.6));*/
     position: relative;
     z-index: 2;
 }
 
+.card--first {
+    background: url("/img/tab-bg--first.png");
+    background-size: cover;
+    background-position: top center;
+}
+
+.card--tow {
+    background: url("/img/tab-bg--tow.png");
+    background-size: cover;
+    background-position: top center;
+}
+.card--three {
+    background: url("/img/tab-bg--three.png");
+    background-size: cover;
+    background-position: top center;
+}
+
 .step .content-wrapper {
-    background: rgba(25, 255, 255, 0.2);
     border-radius: 10px;
     position: relative;
     top: -40px;
     transition: max-height 0.3s ease, padding 0.3s ease;
-    background: linear-gradient(180deg, rgba(250, 107, 255, 0.07), rgba(253, 246, 234, 0) 50%, rgba(255, 150, 48, 0.05));
+    /*background: linear-gradient(180deg, rgba(250, 107, 255, 0.07), rgba(253, 246, 234, 0) 50%, rgba(255, 150, 48, 0.05));*/
+    background-repeat: no-repeat;
     width: 100%;
     height: 15%;
     margin: 0 auto;
@@ -63,9 +82,25 @@
     z-index: 0;
 }
 
+.tab-bg--first {
+    background: url("/img/card-bg--first.png");
+    background-size: cover;
+    background-position: top center;
+}
+.tab-bg--tow {
+    background: url("/img/card-bg--tow.png");
+    background-size: cover;
+    background-position: top center;
+}
+.tab-bg--three {
+    background: url("/img/card-bg--three.png");
+    background-size: cover;
+    background-position: top center;
+}
+
 .step .content {
     opacity: 0;
-    transition: opacity 0.3s ease;
+    transition: opacity 0.2s ease;
 }
 
 .step.active .content-wrapper {
@@ -85,12 +120,12 @@
     bottom: 1%;
 }
 
- .step:last-child img {
+.step:last-child img {
     width: 19vmin;
     bottom: -7.5%;
 }
 
- .step h3 span {
+/*.step h3 span {
     font-size: clamp(6.4rem, calc(6.4rem + 0.5vw), 7rem);
     font-family: "Monsieur La Doulaise", cursive;
     font-weight: 400;
@@ -99,13 +134,13 @@
     position: absolute;
     top: 5%;
     left: 15%;
-}
+}*/
 
- .step h3 {
+.step h3 {
     margin: 6% auto 3%;
 }
 
- .step p {
+.step p {
     font-weight: 500;
     width: 80%;
     margin: 0 auto;
