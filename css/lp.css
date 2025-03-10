@@ -562,7 +562,6 @@ footer {
     }
 
     .hydrated {
-        pointer-events: none;
         overflow-x: hidden;
     }
 
