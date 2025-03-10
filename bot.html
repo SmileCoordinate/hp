@@ -1,0 +1,44 @@
+		<div id="chat-window">
+			<div class="chatbot-container">
+				<div id="close-button" onclick="toggleChatWindow()">✖</div>
+					<p class="bot-text">
+						これはChatbotです。
+						<br>
+						項目を選択してください
+					</p>
+				<!-- ChatBot ウィンドウ -->
+				<div id="chat" class="chat-window">
+				</div>
+				<div class="input-container">
+					<div class="chat-options">
+						<div class="radio-options">
+							項目
+								<label>
+									<input type="radio" name="category" value="about">
+										私たちについて
+								</label>
+								<label>
+									<input type="radio" name="category" value="works">
+										私たちのできること
+								</label>
+								<label>
+									<input type="radio" name="category" value="その他">
+										その他
+								</label>
+						</div>
+							<div class="radio-options keyword-options">
+								<!--キーワード選択肢はカテゴリー選択後にJSで動的に生成 -->
+							</div>
+					</div>
+				<div class="button-container">
+							<button id="send-button" class="send-button panel">
+								決定
+							</button>
+							<button id="clear-button" class="clear-button panel">
+								クリア
+							</button>
+					</div>
+				</div>
+
+			</div>
+		</div>

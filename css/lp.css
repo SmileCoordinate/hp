@@ -52,9 +52,7 @@ h4 {
     padding: 0;
     box-sizing: border-box;
 }
-.hydrated {
-    overflow-x: hidden;
-}
+
 input,
 button,
 select,
@@ -63,7 +61,12 @@ textarea {
     -moz-appearance: none;
     appearance: none;
 }
-
+.mobile {
+    display: none;
+}
+.pc {
+    display: block;
+}
 body {
     margin: 0;
     padding: 0;
@@ -547,13 +550,6 @@ footer {
         width: 5px;
         height: 8px;
     }
-
-    .pc {
-        display: block;
-    }
-    .mobile {
-        display: none;
-    }
 }
 
 @media screen and (max-width: 600px) {
@@ -563,6 +559,11 @@ footer {
 
     .mobile {
         display: block;
+    }
+
+    .hydrated {
+        pointer-events: none;
+        overflow-x: hidden;
     }
 
     body {
@@ -579,6 +580,7 @@ footer {
         height: 100%;
         border-left: 3vmin solid var(--sub);
         border-top: 3vmin solid var(--sub);
+        z-index: 10;
         pointer-events: none;/* クリックを無効化 */
     }
 
