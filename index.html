@@ -1,17 +1,13 @@
 <!DOCTYPE html>
 <html lang="ja">
-
 <head>
-  <!-- 基本のメタタグ -->
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
   <!-- SEO -->
   <meta name="google-site-verification" content="arT_wWeQn_KLlT4yLyz2Q-Lsv5wn0i6WnakFwjAATbM" />
-  <meta name="description" content="Smile Coordinateのウェブサイトへようこそ。私たちの活動や目的、サービスについてご紹介します。">
-  <meta name="keywords" content="Smile Coordinate, コーチング, カウンセリング, 事業サポート">
+  <meta name="description" content="Smile CoordinateのWebサイトでは、私たちの活動や目的、サービスについて紹介しています。">
+  <meta name="keywords" content="Smile Coordinate, コーチング, カウンセリング, 悩み相談">
   <meta name="author" content="Smile Coordinate">
-
   <!-- Google tag (gtag.js) -->
   <script async src="https://www.googletagmanager.com/gtag/js?id=G-535E0J09ZN"></script>
   <script>
@@ -21,14 +17,15 @@
 
     gtag('config', 'G-535E0J09ZN');
   </script>
-
-  <!-- ソーシャルメディア用のメタタグ (OGP) -->
+  <!-- SNS meta (OGP) -->
   <meta property="og:title" content="Smile Coordinate">
   <meta property="og:description" content="私たちの活動やサービスについてご紹介します。">
-  <meta property="og:image" content="path/to/image.jpg"> <!-- 共有時に使われる画像のパス -->
+  <meta property="og:image" content="path/to/image.jpg">
   <meta property="og:url" content="https://smilecoordinate.github.io/hp/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ja_JP">
+  <!-- icon -->
+  <link rel="icon" href="../img/sc_logo_w600.ico">
   <script type="application/ld+json">
     {
       "@context": "https://schema.org",
@@ -38,90 +35,51 @@
       "description": "Smile Coordinate,SC,スマイルコーディネート、コーチング、相談、変化、思考"
     }
     </script>
-
-  <!-- セキュリティとパフォーマンス向上のためのメタタグ
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta http-equiv="Content-Security-Policy" content="upgrade-insecure-requests">
-    <meta http-equiv="Referrer-Policy" content="strict-origin">
-    <meta http-equiv="Strict-Transport-Security" content="max-age=31536000">-->
-
-  <!-- ページタイトル -->
+  <!-- セキュリティを維持しつつ、全ファイルを適切に読み込む -->
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval' data: blob:;">
+  <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+  <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
   <title>Smile Coordinate</title>
-
-  <!-- font
-    h1
-    https://fonts.google.com/share?selection.family=Dongle
-    h2,h3,a,h2-bg
-    https://fonts.google.com/share?selection.family=Hachi+Maru+Pop|Satisfy|Yusei+Magic|Zen+Maru+Gothic
-    -->
+  <!-- font h1/https://fonts.google.com/share?selection.family=Dongle/h2,h3,a,h2-bg/https://fonts.google.com/share?selection.family=Hachi+Maru+Pop|Satisfy|Yusei+Magic|Zen+Maru+Gothic-->
   <!-- font zen gothic -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Satisfy&family=Yusei+Magic&family=Zen+Maru+Gothic&display=swap"
-    rel="stylesheet">
-
-  <!-- css -->
-  <link rel="stylesheet" href="css/bot.css">
-  <link rel="stylesheet" href="css/card.css">
-  <link rel="stylesheet" href="css/form.css">
+  <link href="https://fonts.googleapis.com/css2?family=Hachi+Maru+Pop&family=Satisfy&family=Yusei+Magic&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+  <!-- CSS -->
+  <link rel="stylesheet" href="css/bot.css" defer>
+  <link rel="stylesheet" href="css/card.css" defer>
+  <link rel="stylesheet" href="css/form.css" defer>
   <link rel="stylesheet" href="css/nav.css">
-  <link rel="stylesheet" href="css/acdion.css">
-  <link rel="stylesheet" href="css/modal.css">
+  <link rel="stylesheet" href="css/acdion.css" defer>
+  <link rel="stylesheet" href="css/modal.css" defer>
   <link rel="stylesheet" href="css/header.css">
   <link rel="stylesheet" href="css/lp.css">
-
-  <!-- ファビコン -->
-  <link rel="icon" href="img/sc_logo_w600.ico"> <!-- ファビコンのパス -->
-
-  <!-- JavaScriptファイル -->
+  <!-- JS -->
   <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-  <script src="js/cursor.js"></script> <!-- deferを追加してページのレンダリングをブロックしない -->
-  <script src="js/chat.js"></script> <!-- deferを追加 -->
-  <script src="js/security.js"></script>
-  <script src="js/form.js"></script>
+  <!-- defer追加ページレンダリングブロック回避 -->
+  <script src="js/cursor.js"></script>
+  <script src="js/chat.js" defer></script>
+  <script src="js/form.js" defer></script>
   <script src="js/header.js"></script>
-  <script src="js/card.js"></script>
-  <script src="js/accordion.js"></script>
-  <script src="js/modal.js"></script>
-
+  <script src="js/card.js" defer></script>
+  <script src="js/accordion.js" defer></script>
+  <script src="js/modal.js" defer></script>
 </head>
 
 <body oncontextmenu="return false;">
   <div id="stalker" class="pc"></div>
-
-  <!-- Header
-    <header>
-        <div class="logo">Smile Coordinate</div>
-        <nav>
-            <ul>
-                <li><a href="#tab--start">Top</a></li>
-                <li><a href="#tab--one">About</a></li>
-                <li><a href="#tab--two">Service</a></li>
-                <li><a href="#tab--four">Contact</a></li>
-                <li><a href="#tab--five">Voice</a></li>
-            </ul>
-        </nav>
-    </header>-->
-
   <div id="header-placeholder"></div>
-
-  <!-- Main Visual Section -->
+  <!-- Main Visual -->
   <div class="main-visual fade_bottom pc" id="tab--start">
     <div class="overlay">
       <h1>Smile Coordinate</h1>
-      <p>
-        自分らしく、優しい心を。
-        <br>
-        人はいつからでも変われる。もっと自分を解放して、笑顔でいられるように。
+      <p>自分らしく、優しい心を。<br>人はいつからでも変われる。もっと自分を解放して、笑顔でいられるように。
       </p>
     </div>
-    <img src="https://smilecoordinate.github.io/hp/img/p14.png" class="img--start "
-      alt="sc,SmileCoordinate,スマイルコーディネート">
+    <img src="../img/top-img.png" class="img--start " alt="sc,SmileCoordinate,スマイルコーディネート">
   </div>
-
-  <img src="img/flower-of-life.png" alt="" class="main--top--img">
-
+  <img src="../img/flower-of-life.png" alt="" class="main--top--img">
   <main>
     <!-- mobile top Section -->
     <div class="main-visual fade_bottom mobile" id="tab--start">
@@ -133,24 +91,20 @@
           人はいつからでも変われる。もっと自分を解放して、笑顔でいられるように。
         </p>
       </div>
-      <img src="https://smilecoordinate.github.io/hp/img/p14.png" class="img--start "
-        alt="sc,SmileCoordinate,スマイルコーディネート">
+      <img src="../img/top-img.png" class="img--start" alt="sc,SmileCoordinate,スマイルコーディネート">
     </div>
-
     <!-- About Section -->
     <div class="sentence fade_bottom" id="tab--one">
-      <img src="https://smilecoordinate.github.io/hp/img/p18.png" class="top-img--one pc "
-        alt="sc,SmileCoordinate,スマイルコーディネート">
+      <img src="../img/top-right-first.png" class="top-img--one pc" alt="sc,SmileCoordinate,スマイルコーディネート">
       <ul>
         <li>あなたが大切にしていることはなんですか？</li>
         <li>あなたはどんな人生をおくりたいですか？</li>
         <li>あなたは今を変えたいと思いますか？</li>
         <li>あなたは自分を変えたいと思いますか？</li>
       </ul>
-      <img src="https://smilecoordinate.github.io/hp/img/p19.png" class="top-img--two pc "
-        alt="sc,SmileCoordinate,スマイルコーディネート">
+      <img src="../img/top-right-second.png" class="top-img--two pc" alt="sc,SmileCoordinate,スマイルコーディネート">
     </div>
-
+    <!-- About Section tow -->
     <section class="fade_bottom about-us" id="tab--tow">
       <h2 class="bgfont_h2 " data-en="About">
         私たちについて
@@ -172,7 +126,6 @@
         <br>
         Smile Coordinateは「コーチングやお悩み相談」で、バゲージ（不要な荷物、過剰な感情、無くて良い思考、他人の念やエネルギー）などを見つけ出して、捨てていく思考に変えていくキッカケをお渡しします。
       </p>
-
       <div class="overlay--tow fade_bottom pc">
         <p>
           自分らしく、優しい心を。
@@ -204,8 +157,7 @@
         <br>
         ・現在変化を求めていない方はお悩み相談
       </div>
-
-      <!-- card カードをアコーディオンに変更？-->
+      <!-- se card -->
       <div class="steps">
         <div class="step" onclick="toggleAccordion(this)">
           <div class="tab  card--first">
@@ -216,7 +168,7 @@
               「知る」
               <br>
               自分の特徴、特性を理解して自分を基準に考えられるようになり、あなた自身は何を求めていて、何をどのようにしたいのかを明確に。
-              <img src="img/p01.png" alt="">
+              <img src="../img/se-search.png" alt="">
             </p>
           </div>
         </div>
@@ -230,7 +182,7 @@
               <br>
               目的地に向かうために必要な課題を考えます。
               目的地に向かうにはどうすると良いのか、自分に合うやり方を探しながら進んでいく。
-              <img src="img/p02.png" alt="">
+              <img src="../img/se-question.png" alt="">
             </p>
           </div>
         </div>
@@ -244,18 +196,18 @@
               <br>
               最後のステップでは課題をこなしていきます。
               こちらで用意した、思考を変える課題を次回のセッションまでに完了する。
-              <img src="img/p03.png" alt="">
+              <img src="../img/se-advance.png" alt="">
             </p>
           </div>
         </div>
       </div>
 
       <div class="tab--four-img">
-      <a href="#" class="button" data-modal="modal--first">
-        料金プラン
-      </a>
-      <img src="img/10（トリミング）.png" class="img--four " alt="">
-      <img src="img/11（トリミング）.png" class="img--five " alt="">
+        <a href="#" class="button" data-modal="modal--first">
+          料金プラン
+        </a>
+        <img src="../img/se-left.png" class="img--four " alt="">
+        <img src="../img/se-right.png" class="img--five " alt="">
       </div>
 
       <div class="overlay--tow fade_bottom pc">
@@ -266,10 +218,8 @@
         </p>
       </div>
     </section>
-
-    <!-- モーダルと背景 -->
+    <!-- modal -->
     <div class="modal-overlay"></div>
-
     <div class="modal site-p" id="modal--first">
       <button class="close">&times;</button>
       <p>
@@ -335,19 +285,18 @@
       <ul>
         ※無料相談の面談時間
         <li>
-        通常時間：30分
+          通常時間：30分
         </li>
         <li>
-        <span class="bgfont_h2" data-en="※診断された方限定">毎月 先着3名：約1時間（一人 1回まで）</span>
+          <span class="bgfont_h2" data-en="※診断された方限定">毎月 先着3名：約1時間（一人 1回まで）</span>
         </li>
       </ul>
       <div class="tab--four-img">
-      <a href="matching.html" class="btn" target="_blank">
-        自分診断
-      </a>
-      <img src="https://smilecoordinate.github.io/hp/img/p15.png" class="img--two" alt="">
+        <a href="matching.html" class="btn" target="_blank">
+          自分診断
+        </a>
+        <img src="../img/diagnosis.png" class="img--two" alt="">
       </div>
-
       <div class="overlay--tow fade_bottom pc">
         <p>
           自分らしく、優しい心を。
@@ -357,7 +306,7 @@
       </div>
     </section>
 
-        <!-- contact -->
+    <!-- contact -->
     <section class="fade_bottom contact" id="tab--five">
       <h2 class="bgfont_h2 " data-en="Contact">
         お問い合わせ
@@ -372,8 +321,7 @@
           <form id="contactForm" class="contact-form"
             action="https://script.google.com/macros/s/AKfycbxWnG-Ll6ydxzfxQCrx1vV0yY6L-Nd71smtrghVv5SULaooqwWDXQsiIUXsku1u2OrEYw/exec"
             method="POST" target="hidden_iframe" onsubmit="submitted=true;">
-
-            <!-- ラジオボタンの追加 -->
+            <!-- ラジオボタン -->
             <div class="form-field col align-center">
               <h3>問い合せフォーム</h3>
               <div class="radio-group">
@@ -390,7 +338,7 @@
             <div class="form-row">
               <div class="form-col">
                 <div class="form-field col x-50">
-                  <img src="https://smilecoordinate.github.io/hp/img/p09.png" class="img--three" alt="">
+                  <img src="../img/contact.png" class="img--three" alt="">
                   <input type="text" id="name" name="name" class="input-text" required>
                   <label for="name" class="label">お名前</label>
                 </div>
@@ -409,9 +357,9 @@
             <div class="form-field col align-center">
               <label>
                 <p>
-                <input type="checkbox" name="inquiryType" value="チェック" required>
-                当サイトをご利用の際は、<a href="https://pdmizuki.github.io/website/policy.html">SitePolicy</a>
-                をご確認ください。
+                  <input type="checkbox" name="inquiryType" value="チェック" required>
+                  当サイトをご利用の際は、<a href="https://pdmizuki.github.io/website/policy.html">SitePolicy</a>
+                  をご確認ください。
                 </p>
               </label>
               <button type="submit" class="submit-btn">送信</button>
@@ -421,7 +369,7 @@
       </div>
 
       <iframe name="hidden_iframe" id="hidden_iframe" style="display:none;"></iframe>
-      <!-- モーダルウィンドウ -->
+      <!-- modal -->
       <div id="thanksModal" class="modal ">
         <div class="modal-content">
           <span class="close">&times;</span>
@@ -432,7 +380,6 @@
           </p>
         </div>
       </div>
-
       <div class="overlay--tow fade_bottom pc">
         <p>
           自分らしく、優しい心を。
@@ -447,7 +394,7 @@
       <h2 class="bgfont_h2 " data-en="Q&A">
         よくある質問
       </h2>
-      <!-- アコーディオン -->
+      <!-- accordion -->
       <div class="accordion-wrap ">
         <div class="accordion-item">
           <h3 class="accordion-header">
@@ -462,7 +409,6 @@
           </p>
         </div>
       </div>
-
       <div class="accordion-wrap ">
         <div class="accordion-item">
           <h3 class="accordion-header">
@@ -479,7 +425,6 @@
           </p>
         </div>
       </div>
-
       <div class="accordion-wrap ">
         <div class="accordion-item">
           <h3 class="accordion-header">
@@ -493,7 +438,6 @@
           </p>
         </div>
       </div>
-
       <div class="accordion-wrap ">
         <div class="accordion-item">
           <h3 class="accordion-header">
@@ -506,14 +450,13 @@
         <div class="accordion-text">
           <p>
             コーチング:
-・目標設定や具体的な行動計画の策定を通じ、前向きな変化を促すプロセスです。
-カウンセリング:
-・心の奥にある感情や思考に寄り添い、自己理解を深め、内面の課題に向き合うための対話を行います。
-お客様のニーズに合わせて、最適なアプローチを提案いたします。
+            ・目標設定や具体的な行動計画の策定を通じ、前向きな変化を促すプロセスです。
+            カウンセリング:
+            ・心の奥にある感情や思考に寄り添い、自己理解を深め、内面の課題に向き合うための対話を行います。
+            お客様のニーズに合わせて、最適なアプローチを提案いたします。
           </p>
         </div>
       </div>
-
       <div class="accordion-wrap ">
         <div class="accordion-item">
           <h3 class="accordion-header">
@@ -530,7 +473,6 @@
           </p>
         </div>
       </div>
-
       <div class="accordion-wrap ">
         <div class="accordion-item">
           <h3 class="accordion-header">
@@ -547,7 +489,6 @@
           </p>
         </div>
       </div>
-
       <div class="accordion-wrap ">
         <div class="accordion-item">
           <h3 class="accordion-header">
@@ -564,7 +505,6 @@
           </p>
         </div>
       </div>
-
       <div class="accordion-wrap ">
         <div class="accordion-item">
           <h3 class="accordion-header">
@@ -584,7 +524,6 @@
           </p>
         </div>
       </div>
-
       <div class="overlay--tow fade_bottom pc">
         <p>
           自分らしく、優しい心を。
@@ -593,7 +532,6 @@
         </p>
       </div>
     </section>
-
     <!-- voice -->
     <section class="fade_bottom voice" id="tab--seven">
       <h3 class="bgfont_h2 " data-en="Voice">
@@ -634,7 +572,6 @@
           でのストレスが減りました。
         </li>
       </ul>
-
       <div class="overlay--tow fade_bottom pc">
         <p>
           自分らしく、優しい心を。
@@ -643,9 +580,7 @@
         </p>
       </div>
     </section>
-
     <div id="footer-placeholder"></div>
   </main>
 </body>
-
 </html>

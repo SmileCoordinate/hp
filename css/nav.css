@@ -1,7 +1,6 @@
 * {
    box-sizing: border-box;
 }
-
 .navigation {
    display: block;
    position: fixed;
@@ -23,11 +22,9 @@
    animation: GradientBackground 2s ease infinite;
    overflow: hidden;
 }
-
 .navigation:hover {
    width: 300px;
 }
-
 .navigation ul {
    display: block;
    position: absolute;
@@ -35,7 +32,6 @@
    left: 10%;
    width: 100%;
 }
-
 .navigation ul li {
    list-style: none;
    display: block;
@@ -45,11 +41,9 @@
    /*transition: background-color 0.3s ease;*/
    transition: background-color 0.5s ease-in-out, transform 0.3s ease-in-out;
 }
-
 .nav-bot {
    padding: 0.25rem 0.5rem;
 }
-
 .navigation ul li a,
 .navigation ul li .nav-bot {
    position: relative;
@@ -60,23 +54,19 @@
    align-items: center;
    transition: all 0.3s ease-in-out;
 }
-
 .navigation ul li:hover {
    transform: scale(1.1);
    background-color: rgba(223, 216, 204, 0.85);
 }
-
 /* .active */
 .navigation ul li.active {
    background-color: var(--sub) !important;
    border-top-left-radius: 20px;
    border-bottom-left-radius: 20px;
    transition: box-shadow 0.5s ease-in-out;
-}
-.navigation ul li.active:hover {
+}.navigation ul li.active:hover {
    transform: scale(1);
 }
-
 .navigation ul li.active .nav-bot::before,
 .navigation ul li.active .nav-bot::after,
 .navigation ul li.active a::before,
@@ -89,18 +79,15 @@
    border-radius: 50%;
    box-shadow: 25px 15px 0 var(--sub);
 }
-
 .navigation ul li.active .nav-bot::before,
 .navigation ul li.active a::before {
    top: -49px;
 }
-
 .navigation ul li.active .nav-bot::after,
 .navigation ul li.active a::after {
    top: 59px;
    box-shadow: 25px -15px 0 var(--sub);
 }
-
 .navigation ul li a .icon,
 .navigation ul li .nav-bot .icon {
    display: block;
@@ -109,13 +96,11 @@
    line-height: 70px;
    text-align: center;
 }
-
 .navigation ul li a .icon ion-icon,
 .navigation ul li .nav-bot .icon ion-icon {
    font-size: 2.4rem;
    transition: transform 0.3s ease-in-out;
 }
-
 .navigation ul li a .title,
 .navigation ul li .nav-bot .title {
    padding-left: 7px;
@@ -123,7 +108,6 @@
    line-height: 60px;
    white-space: nowrap;
 }
-
 .navigation ul li:hover .icon ion-icon,
 .navigation ul li.active .icon ion-icon {
    transform: scale(1.25);

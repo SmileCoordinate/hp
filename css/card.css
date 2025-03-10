@@ -46,19 +46,19 @@
 }
 
 .card--first {
-    background: url("/img/tab-bg--first.png");
+    background: url("../img/tab-bg--first.png");
     background-size: cover;
     background-position: top left;
 }
 
 .card--tow {
-    background: url("/img/tab-bg--tow.png");
+    background: url("../img/tab-bg--tow.png");
     background-size: cover;
     background-position: top left;
 }
 
 .card--three {
-    background: url("/img/tab-bg--three.png");
+    background: url("../img/tab-bg--three.png");
     background-size: cover;
     background-position: top left;
 }
@@ -79,19 +79,19 @@
 }
 
 .tab-bg--first {
-    background: url("/img/card-bg--first.png");
+    background: url("../img/card-bg--first.png");
     background-size: cover;
     background-position: top left;
 }
 
 .tab-bg--tow {
-    background: url("/img/card-bg--tow.png");
+    background: url("../img/card-bg--tow.png");
     background-size: cover;
     background-position: top left;
 }
 
 .tab-bg--three {
-    background: url("/img/card-bg--three.png");
+    background: url("../img/card-bg--three.png");
     background-size: cover;
     background-position: top left;
 }

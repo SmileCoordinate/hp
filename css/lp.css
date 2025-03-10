@@ -1,35 +1,14 @@
-/* 全体のスタイル */
-/*h1*/
-
 @import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
-
-
-:root {
-    font-size: 62.5%;
-    --root-font-size: 16;
-    /*text border main rgba(46, 46, 46)*/
-    --text: #2e2e2e;
-    /*sub black rgba(255, 150, 48)*/
-    --hover: #fda144;
-    /*bg base rgba(253, 246, 234)*/
-    --bg: #FDF6EA;
-    /*sub bg rgba(255, 253, 249)*/
-    --sub: #fffdf9;
-    /*link accent rgba(254, 175, 255)*/
-    --accent: #FEAFFF;
-}
-
 /*== Scrollbar ==*/
 ::-webkit-scrollbar {
     width: 3px;
     height: 8px;
 }
-
 ::-webkit-scrollbar-thumb {
     border: thick double var(--hover);
     border-radius: 5px;
+    mix-blend-mode: difference;
 }
-
 /*== Scrollbar END ==*/
 
 /*== fade ==*/
@@ -43,26 +22,24 @@
     opacity: 1;
     filter: blur(0);
 }
-
-
 @keyframes fadeIn_left {
     0% {
         opacity: 0;
         transform: translateX(-200px);
         filter: blur(4px);
     }
-
     100% {
         opacity: 1;
         transform: translateX(0);
         filter: blur(0px);
     }
 }
-
 /*== fade END ==*/
+
 *,
 body,
 header,
+.hydrated,
 p,
 ul,
 td,
@@ -75,11 +52,9 @@ h4 {
     padding: 0;
     box-sizing: border-box;
 }
-
-.mobile {
-    display: none;
+.hydrated {
+    overflow-x: hidden;
 }
-
 input,
 button,
 select,
@@ -99,9 +74,9 @@ body {
     color: var(--text);
     font-weight: 400;
     /*background: linear-gradient(0deg, rgba(255, 255, 255, 0.48), rgba(255, 255, 255, 0.48)), url('https://smilecoordinate.github.io/hp/img/hp-bg.jpg') no-repeat center center / cover;*/
-    background: url('/img/test-bg-img.jpg') no-repeat center center / cover;
+    background: url("../img/test-bg-img.jpg") no-repeat center center / cover;
     background-attachment: fixed;
-    overflow-x: hidden;
+    overflow-x: hidden !important;
     border: 10px solid var(--sub);
     border-bottom: none;
     border-left: none;
@@ -111,8 +86,23 @@ body::before {
     content: "";
     height: 100%;
     position: fixed;
-    background: url("https://smilecoordinate.github.io/hp/img/flower of life.png") no-repeat center center / cover;
+    background: url("../img/flower of life.png") no-repeat center center / cover;
     z-index: -1;
+}
+
+:root {
+    font-size: 62.5%;
+    --root-font-size: 16;
+    /*text border main rgba(46, 46, 46)*/
+    --text: #2e2e2e;
+    /*sub black rgba(255, 150, 48)*/
+    --hover: #fda144;
+    /*bg base rgba(253, 246, 234)*/
+    --bg: #FDF6EA;
+    /*sub bg rgba(255, 253, 249)*/
+    --sub: #fffdf9;
+    /*link accent rgba(254, 175, 255)*/
+    --accent: #FEAFFF;
 }
 
 /*====Section*/
@@ -164,7 +154,6 @@ p {
     line-height: 2;
     text-align: left;
     margin: 0 auto;
-    /*word-break: keep-all; 句読点改行*/
 }
 
 ul,
@@ -186,7 +175,6 @@ a {
     text-decoration: none;
 }
 
-
 img {
     width: 25vmin;
     max-width: 100%;
@@ -199,7 +187,7 @@ img {
     background-size: cover;
     shape-margin: 0.75rem;
     z-index: 11;
-    pointer-events: none; /* クリックを無効化 */
+    pointer-events: none;
 }
 
 .top-img--one {
@@ -268,7 +256,6 @@ img {
     height: 100px;
 }
 
-
 /*===== h2 bg ======*/
 .bgfont_h2 {
     align-items: center;
@@ -295,7 +282,6 @@ img {
     opacity: 0.45;
     z-index: -1;
 }
-
 /*===== h2 bg ======*/
 
 main {
@@ -339,13 +325,11 @@ section,
     margin-top: 20vmin;
 }
 
-
 .main-visual .overlay p {
     font-size: clamp(1.6rem, calc(1.6rem + 0.5vw), 1.8rem);
     margin: 0;
     margin-left: 1%;
 }
-
 
 .overlay--tow {
     position: absolute;
@@ -361,7 +345,6 @@ section,
     margin: 0;
     margin-left: 1%;
 }
-
 
 /* About Us セクション */
 .sentence {
@@ -393,6 +376,7 @@ section,
     width: 65%;
     margin-top: 1vmin;
 }
+
 .self-diagnosis ul li {
     margin-bottom: 1.5vmin;
     font-weight: 400;
@@ -443,7 +427,7 @@ ul .bgfont_h2::before {
     position: absolute;
     right: 2%;
     bottom: 15%;
-    background: url("/img/p04.png") center / cover;
+    background: url("../img/voice.png") center / cover;
 }
 
 .voice li {
@@ -454,8 +438,6 @@ ul .bgfont_h2::before {
     border-bottom: 1px solid;
     padding: 1rem;
 }
-
-/*====contact*/
 
 .btn {
     font-size: clamp(2rem, calc(2rem + 0.5vw), 2.4rem);
@@ -505,8 +487,6 @@ ul .bgfont_h2::before {
     box-shadow: inset 0px 1px 3px 0px rgba(46, 46, 46, 0.5);
 }
 
-
-/* フッター */
 footer {
     font-weight: bold;
     text-align: center;
@@ -568,13 +548,13 @@ footer {
         height: 8px;
     }
 
-    /*== Scrollbar END ==*/
-
     .pc {
         display: block;
     }
+    .mobile {
+        display: none;
+    }
 }
-
 
 @media screen and (max-width: 600px) {
     .pc {
@@ -591,15 +571,17 @@ footer {
         overflow-x: hidden;
         display: block;
     }
+
     body::before {
         content: "";
         position: fixed;
         width: 100%;
         height: 100%;
-        border: 3vmin solid var(--sub);
-        z-index: 10;
-        pointer-events: none; /* クリックを無効化 */
+        border-left: 3vmin solid var(--sub);
+        border-top: 3vmin solid var(--sub);
+        pointer-events: none;/* クリックを無効化 */
     }
+
     body::after {
         content: "";
         position: fixed;
@@ -609,9 +591,9 @@ footer {
         height: 100vh;
         border-top: 1px solid var(--hover);
         border-left: 1px solid var(--hover);
-        pointer-events: none; /* クリックを無効化 */
+        pointer-events: none;
     }
-    /*====Section*/
+
     h1 {
         font-size: clamp(3rem, calc(3rem + 0.5vw), 4rem);
     }
@@ -629,7 +611,8 @@ footer {
         margin: 0 auto;
     }
 
-    ul,ol {
+    ul,
+    ol {
         font-size: 2rem;
     }
 
@@ -764,12 +747,12 @@ footer {
     main {
         width: 95%;
         margin: 0 auto;
-    border-radius: 0;
-    background: rgba(255, 255, 255, 0.35);
-    backdrop-filter: blur(3px);
-    border: none;
-    border-right: 1px solid var(--hover);
-    box-shadow: none;
+        border-radius: 0;
+        background: rgba(255, 255, 255, 0.35);
+        backdrop-filter: blur(3px);
+        border: none;
+        border-right: 1px solid var(--hover);
+        box-shadow: none;
     }
 
     /*====TOP section*/
@@ -840,8 +823,9 @@ footer {
         border: 1px solid var(--text);
         width: 90%;
         margin-top: 2vmin;
-        padding: 0.5rem;
+        padding: 1.5rem 1rem 0;
     }
+
     .self-diagnosis ul li {
         margin-bottom: 4vmin;
         font-weight: 300;
@@ -876,6 +860,7 @@ footer {
         border-image-repeat: round;
         border-style: solid;
         z-index: -1;
+        display: none;
     }
 
     .voice ul::before {
