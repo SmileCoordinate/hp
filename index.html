@@ -62,13 +62,14 @@
     rel="stylesheet">
 
   <!-- css -->
-  <link rel="stylesheet" href="css/lp.css">
   <link rel="stylesheet" href="css/bot.css">
   <link rel="stylesheet" href="css/card.css">
   <link rel="stylesheet" href="css/form.css">
   <link rel="stylesheet" href="css/nav.css">
   <link rel="stylesheet" href="css/acdion.css">
   <link rel="stylesheet" href="css/modal.css">
+  <link rel="stylesheet" href="css/header.css">
+  <link rel="stylesheet" href="css/lp.css">
 
   <!-- ファビコン -->
   <link rel="icon" href="img/sc_logo_w600.ico"> <!-- ファビコンのパス -->
@@ -106,7 +107,7 @@
   <div id="header-placeholder"></div>
 
   <!-- Main Visual Section -->
-  <div class="main-visual fade_bottom" id="tab--start">
+  <div class="main-visual fade_bottom pc" id="tab--start">
     <div class="overlay">
       <h1>Smile Coordinate</h1>
       <p>
@@ -122,6 +123,20 @@
   <img src="img/flower-of-life.png" alt="" class="main--top--img">
 
   <main>
+    <!-- mobile top Section -->
+    <div class="main-visual fade_bottom mobile" id="tab--start">
+      <div class="overlay">
+        <h1>Smile Coordinate</h1>
+        <p>
+          自分らしく、優しい心を。
+          <br>
+          人はいつからでも変われる。もっと自分を解放して、笑顔でいられるように。
+        </p>
+      </div>
+      <img src="https://smilecoordinate.github.io/hp/img/p14.png" class="img--start "
+        alt="sc,SmileCoordinate,スマイルコーディネート">
+    </div>
+
     <!-- About Section -->
     <div class="sentence fade_bottom" id="tab--one">
       <img src="https://smilecoordinate.github.io/hp/img/p18.png" class="top-img--one pc "
@@ -136,7 +151,7 @@
         alt="sc,SmileCoordinate,スマイルコーディネート">
     </div>
 
-    <section class="fade_bottom about-us" id="tab--one-second">
+    <section class="fade_bottom about-us" id="tab--tow">
       <h2 class="bgfont_h2 " data-en="About">
         私たちについて
       </h2>
@@ -158,7 +173,7 @@
         Smile Coordinateは「コーチングやお悩み相談」で、バゲージ（不要な荷物、過剰な感情、無くて良い思考、他人の念やエネルギー）などを見つけ出して、捨てていく思考に変えていくキッカケをお渡しします。
       </p>
 
-      <div class="overlay--tow fade_bottom">
+      <div class="overlay--tow fade_bottom pc">
         <p>
           自分らしく、優しい心を。
           <br>
@@ -168,7 +183,7 @@
     </section>
 
     <!-- Service Section -->
-    <section class="fade_bottom services" id="tab--two">
+    <section class="fade_bottom services" id="tab--three">
       <h2 class="bgfont_h2 " data-en="Service">
         提供しているもの
       </h2>
@@ -189,6 +204,7 @@
         <br>
         ・現在変化を求めていない方はお悩み相談
       </div>
+
       <!-- card カードをアコーディオンに変更？-->
       <div class="steps">
         <div class="step" onclick="toggleAccordion(this)">
@@ -234,17 +250,21 @@
         </div>
       </div>
 
-      <div class="overlay--tow fade_bottom">
+      <div class="tab--four-img">
+      <a href="#" class="button" data-modal="modal--first">
+        料金プラン
+      </a>
+      <img src="img/10（トリミング）.png" class="img--four " alt="">
+      <img src="img/11（トリミング）.png" class="img--five " alt="">
+      </div>
+
+      <div class="overlay--tow fade_bottom pc">
         <p>
           自分らしく、優しい心を。
           <br>
           人はいつからでも変われる。もっと自分を解放して、笑顔でいられるように。
         </p>
       </div>
-
-      <a href="#" class="button" data-modal="modal--first">料金プラン</a>
-
-      <img src="https://smilecoordinate.github.io/hp/img/p15.png" class="img--two" alt="">
     </section>
 
     <!-- モーダルと背景 -->
@@ -284,53 +304,57 @@
       </div>
       <p>
         ※セッションはオンラインで行います。
-        <br>
+        <wbr>
         ※ご予約やお申込みはコンタクトフォームもしくは自分診断から行えます。
-        <br>
+        <wbr>
         ※急な予定が入ってしまった場合には、当日の12時までにご連絡をいただければ、日時の調整をいたします。
-        <br>
+        <wbr>
         ※お支払いについてはよくある質問をご覧ください。
-        <br>
+        <wbr>
         よくある質問以外に知りたいことがありましたらお気軽にお問い合わせください。
       </p>
     </div>
 
     <!-- 自己分析 -->
-    <section class="fade_bottom contact" id="tab--four">
-      <h2 class="bgfont_h2 " data-en="Self Diagnosis">
+    <section class="fade_bottom self-diagnosis" id="tab--four">
+      <h2 class="bgfont_h2" data-en="Diagnosis">
         自分診断
       </h2>
       <p>
-        自分に「必要か分からない方」や「必要かどうか見極めたい方」は、下にある「自分診断」をクリックしてみてください！
-        <br>
+        今の自分にコーチングが「必要なのか分からない方」や「今の自分を知りたい方」は、下の「自分診断」をクリックしてみてください✨
+        <wbr>
         今のあなたに「コーチングやお悩み相談」が必要かどうかを診断いたします。
-        <br>
-        診断の最後に無料相談を希望される方限定で、約1時間の無料相談をお申込みいただけます。
+        <wbr>
+        その結果を見て、コーチングの無料相談を申し込みたい方は、診断の最後に無料相談（約1時間）をお申し込みいただけます。
       </p>
       <p>
-        無料相談が終わった後に本申し込みに進むかご検討ください。
+        無料相談が終わった後からでも本申し込みをご検討ください♪
         <br>
         診断するだけでも、思考がクリーンになると思うので、まずは、診断をしてみて無料相談を受けていただけると嬉しいです！
-        <br>
-        ・無料相談の注意事項
       </p>
-      <p>
-        ※通常時間：30分 / 毎月先着3名：1時間（一人 1回まで）
-      </p>
-      <a href="matching.html" class="btn " target="_blank">
+      <ul>
+        ※無料相談の面談時間
+        <li>
+        通常時間：30分
+        </li>
+        <li>
+        <span class="bgfont_h2" data-en="※診断された方限定">毎月 先着3名：約1時間（一人 1回まで）</span>
+        </li>
+      </ul>
+      <div class="tab--four-img">
+      <a href="matching.html" class="btn" target="_blank">
         自分診断
       </a>
+      <img src="https://smilecoordinate.github.io/hp/img/p15.png" class="img--two" alt="">
+      </div>
 
-      <div class="overlay--tow fade_bottom">
+      <div class="overlay--tow fade_bottom pc">
         <p>
           自分らしく、優しい心を。
           <br>
           人はいつからでも変われる。もっと自分を解放して、笑顔でいられるように。
         </p>
       </div>
-
-      <img src="https://smilecoordinate.github.io/hp/img/p10.png" class="img--four " alt="">
-      <img src="https://smilecoordinate.github.io/hp/img/p11.png" class="img--five " alt="">
     </section>
 
         <!-- contact -->
@@ -338,7 +362,6 @@
       <h2 class="bgfont_h2 " data-en="Contact">
         お問い合わせ
       </h2>
-      <img src="https://smilecoordinate.github.io/hp/img/p09.png" class="img--three" alt="">
       <p>
         お問い合わせいただいた内容は1カ月間保存いたします。
         <br>
@@ -364,10 +387,10 @@
                 </label>
               </div>
             </div>
-
             <div class="form-row">
               <div class="form-col">
                 <div class="form-field col x-50">
+                  <img src="https://smilecoordinate.github.io/hp/img/p09.png" class="img--three" alt="">
                   <input type="text" id="name" name="name" class="input-text" required>
                   <label for="name" class="label">お名前</label>
                 </div>
@@ -385,9 +408,11 @@
 
             <div class="form-field col align-center">
               <label>
+                <p>
                 <input type="checkbox" name="inquiryType" value="チェック" required>
                 当サイトをご利用の際は、<a href="https://pdmizuki.github.io/website/policy.html">SitePolicy</a>
                 をご確認ください。
+                </p>
               </label>
               <button type="submit" class="submit-btn">送信</button>
             </div>
@@ -408,7 +433,7 @@
         </div>
       </div>
 
-      <div class="overlay--tow fade_bottom">
+      <div class="overlay--tow fade_bottom pc">
         <p>
           自分らしく、優しい心を。
           <br>
@@ -418,7 +443,7 @@
     </section>
 
     <!-- FAQ -->
-    <section class="fade_bottom voice" id="tab--six">
+    <section class="fade_bottom faq" id="tab--six">
       <h2 class="bgfont_h2 " data-en="Q&A">
         よくある質問
       </h2>
@@ -426,7 +451,7 @@
       <div class="accordion-wrap ">
         <div class="accordion-item">
           <h3 class="accordion-header">
-            項目の選択とご相談内容
+            Smile Coordinateについて
             <ion-icon class="fa fa-angle-down" name="chevron-forward-outline"></ion-icon>
           </h3>
         </div>
@@ -441,7 +466,92 @@
       <div class="accordion-wrap ">
         <div class="accordion-item">
           <h3 class="accordion-header">
-            お申し込み時に記載してほしいこと
+            どんな人におすすめですか
+            <ion-icon class="fa fa-angle-down" name="chevron-forward-outline"></ion-icon>
+          </h3>
+        </div>
+        <div class="accordion-text">
+          <p>
+            ストレスや不安、悩みがあり、心のケアが必要と感じている方
+            目標設定や自己成長に向けて、具体的な行動計画を立てたい方
+            人間関係やキャリア、ライフスタイルに変化を求めている方
+            自己理解を深めたい、または新しい視点を取り入れたいと考えている方
+          </p>
+        </div>
+      </div>
+
+      <div class="accordion-wrap ">
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            初回は無料ですか？
+            <ion-icon class="fa fa-angle-down" name="chevron-forward-outline"></ion-icon>
+          </h3>
+        </div>
+        <div class="accordion-text">
+          <p>
+            無料剃談
+          </p>
+        </div>
+      </div>
+
+      <div class="accordion-wrap ">
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            コーチングとカウンセリングの違いは
+            <wbr>
+            何ですか？
+            <ion-icon class="fa fa-angle-down" name="chevron-forward-outline"></ion-icon>
+          </h3>
+        </div>
+        <div class="accordion-text">
+          <p>
+            コーチング:
+・目標設定や具体的な行動計画の策定を通じ、前向きな変化を促すプロセスです。
+カウンセリング:
+・心の奥にある感情や思考に寄り添い、自己理解を深め、内面の課題に向き合うための対話を行います。
+お客様のニーズに合わせて、最適なアプローチを提案いたします。
+          </p>
+        </div>
+      </div>
+
+      <div class="accordion-wrap ">
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            <ion-icon class="fa fa-angle-down" name="chevron-forward-outline"></ion-icon>
+            プライバシーは
+            <wbr>
+            どのように保護されていますか？
+          </h3>
+        </div>
+        <div class="accordion-text">
+          <p>
+            個人情報やセッション内容は厳重に管理し、第三者に漏洩しないよう万全の対策を講じています。
+            すべてのお客様が安心してご利用いただける環境作りに努めています。
+          </p>
+        </div>
+      </div>
+
+      <div class="accordion-wrap ">
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            効果を感じられるまでの期間は
+            <wbr>
+            どれくらいですか？
+            <ion-icon class="fa fa-angle-down" name="chevron-forward-outline"></ion-icon>
+          </h3>
+        </div>
+        <div class="accordion-text">
+          <p>
+            個人情報やセッション内容は厳重に管理し、第三者に漏洩しないよう万全の対策を講じています。
+            すべてのお客様が安心してご利用いただける環境作りに努めています。
+          </p>
+        </div>
+      </div>
+
+      <div class="accordion-wrap ">
+        <div class="accordion-item">
+          <h3 class="accordion-header">
+            お申し込みについて
             <ion-icon class="fa fa-angle-down" name="chevron-forward-outline"></ion-icon>
           </h3>
         </div>
@@ -458,7 +568,7 @@
       <div class="accordion-wrap ">
         <div class="accordion-item">
           <h3 class="accordion-header">
-            質問について
+            お支払いについて
             <ion-icon class="fa fa-angle-down" name="chevron-forward-outline"></ion-icon>
           </h3>
         </div>
@@ -475,7 +585,7 @@
         </div>
       </div>
 
-      <div class="overlay--tow fade_bottom">
+      <div class="overlay--tow fade_bottom pc">
         <p>
           自分らしく、優しい心を。
           <br>
@@ -486,7 +596,7 @@
 
     <!-- voice -->
     <section class="fade_bottom voice" id="tab--seven">
-      <h3>
+      <h3 class="bgfont_h2 " data-en="Voice">
         みなさまの感想
       </h3>
       <p>
@@ -524,9 +634,8 @@
           でのストレスが減りました。
         </li>
       </ul>
-      <img src="https://smilecoordinate.github.io/hp/img/p04.png" class="img--six " alt="">
 
-      <div class="overlay--tow fade_bottom">
+      <div class="overlay--tow fade_bottom pc">
         <p>
           自分らしく、優しい心を。
           <br>

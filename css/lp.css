@@ -13,7 +13,7 @@
     --hover: #fda144;
     /*bg base rgba(253, 246, 234)*/
     --bg: #FDF6EA;
-    /*sub bg*/
+    /*sub bg rgba(255, 253, 249)*/
     --sub: #fffdf9;
     /*link accent rgba(254, 175, 255)*/
     --accent: #FEAFFF;
@@ -76,7 +76,7 @@ h4 {
     box-sizing: border-box;
 }
 
-.sp {
+.mobile {
     display: none;
 }
 
@@ -99,7 +99,7 @@ body {
     color: var(--text);
     font-weight: 400;
     /*background: linear-gradient(0deg, rgba(255, 255, 255, 0.48), rgba(255, 255, 255, 0.48)), url('https://smilecoordinate.github.io/hp/img/hp-bg.jpg') no-repeat center center / cover;*/
-    background: url('https://smilecoordinate.github.io/hp/img/bg-img.jpg') no-repeat center center / cover;
+    background: url('/img/test-bg-img.jpg') no-repeat center center / cover;
     background-attachment: fixed;
     overflow-x: hidden;
     border: 10px solid var(--sub);
@@ -133,7 +133,8 @@ h2 {
     margin-bottom: 2%;
 }
 
-h2,a {
+h2,
+a {
     font-family: "Hachi Maru Pop", serif;
     font-weight: bold;
     font-style: normal;
@@ -141,11 +142,13 @@ h2,a {
 
 h3 {
     font-size: clamp(2rem, calc(3rem + 0.5vw), 2.4rem);
-    width: 100%;
+    width: fit-content;
+    margin: 0 auto;
     text-align: center;
 }
 
-h3, li {
+h3,
+li {
     font-family: "Yusei Magic", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -158,39 +161,31 @@ p {
     font-size: clamp(1.6rem, calc(1.8rem + 0.1vw), 1.8rem);
     font-weight: 500;
     width: 65%;
-    line-height: 2.2;
-    text-align: justify;
+    line-height: 2;
+    text-align: left;
+    margin: 0 auto;
+    /*word-break: keep-all; 句読点改行*/
+}
+
+ul,
+ol {
+    font-size: 2.4rem;
     margin: 0 auto;
 }
 
-ul,ol {
-    margin: 0 auto;
-}
 li {
     font-size: 2rem;
     width: fit-content;
     list-style: none;
 }
 
-main a {
-    padding: .25rem .5rem;
+a {
+    padding: 0.25rem 0.5rem;
     transition: all 0.3s ease;
     z-index: 10;
     text-decoration: none;
 }
 
-main a:hover {
-    color: var(--accent);
-}
-
-main a::before {
-    background: var(--accent);
-    bottom: 0;
-    left: 0;
-    width: 0;
-    height: 1px;
-    transition: width 0.5s ease;
-}
 
 img {
     width: 25vmin;
@@ -204,34 +199,8 @@ img {
     background-size: cover;
     shape-margin: 0.75rem;
     z-index: 11;
+    pointer-events: none; /* クリックを無効化 */
 }
-
-/*===== h2 bg ======*/
-.bgfont_h2 {
-    align-items: center;
-    position: relative;
-    z-index: 1;
-}
-.bgfont_h2 span {
-    position: relative;
-    z-index: 2;
-}
-.bgfont_h2::before {
-    font-family: "Satisfy", serif;
-    font-size: 3rem;
-    font-weight: 400;
-    font-style: italic;
-    content: attr(data-en);
-    position: absolute;
-    width: fit-content;
-    transform: rotate(-5deg);
-    top: -30%;
-    left: -10%;
-    color: var(--accent);
-    opacity: 0.45;
-    z-index: -1;
-}
-/*===== h2 bg ======*/
 
 .top-img--one {
     width: 40vmin;
@@ -251,32 +220,34 @@ img {
 }
 
 .img--two {
-    left: -25%;
-    bottom: 5%;
+    width: 16vmin;
+    left: 5%;
+    bottom: -100%;
     transform: scale(-1, 1);
 }
 
 .img--three {
-    top: -10vmin;
-    transform: translate(70%, 5%);
+    width: 10vmin;
+    bottom: -2px;
+    right: 3vmin;
 }
 
 .img--four {
-    width: 20vmin;
-    left: -11.8vmin;
-    bottom: 30vmin;
+    width: 11%;
+    left: -10.5%;
+    bottom: 0;
 }
 
 .img--five {
-    width: 15vmin;
-    right: -9.7vmin;
-    bottom: 32vmin;
+    width: 8%;
+    right: -8.15%;
+    bottom: 0;
 }
 
 .img--six {
     width: 25%;
     right: 2%;
-    bottom: 10%;
+    bottom: -10%;
 }
 
 .main--top--img {
@@ -284,7 +255,7 @@ img {
     position: fixed;
     transform: translate(65%, 75%);
     opacity: 0.5;
-    z-index: -1;
+    z-index: -2;
 }
 
 .img--start {
@@ -292,7 +263,40 @@ img {
     bottom: 0%;
 }
 
+.tab--four-img {
+    position: relative;
+    height: 100px;
+}
 
+
+/*===== h2 bg ======*/
+.bgfont_h2 {
+    align-items: center;
+    position: relative;
+    z-index: 1;
+}
+
+.bgfont_h2 span {
+    position: relative;
+    z-index: 2;
+}
+
+.bgfont_h2::before {
+    font-size: 4rem;
+    font-weight: 400;
+    font-style: italic;
+    content: attr(data-en);
+    position: absolute;
+    width: fit-content;
+    transform: rotate(-5deg);
+    top: -30%;
+    left: -10%;
+    color: var(--accent);
+    opacity: 0.45;
+    z-index: -1;
+}
+
+/*===== h2 bg ======*/
 
 main {
     position: relative;
@@ -300,7 +304,7 @@ main {
     margin-left: 5vmin;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    background: rgba(255, 255, 255, 0.15);
+    background: rgba(255, 255, 255, 0.3);
     backdrop-filter: blur(15px);
     border-left: 0.5px solid var(--accent);
     border-right: 0.5px solid var(--accent);
@@ -320,36 +324,14 @@ section,
     padding-top: 10rem;
 }
 
-/*.h2-bg {
-    position: absolute;
-    top: 0;
-    left: 0;
-    width: 28vmin;
-    height: 10vmin;
-    border-radius: 0 0 30px;
-    border-right: 1px solid var(--accent);
-    border-bottom: 1px solid var(--accent);
-}
-
-.h2-bg p {
-    font-weight: 700;
-    width: fit-content;
-    margin: 0 auto;
-}*/
-
 /*====TOP section*/
 .main-visual {
     font-weight: 600;
     position: relative;
     width: 45%;
     height: 100vh;
-    transform: translate(25%, 0%)
-}
-
-.main-visual .overlay p {
-    font-size: clamp(1.6rem, calc(1.6rem + 0.5vw), 1.8rem);
-    margin: 0;
-    margin-left: 1%;
+    transform: translate(25%, 0%);
+    z-index: -1;
 }
 
 .main-visual h1 {
@@ -357,11 +339,21 @@ section,
     margin-top: 20vmin;
 }
 
+
+.main-visual .overlay p {
+    font-size: clamp(1.6rem, calc(1.6rem + 0.5vw), 1.8rem);
+    margin: 0;
+    margin-left: 1%;
+}
+
+
 .overlay--tow {
     position: absolute;
+    width: fit-content;
     top: 10%;
-    left: -100%;
+    left: -85%;
     margin-top: 10rem;
+    z-index: -1;
 }
 
 .overlay--tow p {
@@ -371,35 +363,22 @@ section,
 }
 
 
-
 /* About Us セクション */
 .sentence {
     align-content: center;
-}
-.about-us ol {
-    font-size: clamp(2rem, calc(2rem + 0.5vw), 2.4rem);
-    font-weight: 600;
-    width: 65%;
-    padding: 0;
-    list-style: none;
-    margin: 2rem auto;
-}
-
-.about-us ol li {
-    font-size: clamp(1.8rem, calc(1.8rem + 0.5vw), 2rem);
-    font-weight: 400;
-    margin-bottom: 4rem;
 }
 
 /* Service セクション */
 .services {
     background: var(--sub);
 }
+
 .services .point {
     font-weight: 600;
     width: 65%;
-    margin: 2vmin auto;
+    margin: 0 auto;
 }
+
 .services h3 {
     width: 65%;
     text-align: left;
@@ -407,13 +386,66 @@ section,
     position: relative;
 }
 
+/*======self-diagnosis*/
+.self-diagnosis ul {
+    font-size: 2rem;
+    font-weight: 700;
+    width: 65%;
+    margin-top: 1vmin;
+}
+.self-diagnosis ul li {
+    margin-bottom: 1.5vmin;
+    font-weight: 400;
+}
+
+ul .bgfont_h2::before {
+    font-size: 1.4rem;
+    font-style: normal;
+    width: 135px;
+    transform: rotate(0);
+    position: absolute;
+    top: -1.5vmin;
+    left: 0%;
+    color: var(--text);
+    font-weight: 600;
+    opacity: 1;
+}
+
+/*===voice*/
 .voice ul {
     width: 75%;
-    height: 480px;
+    height: 55vmin;
     overflow-y: scroll;
     padding: 1rem;
     background: var(--sub);
 }
+
+.voice::after {
+    content: "";
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: calc(100% - 20px);
+    height: calc(100% - 20px);
+    border-image-source: repeating-linear-gradient(45deg, #fff 0, #fff 3px, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 6px);
+    border-width: 20px;
+    border-image-slice: 20;
+    border-image-repeat: round;
+    border-style: solid;
+    z-index: -1;
+}
+
+.voice ul::before {
+    content: "";
+    width: 12vmin;
+    height: 12vmin;
+    position: absolute;
+    right: 2%;
+    bottom: 15%;
+    background: url("/img/p04.png") center / cover;
+}
+
 .voice li {
     font-family: "Zen Maru Gothic", serif;
     font-size: 1.6rem;
@@ -423,23 +455,18 @@ section,
     padding: 1rem;
 }
 
-/*.contact {
-    border-bottom-left-radius: 8px;
-    border-bottom-right-radius: 8px;
-    border-bottom: 1px solid var(--accent);
-    margin-bottom: 5rem;
-}*/
+/*====contact*/
 
 .btn {
     font-size: clamp(2rem, calc(2rem + 0.5vw), 2.4rem);
-    width: 225px;
-    height: 50px;
+    width: 240px;
+    height: 60px;
     color: var(--text);
-    background: linear-gradient(0deg, rgb(207,222,255, 0.3) 0%, rgb(192,252,109, 0.2) 100%);
+    background: linear-gradient(0deg, rgb(207, 252, 255, 0.3) 0%, rgb(192, 252, 109, 0.2) 100%);
     border: none;
     border-radius: 45px;
-    border: 0.5px solid #fff;
-    box-shadow: 0px 2px 1px 0px rgba(46, 46, 46, 0.5);
+    border: 1px solid var(--sub);
+    box-shadow: 0px 2px 4px 0px rgba(46, 46, 46, 0.5);
     cursor: pointer;
     transition: all 0.5s ease;
     z-index: 100;
@@ -452,29 +479,32 @@ section,
 }
 
 .btn:hover {
-    color: var(--accent);
+    color: var(--hover);
     box-shadow: none;
+    background: linear-gradient(0deg, rgb(207, 252, 255, 0.1) 0%, rgb(192, 252, 109, 0) 100%);
+    box-shadow: inset 0px 1px 3px 0px rgba(46, 46, 46, 0.5);
 }
 
-.btn::before {
+.btn::after {
     content: '';
-    width: 240px;
-    height: 60px;
-    border: 1px solid #fff;
+    width: 225px;
+    height: 50px;
+    border: 1px solid var(--sub);
     border-radius: 45px;
-    background: linear-gradient(0deg, rgb(207,222,255, 0.3) 0%, rgb(192,252,109, 0.2) 100%);
-    box-shadow: 0px 2px 1px 0px rgba(46, 46, 46, 0.5);
+    background: linear-gradient(0deg, rgb(107, 202, 235, 0.45) 0%, rgb(192, 252, 109, 0.2) 100%);
+    box-shadow: 0px 2px 4px 0px rgba(46, 46, 46, 0.5);
     position: absolute;
-    top: -5px;
-    left: -10px;
+    top: 3px;
+    left: 6px;
     transition: all 0.3s ease;
     z-index: -1;
 }
 
-.btn:hover::before {
-    box-shadow: none;
-    background: linear-gradient(0deg, rgba(250, 107, 255, 0.07), rgba(253, 246, 234, 0) 50%, rgba(255, 150, 48, 0.05));
+.btn:hover::after {
+    background: linear-gradient(0deg, rgb(207, 252, 255, 0.2) 0%, rgb(192, 252, 109, 0.12) 100%);
+    box-shadow: inset 0px 1px 3px 0px rgba(46, 46, 46, 0.5);
 }
+
 
 /* フッター */
 footer {
@@ -502,8 +532,8 @@ footer {
         top: 0;
         left: 0;
         margin: -15px 0 0 -15px;
-        width: 30px;
-        height: 30px;
+        width: 35px;
+        height: 35px;
         border: 1px solid;
         border-radius: 50%;
         border-color: rgba(61, 78, 236, 0.36);
@@ -514,9 +544,22 @@ footer {
 
     /* ホバー時のスタイル */
     .stalker--hover {
-        background-color: rgba(61, 78, 236, 0.76);
+        background-color: rgba(136, 162, 211, 0.76);
         filter: blur(1);
         transform: scale(2);
+    }
+
+    .stalker--hover::after {
+        content: "クリック";
+        color: var(--sub);
+        font-family: "serif";
+        font-size: 0.9rem;
+        font-weight: 600;
+        letter-spacing: -0.1rem;
+        margin-top: 0.4vmin;
+        display: flex;
+        justify-content: center;
+        margin-right: 2px;
     }
 
     /*== Scrollbar ==*/
@@ -532,46 +575,42 @@ footer {
     }
 }
 
+
 @media screen and (max-width: 600px) {
     .pc {
         display: none;
     }
 
+    .mobile {
+        display: block;
+    }
+
     body {
-        background: linear-gradient(0deg, rgba(255, 255, 255, 0.38), rgba(255, 255, 255, 0.38)), url('https://smilecoordinate.github.io/hp/img/sc_mobaile_bg.png');
-        background-size: 100%;
-        background-position: top;
+        border: none;
+        border-bottom: none;
+        overflow-x: hidden;
+        display: block;
     }
-
     body::before {
-        width: 94%;
-        left: 2.5%;
-        border-left: 1px solid var(--accent);
-        border-right: 1px solid var(--accent);
+        content: "";
+        position: fixed;
+        width: 100%;
+        height: 100%;
+        border: 3vmin solid var(--sub);
+        z-index: 10;
+        pointer-events: none; /* クリックを無効化 */
     }
-
-    header {
-        height: 55px;
+    body::after {
+        content: "";
+        position: fixed;
+        top: 3vmin;
+        left: 3vmin;
+        width: 95vw;
+        height: 100vh;
+        border-top: 1px solid var(--hover);
+        border-left: 1px solid var(--hover);
+        pointer-events: none; /* クリックを無効化 */
     }
-
-    nav {
-        width: fit-content;
-        height: 40px;
-        justify-content: end;
-        backdrop-filter: blur(8px);
-        border: 1px solid rgba(255, 255, 255, 0.62);
-        box-shadow: 0 1px 2px rgba(46, 46, 46, 0.2);
-    }
-
-    nav ul li {
-        margin: 0;
-    }
-
-    nav ul li a {
-        font-size: clamp(1.2rem, calc(1.2rem + 0.5vw), 1.6rem);
-        margin-right: 0.75rem;
-    }
-
     /*====Section*/
     h1 {
         font-size: clamp(3rem, calc(3rem + 0.5vw), 4rem);
@@ -581,16 +620,29 @@ footer {
         font-size: clamp(2.4rem, calc(2.4rem + 0.5vw), 2.8rem);
         width: fit-content;
         margin: 0 auto;
+        left: 0;
     }
 
     h3 {
-        font-size: clamp(2rem, calc(2rem + 0.5vw), 2.4rem);
+        font-size: clamp(1.8rem, calc(2rem + 0.5vw), 2rem);
+        left: 0;
+        margin: 0 auto;
+    }
+
+    ul,ol {
+        font-size: 2rem;
+    }
+
+    li {
+        font-size: 1.6rem;
+        width: 90%;
+        margin: 0 auto;
     }
 
     p {
-        font-size: clamp(1.2rem, calc(1.2rem + 0.5vw), 1.4rem);
+        font-size: clamp(1.6rem, calc(1.4rem + 0.5vw), 1.8rem);
         width: 90%;
-        line-height: 2rem;
+        line-height: 1.6;
     }
 
     a {
@@ -614,6 +666,27 @@ footer {
         transition: width 0.5s ease;
     }
 
+    /*===== h2 bg ======*/
+    .bgfont_h2 {
+        align-items: center;
+        position: relative;
+        z-index: 1;
+    }
+
+    .bgfont_h2 span {
+        position: relative;
+        z-index: 2;
+    }
+
+    .bgfont_h2::before {
+        font-size: 2.4rem;
+        transform: rotate(-5deg);
+        top: -40%;
+        left: -20%;
+        opacity: 0.45;
+    }
+
+    /*===== h2 bg ======*/
     img {
         width: 25vmin;
         max-width: 100%;
@@ -633,180 +706,211 @@ footer {
     }
 
     .img--two {
-        right: 2%;
-        bottom: 5%;
+        width: 30vmin;
+        right: 0;
+        left: 0;
+        bottom: -20vmin;
     }
 
     .img--three {
-        top: -11vmin;
+        width: 22vmin;
+        right: 0;
     }
 
     .img--four {
-        width: 13vmin;
-        right: -5.5vmin;
-        bottom: 0;
+        width: 16%;
+        left: 85.5%;
     }
 
     .img--five {
-        width: 13vmin;
-        right: -5.5vmin;
-        bottom: 0;
-    }
-    /*====Section*/
-    /*.about-us,
-    .services,
-    .contact {
-        box-shadow: none;
-    }*/
-
-    .about-us {
-        border-top-left-radius: 40px;
-        border-top-right-radius: 40px;
+        width: 10%;
+        right: 89.5%;
     }
 
-    .contact {
-        border-bottom-left-radius: 40px;
-        border-bottom-right-radius: 40px;
-        margin-bottom: 10rem;
+    .img--six {
+        width: 25%;
+        right: 2%;
+        bottom: 8%;
     }
 
-    .bg-line {
-        position: relative;
-        width: 90%;
-        height: 550px;
+    .top-img--one {
+        width: 40vmin;
+        top: 2%;
+        right: -15%;
     }
 
-    .contact .bg-line {
-        height: 280px;
+    .top-img--two {
+        width: 25vmin;
+        bottom: 0%;
+        right: -11%;
     }
 
-    .about-us .bg-line,
-     .bg-line {
-        position: absolute;
-        top: 15%;
-        left: 0;
-        border-right: 1px solid var(--accent);
+    .main--top--img {
+        width: 40vmin;
+        position: fixed;
+        transform: translate(65%, 75%);
+        opacity: 0.5;
+        z-index: -1;
     }
 
-    .services .bg-line,
-    .contact .bg-line {
-        position: absolute;
-        right: 0;
-        border-left: 1px solid var(--accent);
-    }
-
-    .contact .bg-line {
-        right: 5%;
-        border-right: 1px solid var(--accent);
-    }
-
-    .h2-bg {
+    .img--start {
         width: 45vmin;
-        height: 20vmin;
-        border-radius: 0 0 20px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-        flex-direction: column;
+        bottom: 0%;
+        top: 50%;
+        left: 25%;
     }
 
-    .h2-bg p {
-        font-weight: 700;
+    /*===== main */
+    main {
+        width: 95%;
+        margin: 0 auto;
+    border-radius: 0;
+    background: rgba(255, 255, 255, 0.35);
+    backdrop-filter: blur(3px);
+    border: none;
+    border-right: 1px solid var(--hover);
+    box-shadow: none;
+    }
+
+    /*====TOP section*/
+    .main-visual {
+        font-weight: 600;
         width: fit-content;
-        line-height: 1.4rem;
-        margin: -4% auto 0;
+        height: 50vh;
+        transform: none;
+        margin: 0 auto;
+        padding-top: 20vmin;
     }
 
-    /*====TOP*/
-    section {
-        height: 100vmin;
-        margin-bottom: 50vmin;
-    }
-
-    section p:last-child {
-        width: 60%;
+    .main-visual h1 {
         margin-top: 0;
     }
 
-    .about-us ol {
-        font-size: clamp(1.4rem, calc(1.4rem + 0.5vw), 2rem);
+    .main-visual .overlay {
+        width: 80%;
+        margin: 0 auto;
+    }
+
+    .main-visual .overlay p {
+        font-size: clamp(1.6rem, calc(1.6rem + 0.5vw), 1.8rem);
+        width: 100%;
+        margin: 0;
+    }
+
+    /*====Section*/
+    section,
+    .sentence {
+        align-content: center;
+        padding-top: 0;
+    }
+
+    section {
+        height: 100vh;
+    }
+
+    /*====top*/
+    .sentence {
+        height: 50vh;
+        padding-top: 0;
+    }
+
+    /* About Us セクション */
+    .about-us p {
         width: 90%;
         list-style: none;
         padding: 0;
-        text-align: left;
         margin: 0 auto 3%;
     }
 
-    .about-us ol li {
-        font-size: clamp(1.2rem, calc(1.2rem + 0.5vw), 1.6rem);
-        font-weight: 400;
-        margin-top: 5px;
+    /* Service セクション */
+    .services .point {
+        font-weight: 600;
+        width: 90%;
+        margin: 2vmin auto;
     }
 
-     .steps {
-        display: flex;
-        justify-content: center;
-        flex-direction: column;
-        gap: 20px;
+    .services h3 {
+        width: fit-content;
     }
 
-     .step {
-        width: 85vmin;
-        height: fit-content;
-        padding: 0.5rem 0 1rem;
-        border-radius: 10px;
-        background: linear-gradient(180deg, rgba(250, 107, 255, 0.07), rgba(253, 246, 234, 0) 50%, rgba(255, 150, 48, 0.05));
+    /*=====self-diagnosis*/
+    .self-diagnosis ul {
+        font-size: 1.6rem;
+        font-weight: 600;
+        border: 1px solid var(--text);
+        width: 90%;
+        margin-top: 2vmin;
+        padding: 0.5rem;
+    }
+    .self-diagnosis ul li {
+        margin-bottom: 4vmin;
+        font-weight: 300;
     }
 
-     .step img {
-        width: 17vmin;
-        right: -10%;
-        bottom: -18%;
+    ul .bgfont_h2::before {
+        font-size: 1.4rem;
+        top: -4vmin;
+        left: 0%;
+        font-weight: 300;
     }
 
-     .step:last-child img {
-        width: 25vmin;
-        bottom: -20%;
+    /*===== voice section */
+    .voice ul {
+        width: 90%;
+        height: 400px;
+        margin-top: 2rem;
+        padding: 0;
     }
 
-     .step h3 span {
-        font-size: clamp(4.8rem, calc(4.8rem + 0.5vw), 6rem);
-        top: -10%;
-        left: 30%;
+    .voice::after {
+        content: "";
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: calc(100% - 10px);
+        height: calc(100% - 10px);
+        border-image-source: repeating-linear-gradient(45deg, #fff 0, #fff 3px, rgba(0, 0, 0, 0) 0, rgba(0, 0, 0, 0) 6px);
+        border-width: 10px;
+        border-image-slice: 10;
+        border-image-repeat: round;
+        border-style: solid;
+        z-index: -1;
     }
 
-     .step h3 {
-        margin: 0% auto;
+    .voice ul::before {
+        width: 20vmin;
+        height: 20vmin;
+        right: 2%;
+        bottom: 15rem;
     }
 
-     .step p {
-        font-weight: 500;
-        width: 85%;
-        margin: 0 auto;
+    .voice li {
+        font-size: 1.4rem;
+        margin-bottom: 2rem;
+        padding: 0.5rem;
     }
 
     .btn {
         font-size: clamp(2rem, calc(2rem + 0.5vw), 2.4rem);
-        width: 75vmin;
-        height: 65px;
+        font-weight: 700;
+        width: 55vmin;
+        height: 55px;
         padding: 1rem 2rem;
-        background: linear-gradient(180deg, rgba(253, 246, 234, 0.1), rgba(255, 150, 48, 0.15));
-        border: none;
         border-radius: 3rem;
         box-shadow: 0px 2px 1px 0px rgba(46, 46, 46, 0.5);
-        cursor: pointer;
-        transition: all 0.5s ease;
     }
 
-    .btn::before {
-        content: '';
-        width: 80vmin;
-        height: 70px;
+    .btn::after {
+        content: "▶";
+        width: 50vmin;
+        height: 45px;
+        top: 2.5px;
+        left: 1.75vmin;
+        align-content: center;
     }
 
-    .btn:hover {
+    .btn:active {
         font-size: clamp(2.4rem, calc(2.4rem + 0.5vw), 2.8rem);
-        width: 80vmin;
-        background: linear-gradient(0deg, rgba(250, 107, 255, 0.07), rgba(253, 246, 234, 0) 50%, rgba(255, 150, 48, 0.05));
     }
 }

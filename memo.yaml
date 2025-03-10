@@ -38,7 +38,7 @@ git push -u origin main
 
 git config --global commit.gpgsign true
 
-git commit --amend -S -m "修正 matching html"
+git commit --amend -S -m "レイアウト修正"
 git push origin main --force-with-lease
 
 git add memo.yaml
@@ -46,7 +46,6 @@ git commit --amend --no-edit
 git push origin main --force-with-lease
 
 
-STEP 横スクロール js 後で
 送信後モーダル
 
 自分診断 デザイン、内容

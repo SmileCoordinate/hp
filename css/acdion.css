@@ -3,10 +3,11 @@
          width: 90%;
          height: fit-content;
          padding: 0.75rem;
-         margin: 0 auto;
+         margin: 0 auto 1vmin;
          background: var(--bg);
          background: var(--sub);
          border-bottom: 1px solid var(--hover);
+         border-radius: 10px;
       }
 
       .accordion-item {
@@ -16,27 +17,29 @@
          cursor: pointer;
       }
 
-      .accordion-item h3::before {
-         content: "";
-         display: block;
-         position: relative;
-         left: -3.5%;
-         top: 35%;
-         width: 10px;
-         height: 10px;
-         background-color: var(--text);
-         border-radius: 50%;
-      }
-
       .accordion-header {
-         font-size: 2.4rem;
+         font-size: 2rem;
          width: 100%;
          text-align: left;
          color: var(--text);
          height: 50px;
          margin: 0 auto;
          padding-left: 3.5rem;
+         position: relative;
+         align-content: center;
          transition: color 100ms;
+      }
+
+      .accordion-item h3::before {
+         content: "";
+         display: block;
+         position: absolute;
+         left: 1.5%;
+         top: 40%;
+         width: 10px;
+         height: 10px;
+         background-color: var(--text);
+         border-radius: 50%;
       }
 
       .accordion-header.active {
@@ -63,6 +66,7 @@
          width: 20px;
          height: 20px;
          color: var(--hover);
+         float: right;
          z-index: 10;
          transform: rotate(315deg);
          transition: transform 300ms, color 100ms;
@@ -70,11 +74,6 @@
 
       .rotate-fa {
          transform: rotate(135deg);
-      }
-
-      .accordion-header .fa {
-         float: right;
-         padding-top: 0;
       }
 
       .accordion-gold .accordion-header {
@@ -86,3 +85,43 @@
       }
 
       /*== アコーディオンEND ==*/
+
+      @media screen and (max-width: 600px) {
+         .accordion-wrap {
+            width: 93%;
+            padding: 0.75rem;
+            margin: 0 auto 1.5vmin;
+         }
+         .accordion-item h3::before {
+            left: 1rem;
+            top: 45%;
+            width: 5px;
+            height: 5px;
+         }
+         .accordion-header {
+            font-size: 1.6rem;
+            width: 100%;
+            text-align: left;
+            color: var(--text);
+            height: 45px;
+            margin: 0 auto;
+            padding-left: 2.5rem;
+         }
+         .accordion-text p {
+            font-size: 1.45rem;
+            width: 100%;
+            padding: 2rem 2rem 3rem;
+            /*white-space: pre-line;
+            word-break: break-all;*/
+         }
+         .fa {
+            display: block;
+            position: absolute;
+            width: 20px;
+            height: 20px;
+            color: var(--hover);
+            right: -1%;
+            top: -4%;
+            z-index: 10;
+         }
+      }

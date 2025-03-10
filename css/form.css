@@ -2,9 +2,9 @@
    font-size: inherit;
    line-height: inherit;
    margin: 0;
-   block-size: 1.2rem;
-   inline-size: 1.2rem;
-   /*vertical-align: text-bottom;*/
+   block-size: 1.6rem;
+   inline-size: 1.6rem;
+   vertical-align: sub;
 }
 
 form input {
@@ -67,6 +67,7 @@ form input[type="radio"]::before {
    /*padding-right: 4rem;*/
    margin-top: 1.5rem;
 }
+
 .col.x-50:nth-of-type(1) {
    margin-top: 0;
 }
@@ -160,14 +161,31 @@ input:-webkit-autofill:focus {
    margin: 1.5rem auto;
    border: none;
    border-radius: 10px;
+   box-shadow: 0px 1px 3px rgba(46, 46, 46, 0.5);
    cursor: pointer;
    transition: all 0.35s ease;
 }
 
 .contact-form .submit-btn:hover {
    color: var(--text);
-   background: rgba(160, 113, 113, 0.6);
+   background: var(--bg);
    border: none;
+}
+
+.radio-group,
+.align-center h3 {
+   font-weight: 700;
+   color: var(--text);
+   width: fit-content;
+   line-height: 1.5;
+   z-index: 1;
+}
+
+.radio-group {
+   font-size: 1.6rem;
+   display: flex;
+   gap: 1.2rem;
+   margin: 0.5rem 0;
 }
 
 .align-center {
@@ -179,23 +197,16 @@ input:-webkit-autofill:focus {
    margin-left: 2.5vmin;
 }
 
-.radio-group,
 .align-center h3 {
-   font-size: 2rem;
    font-family: 'Hachi Maru Pop';
-   font-weight: 700;
-   color: var(--text);
-   width: fit-content;
-   line-height: 1.5;
-   z-index: 1;
-}
-
-.radio-group {
-   margin: 0.5rem 0;
-}
-
-.align-center h3 {
    font-size: 2.4rem;
+}
+
+.align-center p {
+   font-size: 1.6rem;
+   width: 100%;
+   margin: 0;
+   line-height: 1.6;
 }
 
 /*===================== モーダルウィンドウ =====================*/
@@ -363,7 +374,7 @@ input:-webkit-autofill:focus {
 }
 
 
-@media screen and (max-width: 599px) {
+@media screen and (max-width: 600px) {
    .form-row {
       display: block;
    }
@@ -402,32 +413,29 @@ input:-webkit-autofill:focus {
       width: 100%;
       height: 38 pt;
       padding-left: 1rem;
-      background: rgba(217, 217, 217, 0.5);
+      background: var(--sub);
    }
 
    .contact-form #message {
+      width: 100%;
       height: 70pt;
    }
 
    .contact-form .label {
       font-size: clamp(1.4rem, 1.171rem + 1.14vw, 1.6rem);
-      color: rgba(217, 217, 217, 0.75);
+      color: rgba(46, 46, 46, 0.75);
       left: 2.75%;
-      top: 13.75%;
+      top: 5.75%;
       line-height: 2rem;
    }
 
-   .contact-form .label-test {
-      top: 6.5%;
-   }
-
    .contact-form .submit-btn {
-      font-size: clamp(2rem, 1.771rem + 1.14vw, 2.2rem);
+      font-size: clamp(1.8rem, 1.771rem + 1.14vw, 2rem);
       width: 100%;
       height: 30pt;
       padding: 0;
       margin: 0;
-      margin-bottom: 0.5rem;
+      padding-bottom: 0.5rem;
       margin-top: 1rem;
    }
 
@@ -436,49 +444,47 @@ input:-webkit-autofill:focus {
       background: var(--accent);
    }
 
+   .radio-group,
+   .align-center h3 {
+      font-weight: 700;
+      color: var(--text);
+      width: fit-content;
+      line-height: 1.5;
+      z-index: 1;
+   }
+
+   .radio-group {
+      font-size: 1.4rem;
+   }
+
    .align-center {
-      display: grid;
-      align-items: center;
-      justify-content: flex-end;
+      justify-content: flex-start;
+   }
+
+   .align-center h3 {
+      font-size: 2rem;
    }
 
    .align-center p {
-      font-size: clamp(1rem, 0.771rem + 1.14vw, 1.2rem);
+      font-size: clamp(1.4rem, 0.771rem + 1.14vw, 1.6rem);
       width: 85%;
-      margin: 0;
       margin-top: 1rem;
       line-height: 1.2;
-      text-align: left;
    }
 
    .align-center p a {
-      font-size: clamp(1.6rem, 1.143rem + 2.29vw, 2rem);
       margin-top: 0;
       padding: 0.5rem;
       border: 0;
    }
 
    /*===================== モーダルウィンドウ =====================*/
-   .modal {
-      display: none;
-      position: fixed;
-      z-index: 1;
-      left: 0;
-      top: 0;
-      width: 100%;
-      height: 100%;
-      overflow: auto;
-      padding-top: 20%;
-   }
-
    .modal-content {
-      width: 55%;
-      height: 350px;
-      margin: 0 auto;
+      width: 95%;
+      height: 100%;
       padding: 20px;
-      color: var(--text);
       background: rgba(245, 252, 246, 0.13);
-      box-shadow: 0 3px 5px 0 rgba(46, 46, 46, 0.67);
+      box-shadow: 0 3px 5px 0 rgba(46, 46, 46, 0.17);
       backdrop-filter: blur(6.5px);
       border: 1px solid var(--bg);
       border-radius: 20px;
