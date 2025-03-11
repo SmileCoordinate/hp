@@ -45,14 +45,6 @@ document.addEventListener("DOMContentLoaded", function () {
           input.classList.remove('not-empty');
         });
 
-        // 3秒後にフェードアウト
-        setTimeout(() => {
-          modal.classList.remove("show");
-          setTimeout(() => {
-            modal.style.display = "none"; // 完全に非表示にする
-          }, 400); // フェードアウトの時間
-        }, 3000);
-
       } else {
         alert('送信に問題が発生しました。');
       }
@@ -78,4 +70,5 @@ document.addEventListener("DOMContentLoaded", function () {
       }, 400);
     }
   };
+
 });

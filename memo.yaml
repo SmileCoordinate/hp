@@ -38,7 +38,7 @@ git push -u origin main
 
 git config --global commit.gpgsign true
 
-git commit --amend -S -m "body p(width) form(text,width)"
+git commit --amend -S -m "form modal , moodal"
 git push origin main --force-with-lease
 
 git add memo.yaml

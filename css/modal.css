@@ -17,9 +17,9 @@
 .modal-overlay {
    width: 100vw;
    height: 100%;
-   position: fixed;
-   top: 0;
-   left: 0;
+   position: absolute;
+   top: 50%;
+   left: 0%;
    z-index: 999;
    opacity: 0;
    transform: translate(-50%, -50%) scale(1);
@@ -61,7 +61,7 @@
    transform: translate(-50%, -70%) scale(1);
 }
 
-.modal-overlay.show {
+.show {
    opacity: 1;
    visibility: visible;
 }
@@ -134,85 +134,85 @@
       padding-bottom: 0.75rem;
       box-shadow: 0 2px 5px rgba(46, 46, 46, 0.5);
    }
+
    /* モーダルの背景 */
-.modal-overlay {
-   transform: translate(0%, -50%) scale(1);
-   background: rgba(253, 246, 234, 0.1);
-   backdrop-filter: blur(10px);
-}
+   .modal-overlay {
+      transform: translate(0%, -50%) scale(1);
+      background: rgba(253, 246, 234, 0.1);
+      backdrop-filter: blur(10px);
+   }
 
-/* モーダルのスタイル */
-.modal {
-   padding: 10vmin 5vmin;
-   height: 60vh;
-   width: 90vw;
-   backdrop-filter: blur(8px);
-   transform: translate(-50%, -50%) scale(0.8);
-   box-shadow: 0 3px 10px 0px rgba(0, 0, 0, 0.5);
-}
+   /* モーダルのスタイル */
+   .modal {
+      padding: 10vmin 5vmin;
+      height: 60vh;
+      width: 90vw;
+      backdrop-filter: blur(8px);
+      transform: translate(-50%, -50%) scale(0.8);
+      box-shadow: 0 3px 10px 0px rgba(0, 0, 0, 0.5);
+   }
 
-.modal p {
-   font-size: clamp(1.6rem, 1.267rem + 0.44vw, 1.8rem);
-   line-height: 2.7rem;
-   margin-bottom: 2vmin;
-}
+   .modal p {
+      font-size: clamp(1.6rem, 1.267rem + 0.44vw, 1.8rem);
+      line-height: 2.7rem;
+      margin-bottom: 2vmin;
+   }
 
 
-/* モーダルが表示されるとき */
-.modal.show {
-   transform: translate(5%, -70%) scale(1);
-}
+   /* モーダルが表示されるとき */
+   .modal-overlay.modal.show {
+      transform: translate(5%, -70%) scale(1);
+   }
 
-/* 閉じるボタン */
-.modal .close {
-   font-size: clamp(3.8rem, 3.133rem + 0.89vw, 4.2rem);
-   top: 0;
-   right: 1rem;
-}
+   /* 閉じるボタン */
+   .modal .close {
+      font-size: clamp(3.8rem, 3.133rem + 0.89vw, 4.2rem);
+      top: 0;
+      right: 1rem;
+   }
 
-.price {
-   width: 100%;
-   margin: 3% auto;
-   display: grid;
-   justify-content: normal;
-   gap: 2rem;
-}
+   .price {
+      width: 100%;
+      margin: 3% auto;
+      display: grid;
+      justify-content: normal;
+      gap: 2rem;
+   }
 
-.price .price-card--first,
-.price .price-card--second,
-.price .price-card--third {
-   height: fit-content;
-   padding: 0.5rem 3rem 1.5rem;
-   align-items: center;
-   flex-direction: column;
-   justify-content: center;
-   background: linear-gradient(200deg, #ffd59e8e, #ffbfa485 45%, #ffa9a97e 70%);
-   box-shadow: 0 2px 3px rgba(46, 46, 46, 0.5);
-   border-radius: 20px;
-}
+   .price .price-card--first,
+   .price .price-card--second,
+   .price .price-card--third {
+      height: fit-content;
+      padding: 0.5rem 3rem 1.5rem;
+      align-items: center;
+      flex-direction: column;
+      justify-content: center;
+      background: linear-gradient(200deg, #ffd59e8e, #ffbfa485 45%, #ffa9a97e 70%);
+      box-shadow: 0 2px 3px rgba(46, 46, 46, 0.5);
+      border-radius: 20px;
+   }
 
-.price .price-card--first:active,
-.price .price-card--second:active,
-.price .price-card--third:active {
-   transform: scale(1.05);
-}
+   .price .price-card--first:active,
+   .price .price-card--second:active,
+   .price .price-card--third:active {
+      transform: scale(1.05);
+   }
 
-.price h2 {
-   font-size: 2rem;
-   text-align: center;
-   margin: 0 auto;
-}
+   .price h2 {
+      font-size: 2rem;
+      text-align: center;
+      margin: 0 auto;
+   }
 
-.price p {
-   font-size: 1.6rem;
-   font-weight: 600;
-   width: 100%;
-   text-align: left;
-   line-height: 1;
-}
+   .price p {
+      font-size: 1.6rem;
+      font-weight: 600;
+      width: 100%;
+      text-align: left;
+      line-height: 1;
+   }
 
-.price p span {
-   font-size: 1.4rem;
-}
-
+   .price p span {
+      font-size: 1.4rem;
+   }
 }

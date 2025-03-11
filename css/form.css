@@ -149,7 +149,6 @@ input:-webkit-autofill:focus {
    width: 90%;
    align-items: center;
    margin: 1rem auto 0;
-   margin-left: 2.5vmin;
 }
 .align-center h3 {
    font-family: 'Hachi Maru Pop';
@@ -160,54 +159,68 @@ input:-webkit-autofill:focus {
    width: 100%;
    margin: 0;
    line-height: 1.6;
-}/*===================== モーダルウィンドウ =====================*/
-.modal {
+}
+
+/*===================== モーダルウィンドウ =====================*/
+#thanksModal {
    display: none;
-   position: absolute;
-   z-index: 10000;
-   height: fit-content;
-   overflow: hidden;
    opacity: 0;
+   overflow: hidden;
+   position: absolute;
+   z-index: 10099;
+   height: fit-content;
+   background: rgba(46, 46, 46, 0.2);
    transition: opacity 0.4s ease-in-out;
+   width: 100vw;
+   height: 100vh;
+   top: 50%;
+   left: 0%;
+   transform: translate(-50%, -50%);
+   backdrop-filter: blur(10px);
+   border-radius: 20px;
+   border: 1px solid var(--sub);
 }/* モーダルが表示されるとき */
-.modal.show {
+#thanksModal.show {
    display: block;
    opacity: 1;
 }/* モーダルコンテンツのアニメーション */
-.modal-content {
-   position: fixed;
-   width: 70vmin;
-   height: 55vmin;
+#thanksModal .modal-content {
+   position: absolute;
+   width: 75vw;
+   height: 65vh;
    margin: 0 auto;
+   top: 50%;
+   left: 50%;
    transform: translate(-50%, -50%);
-   padding: 20px;
    color: var(--text);
-   background: rgba(255, 255, 255, 0.5);
+   background: rgba(255, 255, 255, 0.7);
    box-shadow: 0 2px 3px 0 rgba(46, 46, 46, 0.63);
    border: 1px solid #fff;
-   backdrop-filter: blur(8px);
    border-radius: 10px;
+   backdrop-filter: blur(20px);
    display: flex;
    justify-content: center;
    align-items: center;
    flex-direction: column;
+   z-index: 11000;
 }/* モーダル表示時 */
-.modal.show .modal-content {
-   transform: translateY(0);
+
+#thanksModal .modal-content p {
+   font-size: 2.4rem;
+   width: fit-content;
+   line-height: 2;
+   margin: 0 auto 5vmin;
 }
-.modal-content p {
-   font-size: clamp(1.6rem, calc(1.6rem + 0.5vw), 1.8rem);
-}
-.close {
+#thanksModal .close {
    font-size: 25pt;
    font-weight: bold;
    float: right;
    position: absolute;
-   top: 20%;
-   right: 20%;
+   top: 5%;
+   right: 5%;
 }
-.close:hover,
-.close:focus {
+#thanksModal .close:hover,
+#thanksModal .close:focus {
    color: var(--accent);
    text-shadow: 0 1px 2px var(--text);
    text-decoration: none;
@@ -384,31 +397,37 @@ input:-webkit-autofill:focus {
       border: 0;
    }
    /*===================== モーダルウィンドウ =====================*/
-   .modal-content {
-      width: 95%;
-      height: 100%;
-      padding: 20px;
-      background: rgba(245, 252, 246, 0.13);
+   #thanksModal .modal-content {
+      width: 100vw;
+      height: 90vh;
+      transform: translate(0%, 0%);
+      background: rgba(245, 252, 246, 0.83);
       box-shadow: 0 3px 5px 0 rgba(46, 46, 46, 0.17);
       backdrop-filter: blur(6.5px);
       border: 1px solid var(--bg);
-      border-radius: 20px;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      flex-direction: column;
+      border-radius: 0;
    }
-   .close {
+
+   #thanksModal.show {
+      transform: translate(3%,0%);
+      background: rgba(46, 46, 46, 0.02);
+   }
+
+   #thanksModal .modal-content p {
+      font-size: 1.8rem;
+      margin-left: 7vmin;
+   }
+   #thanksModal .close {
       color: var(--base);
       font-size: 25pt;
       font-weight: bold;
       float: right;
       position: absolute;
-      top: 20%;
+      top: 10%;
       right: 20%;
    }
-   .close:hover,
-   .close:focus {
+   #thanksModal .close:hover,
+   #thanksModal .close:focus {
       color: var(--main);
       text-shadow: 0 1px 2px var(--base);
       text-decoration: none;
