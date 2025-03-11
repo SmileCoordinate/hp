@@ -923,6 +923,21 @@ footer {
 }
 
 /* 小さなスマホ（iPhone SEなど） */
+@media (max-height: 568px) {
+    :root {
+        --dynamic-height: 110svh;
+    }
+    section {
+        height: 150svh;
+    }
+    .main-visual {
+        height: 80svh;
+    }
+    .sentence {
+        height: 50svh;
+    }
+}
+
 @media (max-height: 600px) {
     :root {
         --dynamic-height: 95svh;
