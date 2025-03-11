@@ -38,7 +38,7 @@ git push -u origin main
 
 git config --global commit.gpgsign true
 
-git commit --amend -S -m "mobile moodal"
+git commit --amend -S -m "vh=>dvh,machting=>diagnosis=css,js変更"
 git push origin main --force-with-lease
 
 git add memo.yaml

@@ -5,15 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>SC 自分診断</title>
-    <link rel="stylesheet" href="css/matching.css">
-    <script src="js/machting.js"></script>
+    <link rel="stylesheet" href="css/diagnosis.css">
+    <script src="js/diagnosis.js"></script>
 </head>
 
 <body>
 <h1>
     Smile Coordinate
+    <br>
+    <span>SC 自分診断ページ</span>
 </h1>
-自分診断ページ
+
     <div class="container">
         <!-- 質問セクション -->
         <div id="question-container">
@@ -21,8 +23,14 @@
             <ul class="options">
                 <!-- 質問の選択肢が動的に挿入されます -->
             </ul>
-            ※個人情報を含めた情報は、お客様の同意が無い場合では収集いたしません。
-            ※こちらからの案内を希望される方のみ、氏名、連絡先アドレスを入力してお送りください。後日こちらから案内の連絡をいたします。
+            <p>
+                この診断は質問に回答した後に、お名前、メールアドレスなどの情報を送信していただき、折り返し1日～2日ほどで診断結果をお送りいたします。
+                <br>
+                ※個人情報を含めた情報は、お客様の同意が無い場合では収集いたしません。
+                <br>
+                ※本格的な自分診断を希望される方は、お名前、メールアドレス、知りたいことについての詳細などを入力して送信してください。
+                確認でき次第、1日～2日ほどでこちらから折り返し連絡をいたします。
+            </p>
         </div>
         <!-- 結果セクション -->
         <div id="result-container" style="display: none;">
@@ -34,7 +42,7 @@
             <div id="contact-info">
                 <label><input type="text" id="name" placeholder="氏名を入力してください"></label><br>
                 <label><input type="email" id="address" placeholder="メールアドレスを入力してください"></label><br>
-                <textarea id="consultation" rows="4" cols="50" placeholder="相談したい事があればご記入お願いします"></textarea>
+                <textarea id="consultation" placeholder="相談したい事があればご記入お願いします"></textarea>
                 <br>
                 <label><input type="checkbox" name="freeConsultation">
                     無料相談を希望する

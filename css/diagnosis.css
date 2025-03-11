@@ -1,0 +1,261 @@
+:root {
+  font-size: 62.5%;
+  --root-font-size: 16;
+  /*text border main rgba(46, 46, 46)*/
+  --text: #2e2e2e;
+  /*sub black rgba(255, 150, 48)*/
+  --hover: #fda144;
+  /*bg base rgba(253, 246, 234)*/
+  --bg: #FDF6EA;
+  /*sub bg rgba(255, 253, 249)*/
+  --sub: #fffdf9;
+  /*link accent rgba(254, 175, 255)*/
+  --accent: #FEAFFF;
+}
+
+html,
+body,
+h1,
+h2,
+h3,
+p,
+a,
+ul,
+ol,
+li,
+div,
+button,
+label,
+input {
+  margin: 0;
+  padding: 0;
+}
+
+
+/* 全体のスタイル */
+body {
+  font-family: 'Roboto', Arial, sans-serif;
+  background: linear-gradient(to bottom, #f9f9f9, #eaeaea);
+  color: #333;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+h1 {
+  font-size: 4rem;
+  line-height: 1;
+  display: block;
+}
+
+h1 span {
+  font-size: 2rem;
+}
+
+/* 質問のテキスト */
+h2 {
+  font-size: 2.4rem;
+  color: #4a90e2;
+  margin-bottom: 15px;
+  text-align: center;
+}
+
+/* コンテンツ部分 */
+p {
+  font-size: 1.8rem;
+  color: #333;
+  margin-bottom: 20px;
+}
+
+a {
+  outline: none;
+}
+
+ul,
+li {
+  width: fit-content;
+  list-style: auto;
+  padding: 0;
+}
+
+ul {
+  margin: 2vmin auto;
+}
+
+li::marker {
+  font-size: 2rem;
+  font-weight: 600;
+}
+
+/* オプションボタン */
+button {
+  font-size: 1.6rem;
+  text-align: left;
+  letter-spacing: 0.1rem;
+  background: #4a90e2;
+  color: var(--sub);
+  border: none;
+  border-radius: 25px;
+  padding: 10px 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+}
+
+button:hover {
+  background: #357abd;
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  transform: translateY(-2px);
+}
+
+button:focus {
+  outline: 2px solid #72b3f4;
+}
+
+/* 質問コンテナ */
+.container {
+  width: 850px;
+  background: var(--bg);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 4vmin;
+  margin: 0 auto;
+  position: relative;
+  display: grid;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+#question-container {
+  font-weight: 500;
+  padding: 2vmin;
+}
+
+/* モーダルのコンテンツ */
+#result-container {
+  font-weight: 500;
+  background: var(--sub);
+  padding: 5vmin;
+  border-radius: 10px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+#advice-content {
+  font-weight: 500;
+}
+
+
+.container span {
+  font-size: 2.2rem;
+  font-weight: 600;
+}
+
+/* オプションリスト */
+.options {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 2rem 10rem;
+}
+
+#contact-info {
+  font-weight: 500;
+  width: fit-content;
+  padding: 2rem;
+  margin: 0 auto;
+}
+
+:where(input[type="checkbox"]) {
+  outline: none;
+  border: none;
+}
+
+label {
+  font-size: 1.6rem;
+}
+
+input,
+textarea {
+  border: none;
+  outline: none;
+  font-size: 1.6rem;
+  margin: 1vmin auto;
+  padding: 0.5vmin;
+  box-shadow: 0 1px 2px rgba(46, 46, 46, 0.6);
+  border-radius: 10px;
+}
+
+::placeholder {
+  font-size: 1.4rem;
+  transition: all 0.3s ease;
+  opacity: 0.75;
+  position: absolute;
+  top: 2%;
+  left: 2.5%;
+}
+
+#name,
+#address,
+#consultation {
+  width: 100%;
+  height: 40px;
+}
+
+#consultation {
+  height: 100px;
+}
+
+input:focus,
+textarea:focus {
+  outline: none;
+}
+
+input:focus::placeholder,
+textarea:focus::placeholder {
+  transform: translate(0, -90%);
+}
+
+/* レスポンシブデザイン */
+@media screen and (max-width: 768px) {
+  h1 {
+    font-size: 3rem;
+    margin: 0 auto;
+  }
+  p {
+    font-size: 1.4rem;
+  }
+  button {
+    font-size: 1.4rem;
+    padding: 8px 15px;
+  }
+
+  .container {
+    width: 80%;
+  }
+
+  .container h2 {
+    font-size: 2rem;
+  }
+
+  #question-container {
+    font-size: 1.6rem;
+    font-weight: 400;
+    margin-top: 5vmin;
+  }
+
+  #question-container p {
+    margin-top: 10vmin;
+  }
+  #contact-info {
+    padding: 0;
+  }
+  .options {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+}
