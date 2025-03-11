@@ -16,7 +16,6 @@ document.addEventListener("DOMContentLoaded", () => {
       let maxScrollLeft = Math.round(container.scrollWidth - container.clientWidth);
       let currentScrollLeft = Math.round(container.scrollLeft);
 
-      // 横スクロールの終端では `preventDefault()` を適用しない（縦スクロールを許可）
       if (!isAtHorizontalEdge(currentScrollLeft, maxScrollLeft, e.deltaY)) {
          e.preventDefault();
       }
@@ -34,10 +33,12 @@ document.addEventListener("DOMContentLoaded", () => {
    // スマホのスワイプで横スクロール
    let touchStartX = 0;
    let touchStartY = 0;
+   let isHorizontalScroll = false;
 
    container.addEventListener("touchstart", (e) => {
       touchStartX = e.touches[0].clientX;
       touchStartY = e.touches[0].clientY;
+      isHorizontalScroll = false;
    });
 
    container.addEventListener("touchmove", (e) => {
@@ -46,11 +47,11 @@ document.addEventListener("DOMContentLoaded", () => {
       let maxScrollLeft = Math.round(container.scrollWidth - container.clientWidth);
       let currentScrollLeft = Math.round(container.scrollLeft);
 
-      if (isAtHorizontalEdge(currentScrollLeft, maxScrollLeft, deltaX)) {
-         return;
+      if (Math.abs(deltaX) > Math.abs(deltaY)) {
+         isHorizontalScroll = true;
       }
 
-      if (Math.abs(deltaX) > Math.abs(deltaY)) {
+      if (isHorizontalScroll && !isAtHorizontalEdge(currentScrollLeft, maxScrollLeft, deltaX)) {
          e.preventDefault();
          container.scrollLeft = Math.min(Math.max(currentScrollLeft + (deltaX > 0 ? fixedScrollAmount : -fixedScrollAmount), 0), maxScrollLeft);
       }

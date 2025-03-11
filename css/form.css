@@ -312,7 +312,7 @@ input:-webkit-autofill:focus {
       transform: translateY(-2rem);
    }
    .content-wrapper {
-      width: 95%;
+      width: 90%;
       padding: 0.5rem 1rem;
       margin: 0 auto;
       position: relative;
@@ -360,7 +360,7 @@ input:-webkit-autofill:focus {
       z-index: 1;
    }
    .radio-group {
-      font-size: 1.4rem;
+      font-size: 1.6rem;
       justify-content: center;
    }
    .align-center {
@@ -376,7 +376,7 @@ input:-webkit-autofill:focus {
       font-size: clamp(1.4rem, 0.771rem + 1.14vw, 1.6rem);
       width: 100%;
       margin-top: 2rem;
-      line-height: 1.2;
+      line-height: 1.6;
    }
    .align-center p a {
       margin-top: 0;
