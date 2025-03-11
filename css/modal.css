@@ -58,7 +58,7 @@
 .modal.show {
    opacity: 1;
    visibility: visible;
-   transform: translate(-50%, -70%) scale(1);
+   transform: translate(3%, -70%) scale(1);
 }
 
 .show {
