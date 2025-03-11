@@ -38,7 +38,7 @@ git push -u origin main
 
 git config --global commit.gpgsign true
 
-git commit --amend -S -m "背景、body、変更"
+git commit --amend -S -m "dvh=>svh"
 git push origin main --force-with-lease
 
 git add memo.yaml

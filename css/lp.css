@@ -95,7 +95,7 @@ body {
 body::before {
     content: "";
     width: 100vw;
-    height: 100dvh;
+    height: 100svh;
     position: fixed;
     background: url("../img/flower of life.webp") no-repeat center center / cover;
     border-top: 1.5vmin solid var(--sub);
@@ -111,7 +111,7 @@ body::after {
     top: 1.35vmin;
     right: 1.35vmin;
     width: 100vw;
-    height: 100dvh;
+    height: 100svh;
     border: 1px solid var(--hover);
     border-left: none;
     border-bottom: none;
@@ -329,7 +329,7 @@ main {
 /*====Section*/
 section,
 .sentence {
-    height: 100dvh;
+    height: 100svh;
     position: relative;
     /*display: flex;
     justify-content: center;*/
@@ -344,7 +344,7 @@ section,
     font-weight: 600;
     position: relative;
     width: 45%;
-    height: 100dvh;
+    height: 100svh;
     transform: translate(25%, 0%);
     z-index: -1;
 }
@@ -777,7 +777,7 @@ footer {
     .main-visual {
         font-weight: 600;
         width: fit-content;
-        height: 50dvh;
+        height: 50svh;
         transform: none;
         margin: 0 auto;
         padding-top: 20vmin;
@@ -806,12 +806,12 @@ footer {
     }
 
     section {
-        height: 100dvh;
+        height: 100svh;
     }
 
     /*====top*/
     .sentence {
-        height: 50dvh;
+        height: 50svh;
         padding-top: 0;
     }
 
