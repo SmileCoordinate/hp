@@ -58,7 +58,7 @@
 .modal.show {
    opacity: 1;
    visibility: visible;
-   transform: translate(3%, -70%) scale(1);
+   transform: translate(-50%, -50%) scale(1);
 }
 
 .show {
@@ -148,7 +148,7 @@
       height: 60vh;
       width: 90vw;
       backdrop-filter: blur(8px);
-      transform: translate(-50%, -50%) scale(0.8);
+      transform: translate(5%, 0%) scale(0.8);
       box-shadow: 0 3px 10px 0px rgba(0, 0, 0, 0.5);
    }
 
@@ -160,8 +160,8 @@
 
 
    /* モーダルが表示されるとき */
-   .modal-overlay.modal.show {
-      transform: translate(5%, -70%) scale(1);
+   .modal.show {
+      transform: translate(3%, -70%) scale(1);
    }
 
    /* 閉じるボタン */
