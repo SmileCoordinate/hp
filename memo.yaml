@@ -38,7 +38,7 @@ git push -u origin main
 
 git config --global commit.gpgsign true
 
-git commit --amend -S -m "dvh=>svh"
+git commit --amend -S -m "svh 縦ブレイクポイント設定"
 git push origin main --force-with-lease
 
 git add memo.yaml

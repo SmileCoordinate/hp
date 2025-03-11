@@ -917,3 +917,32 @@ footer {
         font-size: clamp(2.4rem, calc(2.4rem + 0.5vw), 2.8rem);
     }
 }
+
+:root {
+    --dynamic-height: 100svh; /* 初期値 */
+}
+
+/* 小さなスマホ（iPhone SEなど） */
+@media (max-height: 600px) {
+    :root {
+        --dynamic-height: 95svh;
+    }
+}
+
+/* 標準的なスマホ（iPhone 13/14など） */
+@media (min-height: 601px) and (max-height: 900px) {
+    :root {
+        --dynamic-height: 98svh;
+    }
+}
+
+/* タブレットや大きめのスマホ */
+@media (min-height: 901px) {
+    :root {
+        --dynamic-height: 100svh;
+    }
+}
+
+.full-height {
+    height: var(--dynamic-height);
+}
