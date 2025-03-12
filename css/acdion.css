@@ -94,7 +94,7 @@
             color: var(--text);
             height: 45px;
             margin: 0 auto;
-            padding-left: 2.5rem;
+            padding: 0 2.5rem;
          }
          .accordion-text p {
             font-size: 1.45rem;

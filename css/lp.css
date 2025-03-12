@@ -305,7 +305,7 @@ img {
     position: absolute;
     width: fit-content;
     transform: rotate(-5deg);
-    top: -30%;
+    top: -65%;
     left: -10%;
     color: var(--accent);
     opacity: 0.45;
@@ -320,6 +320,7 @@ main {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     background: rgba(255, 255, 255, 0.3);
+    -webkit-backdrop-filter: blur(20px);
     backdrop-filter: blur(15px);
     border-left: 0.5px solid var(--accent);
     border-right: 0.5px solid var(--accent);
@@ -327,6 +328,9 @@ main {
 }
 
 /*====Section*/
+section {
+    padding: 10rem 0;
+}
 section,
 .sentence {
     height: 100svh;
@@ -336,7 +340,6 @@ section,
     display: grid;
     align-content: flex-start;
     align-items: center;
-    padding-top: 10rem;
 }
 
 /*====TOP section*/
@@ -381,17 +384,17 @@ section,
 }
 
 /* Service セクション */
-.services {
+.service {
     background: var(--sub);
 }
 
-.services .point {
+.service .point {
     font-weight: 600;
     width: 65%;
     margin: 0 auto;
 }
 
-.services h3 {
+.service h3 {
     width: 65%;
     text-align: left;
     margin: 0 auto;
@@ -768,6 +771,7 @@ footer {
         margin: 0 auto;
         border-radius: 0;
         background: rgba(255, 255, 255, 0.25);
+        -webkit-backdrop-filter: blur(10px);
         backdrop-filter: blur(5px);
         border: none;
         box-shadow: none;
@@ -777,7 +781,7 @@ footer {
     .main-visual {
         font-weight: 600;
         width: fit-content;
-        height: 50svh;
+        height: 80svh;
         transform: none;
         margin: 0 auto;
         padding-top: 20vmin;
@@ -799,20 +803,16 @@ footer {
     }
 
     /*====Section*/
-    section,
-    .sentence {
-        align-content: center;
-        padding-top: 0;
-    }
-
     section {
         height: 100svh;
+        min-height: 700px;
+        padding: 4rem 0;
+        align-content: center;
     }
 
     /*====top*/
     .sentence {
         height: 50svh;
-        padding-top: 0;
     }
 
     /* About Us セクション */
@@ -823,13 +823,13 @@ footer {
     }
 
     /* Service セクション */
-    .services .point {
+    .service .point {
         font-weight: 600;
         width: 80%;
         margin: 2vmin auto;
     }
 
-    .services h3 {
+    .service h3 {
         width: fit-content;
     }
 
@@ -860,7 +860,6 @@ footer {
         width: 90%;
         height: 400px;
         margin-top: 2rem;
-        padding: 0;
     }
 
     .voice::after {
@@ -881,10 +880,10 @@ footer {
     }
 
     .voice ul::before {
-        width: 20vmin;
-        height: 20vmin;
+        width: 22%;
+        height: 21vmin;
         right: 2%;
-        bottom: 15rem;
+        bottom: 5%;
     }
 
     .voice li {
@@ -916,48 +915,4 @@ footer {
     .btn:active {
         font-size: clamp(2.4rem, calc(2.4rem + 0.5vw), 2.8rem);
     }
-}
-
-:root {
-    --dynamic-height: 100svh; /* 初期値 */
-}
-
-/* 小さなスマホ（iPhone SEなど） */
-@media (max-height: 568px) {
-    :root {
-        --dynamic-height: 110svh;
-    }
-    section {
-        height: 150svh;
-    }
-    .main-visual {
-        height: 80svh;
-    }
-    .sentence {
-        height: 50svh;
-    }
-}
-
-@media (max-height: 600px) {
-    :root {
-        --dynamic-height: 95svh;
-    }
-}
-
-/* 標準的なスマホ（iPhone 13/14など） */
-@media (min-height: 601px) and (max-height: 900px) {
-    :root {
-        --dynamic-height: 98svh;
-    }
-}
-
-/* タブレットや大きめのスマホ */
-@media (min-height: 901px) {
-    :root {
-        --dynamic-height: 100svh;
-    }
-}
-
-.full-height {
-    height: var(--dynamic-height);
 }

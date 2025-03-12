@@ -24,6 +24,7 @@
    opacity: 0;
    transform: translate(-50%, -50%) scale(1);
    background: rgba(253, 246, 234, 0.3);
+   -webkit-backdrop-filter: blur(20px);
    backdrop-filter: blur(10px);
    visibility: hidden;
    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
@@ -40,7 +41,6 @@
    opacity: 0;
    visibility: hidden;
    overflow-y: auto;
-   backdrop-filter: blur(8px);
    background: var(--sub);
    transform: translate(-50%, -50%) scale(0.8);
    box-shadow: 0 3px 10px 0px rgba(0, 0, 0, 0.5);
@@ -139,16 +139,14 @@
    .modal-overlay {
       transform: translate(0%, -50%) scale(1);
       background: rgba(253, 246, 234, 0.1);
-      backdrop-filter: blur(10px);
    }
 
    /* モーダルのスタイル */
    .modal {
       padding: 10vmin 5vmin;
       height: 60vh;
-      width: 90vw;
-      backdrop-filter: blur(8px);
-      transform: translate(5%, 0%) scale(0.8);
+      width: 100vw;
+      transform: translate(0%, 0%) scale(0.8);
       box-shadow: 0 3px 10px 0px rgba(0, 0, 0, 0.5);
    }
 
@@ -161,7 +159,7 @@
 
    /* モーダルが表示されるとき */
    .modal.show {
-      transform: translate(3%, -70%) scale(1);
+      transform: translate(0%, 0%) scale(1);
    }
 
    /* 閉じるボタン */

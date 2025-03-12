@@ -176,6 +176,7 @@ input:-webkit-autofill:focus {
    top: 50%;
    left: 0%;
    transform: translate(-50%, -50%);
+   -webkit-backdrop-filter: blur(10px);
    backdrop-filter: blur(10px);
    border-radius: 20px;
    border: 1px solid var(--sub);
@@ -197,6 +198,7 @@ input:-webkit-autofill:focus {
    box-shadow: 0 2px 3px 0 rgba(46, 46, 46, 0.63);
    border: 1px solid #fff;
    border-radius: 10px;
+   -webkit-backdrop-filter: blur(20px);
    backdrop-filter: blur(20px);
    display: flex;
    justify-content: center;
@@ -403,6 +405,7 @@ input:-webkit-autofill:focus {
       transform: translate(0%, 0%);
       background: rgba(245, 252, 246, 0.83);
       box-shadow: 0 3px 5px 0 rgba(46, 46, 46, 0.17);
+      -webkit-backdrop-filter: blur(6px);
       backdrop-filter: blur(6.5px);
       border: 1px solid var(--bg);
       border-radius: 0;
