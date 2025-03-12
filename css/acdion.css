@@ -60,6 +60,7 @@
          height: 20px;
          color: var(--hover);
          float: right;
+         top: -10px;
          z-index: 10;
          transform: rotate(315deg);
          transition: transform 300ms, color 100ms;

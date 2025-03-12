@@ -3,7 +3,7 @@
     grid-auto-flow: column;
     gap: 7rem;
     position: relative;
-    margin: 4vmin 0 3vmin 15%;
+    margin: 15vmin 0 3vmin 15%;
     overflow-x: auto;
     padding: 1vmin 3vmin;
     /* 横スクロールを有効化 */

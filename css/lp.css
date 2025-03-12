@@ -1,14 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Dongle&display=swap');
+
 /*== Scrollbar ==*/
 ::-webkit-scrollbar {
     width: 3px;
     height: 8px;
 }
+
 ::-webkit-scrollbar-thumb {
     border: thick double var(--hover);
     border-radius: 5px;
     mix-blend-mode: difference;
 }
+
 /*== Scrollbar END ==*/
 
 /*== fade ==*/
@@ -22,21 +25,26 @@
     opacity: 1;
     filter: blur(0);
 }
+
 @keyframes fadeIn_left {
     0% {
         opacity: 0;
         transform: translateX(-200px);
         filter: blur(4px);
     }
+
     100% {
         opacity: 1;
         transform: translateX(0);
         filter: blur(0px);
     }
 }
+
 /*== fade END ==*/
 
-*, *::before, *::after {
+*,
+*::before,
+*::after {
     box-sizing: inherit;
 }
 
@@ -65,11 +73,54 @@ textarea {
     -moz-appearance: none;
     appearance: none;
 }
+
 .mobile {
     display: none;
 }
+
 .pc {
     display: block;
+}
+
+@keyframes morphRotate {
+    0% {
+        border-radius: 65% 35% 55% 45% / 55% 50% 55% 45%;
+        transform: rotate(0deg) scale(1);
+        filter: blur(0px);
+    }
+    37.5% { border-radius: 60% 40% 50% 45% / 60% 40% 60% 40%; }
+    50% {
+        border-radius: 55% 95% 65% 90% / 75% 65% 85% 70%;
+        transform: rotate(180deg) scale(1.05);
+        filter: blur(0px);
+    }
+    75%   { border-radius: 60% 75% 40% 80% / 70% 70% 60% 65%; }
+    100% {
+        border-radius: 65% 35% 55% 45% / 55% 50% 55% 45%;
+        transform: rotate(360deg) scale(1);
+        filter: blur(0px);
+    }
+}
+
+body .bg {
+    position: fixed;
+    width: 400px;
+    height: 380px;
+    aspect-ratio: 1;
+    border-radius: 61% 39% 16% 84% / 57% 72% 28% 43%;
+    top: 25%;
+    left: 55%;
+    transform: translate(-25%, -75%);
+    z-index: -1;
+    background: radial-gradient(ellipse at 50% 50%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%),
+                radial-gradient(ellipse at 70% 60%, #c3e060 0%, rgba(195, 224, 96, 0) 90%),
+                radial-gradient(ellipse at 30% 30%, #c3e060 0%, rgba(195, 224, 96, 0) 60%),
+                radial-gradient(ellipse at bottom left, #00a3cb 0%, rgba(0, 163, 203, 0) 70%),
+                linear-gradient(135deg, rgba(18, 46, 119, 0) 0%, rgba(18, 46, 119, 0) 75%, #122e77 100%),
+                linear-gradient(to right, #625793 0%, #d55d64 35%, #e49129 65%, #c0671c 100%);
+    background-blend-mode: overlay, luminosity, color-dodge, saturation, screen, color;
+    filter: blur(0px);
+    animation: morphRotate 15s infinite linear;
 }
 
 body {
@@ -85,10 +136,11 @@ body {
     font-family: "Zen Maru Gothic", serif;
     font-size: clamp(1.4rem, calc(1.4rem + 0.5vw), 1.6rem);
     color: var(--text);
+    background-color: var(--bg);
     font-weight: 400;
     /*background: linear-gradient(0deg, rgba(255, 255, 255, 0.48), rgba(255, 255, 255, 0.48)), url('https://smilecoordinate.github.io/hp/img/hp-bg.webp') no-repeat center center / cover;*/
-    background: url("../img/test-bg-img.webp") no-repeat center center / cover;
-    background-attachment: fixed;
+    /*background: url("../img/test-bg-img.webp") no-repeat center center / cover;
+    background-attachment: fixed;*/
     overflow-x: hidden;
 }
 
@@ -97,12 +149,12 @@ body::before {
     width: 100vw;
     height: 100svh;
     position: fixed;
-    background: url("../img/flower of life.webp") no-repeat center center / cover;
     border-top: 1.5vmin solid var(--sub);
     border-right: 2vmin solid var(--sub);
     border-bottom: none;
     z-index: 10;
-    pointer-events: none;/* クリックを無効化 */
+    pointer-events: none;
+    /* クリックを無効化 */
 }
 
 body::after {
@@ -311,6 +363,7 @@ img {
     opacity: 0.45;
     z-index: -1;
 }
+
 /*===== h2 bg ======*/
 
 main {
@@ -320,8 +373,8 @@ main {
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
     background: rgba(255, 255, 255, 0.3);
-    -webkit-backdrop-filter: blur(20px);
-    backdrop-filter: blur(15px);
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(20px);
     border-left: 0.5px solid var(--accent);
     border-right: 0.5px solid var(--accent);
     box-shadow: 0 2px 5px rgba(46, 46, 46, 0.5);
@@ -331,6 +384,7 @@ main {
 section {
     padding: 10rem 0;
 }
+
 section,
 .sentence {
     height: 100svh;
@@ -360,7 +414,6 @@ section,
 .main-visual .overlay p {
     font-size: clamp(1.6rem, calc(1.6rem + 0.5vw), 1.8rem);
     margin: 0;
-    margin-left: 1%;
 }
 
 .overlay--tow {
@@ -771,7 +824,7 @@ footer {
         margin: 0 auto;
         border-radius: 0;
         background: rgba(255, 255, 255, 0.25);
-        -webkit-backdrop-filter: blur(10px);
+        -webkit-backdrop-filter: blur(5px);
         backdrop-filter: blur(5px);
         border: none;
         box-shadow: none;
