@@ -41,8 +41,10 @@
    opacity: 0;
    visibility: hidden;
    overflow-y: auto;
+   top: 50%;
+   left: 50%;
    background-color: var(--sub);
-   transform: translate(-50%, -50%) scale(0.8);
+   transform: translate(-80%, -50%) scale(0.8);
    box-shadow: 0 3px 10px 0px rgba(0, 0, 0, 0.5);
    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, visibility 0.3s;
 }
@@ -58,7 +60,7 @@
 .modal.show {
    opacity: 1;
    visibility: visible;
-   transform: translate(-50%, -50%) scale(1);
+   transform: translate(-80%, -50%) scale(1);
 }
 
 .show {
@@ -145,8 +147,7 @@
    .modal {
       padding: 10vmin 5vmin;
       height: 60vh;
-      width: 100vw;
-      transform: translate(0%, 0%) scale(0.8);
+      width: 90vw;
       box-shadow: 0 3px 10px 0px rgba(0, 0, 0, 0.5);
    }
 
@@ -159,7 +160,7 @@
 
    /* モーダルが表示されるとき */
    .modal.show {
-      transform: translate(0%, 0%) scale(1);
+      transform: translate(-50%, 0%) scale(1);
    }
 
    /* 閉じるボタン */

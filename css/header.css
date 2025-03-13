@@ -52,10 +52,10 @@ nav .bgfont_h2::before {
 	transition-duration: 0.2s;
 }
 nav img {
-	width: clamp(10%, 15%, 20%);
+	width: clamp(15%, 19%, 25%);
 	height: auto;
+	position: relative;
 	border-radius: 20%;
-	transform: translate(30%, 10%);
 }
 nav img:hover {
 	background: #00b900;
@@ -64,18 +64,20 @@ nav .inner {
 	padding: 2rem 1rem 0;
 }
 nav .inner ul {
+	width: 100%;
 	list-style: none;
 }
 nav ul .bgfont_h2::before {
 	font-size: 1.4rem;
 	transform: rotate(-5deg);
-	top: -0.5vmin;
+	top: 1.5vmin;
 	color: var(--hover);
 	opacity: 1;
 }
 nav .inner ul li {
 	position: relative;
 	height: 45px;
+	line-height: 1.2;
 	margin: 1% auto;
 	padding: 0.15rem 0;
 	align-content: flex-end;
