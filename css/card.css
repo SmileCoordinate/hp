@@ -112,14 +112,14 @@
 
 
 .step img {
-    width: 12vmin;
-    right: 1%;
-    bottom: 1%;
+    width: 11vmin;
+    right: 3%;
+    bottom: 3%;
 }
 
 .step:last-child img {
     width: 19vmin;
-    bottom: -7.5%;
+    bottom: -4%;
 }
 
 /*.step h3 span {
