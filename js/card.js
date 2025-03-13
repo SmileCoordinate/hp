@@ -1,46 +1,43 @@
 document.addEventListener("DOMContentLoaded", () => {
    const container = document.querySelector(".steps");
 
-   let speed = 1.5;
    let lastTouchX = 0;
-   let lastDeltaX = 0;
-   let lastTime = 0;
-   let isDragging = false;
+   let lastScrollLeft = 0;
    let inertiaVelocity = 0;
+   let isDragging = false;
    let isHorizontalScroll = false;
+   let animationFrameId;
 
    // PC用のホイールスクロール
    container.addEventListener("wheel", (e) => {
       e.preventDefault();
-      container.scrollLeft += e.deltaY * speed;
+      container.scrollLeft += e.deltaY * 1.5;
    }, { passive: false });
 
    // スマホ用スワイプ
    container.addEventListener("touchstart", (e) => {
       lastTouchX = e.touches[0].clientX;
-      lastTime = Date.now();
+      lastScrollLeft = container.scrollLeft;
       isDragging = true;
       isHorizontalScroll = false;
       inertiaVelocity = 0;
+      cancelAnimationFrame(animationFrameId);
    });
 
    container.addEventListener("touchmove", (e) => {
       const touchX = e.touches[0].clientX;
       const touchY = e.touches[0].clientY;
       const deltaX = lastTouchX - touchX;
-      const deltaY = Math.abs(touchY - e.touches[0].clientY); // 縦方向の移動量
+      const deltaY = Math.abs(e.touches[0].clientY - touchY); // 縦スクロール量
 
-      // 横方向スクロールかどうかを判定
-      if (!isHorizontalScroll && Math.abs(deltaX) > Math.abs(deltaY)) {
+      if (!isHorizontalScroll && Math.abs(deltaX) > deltaY) {
          isHorizontalScroll = true;
       }
 
       if (isHorizontalScroll) {
          e.preventDefault();
-         container.scrollLeft += deltaX * speed;
-         let now = Date.now();
-         inertiaVelocity = (deltaX / (now - lastTime)) * 500; // 慣性の速度計算
-         lastTime = now;
+         container.scrollLeft += deltaX;
+         inertiaVelocity = deltaX * 0.8; // 慣性計算
       }
 
       lastTouchX = touchX;
@@ -56,13 +53,7 @@ document.addEventListener("DOMContentLoaded", () => {
       if (Math.abs(inertiaVelocity) > 1) {
          container.scrollLeft += inertiaVelocity;
          inertiaVelocity *= 0.95; // 徐々に減速
-
-         requestAnimationFrame(applyInertia);
+         animationFrameId = requestAnimationFrame(applyInertia);
       }
    }
-
-   window.addEventListener("resize", () => {
-      let maxScrollLeft = container.scrollWidth - container.clientWidth;
-      container.scrollLeft = Math.min(container.scrollLeft, maxScrollLeft);
-   });
 });

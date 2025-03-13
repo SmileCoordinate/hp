@@ -87,11 +87,11 @@ textarea {
         filter: blur(0px);
     }
     25% {
-        border-radius: 60% 40% 50% 45% / 60% 40% 60% 40%;
+        border-radius: 55% 45% 40% 25% / 75% 40% 60% 20%;
         transform: rotate(90deg) scale(1.02) translate(20px, 20px);
     }
     50% {
-        border-radius: 55% 95% 65% 90% / 75% 65% 85% 70%;
+        border-radius: 35% 75% 65% 90% / 45% 65% 85% 70%;
         transform: rotate(180deg) scale(1.05) translate(40px, 0);
         filter: blur(0px);
     }
@@ -270,7 +270,7 @@ img {
     background-repeat: no-repeat;
     background-size: cover;
     shape-margin: 0.75rem;
-    z-index: 11;
+    z-index: -1;
     pointer-events: none;
 }
 
@@ -369,9 +369,9 @@ main {
     margin-left: 5vmin;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    background: rgba(255, 255, 255, 0.3);
-    -webkit-backdrop-filter: blur(15px);
-    backdrop-filter: blur(20px);
+    background: rgba(255, 255, 255, 0.25);
+    -webkit-backdrop-filter: blur(25px);
+    backdrop-filter: blur(25px);
     border-left: 0.5px solid var(--accent);
     border-right: 0.5px solid var(--accent);
     box-shadow: 0 2px 5px rgba(46, 46, 46, 0.5);
@@ -433,6 +433,15 @@ section,
     align-content: center;
 }
 
+.sentence ul {
+    line-height: 2;
+}
+
+.about-us,
+.service {
+    height: 120svh;
+}
+
 /* Service セクション */
 .service,
 .voice {
@@ -488,7 +497,8 @@ ul .bgfont_h2::before {
     height: 55vmin;
     overflow-y: scroll;
     padding: 1rem;
-    background: var(--sub);
+    background: var(--bg);
+    border-radius: 10px;
 }
 
 .voice::after {
@@ -771,6 +781,7 @@ footer {
         background-repeat: no-repeat;
         background-size: cover;
         shape-margin: 0.75rem;
+        z-index: 1;
     }
 
     .img--start {
@@ -820,7 +831,7 @@ footer {
     }
 
     .main--top--img {
-        width: 90%;
+        width: 80%;
         position: fixed;
         top: 50%;
         left: 50%;
@@ -879,8 +890,14 @@ footer {
     .sentence {
         height: 50svh;
     }
+    .sentence ul {
+        width: 80%;
+    }
 
     /* About Us セクション */
+    .about-us {
+        height: 120svh;
+    }
     .about-us p {
         list-style: none;
         padding: 0;
@@ -926,7 +943,7 @@ footer {
     border-top-right-radius: 0;
 }
     .voice ul {
-        width: 90%;
+        width: 80%;
         height: 400px;
         margin-top: 2rem;
     }
