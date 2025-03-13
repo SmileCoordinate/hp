@@ -61,13 +61,14 @@
 
 
 (function () {
-    document.addEventListener('DOMContentLoaded', function () {
-        var elementsToShow = document.querySelectorAll('.fade_bottom');
+    window.addEventListener('load', function () {
+        let elementsToShow = document.querySelectorAll('.fade_bottom');
+        let ticking = false;
 
         function isVisible(element) {
-            var elementRect = element.getBoundingClientRect();
-            var elementTop = elementRect.top;
-            var elementBottom = elementRect.bottom;
+            let elementRect = element.getBoundingClientRect();
+            let elementTop = elementRect.top;
+            let elementBottom = elementRect.bottom;
 
             return (elementTop < window.innerHeight * 0.8) && (elementBottom > 0.2);
         }
@@ -80,11 +81,18 @@
                     element.classList.remove('visible');
                 }
             });
+            ticking = false;
         }
 
-        window.addEventListener('scroll', checkScroll);
+        function onScroll() {
+            if (!ticking) {
+                ticking = true;
+                requestAnimationFrame(checkScroll);
+            }
+        }
+
+        window.addEventListener('scroll', onScroll, { passive: true });
         window.addEventListener('resize', checkScroll);
-        window.addEventListener('load', checkScroll);
 
         checkScroll(); // 初回チェック
     });
