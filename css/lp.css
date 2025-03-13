@@ -15,7 +15,7 @@
 /*== fade ==*/
 .fade_bottom {
     opacity: 0;
-    transition: opacity 1.2s ease, transform 1.2s ease, filter 1.2s ease;
+    transition: opacity 1.2s ease, transform 1.2s ease;
     filter: blur(3px);
 }
 

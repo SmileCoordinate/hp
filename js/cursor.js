@@ -60,7 +60,6 @@
 })(jQuery);
 
 
-//左上ニュース
 (function () {
     document.addEventListener('DOMContentLoaded', function () {
         var elementsToShow = document.querySelectorAll('.fade_bottom');
@@ -70,7 +69,7 @@
             var elementTop = elementRect.top;
             var elementBottom = elementRect.bottom;
 
-            return (elementTop < window.innerHeight * 0.75) && (elementBottom > window.innerHeight * 0.25);
+            return (elementTop < window.innerHeight * 0.8) && (elementBottom > 0.2);
         }
 
         function checkScroll() {
@@ -78,24 +77,15 @@
                 if (isVisible(element)) {
                     element.classList.add('visible');
                 } else {
-                    element.classList.remove('visible'); // 画面外に出たらフェードアウト
+                    element.classList.remove('visible');
                 }
             });
         }
 
-        // requestAnimationFrameを使ってスクロールイベントを最適化
-        let ticking = false;
-        window.addEventListener('scroll', function () {
-            if (!ticking) {
-                window.requestAnimationFrame(function () {
-                    checkScroll();
-                    ticking = false;
-                });
-                ticking = true;
-            }
-        });
+        window.addEventListener('scroll', checkScroll);
+        window.addEventListener('resize', checkScroll);
+        window.addEventListener('load', checkScroll);
 
-        // ページロード時に最初のチェック
-        checkScroll();
+        checkScroll(); // 初回チェック
     });
 })();
