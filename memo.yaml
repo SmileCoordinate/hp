@@ -38,7 +38,7 @@ git push -u origin main
 
 git config --global commit.gpgsign true
 
-git commit --amend -S -m "card スクロール、メニューレイアウト"
+git commit --amend -S -m "速度修正"
 git push origin main --force-with-lease
 
 git add memo.yaml

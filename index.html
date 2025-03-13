@@ -45,23 +45,24 @@
   <!-- font zen gothic -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Dongle&family=Hachi+Maru+Pop&family=Yusei+Magic&family=Zen+Maru+Gothic&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Dongle&family=Hachi+Maru+Pop&family=Yusei+Magic&family=Zen+Maru+Gothic&display=swap">
   <!-- CSS -->
-  <link rel="stylesheet" href="css/header.css">
-  <link rel="stylesheet" href="css/bot.css" defer>
-  <link rel="stylesheet" href="css/card.css" defer>
-  <link rel="stylesheet" href="css/form.css" defer>
-  <link rel="stylesheet" href="css/acdion.css" defer>
-  <link rel="stylesheet" href="css/modal.css" defer>
-  <link rel="stylesheet" href="css/nav.css">
-  <link rel="stylesheet" href="css/lp.css">
+  <link rel="stylesheet" href="style.css" media="print" onload="this.onload=null;this.removeAttribute('media');">
+  <link rel="stylesheet" href="css/header.css" media="print" onload="this.onload=null;this.removeAttribute('media');">
+  <link rel="stylesheet" href="css/bot.css" media="print" onload="this.onload=null;this.removeAttribute('media');">
+  <link rel="stylesheet" href="css/card.css" media="print" onload="this.onload=null;this.removeAttribute('media');">
+  <link rel="stylesheet" href="css/form.css" media="print" onload="this.onload=null;this.removeAttribute('media');">
+  <link rel="stylesheet" href="css/acdion.css" media="print" onload="this.onload=null;this.removeAttribute('media');">
+  <link rel="stylesheet" href="css/modal.css" media="print" onload="this.onload=null;this.removeAttribute('media');">
+  <link rel="stylesheet" href="css/nav.css" media="print" onload="this.onload=null;this.removeAttribute('media');">
+  <link rel="stylesheet" href="css/lp.css" media="print" onload="this.onload=null;this.removeAttribute('media');">
   <!-- JS -->
-  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" defer></script>
   <!-- defer追加ページレンダリングブロック回避 -->
-  <script src="js/chat.js"></script>
-  <script src="js/cursor.js"></script>
+  <script src="js/chat.js" defer></script>
+  <script src="js/cursor.js" async></script>
   <script src="js/form.js" defer></script>
-  <script src="js/header.js"></script>
+  <script src="js/header.js" async></script>
   <script src="js/card.js" defer></script>
   <script src="js/accordion.js" defer></script>
   <script src="js/modal.js" defer></script>
