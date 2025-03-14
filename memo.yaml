@@ -38,7 +38,7 @@ git push -u origin main
 
 git config --global commit.gpgsign true
 
-git commit --amend -S -m "レイアウト"
+git commit --amend -S -m "service heigh"
 git push origin main --force-with-lease
 
 git add memo.yaml
