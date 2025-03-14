@@ -901,7 +901,7 @@ footer {
 
     /*====top*/
     .sentence {
-        height: 50svh;
+        height: 60svh;
     }
     .sentence ul {
         width: 80%;
@@ -1033,9 +1033,30 @@ footer {
     .contact,
     .self-diagnosis,
     .faq,
-    .voice{
+    .voice {
         height: 140svh;
         min-height: 120svh;
     }
 
+}
+@media (max-height: 600px) {
+    .main-visual {
+        height: 80svh;
+        min-height: 65svh;
+    }
+    .about-us {
+        min-height: 160svh;
+    }
+    .service {
+        height: 180svh;
+        min-height: 160svh;
+    }
+
+    .contact,
+    .self-diagnosis,
+    .faq,
+    .voice {
+        height: 160svh;
+        min-height: 150svh;
+    }
 }
