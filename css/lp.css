@@ -734,7 +734,6 @@ footer {
     }
 
     a {
-        font-family: "Inter", sans-serif;
         font-weight: 400;
         color: var(--accent);
         padding: .25rem .5rem;
