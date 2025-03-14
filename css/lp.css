@@ -73,11 +73,11 @@ textarea {
 }
 
 .mobile {
-    display: none;
+    display: none !important;
 }
 
 .pc {
-    display: block;
+    display: block !important;
 }
 
 @keyframes morphRotate {
@@ -151,7 +151,7 @@ body {
 body::before {
     content: "";
     width: 100vw;
-    height: 100svh;
+    height: 100%;
     position: fixed;
     border-top: 1.5vmin solid var(--sub);
     border-right: 2vmin solid var(--sub);
@@ -159,6 +159,7 @@ body::before {
     z-index: 10;
     pointer-events: none;
     /* クリックを無効化 */
+    box-shadow: inset 1px 1px 5px rgba(46, 46, 46, 0.35);
 }
 
 body::after {
@@ -167,7 +168,7 @@ body::after {
     top: 1.35vmin;
     right: 1.35vmin;
     width: 100vw;
-    height: 100svh;
+    height: 100%;
     border: 1px solid var(--hover);
     border-left: none;
     border-bottom: none;
@@ -193,13 +194,14 @@ body::after {
 /*====Section*/
 h1 {
     font-size: clamp(6rem, calc(6rem + 0.5vw), 8rem);
-    font-family: "Dongle", serif;
+    font-family: "Dongle", sans-serif;
     font-weight: 400;
     font-style: normal;
     width: fit-content;
 }
 
 h2 {
+    font-family: "Yomogi", cursive;
     font-size: clamp(4rem, calc(4rem + 0.5vw), 4.8rem);
     width: fit-content;
     line-height: 5rem;
@@ -210,12 +212,12 @@ h2 {
 
 h2,
 a {
-    font-family: "Hachi Maru Pop", serif;
     font-weight: bold;
     font-style: normal;
 }
 
 h3 {
+    font-family: "Comic Sans",  "Roboto";
     font-size: clamp(2rem, calc(3rem + 0.5vw), 2.4rem);
     width: fit-content;
     margin: 0 auto;
@@ -224,13 +226,12 @@ h3 {
 
 h3,
 li {
-    font-family: "Yusei Magic", sans-serif;
-    font-weight: 400;
+    font-weight: 300;
     font-style: normal;
 }
 
 p {
-    font-weight: 400;
+    font-weight: 300;
     font-style: normal;
     font-size: clamp(1.6rem, calc(1.8rem + 0.1vw), 1.8rem);
     font-weight: 500;
@@ -253,6 +254,7 @@ li {
 }
 
 a {
+    font-family: "Roboto";
     padding: 0.25rem 0.5rem;
     transition: all 0.3s ease;
     z-index: 10;
@@ -349,6 +351,7 @@ img {
 .bgfont_h2::before {
     font-size: 4rem;
     font-weight: 400;
+    font-family: "Comic Sans MS";
     font-style: italic;
     content: attr(data-en);
     position: absolute;
@@ -372,14 +375,14 @@ main {
     background: rgba(255, 255, 255, 0.25);
     -webkit-backdrop-filter: blur(25px);
     backdrop-filter: blur(25px);
-    border-left: 0.5px solid var(--accent);
-    border-right: 0.5px solid var(--accent);
+    border-left: 0.5px solid var(--hover);
+    border-right: 0.5px solid var(--hover);
     box-shadow: 0 2px 5px rgba(46, 46, 46, 0.5);
 }
 
 /*====Section*/
 section {
-    padding: 10rem 0;
+    position: relative;
 }
 
 section,
@@ -390,6 +393,7 @@ section,
     justify-content: center;*/
     display: grid;
     align-content: flex-start;
+    align-content: center;
     align-items: center;
 }
 
@@ -438,8 +442,9 @@ section,
 }
 
 .about-us,
-.service {
-    height: 120svh;
+.service,
+.self-diagnosis {
+    height: 140svh;
 }
 
 /* Service セクション */
@@ -453,8 +458,10 @@ section,
 }
 
 .service .point {
+    position: relative;
     font-weight: 600;
     width: 65%;
+    min-height: fit-content;
     margin: 0 auto;
 }
 
@@ -475,19 +482,18 @@ section,
 
 .self-diagnosis ul li {
     margin-bottom: 1.5vmin;
-    font-weight: 400;
 }
 
 ul .bgfont_h2::before {
+    font-family: "Zen Maru Gothic", serif;
     font-size: 1.4rem;
+    font-weight: 700;
     font-style: normal;
     width: 135px;
     transform: rotate(0);
-    position: absolute;
     top: -1.5vmin;
     left: 0%;
     color: var(--text);
-    font-weight: 600;
     opacity: 1;
 }
 
@@ -648,11 +654,11 @@ footer {
 
 @media screen and (max-width: 600px) {
     .pc {
-        display: none;
+        display: none !important;
     }
 
     .mobile {
-        display: block;
+        display: block !important;
     }
 
     .hydrated {
@@ -882,8 +888,6 @@ footer {
     section {
         height: 100svh;
         min-height: 750px;
-        padding: 4rem 0 0;
-        align-content: center;
     }
 
     /*====top*/
@@ -895,8 +899,10 @@ footer {
     }
 
     /* About Us セクション */
-    .about-us {
-        height: 120svh;
+    .about-us,
+    .service,
+    .self-diagnosis {
+        height: 170svh;
     }
     .about-us p {
         list-style: none;
@@ -905,6 +911,10 @@ footer {
     }
 
     /* Service セクション */
+    .service {
+        padding-top: 4rem;
+        overflow: hidden;
+    }
     .service .point {
         font-weight: 600;
         width: 80%;

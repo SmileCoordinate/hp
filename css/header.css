@@ -54,6 +54,7 @@ nav .bgfont_h2::before {
 nav img {
 	width: clamp(15%, 19%, 25%);
 	height: auto;
+	min-height: 30px;
 	position: relative;
 	border-radius: 20%;
 }
@@ -108,8 +109,9 @@ nav .inner a:active {
 	backdrop-filter: blur(5px);
 	border-bottom: 7.5px solid var(--sub);
 	border-left: 7.5px solid var(--sub);
-	box-shadow: -1px 1px 0 var(--hover);
+	box-shadow:inset -1px 1px 0 var(--hover);
 	border-bottom-left-radius: 25px;
+	box-shadow: 1px 1px 5px rgba(46, 46, 46, 0.35), inset 1px -1px 0 var(--hover);
 }
 .toggle_btn span {
 	display: flex;

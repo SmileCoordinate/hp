@@ -3,25 +3,25 @@
     grid-auto-flow: column;
     gap: 7rem;
     position: relative;
-    margin: 15vmin 0 3vmin 15%;
-    overflow-x: auto;
+    overflow-x: scroll;
     padding: 1vmin 3vmin;
-    /* 横スクロールを有効化 */
     overflow-y: hidden;
-    /* 縦スクロールを無効化 */
     scroll-behavior: smooth;
-    /*white-space: nowrap; 折り返し防止 */
+    width: 90%;
+    transform: translate(11%,13%);
+    border: 1px solid var(--hover);
+    border-right: none;
+    /*white-space: nowrap; 折り返し防止
     scrollbar-width: none;
-    /* Firefoxのスクロールバー非表示 */
+    Firefoxのスクロールバー非表示
     -ms-overflow-style: none;
-    /* IEでスクロールバー非表示 */
+    IEでスクロールバー非表示
     touch-action: pan-y;
-    /* 縦スクロールのみ許可 */
+     縦スクロールのみ許可 */
 }
 
-/* Chrome, Safariのスクロールバー非表示 */
 .steps::-webkit-scrollbar {
-    display: none;
+    height: 2px;
 }
 
 .step {
@@ -122,17 +122,6 @@
     bottom: -4%;
 }
 
-/*.step h3 span {
-    font-size: clamp(6.4rem, calc(6.4rem + 0.5vw), 7rem);
-    font-family: "Monsieur La Doulaise", cursive;
-    font-weight: 400;
-    color: var(--hover);
-    line-height: 6rem;
-    position: absolute;
-    top: 5%;
-    left: 15%;
-}*/
-
 .step p {
     font-weight: 600;
     width: 80%;
@@ -145,8 +134,10 @@
 @media screen and (max-width: 600px) {
     .steps {
         gap: 20px;
-        margin: 4vmin 0 3vmin 5%;
+        width: 95%;
+        transform: translate(5%,0%);
         padding: 1vmin 3vmin;
+        overflow-x: scroll;
     }
 
     .step {
@@ -182,12 +173,6 @@
         width: 29vmin;
         bottom: -2%;
         right: 4%;
-    }
-
-    .step h3 span {
-        font-size: clamp(4.8rem, calc(4.8rem + 0.5vw), 6rem);
-        top: -10%;
-        left: 30%;
     }
 
     .step p {

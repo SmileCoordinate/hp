@@ -38,7 +38,7 @@ git push -u origin main
 
 git config --global commit.gpgsign true
 
-git commit --amend -S -m "cardjs修正,文章、レイアウト"
+git commit --amend -S -m "font,レイアウト,menu,nav,shadow"
 git push origin main --force-with-lease
 
 git add memo.yaml

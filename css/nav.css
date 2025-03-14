@@ -6,7 +6,6 @@
    top: 0;
    background: linear-gradient(300deg, rgba(124, 242, 255, 0.37), rgba(255, 255, 255, 0.13) 22%, rgba(129, 255, 143, 0.3)38%, rgba(255, 255, 255, 0.13) 74%, rgba(255, 175, 216, 0.3)100%);
    border: 10px solid var(--sub);
-   overflow-x: hidden;
    transition: width 0.5s ease-in-out;
    border-top-right-radius: 20px;
    border-bottom-right-radius: 20px;
@@ -16,6 +15,7 @@
    background-size: 200% 200%;
    animation: GradientBackground 2s ease infinite;
    overflow: hidden;
+   box-shadow: 1px 5px 5px rgba(46, 46, 46, 0.35), inset 1px 1px 5px rgba(46, 46, 46, 0.35);
 }
 .navigation:hover {
    width: 300px;
@@ -37,10 +37,12 @@
 
 }
 .nav-bot {
+   font-weight: bold;
    padding: 0.25rem 0.5rem;
 }
 .navigation ul li a,
 .navigation ul li .nav-bot {
+   font-family: "Yomogi", cursive;
    position: relative;
    text-decoration: none;
    color: var(--text);
@@ -57,6 +59,7 @@
 .navigation ul li.active {
    background-color: var(--sub) !important;
    transition: box-shadow 0.5s ease-in-out;
+   box-shadow: 1px 1px 5px rgba(46, 46, 46, 0.35);
    z-index: 100;
 }
 .navigation ul li.active:hover {
