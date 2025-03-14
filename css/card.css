@@ -4,13 +4,15 @@
     gap: 7rem;
     position: relative;
     overflow-x: scroll;
-    padding: 1vmin 3vmin;
+    padding: 2vmin 3vmin;
     overflow-y: hidden;
     scroll-behavior: smooth;
     width: 90%;
     transform: translate(11%,13%);
     border: 1px solid var(--hover);
     border-right: none;
+    box-shadow: inset 1px 1px 3px rgba(46, 46, 46, 0.5);
+    border-radius: 10px 0 0 0;
     /*white-space: nowrap; 折り返し防止
     scrollbar-width: none;
     Firefoxのスクロールバー非表示

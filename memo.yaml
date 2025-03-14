@@ -38,7 +38,7 @@ git push -u origin main
 
 git config --global commit.gpgsign true
 
-git commit --amend -S -m " loading="lazy""
+git commit --amend -S -m "レイアウト、文章 修正"
 git push origin main --force-with-lease
 
 git add memo.yaml
