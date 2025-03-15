@@ -142,7 +142,6 @@
     /* キーワード選択肢 */
     .keyword-options {
         position: relative;
-        top: 3%;
         margin-left: 0;
     }    .keyword-options::before {
         content: "キーワード";
@@ -244,8 +243,8 @@
         }
         /* ChatBot ウィンドウのスタイル */
         #chat-window {
-            width: calc(85vmin - 100px);
-            height: calc(85% - 100px);
+            width: calc(75vmin - 100px);
+            height: calc(95% - 100px);
             padding: 4vmin 5vmin 0;
             border-radius: 20px;
             background: linear-gradient(25deg, rgba(211, 255, 107, 0.65)10%, rgba(252, 250, 245, 0.85));
@@ -265,21 +264,20 @@
             font-size: clamp(0.8rem, calc(0.8rem + 0.5vw), 1rem);
             line-height: 1.4em;
         }
-        .input-container {
-            margin-top: 20px;
-            margin-left: 20px;
-        }
         .radio-options {
             padding: 0 calc(2vw - 20px) 0;
         }
         .radio-options label {
-            margin-top: 5px;
+            gap: 0.5rem;
         }
         /* キーワード選択肢 */
         .keyword-options label {
             margin-top: 0px;
         }
         /*ラジオボタン*/
+        .chat-options {
+            height: 30vmin;
+        }
         .chat-options select,
         .chat-options input {
             width: 10px;
@@ -351,7 +349,7 @@
             margin: 0 auto 2%;
         }
         .radio-options label {
-            margin: 10px;
+            align-items: center;
         }
         .keyword-options {
             top: 0;
@@ -362,6 +360,7 @@
             margin: 1.5rem;
         }
         .chat-options {
+            height: 27vmin;
             justify-content: center;
             align-items: center;
         }
