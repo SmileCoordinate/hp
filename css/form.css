@@ -237,6 +237,7 @@ input:-webkit-autofill:focus {
 @media screen and (min-width: 600px) and (max-width: 1299px) {
    .col.x-50,
    .col.x-100 {
+      width: 100%;
       padding: 0;
       margin: 1.5rem auto;
    }

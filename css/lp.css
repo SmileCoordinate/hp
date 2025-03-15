@@ -618,15 +618,15 @@ footer {
     bottom: 0;
 }
 
-@media (max-height: 1000px) {
+@media (max-height: 900px) {
     .service, .self-diagnosis {
-        height: 160svh;
-        min-height: 150svh;
+        height: 150svh;
+        min-height: 130svh;
     }
     .contact,
     .faq {
-        height: 140svh;
-        min-height: 130svh;
+        height: 120svh;
+        min-height: 120svh;
     }
 }
 
