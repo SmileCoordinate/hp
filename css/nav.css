@@ -23,7 +23,7 @@
 .navigation ul {
    display: block;
    position: absolute;
-   top: 25%;
+   top: 20vmin;
    left: 10%;
    width: 100%;
 }

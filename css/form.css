@@ -234,28 +234,18 @@ input:-webkit-autofill:focus {
    cursor: pointer;
 }
 /*===================== モーダルウィンドウ =====================*/
-
 @media screen and (min-width: 600px) and (max-width: 1299px) {
-   .form-row {
-      display: block;
-   }
-   .col {
-      padding: 0;
-   }
-   .col.x-50 {
-      padding: 0;
-      margin: 0.5rem auto 1rem;
-   }
+   .col.x-50,
    .col.x-100 {
       padding: 0;
-      margin-top: 1.5rem;
+      margin: 1.5rem auto;
    }
    .contact-form .input-text:focus+.label,
    .contact-form .input-text.not-empty+.label {
       transform: translateY(-2rem);
    }
    .content-wrapper {
-      width: 95%;
+      width: 75%;
       padding: 0.5rem 1rem;
       margin: 0 auto;
       position: relative;
@@ -271,7 +261,8 @@ input:-webkit-autofill:focus {
       border: 1px solid var(--border);
    }
    .contact-form #message {
-      height: 70pt;
+      width: 100%;
+      height: 85pt;
    }
    .contact-form .label {
       font-size: clamp(1.4rem, 1.171rem + 1.14vw, 1.6rem);
@@ -296,21 +287,18 @@ input:-webkit-autofill:focus {
       color: var(--text);
       background: var(--accent);
    }
+   .align-center {
+      width: 100%;
+   }
    .align-center p {
-      font-size: clamp(1rem, 0.771rem + 1.14vw, 1.2rem);
       width: 100%;
       margin: 0;
       margin-top: 1rem;
       line-height: 1.2;
       text-align: left;
    }
-   .align-center p a {
-      font-size: clamp(1.6rem, 1.143rem + 2.29vw, 2rem);
-      margin-top: 0;
-      padding: 0.5rem;
-      border: 0;
-   }
 }
+
 
 @media screen and (max-width: 600px) {
    .form-row {
