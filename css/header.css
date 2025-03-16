@@ -58,12 +58,16 @@ nav ul .bgfont_h2::before {
 	top: 1.5vmin;
 	color: var(--hover);
 	opacity: 1;
+	z-index: 2;
+}
+nav ul .bgfont_h2:nth-last-child(1)::before {
+	top: 0rem;
 }
 nav .inner ul li {
 	position: relative;
 	height: 45px;
 	line-height: 1.2;
-	margin: 1% auto;
+	margin: 2.5% auto;
 	padding: 0.15rem 0;
 	align-content: flex-end;
 	border-bottom: 0.5px solid rgba(46, 46, 46, 0.3);
@@ -89,6 +93,7 @@ nav img {
 	min-height: 30px;
 	position: relative;
 	border-radius: 20%;
+	background: var(--sub);
 }
 nav img:hover {
 	background: #00b900;
