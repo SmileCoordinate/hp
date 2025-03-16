@@ -82,25 +82,25 @@ textarea {
 
 @keyframes morphRotate {
     0% {
-        border-radius: 60% 40% 50% 45% / 60% 50% 40% 30%;
+        border-radius: 60% 55% 50% 65% / 60% 55% 50% 65%;
         transform: rotate(0deg) scale(1);
     }
     25% {
-        border-radius: 50% 60% 70% 40% / 50% 60% 40% 70%;
+        border-radius: 55% 60% 70% 65% / 55% 65% 55% 70%;
         transform: rotate(90deg) scale(0.95);
         opacity: 0.5;
     }
     50% {
-        border-radius: 70% 50% 60% 30% / 40% 70% 50% 60%;
+        border-radius: 70% 50% 60% 55% / 55% 70% 50% 60%;
         transform: rotate(180deg) scale(1.06);
     }
     75% {
-        border-radius: 40% 70% 50% 60% / 70% 40% 60% 50%;
+        border-radius: 55% 70% 55% 60% / 70% 55% 60% 65%;
         transform: rotate(270deg) scale(1.03);
         opacity: 0.8;
     }
     100% {
-        border-radius: 60% 40% 50% 55% / 60% 50% 45% 30%;
+        border-radius: 60% 55% 50% 65% / 60% 55% 50% 65%;
         transform: rotate(360deg) scale(1);
     }
 }
@@ -695,12 +695,12 @@ footer {
 
     body .bg {
         position: fixed;
-        width: 800px;
-        height: 800px;
-        top: 70%;
-        left: 0%;
+        width: 600px;
+        height: 600px;
+        top: 90%;
+        left: -35%;
         transform: translate(-0%, -130%);
-        filter: blur(15px);
+        filter: blur(10px);
         animation: morphRotate 30s infinite linear;
     }
     body {
@@ -881,7 +881,7 @@ footer {
     /*====TOP section*/
     .main-visual {
         font-weight: 600;
-        width: fit-content;
+        width: 100%;
         height: 65svh;
         transform: none;
         margin: 0 auto;
