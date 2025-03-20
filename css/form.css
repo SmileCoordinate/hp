@@ -53,11 +53,12 @@ form input[type="checkbox"]::before {
 }
 .col.x-50,
 .col.x-100 {
-   margin-top: 1.5rem;
+   margin-top: 2rem;
 }
 .col.x-50:nth-of-type(1) {
-   margin-top: 0;
-}input:-webkit-autofill,
+   margin-top: 1rem;
+}
+input:-webkit-autofill,
 input:-webkit-autofill:focus {
    transition: background-color 0s 600000s, color 0s 600000s !important;
 }
@@ -79,7 +80,7 @@ input:-webkit-autofill:focus {
    color: var(--text);
    display: block;
    width: 90%;
-   height: 35pt;
+   height: 38pt;
    border-width: 0;
    margin: 0 auto;
    padding-left: 2rem;
@@ -89,7 +90,7 @@ input:-webkit-autofill:focus {
 }
 .contact-form #message {
    width: 90%;
-   height: 130px;
+   height: 95pt;
    margin: 0 auto;
    padding-top: 1rem;
 }
@@ -116,7 +117,7 @@ input:-webkit-autofill:focus {
    font-family: "Zen Maru Gothic", serif;
    font-size: clamp(1.6rem, 1.467rem + 0.44vw, 1.8rem);
    width: 100%;
-   height: 22pt;
+   height: 28pt;
    display: inline-block;
    color: var(--bg);
    background-color: var(--text);
@@ -148,7 +149,7 @@ input:-webkit-autofill:focus {
    font-size: 2rem;
    display: flex;
    gap: 1.2rem;
-   margin: 0.5rem 0;
+   margin: 1.5rem 0 0.5rem;
 }
 .align-center {
    width: 90%;
@@ -307,13 +308,11 @@ input:-webkit-autofill:focus {
    .col {
       padding: 0;
    }
-   .col.x-50 {
-      padding: 0;
-      margin: 0.5rem auto 1rem;
-   }
+   .col.x-50,
+   .col.x-50:nth-child(1),
    .col.x-100 {
       padding: 0;
-      margin-top: 1.5rem;
+      margin-top: 1.8rem;
    }
    .contact-form .input-text:focus+.label,
    .contact-form .input-text.not-empty+.label {
@@ -370,6 +369,7 @@ input:-webkit-autofill:focus {
    .radio-group {
       font-size: 1.6rem;
       justify-content: center;
+      margin: 2rem 0 1rem;
    }
    .align-center {
       width: 100%;
