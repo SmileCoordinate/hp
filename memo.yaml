@@ -38,7 +38,7 @@ git push -u origin main
 
 git config --global commit.gpgsign true
 
-git commit --amend -S -m "背景、card"
+git commit --amend -S -m "10万＝6カ月"
 git push origin main --force-with-lease
 
 git add memo.yaml
@@ -48,5 +48,4 @@ git push origin main --force-with-lease
 
 自分診断 内容
 表示確認
-背景画像作成
-card margin調整
+lp,form,modal（フォントサイズ調整完）
