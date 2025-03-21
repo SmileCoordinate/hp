@@ -1,5 +1,7 @@
+.button,.price p,.site-p h2 span {
+   font-size: clamp(1.8rem, 1.467rem + 0.44vw, 2rem);
+}
 .button {
-   font-size: 2rem;
    font-weight: 800;
    width: 30%;
    bottom: 0;
@@ -55,7 +57,6 @@
 }
 
 .modal p {
-   font-size: clamp(1.6rem, 1.267rem + 0.44vw, 1.8rem);
    line-height: 2.7rem;
    margin-bottom: 2vmin;
 }
@@ -80,17 +81,17 @@
    right: 5rem;
    background: none;
    border: none;
-   font-size: clamp(3.8rem, 3.133rem + 0.89vw, 4.2rem);
    cursor: pointer;
 }
-
+.modal .close,
 .site-p h2 {
-   font-size: 4rem;
+font-size: clamp(3.8rem, 3.467rem + 0.44vw, 4rem);
+}
+.site-p h2 {
    margin: 0 auto;
 }
 
 .site-p h2 span {
-   font-size: 2rem;
    position: relative;
    left: -5%;
 }
@@ -126,13 +127,12 @@
 }
 
 .price h2 {
-   font-size: 3rem;
+   font-size: clamp(2.8rem, 2.467rem + 0.44vw, 3rem);
    text-align: center;
    margin: 0 auto 4%;
 }
 
 .price p {
-   font-size: 2rem;
    font-weight: 600;
    width: 70%;
    text-align: left;
@@ -140,13 +140,13 @@
 }
 
 .price p span {
-   font-size: 1.6rem;
+   font-size: clamp(1.6rem, 1.267rem + 0.44vw, 1.8rem);
 }
 
 
 @media screen and (max-width: 600px) {
    .button {
-      font-size: 1.6rem;
+      font-size: clamp(1.6rem, 1.371rem + 1.14vw, 1.8rem);
       width: 50%;
       margin: 1vmin auto;
       padding-bottom: 0.75rem;
@@ -169,7 +169,6 @@
    }
 
    .modal p {
-      font-size: 1.6rem;
       width: 100%;
       line-height: 1.8;
    }
@@ -186,17 +185,19 @@
 
    /* 閉じるボタン */
    .modal .close {
-      font-size: clamp(3.8rem, 3.133rem + 0.89vw, 4.2rem);
+      font-size: clamp(3.8rem, 3.343rem + 2.29vw, 4.2rem);
       top: 0;
       right: 1rem;
    }
 
-   .site-p h2 {
-      font-size: 2rem;
+   .site-p h2,
+   .price h2 {
+      font-size: clamp(1.8rem, 1.571rem + 1.14vw, 2rem);
    }
    
-   .site-p h2 span {
-      font-size: 1.4rem;
+   .site-p h2 span,
+   .price p span {
+      font-size: clamp(1.4rem, 1.171rem + 1.14vw, 1.6rem);
    }
 
    .price {
@@ -227,20 +228,14 @@
    }
 
    .price h2 {
-      font-size: 2rem;
       text-align: center;
       margin: 0 auto;
    }
 
    .price p {
-      font-size: 1.6rem;
       font-weight: 600;
       width: 100%;
       text-align: left;
       line-height: 1;
-   }
-
-   .price p span {
-      font-size: 1.4rem;
    }
 }
