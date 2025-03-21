@@ -137,7 +137,7 @@ body {
     font-size: clamp(1.4rem, calc(1.4rem + 0.5vw), 1.6rem);
     color: var(--text);
     background-color: var(--bg);
-    background: url("/img/bg-img.webp") no-repeat center center / cover;
+    background: url("../img/bg-img.webp") no-repeat center center / cover;
     overflow-x: hidden;
 
     /* モバイル用の背景スクロール対応 */
@@ -710,7 +710,7 @@ footer {
         border: none;
         border-bottom: none;
         display: block;
-        background: url("/img/sp-bg.webp") no-repeat left center / cover;
+        background: url("../img/sp-bg.webp") no-repeat left center / cover;
         background-attachment: fixed;
     }
 
