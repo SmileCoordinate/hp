@@ -136,9 +136,8 @@ body {
     width: 100%;
     color: var(--text);
     background-color: var(--bg);
-    background: url("../img/bg-img.webp") no-repeat center center / cover;
+    background: url("../img/bg-img.webp") no-repeat center / cover;
     overflow-x: hidden;
-
     /* モバイル用の背景スクロール対応 */
     @supports (background-attachment: fixed) {
         background-attachment: fixed;
@@ -715,7 +714,7 @@ footer {
         border: none;
         border-bottom: none;
         display: block;
-        background: url("../img/sp-bg.webp") no-repeat left center / cover;
+        background: url("../img/sp-bg.webp") no-repeat left top / cover;
         background-attachment: fixed;
     }
 
