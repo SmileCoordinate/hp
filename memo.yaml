@@ -38,7 +38,7 @@ git push -u origin main
 
 git config --global commit.gpgsign true
 
-git commit --amend -S -m "背景画像 ポジション"
+git commit --amend -S -m "cardポジション"
 git push origin main --force-with-lease
 
 git add memo.yaml
