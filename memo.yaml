@@ -38,7 +38,7 @@ git push -u origin main
 
 git config --global commit.gpgsign true
 
-git commit --amend -S -m "font / section>OK"
+git commit --amend -S -m "font >OK"
 git push origin main --force-with-lease
 
 git add memo.yaml
