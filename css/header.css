@@ -30,7 +30,7 @@ nav {
 	z-index: 99;
 }
 nav .bgfont_h2::before {
-	font-size: 2.8rem;
+	font-size: clamp(2.4rem, 1.943rem + 2.29vw, 2.8rem);
 	transform: rotate(-5deg);
 	top: 0%;
 	left: -5%;
@@ -40,7 +40,7 @@ nav .bgfont_h2::before {
 	display: grid;
 	width: 100%;
 	color: var(--text);
-	font-size: 1.6rem;
+	font-size: clamp(1.6rem, 1.371rem + 1.14vw, 1.8rem);
 	font-weight: 700;
 	text-decoration: none;
 	transition-duration: 0.2s;
@@ -53,8 +53,13 @@ nav .inner ul {
 	width: 100%;
 	list-style: none;
 }
+
+#navArea .inner .manu_p a,
 nav ul .bgfont_h2::before {
-	font-size: 1.4rem;
+	font-size: clamp(1.4rem, 1.171rem + 1.14vw, 1.6rem);
+}
+
+nav ul .bgfont_h2::before {
 	transform: rotate(-5deg);
 	top: 1.5vmin;
 	color: var(--hover);
@@ -79,9 +84,6 @@ nav .inner a:active {
 }
 .manu_p {
 	margin-top: 8vmin;
-}
-#navArea .inner .manu_p a {
-	font-size: 1.6rem;
 }
 
 #navArea .inner ul li a span {
@@ -206,13 +208,16 @@ nav img:hover {
 		transition: .5s ease;
 	}
 	#navArea .inner ul li a {
-		font-size: clamp(1.2rem, calc(1.2rem + 0.5vw), 1.4rem);
+		font-size: clamp(1.4rem, 1.057rem + 0.92vw, 1.8rem);
 		width: 100%;
 		display: flex;
 		transition-duration: 0.2s;
 	}
+	#navArea .inner .manu_p a,
 	#navArea .inner ul li a span {
-		font-size: clamp(0.8rem, calc(0.8rem + 0.5vw), 1rem);
+		font-size: clamp(1rem, 0.828rem + 0.46vw, 1.2rem);
+	}
+	#navArea .inner ul li a span {
 		width: auto;
 		margin-top: 1.5%;
 		margin-left: 1%;
@@ -243,9 +248,7 @@ nav img:hover {
 	.manu_p {
 		margin-top: 80px;
 	}
-	#navArea .inner .manu_p a {
-		font-size: clamp(1rem, calc(1rem + 0.5vw), 1.2rem);
-	}
+
 	/*=	.toggle_btn	=*/
 	.toggle_btn {
 		right: -9%;

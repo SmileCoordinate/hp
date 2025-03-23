@@ -17,7 +17,7 @@
          cursor: pointer;
       }
       .accordion-header {
-         font-size: 2rem;
+         font-size: clamp(1.8rem, 1.467rem + 0.44vw, 2rem);
          width: 100%;
          font-weight: 600;
          text-align: left;
@@ -49,11 +49,8 @@
          display: none;
       }
       .accordion-text p {
-         font-size: 1.8rem;
          width: 100%;
-         padding: 2rem 2rem 3rem;
-         /*white-space: pre-line;
-         word-break: break-all;*/
+         padding: 1em 1em 2em;
       }
       .fa {
          display: block;
@@ -91,7 +88,7 @@
             height: 5px;
          }
          .accordion-header {
-            font-size: 1.6rem;
+            font-size: clamp(1.4rem, 1.171rem + 1.14vw, 1.6rem);
             width: 100%;
             text-align: left;
             color: var(--text);
@@ -99,13 +96,10 @@
             margin: 0 auto;
             padding: 0 2.5rem;
          }
-         .accordion-text p {
-            font-size: 1.45rem;
-            width: 100%;
-            padding: 2rem 2rem 3rem;
-            /*white-space: pre-line;
-            word-break: break-all;*/
-         }
+         /*.accordion-text p {
+            white-space: pre-line;
+            word-break: break-all;
+         }*/
          .fa {
             display: block;
             position: absolute;

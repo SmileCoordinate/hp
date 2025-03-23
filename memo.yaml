@@ -38,7 +38,7 @@ git push -u origin main
 
 git config --global commit.gpgsign true
 
-git commit --amend -S -m "card padding"
+git commit --amend -S -m "font / section>OK"
 git push origin main --force-with-lease
 
 git add memo.yaml
@@ -46,6 +46,8 @@ git commit --amend --no-edit
 git push origin main --force-with-lease
 
 
-自分診断 内容
-表示確認
-lp,form,modal（フォントサイズ調整完）
+自分診断 内容>未
+表示確認>未
+
+フォントサイズ調整完
+section height: auto; padding: 10em 0;>OK

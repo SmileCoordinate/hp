@@ -85,18 +85,22 @@ textarea {
         border-radius: 65% 55% 50% 60% / 60% 55% 50% 65%;
         transform: rotate(0deg) scale(1);
     }
+
     25% {
         border-radius: 55% 60% 50% 65% / 55% 60% 50% 65%;
         transform: rotate(90deg) scale(0.95);
     }
+
     50% {
         border-radius: 60% 50% 65% 55% / 55% 65% 50% 60%;
         transform: rotate(180deg) scale(1.04);
     }
+
     75% {
         border-radius: 55% 65% 55% 60% / 65% 55% 60% 65%;
         transform: rotate(270deg) scale(0.95);
     }
+
     100% {
         border-radius: 65% 55% 50% 60% / 60% 55% 50% 65%;
         transform: rotate(360deg) scale(1);
@@ -115,11 +119,11 @@ body .bg {
     transform: translate(25%, -55%);
     z-index: -1;
     background: radial-gradient(ellipse at 50% 50%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%),
-                radial-gradient(ellipse at 70% 60%, #c3e060 0%, rgba(195, 224, 96, 0) 90%),
-                radial-gradient(ellipse at 30% 30%, #c3e060 0%, rgba(195, 224, 96, 0) 60%),
-                radial-gradient(ellipse at bottom left, #00a3cb 0%, rgba(0, 163, 203, 0)1 70%),
-                linear-gradient(135deg, rgba(18, 46, 119, 0) 0%, rgba(18, 46, 119, 0) 75%, #122e77 100%),
-                linear-gradient(to right, #bb76bd 0%, #cf8c90 35%, #c8e429 65%, #bdc01c 100%);
+        radial-gradient(ellipse at 70% 60%, #c3e060 0%, rgba(195, 224, 96, 0) 90%),
+        radial-gradient(ellipse at 30% 30%, #c3e060 0%, rgba(195, 224, 96, 0) 60%),
+        radial-gradient(ellipse at bottom left, #00a3cb 0%, rgba(0, 163, 203, 0)1 70%),
+        linear-gradient(135deg, rgba(18, 46, 119, 0) 0%, rgba(18, 46, 119, 0) 75%, #122e77 100%),
+        linear-gradient(to right, #bb76bd 0%, #cf8c90 35%, #c8e429 65%, #bdc01c 100%);
     background-blend-mode: overlay, luminosity, color-dodge, saturation, screen, color;
     filter: blur(0px);
     animation: morphRotate 45s infinite linear;
@@ -138,26 +142,31 @@ body {
     background-color: var(--bg);
     background: url("../img/bg-img.webp") no-repeat center / cover;
     overflow-x: hidden;
+
     /* モバイル用の背景スクロール対応 */
     @supports (background-attachment: fixed) {
         background-attachment: fixed;
     }
+
     @supports not (background-attachment: fixed) {
         background-attachment: scroll;
     }
 }
+
 /*font-size*/
 body,
 ul .bgfont_h2::before,
 .voice li {
     font-size: clamp(1.4rem, 1.067rem + 0.44vw, 1.6rem);
 }
+
 ul,
 ol,
 .overlay--tow p,
 .btn {
     font-size: clamp(2rem, 1.333rem + 0.89vw, 2.4rem);
 }
+
 .self-diagnosis ul p,
 .service .point,
 li {
@@ -355,9 +364,11 @@ img {
     height: 100px;
     top: 8vmin;
 }
-main .tab--four-img:nth-of-type(1) {
+
+main .tab--four-img:nth-of-type(2) {
     top: 3vmin;
 }
+
 /*===== h2 bg ======*/
 .bgfont_h2 {
     align-items: center;
@@ -386,6 +397,19 @@ main .tab--four-img:nth-of-type(1) {
     z-index: -1;
 }
 
+/* serf ul */
+ul .bgfont_h2::before {
+    font-family: "Zen Maru Gothic";
+    font-weight: 700;
+    font-style: normal;
+    width: 150px;
+    transform: rotate(0);
+    top: -2vmin;
+    left: 0%;
+    color: var(--text);
+    opacity: 1;
+}
+
 /*===== h2 bg ======*/
 
 main {
@@ -394,9 +418,9 @@ main {
     margin-left: 5vmin;
     border-top-left-radius: 10px;
     border-top-right-radius: 10px;
-    background: rgba(255, 255, 255, 0.45);
-    -webkit-backdrop-filter: blur(10px);
-    backdrop-filter: blur(10px);
+    background: rgba(255, 255, 255, 0.25);
+    -webkit-backdrop-filter: blur(15px);
+    backdrop-filter: blur(15px);
     border-left: 0.5px solid var(--hover);
     border-right: 0.5px solid var(--hover);
     box-shadow: inset 0 2px 3px rgba(46, 46, 46, 0.5);
@@ -404,17 +428,21 @@ main {
 
 /*====Section*/
 section {
-    position: relative;
+    padding: 10em 0;
+}
+
+.sentence {
+    min-height: 100svh;
 }
 
 section,
 .sentence {
-    height: 100svh;
     position: relative;
     /*display: flex;
     justify-content: center;*/
     display: grid;
     align-content: center;
+    height: auto;
 }
 
 /*====TOP section pc left*/
@@ -437,16 +465,17 @@ section,
 }
 
 .overlay--tow {
-    position: absolute;
+    position: relative;
     width: fit-content;
     top: 20%;
     left: -85%;
     z-index: -1;
+    transform: translate(-10%,50%);
 }
 
 .service .overlay--tow,
 .voice .overlay--tow {
-    top: 5%;
+    transform: translate(-10%,-100%);
 }
 
 .overlay--tow p {
@@ -463,20 +492,21 @@ section,
 .sentence ul {
     line-height: 2;
 }
+
 .sentence li {
     font-weight: 600;
 }
 
-.service {
+/*.service {
     height: 140svh;
-    min-height: 100svh;
+    height: auto;
 }
 .about-us,
 .contact,
 .faq {
     height: 120svh;
-    min-height: 100svh;
-}
+    height: auto;
+}*/
 
 /* Service セクション */
 .service,
@@ -486,11 +516,11 @@ section,
     border-top-left-radius: 40px;
     border-top-right-radius: 40px;
 }
+
 .service .point {
     position: relative;
     font-weight: 600;
     width: 65%;
-    min-height: fit-content;
     margin: 0 auto;
 }
 
@@ -509,6 +539,7 @@ section,
     background: var(--sub);
     box-shadow: inset 0 2px 3px rgba(46, 46, 46, 0.5);
 }
+
 .self-diagnosis ul p {
     font-weight: 700;
     margin: 0;
@@ -520,22 +551,11 @@ section,
     margin-bottom: 2vmin;
 }
 
-ul .bgfont_h2::before {
-    font-family: "Zen Maru Gothic";
-    font-weight: 700;
-    font-style: normal;
-    width: 135px;
-    transform: rotate(0);
-    top: -1.5vmin;
-    left: 0%;
-    color: var(--text);
-    opacity: 1;
-}
-
 /*===voice*/
 .voice h3 {
     font-weight: 600;
 }
+
 .voice ul {
     width: 65%;
     height: 55vmin;
@@ -592,7 +612,7 @@ ul .bgfont_h2::before {
     cursor: pointer;
     z-index: 100;
     display: flex;
-    margin: 5% auto 0;
+    margin: 0 auto;
     justify-content: center;
     align-items: center;
     transition: all 0.35s ease;
@@ -710,6 +730,7 @@ footer {
         filter: blur(10px);
         animation: morphRotate 30s infinite linear;
     }
+
     body {
         border: none;
         border-bottom: none;
@@ -736,17 +757,24 @@ footer {
     h1 {
         font-size: clamp(3.4rem, 2.486rem + 4.57vw, 4.2rem);
     }
-h2,.btn:active {
-    font-size: clamp(2.4rem, 1.943rem + 2.29vw, 2.8rem);
-}
+
+    h2,
+    .btn:active {
+        font-size: clamp(2.4rem, 1.943rem + 2.29vw, 2.8rem);
+    }
+
     h2 {
         width: fit-content;
         margin: 0 auto;
         left: 0;
     }
-h3,ul,ol {
-    font-size: clamp(1.8rem, 1.571rem + 1.14vw, 2rem);
-}
+
+    h3,
+    ul,
+    ol {
+        font-size: clamp(1.8rem, 1.571rem + 1.14vw, 2rem);
+    }
+
     h3 {
         left: 0;
         margin: 0 auto;
@@ -756,9 +784,14 @@ h3,ul,ol {
     ol {
         width: fit-content;
     }
-li,p,.voice li,ul .bgfont_h2::before {
-    font-size: clamp(1.4rem, 1.171rem + 1.14vw, 1.6rem);
-}
+
+    li,
+    p,
+    .voice li,
+    ul .bgfont_h2::before {
+        font-size: clamp(1.4rem, 1.171rem + 1.14vw, 1.6rem);
+    }
+
     li {
         width: 100%;
         line-height: 1.8;
@@ -802,9 +835,12 @@ li,p,.voice li,ul .bgfont_h2::before {
         line-height: 1.2;
         z-index: 2;
     }
-    .bgfont_h2::before,.btn {
+
+    .bgfont_h2::before,
+    .btn {
         font-size: clamp(2rem, 1.543rem + 2.29vw, 2.4rem);
     }
+
     .bgfont_h2::before {
         top: -25%;
         left: -10%;
@@ -871,9 +907,7 @@ li,p,.voice li,ul .bgfont_h2::before {
         opacity: 1;
         z-index: -1;
     }
-    .tab--four-img {
-        /*height: 50px;*/
-    }
+
     /*===== main */
     main {
         width: 95%;
@@ -912,26 +946,21 @@ li,p,.voice li,ul .bgfont_h2::before {
     }
 
     /*====Section*/
-    section {
-        height: 100svh;
-        min-height: 750px;
-    }
-
     /*====top*/
     .sentence {
-        height: 60svh;
+        min-height: 60svh;
     }
+
     .sentence ul {
         width: 80%;
     }
 
-    /* About Us セクション */
+    /* About Us セクション
     .about-us,
     .service,
     .self-diagnosis {
-        height: 120svh;
         min-height: 120svh;
-    }
+    }*/
     .about-us p {
         list-style: none;
         padding: 0;
@@ -942,9 +971,9 @@ li,p,.voice li,ul .bgfont_h2::before {
     .service {
         border-top-left-radius: 30px;
         border-top-right-radius: 30px;
-        padding-top: 4rem;
         overflow: hidden;
     }
+
     .service .point {
         font-weight: 600;
         width: 80%;
@@ -967,6 +996,7 @@ li,p,.voice li,ul .bgfont_h2::before {
         margin-bottom: 4vmin;
         font-weight: 300;
     }
+
     ul .bgfont_h2::before {
         font-weight: 600;
         top: -4vmin;
@@ -974,13 +1004,14 @@ li,p,.voice li,ul .bgfont_h2::before {
     }
 
     /*===== voice section */
-.voice {
-    border-top-left-radius: 0;
-    border-top-right-radius: 0;
-}
+    .voice {
+        border-top-left-radius: 0;
+        border-top-right-radius: 0;
+    }
+
     .voice ul {
         width: 80%;
-        height: 350px;
+        min-height: 350px;
         margin-top: 2rem;
     }
 
@@ -1034,6 +1065,7 @@ li,p,.voice li,ul .bgfont_h2::before {
 
 }
 
+/*
 @media (max-height: 600px) {
     .main-visual {
         height: clamp(65vh, 80lvh, 80vh);
@@ -1082,3 +1114,4 @@ li,p,.voice li,ul .bgfont_h2::before {
         min-height: 110vh;
     }
 }
+*/
