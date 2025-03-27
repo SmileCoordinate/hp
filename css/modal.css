@@ -9,7 +9,7 @@
    display: block;
    text-align: center;
    margin: 1vmin auto;
-   padding: 1rem 1rem 1.5rem;
+   padding: 1rem 1rem 0.75rem;
    color: var(--text);
    background: var(--bg);
    box-shadow: 0 2px 3px rgba(46, 46, 46, 0.5);
@@ -149,7 +149,6 @@ font-size: clamp(3.8rem, 3.467rem + 0.44vw, 4rem);
       font-size: clamp(1.6rem, 1.371rem + 1.14vw, 1.8rem);
       width: 50%;
       margin: 1vmin auto;
-      padding-bottom: 0.75rem;
       box-shadow: 0 2px 5px rgba(46, 46, 46, 0.5);
    }
 

@@ -29,13 +29,7 @@ nav {
 	transition: .5s ease;
 	z-index: 99;
 }
-nav .bgfont_h2::before {
-	font-size: clamp(2.4rem, 1.943rem + 2.29vw, 2.8rem);
-	transform: rotate(-5deg);
-	top: 0%;
-	left: -5%;
-	opacity: 0.5;
-}
+
 #navArea .inner ul li a {
 	display: grid;
 	width: 100%;
@@ -60,11 +54,12 @@ nav ul .bgfont_h2::before {
 }
 
 nav ul .bgfont_h2::before {
-	transform: rotate(-5deg);
-	top: 1.5vmin;
+	transform: rotate(-7deg);
+	top: 2vmin;
+	left: -2px;
 	color: var(--hover);
 	opacity: 0.5;
-	z-index: 2;
+	z-index: -1;
 }
 nav .manu_p .bgfont_h2:nth-last-child(1)::before {
 	top: -0.5rem;

@@ -885,7 +885,7 @@ footer {
 
     /*===== main */
     main {
-        width: 95%;
+        width: 100%;
         margin: 0 auto;
         border-radius: 0;
         background: rgba(245, 245, 245, 0.2);
@@ -922,6 +922,10 @@ footer {
 
     /*====Section*/
     /*====top*/
+    section {
+        padding-left: 0.5em;
+        padding-right: 0.5em;
+    }
     .sentence {
         min-height: 60svh;
     }
