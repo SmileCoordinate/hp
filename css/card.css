@@ -1,7 +1,7 @@
 .steps {
     display: grid;
     grid-auto-flow: column;
-    gap: 7rem;
+    gap: 4rem;
     position: relative;
     overflow-x: scroll;
     padding: 2vmin 3vmin;
@@ -36,7 +36,7 @@
 
 .step .tab {
     width: 235px;
-    height: 66px;
+    height: 63px;
     padding: 15px 30px;
     font-size: clamp(2rem, 1.92rem + 0.4vw, 2.4rem);
     font-weight: bold;
@@ -71,7 +71,7 @@
     top: -40px;
     transition: max-height 0.45s ease, padding 0.4s ease;
     background-repeat: no-repeat;
-    width: 100%;
+    width: 95%;
     height: 14.5%;
     margin: 0 auto;
     padding: 0 1.5rem;
@@ -135,7 +135,7 @@
 
 @media screen and (max-width: 600px) {
     .steps {
-        gap: 20px;
+        gap: 0;
         width: 95%;
         transform: translate(5%,0%);
     }
@@ -148,11 +148,16 @@
         min-height: 250px;
     }
 
+    .step .tab {
+        width: 215px;
+        height: 60px;
+    }
+
     .step .content-wrapper {
         border-radius: 10px;
         top: -40px;
-        width: 100%;
-        height: 22%;
+        width: 85%;
+        height: 20%;
         margin: 0 auto;
         padding: 0 1.5rem;
         max-height: 100%;
