@@ -246,7 +246,7 @@ input:-webkit-autofill:focus {
    }
    .contact-form .input-text:focus+.label,
    .contact-form .input-text.not-empty+.label {
-      transform: translateY(-2rem);
+      transform: translateY(-2.5rem);
    }
    .content-wrapper {
       width: 75%;
@@ -261,44 +261,34 @@ input:-webkit-autofill:focus {
       width: 100%;
       height: 35pt;
       padding-left: 1rem;
-      background-color: var(--bg);
-      border: 1px solid var(--border);
    }
    .contact-form #message {
+      font-size: clamp(1.4rem, 1.228rem + 0.46vw, 1.6rem);
       width: 100%;
       height: 85pt;
    }
    .contact-form .label {
       font-size: clamp(1.4rem, 1.228rem + 0.46vw, 1.6rem);
-      color: rgba(217, 217, 217, 0.75);
       left: 2.75%;
       top: 13.75%;
-      line-height: 2rem;
+      line-height: 2;
    }
    .contact-form .label-test {
       top: 6.5%;
    }
    .contact-form .submit-btn {
-      font-size: clamp(1.8rem, 1.285rem + 1.37vw, 2.4rem);
-      width: 100%;
-      height: 30pt;
+      font-size: clamp(1.6rem, 1.256rem + 0.92vw, 2rem);
+      height: 28pt;
       padding: 0;
       margin: 0;
       margin-bottom: 0.5rem;
       margin-top: 1rem;
    }
-   .contact-form .submit-btn:active {
-      color: var(--text);
-      background: var(--accent);
-   }
    .align-center {
       width: 100%;
    }
    .align-center p {
-      width: 100%;
-      margin: 0;
       margin-top: 1rem;
-      line-height: 1.2;
       text-align: left;
    }
 }
@@ -319,7 +309,7 @@ input:-webkit-autofill:focus {
    }
    .contact-form .input-text:focus+.label,
    .contact-form .input-text.not-empty+.label {
-      transform: translateY(-2rem);
+      transform: translateY(-2.4rem);
    }
    .content-wrapper {
       width: 90%;
@@ -342,8 +332,11 @@ input:-webkit-autofill:focus {
       background: var(--sub);
    }
    .contact-form #message {
+      font-size: clamp(1.4rem, 1.171rem + 1.14vw, 1.6rem);
       width: 100%;
-      height: 100px;
+      height: 100pt;
+      line-height: 1.4;
+      letter-spacing: 0.01rem;
    }
    .contact-form .label,
    .align-center p,
@@ -354,10 +347,9 @@ input:-webkit-autofill:focus {
       color: rgba(46, 46, 46, 0.75);
       left: 2.75%;
       top: 5.75%;
-      line-height: 2rem;
+      line-height: 2;
    }
    .contact-form .submit-btn {
-      width: 100%;
       height: 35px;
       padding: 0;
       margin: 0;
@@ -368,28 +360,15 @@ input:-webkit-autofill:focus {
       color: var(--text);
       background: var(--accent);
    }
-   .radio-group,
-   .align-center h3 {
-      font-weight: 700;
-      color: var(--text);
-      width: fit-content;
-      line-height: 1.5;
-      z-index: 1;
-   }
    .radio-group {
       justify-content: center;
       margin: 2rem 0 1rem;
    }
    .align-center {
       width: 100%;
-      align-items: center;
-      margin: 1rem auto 0;
-      justify-content: flex-start;
    }
    .align-center p {
-      width: 100%;
       margin-top: 2rem;
-      line-height: 1.6;
    }
    .align-center p a {
       margin-top: 0;

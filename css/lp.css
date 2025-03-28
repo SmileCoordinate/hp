@@ -218,7 +218,7 @@ body::after {
 
 /*====Section*/
 h1 {
-    font-size: clamp(6rem, 2.667rem + 4.44vw, 8rem);
+    font-size: clamp(3.4rem, 2.48rem + 4.6vw, 8rem);
     font-family: "Dongle", sans-serif;
     font-weight: 400;
     font-style: normal;
@@ -227,7 +227,7 @@ h1 {
 
 h2 {
     font-family: "Yomogi", cursive, sans-serif;
-    font-size: clamp(4rem, 2.667rem + 1.78vw, 4.8rem);
+    font-size: clamp(2.4rem, 1.92rem + 2.4vw, 4.8rem);
     width: fit-content;
     line-height: 5rem;
     top: -2%;
@@ -447,7 +447,7 @@ section,
     margin-top: 20vmin;
 }
 
-.main-visual .overlay p {
+.main-visual p {
     margin: 0;
 }
 
@@ -570,10 +570,12 @@ section,
 
 .voice li {
     font-family: "Zen Maru Gothic";
-    font-weight: bold;
+    font-weight: 400;
     margin-bottom: 3rem;
     border-bottom: 1px solid;
     padding: 1rem;
+    line-height: 1.6;
+    letter-spacing: 0.1rem;
 }
 
 .btn {
@@ -683,6 +685,7 @@ footer {
     }
 }
 
+
 @media screen and (max-width: 600px) {
     .pc {
         display: none !important;
@@ -717,7 +720,6 @@ footer {
 
     body::before {
         border: 3vw solid var(--sub);
-        border-bottom: none;
         box-shadow: inset 0px 1px 4px rgba(46, 46, 46, 0.85);
     }
 
@@ -725,22 +727,9 @@ footer {
         top: 2.75vw;
         left: 2.75vw;
         width: 94.5vw;
-        border: 1px solid var(--hover);
-        border-bottom: none;
-        pointer-events: none;
-    }
-
-    h1 {
-        font-size: clamp(3.4rem, 2.486rem + 4.57vw, 4.2rem);
-    }
-
-    h2,
-    .btn:active {
-        font-size: clamp(2.4rem, 1.943rem + 2.29vw, 2.8rem);
     }
 
     h2 {
-        width: fit-content;
         margin: 0 auto;
         left: 0;
     }
@@ -762,8 +751,7 @@ footer {
     }
 
     li,
-    p,
-    .voice li {
+    p {
         font-size: clamp(1.4rem, 1.171rem + 1.14vw, 1.6rem);
     }
 
@@ -799,14 +787,7 @@ footer {
     }
 
     /*===== h2 bg ======*/
-    .bgfont_h2 {
-        align-items: center;
-        position: relative;
-        z-index: 1;
-    }
-
     li .bgfont_h2 {
-        position: relative;
         line-height: 1.2;
         z-index: 2;
     }
@@ -823,10 +804,6 @@ footer {
     }
 
     /*===== h2 bg ======*/
-    img {
-        z-index: 1;
-    }
-
     .img--start {
         width: 45vmin;
         bottom: 0%;
@@ -910,14 +887,9 @@ footer {
         width: 80%;
     }
 
-    .main-visual .overlay {
+    .main-visual p {
         width: 80%;
         margin: 0 auto;
-    }
-
-    .main-visual .overlay p {
-        width: 100%;
-        margin: 0;
     }
 
     /*====Section*/
@@ -1025,5 +997,77 @@ footer {
         border-radius: 50px;
         align-content: center;
     }
+}
 
+
+@media screen and (min-width: 601px) and (max-width: 1299px) {
+    .pc {
+        display: none !important;
+    }
+    .mobile {
+        display: block !important;
+    }
+
+    body::before {
+        border: 1.5vw solid var(--sub);
+        box-shadow: inset 0px 1px 4px rgba(46, 46, 46, 0.85);
+    }
+
+    body::after {
+        top: 1.45vw;
+        left: 1.45vw;
+        width: 97.15vw;
+    }
+    main {
+        width: 70vmin;
+        margin: 0 auto;
+    }
+
+    h1 {
+        line-height: 0.8;
+    }
+    h2 {
+        font-size: clamp(2.8rem, 1.939rem + 2.29vw, 3.8rem);
+    }
+    h3,ul,ol {
+        font-size: clamp(2rem, 1.311rem + 1.83vw, 2.8rem);
+    }
+    li,
+    p,
+    .voice li {
+        font-size: clamp(1.6rem, 1.428rem + 0.46vw, 1.8rem);
+    }
+        /*====TOP section*/
+        .main-visual {
+            font-weight: 600;
+            width: 80%;
+            height: 65svh;
+            transform: none;
+            margin: 0 auto;
+            padding-top: 20vmin;
+        }
+    
+        .main-visual h1 {
+            margin: 0;
+        }
+    
+        .main-visual p {
+            width: 80%;
+        }
+        .img--start {
+            width: 35vmin;
+            left: 10vmin;
+        }
+}
+
+@media screen and (max-width: 1299px) {
+    body::before {
+        border-bottom: none;
+    }
+
+    body::after {
+        border: 1px solid var(--hover);
+        border-bottom: none;
+        pointer-events: none;
+    }
 }
