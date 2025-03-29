@@ -80,7 +80,7 @@ input:-webkit-autofill:focus {
    color: var(--text);
    display: block;
    width: 90%;
-   height: 38pt;
+   height: 42pt;
    border-width: 0;
    margin: 0 auto;
    padding-left: 2rem;
@@ -90,7 +90,7 @@ input:-webkit-autofill:focus {
 }
 .contact-form #message {
    width: 90%;
-   height: 95pt;
+   height: 120pt;
    margin: 0 auto;
    padding-top: 1rem;
 }
@@ -237,7 +237,7 @@ input:-webkit-autofill:focus {
    cursor: pointer;
 }
 /*===================== モーダルウィンドウ =====================*/
-@media screen and (min-width: 600px) and (max-width: 1299px) {
+@media screen and (min-width: 601px) and (max-width: 1299px) {
    .col.x-50,
    .col.x-100 {
       width: 100%;
@@ -259,13 +259,12 @@ input:-webkit-autofill:focus {
    .contact-form .input-text {
       font-size: clamp(1.8rem, 1.628rem + 0.46vw, 2rem);
       width: 100%;
-      height: 35pt;
+      height: 40pt;
       padding-left: 1rem;
    }
    .contact-form #message {
       font-size: clamp(1.4rem, 1.228rem + 0.46vw, 1.6rem);
       width: 100%;
-      height: 85pt;
    }
    .contact-form .label {
       font-size: clamp(1.4rem, 1.228rem + 0.46vw, 1.6rem);
@@ -327,14 +326,14 @@ input:-webkit-autofill:focus {
    .contact-form .input-text {
       color: var(--text);
       width: 100%;
-      height: 45px;
+      height: 37pt;
       padding-left: 1rem;
       background: var(--sub);
    }
    .contact-form #message {
       font-size: clamp(1.4rem, 1.171rem + 1.14vw, 1.6rem);
       width: 100%;
-      height: 100pt;
+      height: 110pt;
       line-height: 1.4;
       letter-spacing: 0.01rem;
    }
@@ -350,7 +349,7 @@ input:-webkit-autofill:focus {
       line-height: 2;
    }
    .contact-form .submit-btn {
-      height: 35px;
+      height: 25pt;
       padding: 0;
       margin: 0;
       padding-bottom: 0.5rem;

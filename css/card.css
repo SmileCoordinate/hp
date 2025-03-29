@@ -72,7 +72,7 @@
     transition: max-height 0.45s ease, padding 0.4s ease;
     background-repeat: no-repeat;
     width: 95%;
-    height: 14.5%;
+    height: 42pt;
     margin: 0 auto;
     padding: 0 1.5rem;
     max-height: 100%;
@@ -157,7 +157,7 @@
         border-radius: 10px;
         top: -40px;
         width: 85%;
-        height: 20%;
+        height: 38pt;
         margin: 0 auto;
         padding: 0 1.5rem;
         max-height: 100%;

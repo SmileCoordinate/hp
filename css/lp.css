@@ -157,7 +157,7 @@ body {
 body,
 ul .bgfont_h2::before,
 .voice li {
-    font-size: clamp(1.4rem, 1.067rem + 0.44vw, 1.6rem);
+    font-size: clamp(1.4rem, 1.36rem + 0.2vw, 1.6rem);
 }
 
 ul,
@@ -257,7 +257,7 @@ li {
 
 p {
     font-style: normal;
-    font-size: clamp(1.6rem, 1.267rem + 0.44vw, 1.8rem);
+    font-size: clamp(1.6rem, 1.56rem + 0.2vw, 1.8rem);
     font-weight: 500;
     width: 65%;
     line-height: 2;
@@ -750,12 +750,8 @@ footer {
         width: fit-content;
     }
 
-    li,
-    p {
-        font-size: clamp(1.4rem, 1.171rem + 1.14vw, 1.6rem);
-    }
-
     li {
+        font-size: clamp(1.2rem, 0.514rem + 3.43vw, 1.8rem);
         width: 100%;
         line-height: 1.8;
         margin: 0 auto;
@@ -936,6 +932,8 @@ footer {
 
     .self-diagnosis ul li {
         font-weight: 300;
+        width: 85%;
+        margin: 0 auto;
     }
 
     /*===== voice section */
@@ -1046,11 +1044,11 @@ footer {
             margin: 0 auto;
             padding-top: 20vmin;
         }
-    
+
         .main-visual h1 {
             margin: 0;
         }
-    
+
         .main-visual p {
             width: 80%;
         }
