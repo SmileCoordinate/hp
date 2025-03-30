@@ -14,13 +14,12 @@
     window.dataLayer = window.dataLayer || [];
     function gtag() { dataLayer.push(arguments); }
     gtag('js', new Date());
-
     gtag('config', 'G-535E0J09ZN');
   </script>
   <!-- SNS meta (OGP) -->
   <meta property="og:title" content="Smile Coordinate">
   <meta property="og:description" content="私たちの活動やサービスについてご紹介します。">
-  <meta property="og:image" content="path/to/image.jpg">
+  <meta property="og:image" content="img/sc_ogp.jpg"> <!-- 画像パス修正 -->
   <meta property="og:url" content="https://smilecoordinate.github.io/hp/">
   <meta property="og:type" content="website">
   <meta property="og:locale" content="ja_JP">
@@ -34,21 +33,17 @@
       "url": "https://smilecoordinate.github.io/hp/",
       "description": "Smile Coordinate,SC,スマイルコーディネート、コーチング、相談、変化、思考"
     }
-    </script>
-  <!-- セキュリティを維持しつつ、全ファイルを適切に読み込む -->
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta http-equiv="Content-Security-Policy" content="default-src * 'unsafe-inline' 'unsafe-eval' data: blob:;">
+  </script>
+  <!-- セキュリティ -->
   <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
   <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
   <title>Smile Coordinate</title>
-  <!-- font h1/h2,h3,a, https://fonts.google.com/share?selection.family=Dongle:wght@300;400|Yomogi|Zen+Maru+Gothic:wght@300;400 -->
   <!-- font zen gothic -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Dongle:wght@300;400&family=Yomogi&family=Zen+Maru+Gothic:wght@300;400&display=swap" rel="stylesheet">
   <!-- CSS -->
   <link rel="stylesheet" href="css/header.css" media="print" onload="this.onload=null;this.removeAttribute('media');">
-  <!--<link rel="stylesheet" href="css/bot.css" media="print" onload="this.onload=null;this.removeAttribute('media');">-->
   <link rel="stylesheet" href="css/card.css" media="print" onload="this.onload=null;this.removeAttribute('media');">
   <link rel="stylesheet" href="css/form.css" media="print" onload="this.onload=null;this.removeAttribute('media');">
   <link rel="stylesheet" href="css/acdion.css" media="print" onload="this.onload=null;this.removeAttribute('media');">
@@ -56,16 +51,15 @@
   <link rel="stylesheet" href="css/nav.css" media="print" onload="this.onload=null;this.removeAttribute('media');">
   <link rel="stylesheet" href="css/lp.css" media="print" onload="this.onload=null;this.removeAttribute('media');">
   <!-- JS -->
-  <script nonce="random1234" src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
-  <!-- defer追加ページレンダリングブロック回避 -->
-  <!--<script src="js/chat.js" defer></script>-->
-  <script src="js/cursor.js" async></script>
+  <script src="https://code.jquery.com/jquery-3.7.1.min.js" defer></script>
   <script src="js/form.js" defer></script>
-  <script src="js/header.js"></script>
+  <script src="js/header.js" defer></script>
   <script src="js/card.js" defer></script>
   <script src="js/accordion.js" defer></script>
   <script src="js/modal.js" defer></script>
+  <script src="js/cursor.js" defer></script>
 </head>
+
 
 <body oncontextmenu="return false;">
   <div id="stalker" class="pc"></div>
