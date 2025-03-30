@@ -175,22 +175,24 @@ input:-webkit-autofill:focus {
    position: absolute;
    z-index: 10099;
    height: fit-content;
-   background: rgba(46, 46, 46, 0.2);
+   background: rgba(146, 146, 146, 0.2);
    transition: opacity 0.4s ease-in-out;
-   width: 100vw;
+   width: 90vw;
    height: 100vh;
    top: 50%;
-   left: 0%;
+   left: 10%;
    transform: translate(-50%, -50%);
    -webkit-backdrop-filter: blur(10px);
    backdrop-filter: blur(10px);
    border-radius: 20px;
    border: 1px solid var(--sub);
-}/* モーダルが表示されるとき */
+}
+/* モーダルが表示されるとき */
 #thanksModal.show {
    display: block;
    opacity: 1;
-}/* モーダルコンテンツのアニメーション */
+}
+/* モーダルコンテンツのアニメーション */
 #thanksModal .modal-content {
    position: absolute;
    width: 75vw;
@@ -201,17 +203,19 @@ input:-webkit-autofill:focus {
    transform: translate(-50%, -50%);
    color: var(--text);
    background: rgba(255, 255, 255, 0.7);
-   box-shadow: 0 2px 3px 0 rgba(46, 46, 46, 0.63);
+   box-shadow: inset 1px 1px 4px rgba(46, 46, 46, 0.5), 1px 1px 3px 0 rgba(46, 46, 46, 0.4);
    border: 1px solid #fff;
    border-radius: 10px;
    -webkit-backdrop-filter: blur(20px);
    backdrop-filter: blur(20px);
+   border-radius: 20px;
    display: flex;
    justify-content: center;
    align-items: center;
    flex-direction: column;
    z-index: 11000;
-}/* モーダル表示時 */
+}
+/* モーダル表示時 */
 .align-center h3,
 #thanksModal .modal-content p,
 #thanksModal .close {
@@ -289,6 +293,27 @@ input:-webkit-autofill:focus {
    .align-center p {
       margin-top: 1rem;
       text-align: left;
+   }
+   /*===================== モーダルウィンドウ =====================*/
+   #thanksModal {
+      width: 100%;
+      top: 20%;
+      left: 0%;
+      transform: translate(0%, 0%);
+   }
+   #thanksModal .modal-content {
+      width: 90%;
+      height: 70vh;
+      transform: translate(-50%, -50%);
+      background: rgba(245, 252, 246, 0.83);
+      -webkit-backdrop-filter: blur(6px);
+      backdrop-filter: blur(6.5px);
+      border: 1px solid var(--bg);
+   }
+
+   #thanksModal.show {
+      transform: translate(0%,0%);
+      background: rgba(146, 146, 146, 0.2);
    }
 }
 
@@ -374,21 +399,29 @@ input:-webkit-autofill:focus {
       border: 0;
    }
    /*===================== モーダルウィンドウ =====================*/
-   #thanksModal .modal-content {
+   #thanksModal {
       width: 100vw;
-      height: 90vh;
-      transform: translate(0%, 0%);
+      height: 100vh;
+      top: 0%;
+      left: 0%;
+      transform: translate(-50%, -50%);
+      -webkit-backdrop-filter: blur(10px);
+      backdrop-filter: blur(10px);
+      background: rgba(246, 246, 246, 0.2);
+   }
+   #thanksModal .modal-content {
+      width: 90vw;
+      height: 60vh;
+      transform: translate(-50%, -50%);
       background: rgba(245, 252, 246, 0.83);
-      box-shadow: 0 3px 5px 0 rgba(46, 46, 46, 0.17);
       -webkit-backdrop-filter: blur(6px);
       backdrop-filter: blur(6.5px);
       border: 1px solid var(--bg);
-      border-radius: 0;
    }
 
    #thanksModal.show {
-      transform: translate(3%,0%);
-      background: rgba(46, 46, 46, 0.02);
+      transform: translate(0%,0%);
+      background: rgba(146, 146, 146, 0.2);
    }
 
    #thanksModal .modal-content p,

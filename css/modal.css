@@ -30,9 +30,6 @@
    z-index: 999;
    opacity: 0;
    transform: translate(-50%, -50%) scale(1);
-   background: rgba(253, 246, 234, 0.3);
-   -webkit-backdrop-filter: blur(5px);
-   backdrop-filter: blur(5px);
    visibility: hidden;
    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
@@ -56,17 +53,7 @@
    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, visibility 0.3s;
 }
 
-.modal p {
-   line-height: 2.7rem;
-   margin-bottom: 2vmin;
-}
-
-
 /* モーダルが表示されるとき */
-.modal.show {
-   opacity: 1;
-   visibility: visible;
-}
 #modal--first {
    transform: translate(-60%, -50%) scale(1);
 }
@@ -77,6 +64,12 @@
 .show {
    opacity: 1;
    visibility: visible;
+   transform: translate(-50%, -50%) scale(1);
+}
+
+.modal p {
+   line-height: 2.7rem;
+   margin-bottom: 2vmin;
 }
 
 /* 閉じるボタン */
@@ -215,7 +208,6 @@ font-size: clamp(3.8rem, 3.467rem + 0.44vw, 4rem);
    /* モーダルの背景 */
    .modal-overlay {
       transform: translate(0%, -40%) scale(1);
-      background: rgba(253, 246, 234, 0.1);
    }
 
    /* モーダルのスタイル */
@@ -239,6 +231,7 @@ font-size: clamp(3.8rem, 3.467rem + 0.44vw, 4rem);
 
    /* モーダルが表示されるとき */
    .modal.show,#modal--first,#modal--second {
+      height: 70vh;
       transform: translate(-50%, -20%) scale(1);
    }
 
