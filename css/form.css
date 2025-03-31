@@ -260,6 +260,12 @@ input:-webkit-autofill:focus {
       right: 0;
       top: 5%;
    }
+
+   .contact-form #message,
+   .contact-form .submit-btn,
+   .contact-form .label {
+      font-size: clamp(1.6rem, 1.256rem + 0.92vw, 2rem);
+   }
    .contact-form .input-text {
       font-size: clamp(1.8rem, 1.628rem + 0.46vw, 2rem);
       width: 100%;
@@ -267,11 +273,9 @@ input:-webkit-autofill:focus {
       padding-left: 1rem;
    }
    .contact-form #message {
-      font-size: clamp(1.4rem, 1.228rem + 0.46vw, 1.6rem);
       width: 100%;
    }
    .contact-form .label {
-      font-size: clamp(1.4rem, 1.228rem + 0.46vw, 1.6rem);
       left: 2.75%;
       top: 13.75%;
       line-height: 2;
@@ -280,7 +284,6 @@ input:-webkit-autofill:focus {
       top: 6.5%;
    }
    .contact-form .submit-btn {
-      font-size: clamp(1.6rem, 1.256rem + 0.92vw, 2rem);
       height: 28pt;
       padding: 0;
       margin: 0;
@@ -356,7 +359,6 @@ input:-webkit-autofill:focus {
       background: var(--sub);
    }
    .contact-form #message {
-      font-size: clamp(1.4rem, 1.171rem + 1.14vw, 1.6rem);
       width: 100%;
       line-height: 1.4;
       letter-spacing: 0.01rem;
