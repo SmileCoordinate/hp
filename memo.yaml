@@ -39,7 +39,7 @@ git push -u origin main
 git config --global commit.gpgsign true
 
 //変更メモ
-git commit --amend -S -m "form text:size"
+git commit --amend -S -m "modal main color policy"
 git push origin main --force-with-lease
 
 git add memo.yaml
@@ -47,8 +47,4 @@ git commit --amend --no-edit
 git push origin main --force-with-lease
 
 
-自分診断 内容>未
-表示確認>未
-
-フォントサイズ調整完
-section height: auto; padding: 10em 0;>OK
+残り＝自分診断 内容>未
