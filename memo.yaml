@@ -39,7 +39,7 @@ git push -u origin main
 git config --global commit.gpgsign true
 
 //変更メモ
-git commit --amend -S -m "modal main color policy"
+git commit --amend -S -m "次回csp設定"
 git push origin main --force-with-lease
 
 git add memo.yaml

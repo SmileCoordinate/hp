@@ -38,6 +38,29 @@
   <!-- セキュリティ -->
   <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
   <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
+<!--<meta http-equiv="Content-Security-Policy" content="
+  default-src 'self';
+  script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://code.jquery.com https://unpkg.com https://cdn.jsdelivr.net;
+  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
+  font-src 'self' https://fonts.gstatic.com;
+  img-src 'self' data: https://smilecoordinate.github.io https://unpkg.com;
+  connect-src 'self' https://www.google-analytics.com https://script.google.com https://script.googleapis.com https://googleusercontent.com https://docs.google.com https://spreadsheets.google.com;
+  form-action 'self' https://script.google.com;
+  base-uri 'self';
+">
+X-Frame-Options を追加 -->
+<!--
+<meta http-equiv="Content-Security-Policy" content="frame-ancestors 'self' https://smilecoordinate.github.io/hp/;">
+<script>
+  if (window.top !== window.self) {
+    const allowedOrigins = ["https://smilecoordinate.github.io/hp/"];
+    if (!allowedOrigins.includes(document.referrer)) {
+      window.top.location = window.self.location;
+    }
+  }
+</script>
+-->
+
   <title>Smile Coordinate</title>
   <!-- font zen gothic -->
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -62,7 +85,6 @@
   <script src="js/modal.js" defer></script>
   <script src="js/cursor.js" defer></script>
 </head>
-
 
 <body oncontextmenu="return false;">
   <div id="stalker" class="pc"></div>
@@ -357,7 +379,7 @@
       <div class="content-wrapper ">
         <div class="get-in-touch">
           <form id="contactForm" class="contact-form"
-            action="https://script.google.com/macros/s/AKfycbxWnG-Ll6ydxzfxQCrx1vV0yY6L-Nd71smtrghVv5SULaooqwWDXQsiIUXsku1u2OrEYw/exec"
+            action="https://script.google.com/macros/s/AKfycbw8GYB7EzFo8ZR9kiUtF69nBliE5EA1QU2CfXO8CC4Ldy4culGQCcx3SrfeU3lzbAIibQ/exec"
             method="POST" target="hidden_iframe" onsubmit="submitted=true;">
             <!-- ラジオボタン -->
             <div class="form-field col align-center">
