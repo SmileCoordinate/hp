@@ -23,14 +23,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
   contactForm.addEventListener('submit', function (e) {
     e.preventDefault();
+
     const formData = new FormData(contactForm);
+    const encodedData = new URLSearchParams(formData).toString(); // x-www-form-urlencoded に変換
 
     fetch(contactForm.action, {
       method: 'POST',
-      body: formData
+      headers: {
+        'Content-Type': 'application/x-www-form-urlencoded'
+      },
+      body: encodedData
     })
-      .then(response => response.json())
-      .then(result => {
+      .then(response => response.text())
+      .then(text => {
+        let result;
+        try {
+          result = JSON.parse(text);
+        } catch (e) {
+          throw new Error('レスポンスの解析に失敗しました。内容: ' + text);
+        }
+
         if (result.success) {
           submitted = true;
           modal.style.display = "block";
@@ -43,7 +55,7 @@ document.addEventListener("DOMContentLoaded", function () {
         }
       })
       .catch(error => {
-        alert('送信に失敗しました：' + error);
+        alert('送信に失敗しました：' + error.message);
       });
   });
 
