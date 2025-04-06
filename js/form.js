@@ -25,7 +25,6 @@ document.addEventListener("DOMContentLoaded", function () {
     e.preventDefault();
     const form = e.target;
 
-    // 値の取得
     const formData = {
       name: form.name.value.trim(),
       email: form.email.value.trim(),
@@ -33,14 +32,13 @@ document.addEventListener("DOMContentLoaded", function () {
       inquiryType: form.inquiryType.value
     };
 
-    // バリデーション（簡易）
     if (!formData.name || !formData.email || !formData.message || !formData.inquiryType) {
       alert("全ての必須項目を入力してください。");
       return;
     }
 
-    // GASエンドポイント（★ご自身のURLに置き換えてください）
-    const endpoint = "https://script.google.com/macros/s/AKfycby2cXTFvwpUqTMT6lTJj1gzkG_gCWqxc1xCXHGWPekOyGbGiZomIbXyKmOV_Z7z9yAF4w/exec";
+    // あなたのGAS URLに置き換えてください
+    const endpoint = "https://script.google.com/macros/s/AKfycbxSHBGN3AmQMO86MzvyabWxD86WpqAMqqaDoYFurIG_29ExicU8KT8qvM_STux1tq15bQ/exec";
 
     fetch(endpoint, {
       method: 'POST',
