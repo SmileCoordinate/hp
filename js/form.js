@@ -1,72 +1,84 @@
 document.addEventListener("DOMContentLoaded", function () {
-  const form = document.getElementById("contactForm");
-  const modal = document.getElementById("thanksModal");
-  const closeButton = document.querySelector(".close");
   const inputs = document.querySelectorAll(".input-text");
 
-  const scriptURL = "https://script.google.com/macros/s/AKfycbzEsbO5FbwmCA_DWYImATTVNce_a-wCSbktCYpbTfoWPcwlYz1_M6_PLLsHgphB1XtpnA/exec";
-
-  if (!form || !modal || !closeButton) {
-    console.error("必要な要素が見つかりません。HTML を確認してください。");
-    return;
-  }
-
-  // ラベル制御
   inputs.forEach(input => {
     toggleLabel(input);
-    input.addEventListener("input", () => toggleLabel(input));
+    input.addEventListener("input", function () {
+      toggleLabel(input);
+    });
+
+    function toggleLabel(input) {
+      if (input.value !== "") {
+        input.classList.add("not-empty");
+      } else {
+        input.classList.remove("not-empty");
+      }
+    }
   });
 
-  function toggleLabel(input) {
-    input.classList.toggle("not-empty", input.value.trim() !== "");
-  }
+  const modal = document.getElementById('thanksModal');
+  const closeButton = document.getElementsByClassName('close')[0];
 
-  modal.style.display = "none";
+  modal.classList.remove("show");
 
-  form.addEventListener("submit", function (e) {
+  document.getElementById('contactForm').addEventListener('submit', function (e) {
     e.preventDefault();
+    const form = e.target;
 
+    // 値の取得
     const formData = {
-      name: form.querySelector('[name="name"]').value,
-      email: form.querySelector('[name="email"]').value,
-      inquiryType: form.querySelector('[name="inquiryType"]').value,
-      message: form.querySelector('[name="message"]').value,
+      name: form.name.value.trim(),
+      email: form.email.value.trim(),
+      message: form.message.value.trim(),
+      inquiryType: form.inquiryType.value
     };
 
-    fetch(scriptURL, {
-      method: "POST",
+    // バリデーション（簡易）
+    if (!formData.name || !formData.email || !formData.message || !formData.inquiryType) {
+      alert("全ての必須項目を入力してください。");
+      return;
+    }
+
+    // GASエンドポイント（★ご自身のURLに置き換えてください）
+    const endpoint = "https://script.google.com/macros/s/AKfycby2cXTFvwpUqTMT6lTJj1gzkG_gCWqxc1xCXHGWPekOyGbGiZomIbXyKmOV_Z7z9yAF4w/exec";
+
+    fetch(endpoint, {
+      method: 'POST',
       headers: {
-        "Content-Type": "application/json",
+        "Content-Type": "application/json"
       },
-      body: JSON.stringify(formData),
+      body: JSON.stringify(formData)
     })
       .then(response => response.json())
-      .then(data => {
-        if (data.success) {
+      .then(result => {
+        if (result.success) {
+          modal.classList.add("show");
           form.reset();
-          inputs.forEach(input => toggleLabel(input));
-          modal.style.display = "block";
-          setTimeout(() => modal.classList.add("show"), 10);
+          document.querySelectorAll('.input-text').forEach(input => {
+            input.classList.remove('not-empty');
+          });
         } else {
-          alert("送信に失敗しました。もう一度お試しください。");
+          alert("送信に失敗しました：" + result.error);
         }
       })
       .catch(error => {
-        console.error("送信エラー:", error);
-        alert("送信に失敗しました。通信状況をご確認の上、再度お試しください。");
+        alert("送信に失敗しました：" + error);
       });
   });
 
-
-  closeButton.addEventListener("click", closeModal);
-  window.addEventListener("click", event => {
-    if (event.target === modal) closeModal();
-  });
-
-  function closeModal() {
+  closeButton.onclick = function () {
     modal.classList.remove("show");
     setTimeout(() => {
       modal.style.display = "none";
     }, 400);
-  }
+  };
+
+  window.onclick = function (event) {
+    if (event.target == modal) {
+      modal.classList.remove("show");
+      setTimeout(() => {
+        modal.style.display = "none";
+      }, 400);
+    }
+  };
 });

@@ -371,50 +371,51 @@
         ※アドレスは連絡の取れるものを入力してください。
       </p>
 
-      <form id="contactForm" class="contact-form">
-      <!-- ラジオボタン -->
-      <div class="form-field col align-center">
-        <h3>問い合せフォーム</h3>
-        <div class="radio-group">
-          <label>
-            <input type="radio" name="inquiryType" value="相談" required> 相談
-          </label>
-          <label>
-            <input type="radio" name="inquiryType" value="申込" required> 申込
-          </label>
-        </div>
+<!-- フォーム（そのまま使えます） -->
+<form id="contactForm" class="contact-form">
+  <!-- ラジオボタン -->
+  <div class="form-field col align-center">
+    <h3>問い合せフォーム</h3>
+    <div class="radio-group">
+      <label>
+        <input type="radio" name="inquiryType" value="相談" required> 相談
+      </label>
+      <label>
+        <input type="radio" name="inquiryType" value="申込" required> 申込
+      </label>
+    </div>
+  </div>
+
+  <div class="form-row">
+    <div class="form-col">
+      <div class="form-field col x-50">
+        <input type="text" id="name" name="name" class="input-text" required>
+        <label for="name" class="label">お名前</label>
       </div>
-    
-      <div class="form-row">
-        <div class="form-col">
-          <div class="form-field col x-50">
-            <input type="text" id="name" name="name" class="input-text" required>
-            <label for="name" class="label">お名前</label>
-          </div>
-          <div class="form-field col x-50">
-            <input type="email" id="email" name="email" class="input-text" required>
-            <label for="email" class="label">メールアドレス</label>
-          </div>
-        </div>
-    
-        <div class="form-field col x-100">
-          <textarea id="message" name="message" class="input-text" required></textarea>
-          <label for="message" class="label label-test">お問い合わせ内容</label>
-        </div>
+      <div class="form-field col x-50">
+        <input type="email" id="email" name="email" class="input-text" required>
+        <label for="email" class="label">メールアドレス</label>
       </div>
-    
-      <div class="form-field col align-center">
-        <label>
-          <p>
-            <input type="checkbox" name="consent" value="同意する" required>
-            当サイトをご利用の際は、
-            <a href="#" class="button" data-modal="modal--third">SitePolicy</a>
-            をご確認ください。
-          </p>
-        </label>
-        <button type="submit" class="submit-btn">送信</button>
-      </div>
-    </form>
+    </div>
+
+    <div class="form-field col x-100">
+      <textarea id="message" name="message" class="input-text" required></textarea>
+      <label for="message" class="label label-test">お問い合わせ内容</label>
+    </div>
+  </div>
+
+  <div class="form-field col align-center">
+    <label>
+      <p>
+        <input type="checkbox" name="consent" value="同意する" required>
+        当サイトをご利用の際は、
+        <a href="#" class="button" data-modal="modal--third">SitePolicy</a>
+        をご確認ください。
+      </p>
+    </label>
+    <button type="submit" class="submit-btn">送信</button>
+  </div>
+</form>
     
 
       <!-- modal -->
