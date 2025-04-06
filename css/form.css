@@ -159,6 +159,9 @@ input:-webkit-autofill:focus {
    align-items: center;
    margin-top: 3em;
 }
+.align-center:last-child {
+   margin-top: 1em;
+}
 .align-center h3 {
    font-family: 'Hachi Maru Pop';
 }
@@ -375,9 +378,6 @@ input:-webkit-autofill:focus {
    .radio-group {
       justify-content: center;
       margin-top: 2rem;
-   }
-   .align-center:last-child {
-      margin-top: 1em;
    }
    .align-center p a {
       margin-top: 0;

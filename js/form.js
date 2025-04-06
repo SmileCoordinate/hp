@@ -4,7 +4,7 @@ document.addEventListener("DOMContentLoaded", function () {
   const closeButton = document.querySelector(".close");
   const inputs = document.querySelectorAll(".input-text");
 
-  const scriptURL = "https://script.google.com/macros/s/AKfycbyg9Yf9AGGis0Ep9_cipYEV7Noi2uAwdObWl_RZuK3TFdqgGkXGJIfuX3VOtAHPUSMpcQ/exec";
+  const scriptURL = "https://script.google.com/macros/s/AKfycbzEsbO5FbwmCA_DWYImATTVNce_a-wCSbktCYpbTfoWPcwlYz1_M6_PLLsHgphB1XtpnA/exec";
 
   if (!form || !modal || !closeButton) {
     console.error("必要な要素が見つかりません。HTML を確認してください。");
@@ -40,17 +40,8 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       body: JSON.stringify(formData),
     })
-      .then(response => response.text())
-      .then(text => {
-        console.log("レスポンステキスト:", text);
-        let data;
-        try {
-          data = JSON.parse(text);
-        } catch (e) {
-          console.error("JSONパース失敗:", e);
-          throw new Error("無効なレスポンス形式");
-        }
-
+      .then(response => response.json())
+      .then(data => {
         if (data.success) {
           form.reset();
           inputs.forEach(input => toggleLabel(input));
@@ -65,6 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
         alert("送信に失敗しました。通信状況をご確認の上、再度お試しください。");
       });
   });
+
 
   closeButton.addEventListener("click", closeModal);
   window.addEventListener("click", event => {
