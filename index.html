@@ -6,7 +6,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <!-- SEO -->
   <meta name="google-site-verification" content="arT_wWeQn_KLlT4yLyz2Q-Lsv5wn0i6WnakFwjAATbM" />
-  <meta name="description" content="Smile CoordinateのWebサイトでは、私たちの活動や目的、サービスについて紹介しています。">
+  <meta name="description" content="このWebサイトでは、Smile Coordinateの活動やサービスについて紹介をしています。自分を知るためのお悩み相談、コーチングを提供しています。">
   <meta name="keywords" content="Smile Coordinate, コーチング, カウンセリング, 悩み相談">
   <meta name="author" content="Smile Coordinate">
   <!-- Google tag (gtag.js) -->
@@ -38,28 +38,22 @@
   <!-- セキュリティ -->
   <meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
   <meta http-equiv="Strict-Transport-Security" content="max-age=31536000; includeSubDomains">
-<!--<meta http-equiv="Content-Security-Policy" content="
+<meta http-equiv="Content-Security-Policy" content="
   default-src 'self';
-  script-src 'self' 'unsafe-inline' https://www.googletagmanager.com https://code.jquery.com https://unpkg.com https://cdn.jsdelivr.net;
-  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com;
-  font-src 'self' https://fonts.gstatic.com;
-  img-src 'self' data: https://smilecoordinate.github.io https://unpkg.com;
-  connect-src 'self' https://www.google-analytics.com https://script.google.com https://script.googleapis.com https://googleusercontent.com https://docs.google.com https://spreadsheets.google.com;
-  form-action 'self' https://script.google.com;
-  base-uri 'self';
+  style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdn.jsdelivr.net;
+  font-src 'self' data: https://fonts.gstatic.com;
+  script-src 'self' 'unsafe-inline' https://cdnjs.cloudflare.com https://www.googletagmanager.com https://code.jquery.com https://cdn.jsdelivr.net;
+  connect-src 'self' https://cdn.jsdelivr.net https://fonts.googleapis.com https://script.google.com https://script.googleusercontent.com https://www.google-analytics.com;
+  img-src 'self' data: https://smilecoordinate.github.io;
+  object-src 'none';
 ">
-X-Frame-Options を追加 -->
-<!--
-<meta http-equiv="Content-Security-Policy" content="frame-ancestors 'self' https://smilecoordinate.github.io/hp/;">
+
+<!-- XSS 対策: iframe 埋め込み防止 -->
 <script>
   if (window.top !== window.self) {
-    const allowedOrigins = ["https://smilecoordinate.github.io/hp/"];
-    if (!allowedOrigins.includes(document.referrer)) {
-      window.top.location = window.self.location;
-    }
+      document.body.innerHTML = "";  // iframe ならページを非表示
   }
 </script>
--->
 
   <title>Smile Coordinate</title>
   <!-- font zen gothic -->
@@ -99,9 +93,9 @@ X-Frame-Options を追加 -->
         自分を知り、生まれ変わる。
       </p>
     </div>
-    <img src="img/top-img.webp" alt="sc,SmileCoordinate,スマイルコーディネート" class="img--start">
+    <img src="img/top.webp" alt="sc,SmileCoordinate,スマイルコーディネート" class="img--start">
   </div>
-  <img src="img/flower-of-life.webp" alt="sc,SmileCoordinate,スマイルコーディネート" class="main--top--img">
+  <img src="img/fol-pc.webp" alt="sc,SmileCoordinate,スマイルコーディネート" class="main--top--img pc">
   <span class="bg"></span>
   <main>
     <!-- mobile top Section -->
@@ -112,17 +106,17 @@ X-Frame-Options を追加 -->
         <br>
         自分を知り、生まれ変わる。
       </p>
-      <img src="img/top-img.webp" alt="sc,SmileCoordinate,スマイルコーディネート" class="img--start">
+      <img src="img/top.webp" alt="sc,SmileCoordinate,スマイルコーディネート" class="img--start">
     </div>
     <!-- About Section -->
     <div class="sentence fade_bottom" id="tab--one">
-      <img src="img/top-right-first.webp" alt="sc,SmileCoordinate,スマイルコーディネート" class="top-img--one pc">
+      <img src="img/top-first.webp" alt="sc,SmileCoordinate,スマイルコーディネート" class="top-img--one pc">
       <ul>
         <li>あなたは何を大切に思いますか？</li>
         <li>あなたの人生はどんな人生になりますか？</li>
         <li>あなたは変わりたいと思いますか？</li>
       </ul>
-      <img src="img/top-right-second.webp" alt="sc,SmileCoordinate,スマイルコーディネート" class="top-img--two pc">
+      <img src="img/top-second.webp" alt="sc,SmileCoordinate,スマイルコーディネート" class="top-img--two pc">
     </div>
     <!-- About Section tow -->
     <section class="fade_bottom about-us" id="tab--tow">
@@ -376,60 +370,53 @@ X-Frame-Options を追加 -->
         <br>
         ※アドレスは連絡の取れるものを入力してください。
       </p>
-      <div class="content-wrapper ">
-        <div class="get-in-touch">
-          <form id="contactForm" class="contact-form"
-            action="https://script.google.com/macros/s/AKfycbw8GYB7EzFo8ZR9kiUtF69nBliE5EA1QU2CfXO8CC4Ldy4culGQCcx3SrfeU3lzbAIibQ/exec"
-            method="POST" target="hidden_iframe" onsubmit="submitted=true;">
-            <!-- ラジオボタン -->
-            <div class="form-field col align-center">
-              <h3>問い合せフォーム</h3>
-              <div class="radio-group">
-                <label>
-                  <input type="radio" name="inquiryType" value="相談" required>
-                  相談
-                </label>
-                <label>
-                  <input type="radio" name="inquiryType" value="申込" required>
-                  申込
-                </label>
-              </div>
-            </div>
-            <div class="form-row">
-              <div class="form-col">
-                <div class="form-field col x-50">
-                  <img src="img/contact.webp" alt="sc,SmileCoordinate,スマイルコーディネート" class="img--three" loading="lazy">
-                  <input type="text" id="name" name="name" class="input-text" required>
-                  <label for="name" class="label">お名前</label>
-                </div>
-                <div class="form-field col x-50">
-                  <input type="email" id="email" name="email" class="input-text" required>
-                  <label for="email" class="label">メールアドレス</label>
-                </div>
-              </div>
 
-              <div class="form-field col x-100">
-                <textarea id="message" name="message" class="input-text" required></textarea>
-                <label for="message" class="label label-test">お問い合わせ内容</label>
-              </div>
-            </div>
-
-            <div class="form-field col align-center">
-              <label>
-                <p>
-                  <input type="checkbox" name="inquiryType" value="チェック" required>
-                  当サイトをご利用の際は、
-                  <a href="#" class="button" data-modal="modal--third">
-                    SitePolicy
-                  </a>
-                  をご確認ください。
-                </p>
-              </label>
-              <button type="submit" class="submit-btn">送信</button>
-            </div>
-          </form>
+      <form id="contactForm" class="contact-form">
+      <!-- ラジオボタン -->
+      <div class="form-field col align-center">
+        <h3>問い合せフォーム</h3>
+        <div class="radio-group">
+          <label>
+            <input type="radio" name="inquiryType" value="相談" required> 相談
+          </label>
+          <label>
+            <input type="radio" name="inquiryType" value="申込" required> 申込
+          </label>
         </div>
       </div>
+    
+      <div class="form-row">
+        <div class="form-col">
+          <div class="form-field col x-50">
+            <input type="text" id="name" name="name" class="input-text" required>
+            <label for="name" class="label">お名前</label>
+          </div>
+          <div class="form-field col x-50">
+            <input type="email" id="email" name="email" class="input-text" required>
+            <label for="email" class="label">メールアドレス</label>
+          </div>
+        </div>
+    
+        <div class="form-field col x-100">
+          <textarea id="message" name="message" class="input-text" required></textarea>
+          <label for="message" class="label label-test">お問い合わせ内容</label>
+        </div>
+      </div>
+    
+      <div class="form-field col align-center">
+        <label>
+          <p>
+            <input type="checkbox" name="consent" value="同意する" required>
+            当サイトをご利用の際は、
+            <a href="#" class="button" data-modal="modal--third">SitePolicy</a>
+            をご確認ください。
+          </p>
+        </label>
+        <button type="submit" class="submit-btn">送信</button>
+      </div>
+    </form>
+    
+
       <!-- modal -->
       <div class="modal-overlay"></div>
       <div class="modal" id="modal--third">

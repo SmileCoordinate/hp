@@ -109,6 +109,10 @@ textarea {
 
 
 body .bg {
+    width: 440px;
+    height: 440px;
+    border-radius: 15rem;
+    background: radial-gradient(49.19% 88.28% at 72.99% 113.54%, rgba(255, 255, 255, 0.2) 0%, rgba(93, 227, 236, 0.1679) 59.78%, rgba(93, 227, 236, 0) 100%), linear-gradient(54.57deg, #c3e060 8.59%, rgba(185, 91, 230, 0) 80.49%), radial-gradient(118.75% 118.75% at 96.65% 74.22%, #cf8c90 0%, rgba(48, 158, 230, 0) 73.91%), radial-gradient(114.51% 155.86% at 9.82% 10.94%, rgba(255, 85, 85, 0.7) 0%, rgba(255, 85, 85, 0.147) 61.98%, #bdc01c 100%, #F2F5FA);
     position: fixed;
     width: 45vmin;
     height: 43vmin;
@@ -118,12 +122,12 @@ body .bg {
     left: 55%;
     transform: translate(25%, -55%);
     z-index: -1;
-    background: radial-gradient(ellipse at 50% 50%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%),
+    /*background: radial-gradient(ellipse at 50% 50%, rgba(255, 255, 255, 0.2) 0%, rgba(255, 255, 255, 0) 100%),
         radial-gradient(ellipse at 70% 60%, #c3e060 0%, rgba(195, 224, 96, 0) 90%),
         radial-gradient(ellipse at 30% 30%, #c3e060 0%, rgba(195, 224, 96, 0) 60%),
         radial-gradient(ellipse at bottom left, #00a3cb 0%, rgba(0, 163, 203, 0)1 70%),
         linear-gradient(135deg, rgba(18, 46, 119, 0) 0%, rgba(18, 46, 119, 0) 75%, #122e77 100%),
-        linear-gradient(to right, #bb76bd 0%, #cf8c90 35%, #c8e429 65%, #bdc01c 100%);
+        linear-gradient(to right, #bb76bd 0%, #cf8c90 35%, #c8e429 65%, #bdc01c 100%);*/
     background-blend-mode: overlay, luminosity, color-dodge, saturation, screen, color;
     filter: blur(0px);
     animation: morphRotate 45s infinite linear;
@@ -457,12 +461,12 @@ section,
     top: 20%;
     left: -85%;
     z-index: -1;
-    transform: translate(-10%,50%);
+    transform: translate(-10%, 50%);
 }
 
 .service .overlay--tow,
 .voice .overlay--tow {
-    transform: translate(-10%,-100%);
+    transform: translate(-10%, -100%);
 }
 
 .overlay--tow p {
@@ -701,12 +705,11 @@ footer {
 
     body .bg {
         position: fixed;
-        width: 600px;
-        height: 600px;
-        top: 90%;
-        left: -35%;
-        transform: translate(-0%, -130%);
-        filter: blur(10px);
+        width: 350px;
+        height: 350px;
+        top: 80%;
+        left: 30%;
+        filter: blur(20px);
         animation: morphRotate 30s infinite linear;
     }
 
@@ -802,9 +805,10 @@ footer {
     /*===== h2 bg ======*/
     .img--start {
         width: 45vmin;
-        bottom: 0%;
         top: 50%;
-        left: 25%;
+        display: block;
+        position: relative;
+        margin: 0 auto;
     }
 
     .img--one {
@@ -878,6 +882,15 @@ footer {
         padding-top: 20vmin;
     }
 
+    .main-visual::before {
+        content: "";
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        background: url("../img/fol-mobile.webp") no-repeat center / 60%;
+        filter: blur(2px);
+    }
+
     .main-visual h1 {
         margin: 0 auto;
         width: 80%;
@@ -894,6 +907,7 @@ footer {
         padding-left: 0.5em;
         padding-right: 0.5em;
     }
+
     .sentence {
         min-height: 60svh;
     }
@@ -901,6 +915,7 @@ footer {
     .sentence ul {
         width: 80%;
     }
+
     .about-us p {
         list-style: none;
         padding: 0;
@@ -1002,6 +1017,7 @@ footer {
     .pc {
         display: none !important;
     }
+
     .mobile {
         display: block !important;
     }
@@ -1016,6 +1032,7 @@ footer {
         left: 1.45vw;
         width: 97.15vw;
     }
+
     main {
         width: 70vmin;
         margin: 0 auto;
@@ -1024,38 +1041,45 @@ footer {
     h1 {
         line-height: 0.8;
     }
+
     h2 {
         font-size: clamp(2.8rem, 1.939rem + 2.29vw, 3.8rem);
     }
-    h3,ul,ol {
+
+    h3,
+    ul,
+    ol {
         font-size: clamp(2rem, 1.311rem + 1.83vw, 2.8rem);
     }
+
     li,
     p,
     .voice li {
         font-size: clamp(1.6rem, 1.428rem + 0.46vw, 1.8rem);
     }
-        /*====TOP section*/
-        .main-visual {
-            font-weight: 600;
-            width: 80%;
-            height: 65svh;
-            transform: none;
-            margin: 0 auto;
-            padding-top: 20vmin;
-        }
 
-        .main-visual h1 {
-            margin: 0;
-        }
+    /*====TOP section*/
+    .main-visual {
+        font-weight: 600;
+        width: 80%;
+        height: 65svh;
+        transform: none;
+        margin: 0 auto;
+        padding-top: 20vmin;
+    }
 
-        .main-visual p {
-            width: 80%;
-        }
-        .img--start {
-            width: 35vmin;
-            left: 10vmin;
-        }
+    .main-visual h1 {
+        margin: 0;
+    }
+
+    .main-visual p {
+        width: 80%;
+    }
+
+    .img--start {
+        width: 35vmin;
+        left: 10vmin;
+    }
 }
 
 @media screen and (max-width: 1299px) {
