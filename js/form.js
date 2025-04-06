@@ -36,14 +36,7 @@ document.addEventListener("DOMContentLoaded", function () {
     })
       .then(response => response.text())
       .then(text => {
-        let result;
-        try {
-          result = JSON.parse(text);
-        } catch (e) {
-          throw new Error('レスポンスの解析に失敗しました。内容: ' + text);
-        }
-
-        if (result.success) {
+        if (text.trim() === "success") {
           submitted = true;
           modal.style.display = "block";
           setTimeout(() => modal.classList.add("show"), 10);
@@ -51,7 +44,7 @@ document.addEventListener("DOMContentLoaded", function () {
           contactForm.reset();
           inputs.forEach(input => input.classList.remove("not-empty"));
         } else {
-          alert('送信に失敗しました：' + (result.error || '不明なエラー'));
+          alert('送信に失敗しました：' + text);
         }
       })
       .catch(error => {
