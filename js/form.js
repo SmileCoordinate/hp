@@ -20,7 +20,7 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   contactForm.addEventListener("submit", function (e) {
-    e.preventDefault();
+    e.preventDefault(); // ← ページ遷移を防ぐ
 
     const formData = {
       name: contactForm.querySelector('[name="name"]').value,
@@ -29,12 +29,16 @@ document.addEventListener("DOMContentLoaded", function () {
       message: contactForm.querySelector('[name="message"]').value
     };
 
+    console.log("送信データ:", formData);
+    console.log("送信先URL:", contactForm.action);
+
     fetch(contactForm.action, {
       method: "POST",
       headers: {
         "Content-Type": "application/json"
       },
-      body: JSON.stringify(formData)
+      body: JSON.stringify(formData),
+      mode: "cors"  // ← 必須
     })
       .then(response => response.json())
       .then(result => {
@@ -44,12 +48,13 @@ document.addEventListener("DOMContentLoaded", function () {
           contactForm.reset();
           inputs.forEach(input => input.classList.remove("not-empty"));
         } else {
-          alert("送信エラーが発生しました：" + (result.error || "不明なエラー"));
+          console.error("送信失敗:", result.error);
+          alert("送信に失敗しました。");
         }
       })
       .catch(error => {
-        console.error("送信エラー:", error);
-        alert("ネットワークエラーが発生しました。");
+        console.error("通信エラー:", error);
+        alert("通信エラーが発生しました");
       });
   });
 
