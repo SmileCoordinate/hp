@@ -20,42 +20,31 @@ document.addEventListener("DOMContentLoaded", function () {
   });
 
   contactForm.addEventListener("submit", function (e) {
-    e.preventDefault(); // ← ページ遷移を防ぐ
+    e.preventDefault();
+    const form = e.target;
+    const formData = new FormData(form);
 
-    const formData = {
-      name: contactForm.querySelector('[name="name"]').value,
-      email: contactForm.querySelector('[name="email"]').value,
-      inquiryType: contactForm.querySelector('[name="inquiryType"]:checked')?.value || "",
-      message: contactForm.querySelector('[name="message"]').value
-    };
-
-    console.log("送信データ:", formData);
-    console.log("送信先URL:", contactForm.action);
-
-    fetch(contactForm.action, {
-      method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(formData),
-      mode: "cors"  // ← 必須
-    })
-      .then(response => response.json())
-      .then(result => {
-        if (result.success) {
-          modal.style.display = "block";
-          setTimeout(() => modal.classList.add("show"), 10);
-          contactForm.reset();
-          inputs.forEach(input => input.classList.remove("not-empty"));
-        } else {
-          console.error("送信失敗:", result.error);
-          alert("送信に失敗しました。");
-        }
-      })
-      .catch(error => {
-        console.error("通信エラー:", error);
-        alert("通信エラーが発生しました");
-      });
+    // 送信処理
+    fetch(form.action, {
+      method: 'POST',
+      body: formData
+    }).then(response => {
+      if (response.ok) {
+        submitted = true;  // 送信成功時に submitted を true にする
+        modal.style.display = "block";  // モーダルを表示
+        modal.classList.add("show");
+        form.reset();  // フォームをリセット
+        document.querySelectorAll('.input-text').forEach(input => {
+          input.classList.remove('not-empty');
+        });
+      } else {
+        alert('送信に問題が発生しました。サーバーからエラーが返されました。');
+        console.error('送信エラー:', response);
+      }
+    }).catch(error => {
+      alert('送信に問題が発生しました。ネットワークエラーの可能性があります。');
+      console.error('ネットワークエラー:', error);  // エラーをコンソールに出力
+    });
   });
 
   closeButton.onclick = () => {
