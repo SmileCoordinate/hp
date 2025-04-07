@@ -22,20 +22,24 @@ document.addEventListener("DOMContentLoaded", function () {
   contactForm.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    // フォームデータをJSON形式に変換
+    const nameInput = contactForm.querySelector('[name="name"]');
+    const emailInput = contactForm.querySelector('[name="email"]');
+    const inquiryTypeInput = contactForm.querySelector('[name="inquiryType"]');
+    const messageInput = contactForm.querySelector('[name="message"]');
+
     const formData = {
-      name: contactForm.querySelector('[name="name"]').value,
-      email: contactForm.querySelector('[name="email"]').value,
-      inquiryType: contactForm.querySelector('[name="inquiryType"]').value,
-      message: contactForm.querySelector('[name="message"]').value
+      name: nameInput.value,
+      email: emailInput.value,
+      inquiryType: inquiryTypeInput.value,
+      message: messageInput.value
     };
 
     fetch(contactForm.action, {
       method: "POST",
-      body: JSON.stringify(formData),
       headers: {
         "Content-Type": "application/json"
-      }
+      },
+      body: JSON.stringify(formData)
     })
       .then(response => {
         if (response.ok) {
@@ -44,7 +48,7 @@ document.addEventListener("DOMContentLoaded", function () {
           contactForm.reset();
           inputs.forEach(input => input.classList.remove("not-empty"));
         } else {
-          alert("送信エラーが発生しました。");
+          alert("送信エラーが発生しました（サーバー応答不良）。");
         }
       })
       .catch(error => {
@@ -52,6 +56,7 @@ document.addEventListener("DOMContentLoaded", function () {
         alert("ネットワークエラーが発生しました。");
       });
   });
+
 
   closeButton.onclick = () => {
     modal.classList.remove("show");
