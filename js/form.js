@@ -22,16 +22,11 @@ document.addEventListener("DOMContentLoaded", function () {
   contactForm.addEventListener("submit", function (e) {
     e.preventDefault();
 
-    const nameInput = contactForm.querySelector('[name="name"]');
-    const emailInput = contactForm.querySelector('[name="email"]');
-    const inquiryTypeInput = contactForm.querySelector('[name="inquiryType"]');
-    const messageInput = contactForm.querySelector('[name="message"]');
-
     const formData = {
-      name: nameInput.value,
-      email: emailInput.value,
-      inquiryType: inquiryTypeInput.value,
-      message: messageInput.value
+      name: contactForm.querySelector('[name="name"]').value,
+      email: contactForm.querySelector('[name="email"]').value,
+      inquiryType: contactForm.querySelector('[name="inquiryType"]:checked')?.value || "",
+      message: contactForm.querySelector('[name="message"]').value
     };
 
     fetch(contactForm.action, {
@@ -41,14 +36,15 @@ document.addEventListener("DOMContentLoaded", function () {
       },
       body: JSON.stringify(formData)
     })
-      .then(response => {
-        if (response.ok) {
+      .then(response => response.json())
+      .then(result => {
+        if (result.success) {
           modal.style.display = "block";
           setTimeout(() => modal.classList.add("show"), 10);
           contactForm.reset();
           inputs.forEach(input => input.classList.remove("not-empty"));
         } else {
-          alert("送信エラーが発生しました（サーバー応答不良）。");
+          alert("送信エラーが発生しました：" + (result.error || "不明なエラー"));
         }
       })
       .catch(error => {
@@ -56,7 +52,6 @@ document.addEventListener("DOMContentLoaded", function () {
         alert("ネットワークエラーが発生しました。");
       });
   });
-
 
   closeButton.onclick = () => {
     modal.classList.remove("show");
