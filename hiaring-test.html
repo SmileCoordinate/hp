@@ -1,0 +1,512 @@
+<!DOCTYPE html>
+<html lang="ja">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>ヒアリング form</title>
+   <link rel="stylesheet" href="styles.css">
+</head>
+<style>
+   /* 全体のスタイル */
+   body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f4f4f4;
+      text-align: center;
+      margin: 0;
+      padding: 0;
+   }
+
+   /* コンテナ */
+   .container {
+      width: 90%;
+      max-width: 600px;
+      background: white;
+      padding: 20px;
+      margin: 30px auto;
+      border-radius: 10px;
+      box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+   }
+
+   /* タイトル */
+   h2 {
+      font-size: 22px;
+      font-weight: bold;
+      margin-bottom: 10px;
+   }
+
+   /* 質問のテキスト */
+   p {
+      font-size: 18px;
+      font-weight: bold;
+      color: #333;
+      margin-bottom: 15px;
+   }
+
+   /* フォーム内の質問ブロック */
+   #questionContainer {
+      text-align: left;
+      margin-bottom: 20px;
+   }
+
+   /* 質問ラベル */
+   label {
+      display: block;
+      font-size: 16px;
+      font-weight: normal;
+      color: #555;
+      margin-top: 10px;
+   }
+
+   /* テキスト入力 */
+   input[type="text"] {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 5px;
+      font-size: 16px;
+   }
+
+   /* ラジオボタン */
+   input[type="radio"] {
+      margin-right: 5px;
+   }
+
+   label input[type="radio"] {
+      transform: scale(1.2);
+   }
+
+   /* ナビゲーションボタン */
+   .navigation {
+      display: flex;
+      justify-content: space-between;
+      margin-top: 20px;
+   }
+
+   button {
+      width: 48%;
+      padding: 12px;
+      font-size: 16px;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      transition: 0.3s;
+   }
+
+   /* 戻るボタン */
+   #prevBtn {
+      background-color: #ddd;
+      color: #333;
+   }
+
+   /* 次へボタン */
+   #nextBtn {
+      background-color: #007bff;
+      color: white;
+   }
+
+   /* ボタンのホバーエフェクト */
+   button:hover {
+      opacity: 0.8;
+   }
+</style>
+
+<body>
+
+   <div class="container">
+      <h2>悩みの共有アンケート</h2>
+      <p>これからの質問の回答内容は約1カ月間保管いたします。</p>
+
+      <form id="surveyForm">
+         <div id="questionContainer"></div>
+
+         <!-- ナビゲーションボタン -->
+         <div class="navigation">
+            <button type="button" id="prevBtn" onclick="prevQuestion()">戻る</button>
+            <button type="button" id="nextBtn" onclick="nextQuestion()">次へ</button>
+         </div>
+
+
+      </form>
+   </div>
+
+   <script>
+      const GAS_URL = "https://script.google.com/macros/s/AKfycbyukZt0iZ4s-DnPrtBDcvIbS7qmRpiZO2BfklohUe2iLm8MbY87E0Nu0L_KAvEYyGut/exec";
+
+      //質問が進まない
+      const questions = [
+         {
+            id: 1,
+            text: "あなたについて教えてください",
+            fields: [
+               { label: "依頼主の氏名", type: "text", id: "name", required: true },
+               { label: "性別", type: "radio", id: "gender", options: ["男性", "女性"], required: true },
+               { label: "年齢", type: "select", id: "age", options: ["選択してください", "20代", "30代", "40代", "50代", "60代", "70代", "80代", "90代"], required: true },
+               { label: "制作依頼を検討中でしょうか？", type: "radio", id: "consultation", options: ["はい", "いいえ"], required: true }
+            ],
+            next: 2
+         },
+         {
+            id: 2,
+            text: "今、困っていることや悩み事はありますか",
+            type: "radio",
+            options: ["はい", "いいえ"],
+            required: true,
+            next: { "はい": 3, "いいえ": 99 }
+         },
+         {
+            id: 3,
+            text: "この中で悩んでいる事はありますか？<br>悩みがあれば教えてください。",
+            type: "radio",
+            options: ["人間関係", "子育て", "教育", "仕事関連", "その他"],
+            required: true,
+            next: { "人間関係": 10, "子育て": 20, "教育": 30, "仕事関連": 40, "その他": 4 }
+         },
+
+         {
+            id: 4,
+            text: "どんなことで悩んでいるのか教えてください🙏🏻",
+            type: "text",
+            placeholder: "ここに入力してください",
+            required: true,
+            next: 98
+         },
+         /////////10 人間関係
+         {
+            id: 10,
+            text: "その人はどんな人ですか？",
+            type: "radio",
+            options: ["家族", "親族", "職場の上司、部下、同僚", "学校の先生", "友人や知人", "その他"],
+            type: "text",
+            placeholder: "その他の場合に入力してください",
+            required: true,
+            next: 11
+         },
+         {
+            id: 11,
+            text: "どのようなことで悩んでますか？",
+            type: "text",
+            required: true,
+            next: 12
+         },
+         /////////10 人間関係
+         /////////20 子育て
+         {
+            id: 20,
+            text: "お子さんの性別と年齢を教えてください",
+            fields: [
+               { label: "性別を教えてください", type: "radio", id: "gender", options: ["男の子", "女の子"], required: true },
+               { label: "年齢を教えてください", type: "select", id: "age", options: ["選択してください", "0才", "1～3才", "4～5才", "6～9才", "10～12才", "それ以上"], required: true },
+            ],
+            required: true,
+            next: 21
+         },
+         {
+            id: 21,
+            text: "困ってしまう環境（場所）やタイミングを教えてください",
+            type: "text",
+            required: true,
+            next: 12
+         },
+         /////////20 子育て
+         /////////30 教育
+         {
+            id: 30,
+            text: "（教育について）どのように悩んでいるのか教えてください",
+            type: "text",
+            required: true,
+            next: 21
+         },
+         {
+            id: 21,
+            text: "その悩みはお子さんの悩みですか？",
+            type: "text",
+            options: ["はい", "いいえ"],
+            required: true,
+            next: 12
+         },
+         /////////30 子育て
+         /////////40 仕事
+         {
+            id: 40,
+            text: "（仕事）でどのようなことに悩みや困っていますか",
+            options: ["経営", "人材", "売り上げ", "認知", "その他"],
+            type: "text",
+            placeholder: "その他の場合に入力してください",
+            required: true,
+            next: 41
+         },
+         {
+            id: 41,
+            text: "その悩みはどのように、いつまでに解消したいと思いますか？",
+            type: "text",
+            options: ["直ぐにでも", "2週間以内", "1カ月以内", "今じゃなくていい"],
+            required: true,
+            next: 12
+         },
+         /////////40 仕事
+         {
+            id: 12,
+            text: "その悩んでいることが、どの様に、どんな風になると嬉しいですか？",
+            type: "text",
+            required: true,
+            next: 98
+         },
+         {
+            id: 98,
+            text: "他に悩んでいることはありますか？",
+            type: "radio",
+            options: ["はい", "いいえ"],
+            required: true,
+            next: { "はい": 3, "いいえ": 99 }
+         },
+
+         {
+            id: 99,
+            text: "ご回答ありがとうございました！",
+            type: "message"
+         }
+      ];
+
+      let currentQuestionIndex = 0;
+      let answers = [];
+      let historyStack = []; // 戻る履歴のためのスタック
+
+      function loadQuestion(index) {
+         const questionContainer = document.getElementById("questionContainer");
+         questionContainer.innerHTML = "";
+
+         const question = questions[index];
+         if (!question) return;
+
+         // 質問表示
+         const questionText = document.createElement("p");
+         questionText.innerHTML = question.text;
+         questionContainer.appendChild(questionText);
+
+         if (question.type === "radio") {
+            question.options.forEach(option => {
+               const label = document.createElement("label");
+               const input = document.createElement("input");
+               input.type = "radio";
+               input.name = "answer";
+               input.value = option;
+               label.appendChild(input);
+               label.appendChild(document.createTextNode(option));
+               questionContainer.appendChild(label);
+            });
+         } else if (question.type === "text") {
+            const input = document.createElement("textarea");
+            input.id = "textAnswer";
+            questionContainer.appendChild(input);
+         } else if (question.fields) {
+            question.fields.forEach(field => {
+               const wrapper = document.createElement("div");
+               const label = document.createElement("label");
+               label.textContent = field.label;
+               wrapper.appendChild(label);
+
+               if (field.type === "text") {
+                  const input = document.createElement("input");
+                  input.type = "text";
+                  input.id = field.id;
+                  wrapper.appendChild(input);
+               } else if (field.type === "radio") {
+                  field.options.forEach(option => {
+                     const radioLabel = document.createElement("label");
+                     const input = document.createElement("input");
+                     input.type = "radio";
+                     input.name = field.id;
+                     input.value = option;
+                     radioLabel.appendChild(input);
+                     radioLabel.appendChild(document.createTextNode(option));
+                     wrapper.appendChild(radioLabel);
+                  });
+               } else if (field.type === "select") {
+                  const select = document.createElement("select");
+                  select.id = field.id;
+                  field.options.forEach(option => {
+                     const opt = document.createElement("option");
+                     opt.value = option;
+                     opt.textContent = option;
+                     select.appendChild(opt);
+                  });
+                  wrapper.appendChild(select);
+               }
+
+               questionContainer.appendChild(wrapper);
+            });
+         }
+
+         // ボタン表示制御（99なら非表示）
+         document.getElementById("nextBtn").style.display = (question.id === 99) ? "none" : "inline-block";
+         document.getElementById("prevBtn").style.display = (question.id === 99) ? "none" : "inline-block";
+      }
+
+      function validateInputs(question) {
+         if (question.fields) {
+            return question.fields.every(field => {
+               if (field.required) {
+                  if (field.type === "text") {
+                     return document.getElementById(field.id).value.trim() !== "";
+                  } else if (field.type === "radio") {
+                     return !!document.querySelector(`input[name="${field.id}"]:checked`);
+                  } else if (field.type === "select") {
+                     return document.getElementById(field.id).value !== "選択してください";
+                  }
+               }
+               return true;
+            });
+         } else if (question.type === "radio") {
+            return !!document.querySelector('input[name="answer"]:checked');
+         } else if (question.type === "text") {
+            return document.getElementById("textAnswer").value.trim() !== "";
+         }
+         return true;
+      }
+
+      function nextQuestion() {
+         const question = questions[currentQuestionIndex];
+
+         if (!validateInputs(question)) {
+            alert("すべての質問に回答してください。");
+            return;
+         }
+
+         const answerEntry = {
+            id: question.id,
+            type: question.type,
+            question: question.text,
+            answer: null
+         };
+
+         if (question.fields) {
+            question.fields.forEach(field => {
+               let value = "";
+               if (field.type === "text") {
+                  value = document.getElementById(field.id).value.trim();
+               } else if (field.type === "radio") {
+                  const checked = document.querySelector(`input[name="${field.id}"]:checked`);
+                  if (checked) value = checked.value;
+               } else if (field.type === "select") {
+                  value = document.getElementById(field.id).value;
+               }
+               answers.push({
+                  id: field.id,
+                  type: field.type,
+                  question: field.label,
+                  answer: value
+               });
+            });
+         } else if (question.type === "radio") {
+            const checked = document.querySelector('input[name="answer"]:checked');
+            if (checked) answerEntry.answer = checked.value;
+            answerEntry.answer = checked.value;
+            answers.push(answerEntry);
+         } else if (question.type === "text") {
+            const text = document.getElementById("textAnswer").value.trim();
+            answerEntry.answer = text;
+            answers.push(answerEntry);
+         }
+
+         // スタックに現在の index を保存
+         historyStack.push(currentQuestionIndex);
+
+         let nextId = null;
+
+         if (question.next) {
+            if (typeof question.next === "object") {
+               nextId = question.next[answerEntry.answer];
+            } else {
+               nextId = question.next;
+            }
+         }
+
+         if (!nextId) {
+            submitSurvey();
+            displayThankYouMessage();
+            return;
+         }
+
+         const nextIndex = questions.findIndex(q => q.id === nextId);
+         if (nextIndex === -1) {
+            alert("次の質問が見つかりません。設定を確認してください。");
+            return;
+         }
+
+         currentQuestionIndex = nextIndex;
+         loadQuestion(currentQuestionIndex);
+
+      }
+
+      function prevQuestion() {
+         if (historyStack.length === 0) return;
+
+         currentQuestionIndex = historyStack.pop();
+
+         // 直前の質問に対応する回答だけ削除（fieldsのときは複数回pop）
+         const prevQuestion = questions[currentQuestionIndex];
+         if (prevQuestion.fields) {
+            for (let i = 0; i < prevQuestion.fields.length; i++) {
+               answers.pop();
+            }
+         } else {
+            answers.pop();
+         }
+
+         loadQuestion(currentQuestionIndex);
+      }
+
+
+      function displayThankYouMessage() {
+         const questionContainer = document.getElementById("questionContainer");
+         questionContainer.innerHTML = `
+         <h2>ご回答ありがとうございました！</h2>
+         <p>内容の確認ができ次第、お見積りを行いますので、2～3日ほどお待ちください。</p>
+         <button onclick="restartSurvey()">トップに戻る</button>
+         `;
+         document.getElementById("nextBtn").style.display = "none";
+         document.getElementById("prevBtn").style.display = "none";
+      }
+
+      function restartSurvey() {
+         currentQuestionIndex = 0;
+         answers = [];
+         loadQuestion(currentQuestionIndex);
+      }
+
+      function submitSurvey() {
+         fetch(GAS_URL, {
+            method: "POST",
+            headers: {
+               "Content-Type": "application/json"
+            },
+            body: JSON.stringify({ answers })
+         })
+            .then(response => response.json())
+            .then(data => {
+               console.log("送信結果:", data);
+               if (data.status !== "success") {
+                  alert("送信エラーが発生しました。もう一度お試しください。");
+               }
+            })
+            .catch(err => {
+               console.error("送信エラー:", err);
+               alert("送信に失敗しました。ネットワーク接続を確認してください。");
+            });
+      }
+
+
+      document.addEventListener("DOMContentLoaded", () => {
+         loadQuestion(currentQuestionIndex);
+      });
+      document.getElementById("surveyForm").addEventListener("submit", (e) => {
+         e.preventDefault(); // フォーム送信を無効化
+      });
+
+   </script>
+
+</body>
+
+</html>

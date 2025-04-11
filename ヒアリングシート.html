@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>悩み共有アンケート</title>
-    <link rel="stylesheet" href="styles.css">
+    <title>ヒアリング</title>
 </head>
 <style>
     /* 全体のスタイル */
@@ -115,7 +114,7 @@
 <body>
 
     <div class="container">
-        <h2>悩みの共有アンケート</h2>
+        <h2>Web制作前のヒアリング</h2>
         <p>これからの質問の回答内容は約1カ月間保管いたします。</p>
 
         <form id="surveyForm">
@@ -132,7 +131,7 @@
     </div>
 
     <script>
-        const GAS_URL = "https://script.google.com/macros/s/AKfycbyukZt0iZ4s-DnPrtBDcvIbS7qmRpiZO2BfklohUe2iLm8MbY87E0Nu0L_KAvEYyGut/exec";
+        const GAS_URL = "https://script.google.com/macros/s/AKfycbyE5UrT0NZUexMFTM_rUPcm7YZoae3JOGaCy9jtDPrETGoQLXxUfr6tHCX-UOcsIP9E/exec";
 
         //質問が進まない
         const questions = [
@@ -168,87 +167,20 @@
                 id: 4,
                 text: "どんなことで悩んでいるのか教えてください🙏🏻",
                 type: "text",
-                placeholder: "ここに入力してください",
                 required: true,
-                next: 98
+                next: 99
             },
-            /////////10 人間関係
             {
                 id: 10,
-                text: "その人はどんな人ですか？",
+                text: "その人とはどんな人ですか？",
                 type: "radio",
                 options: ["家族", "親族", "職場の上司、部下、同僚", "学校の先生", "友人や知人", "その他"],
-                type: "text",
-                placeholder: "その他の場合に入力してください",
                 required: true,
                 next: 11
             },
             {
                 id: 11,
                 text: "どのようなことで悩んでますか？",
-                type: "text",
-                required: true,
-                next: 12
-            },
-            /////////10 人間関係
-            /////////20 子育て
-            {
-                id: 20,
-                text: "お子さんの性別と年齢を教えてください",
-                fields: [
-                    { label: "性別を教えてください", type: "radio", id: "gender", options: ["男の子", "女の子"], required: true },
-                    { label: "年齢を教えてください", type: "select", id: "age", options: ["選択してください", "0才", "1～3才", "4～5才", "6～9才", "10～12才", "それ以上"], required: true },
-                ],
-                required: true,
-                next:   21
-            },
-            {
-                id: 21,
-                text: "困ってしまう環境（場所）やタイミングを教えてください",
-                type: "text",
-                required: true,
-                next: 12
-            },
-            /////////20 子育て
-            /////////30 教育
-            {
-                id: 30,
-                text: "（教育について）どのように悩んでいるのか教えてください",
-                type: "text",
-                required: true,
-                next:   21
-            },
-            {
-                id: 21,
-                text: "その悩みはお子さんの悩みですか？",
-                type: "text",
-                options: ["はい", "いいえ"],
-                required: true,
-                next: 12
-            },
-            /////////30 子育て
-            /////////40 仕事
-            {
-                id: 40,
-                text: "（仕事）でどのようなことに悩みや困っていますか",
-                options: ["経営", "人材", "売り上げ", "認知", "その他"],
-                type: "text",
-                placeholder: "その他の場合に入力してください",
-                required: true,
-                next:   41
-            },
-            {
-                id: 41,
-                text: "その悩みはどのように、いつまでに解消したいと思いますか？",
-                type: "text",
-                options: ["直ぐにでも", "2週間以内", "1カ月以内", "今じゃなくていい"],
-                required: true,
-                next: 12
-            },
-            /////////40 仕事
-            {
-                id: 12,
-                text: "その悩んでいることが、どの様に、どんな風になると嬉しいですか？",
                 type: "text",
                 required: true,
                 next: 98
@@ -385,7 +317,7 @@
                 question.fields.forEach(field => {
                     let value = "";
                     if (field.type === "text") {
-                        value = document.getElementById(field.id).value.trim();
+                        value = document.getElementById(field.id).value;
                     } else if (field.type === "radio") {
                         const checked = document.querySelector(`input[name="${field.id}"]:checked`);
                         if (checked) value = checked.value;
@@ -402,10 +334,9 @@
             } else if (question.type === "radio") {
                 const checked = document.querySelector('input[name="answer"]:checked');
                 if (checked) answerEntry.answer = checked.value;
-                answerEntry.answer = checked.value;
                 answers.push(answerEntry);
             } else if (question.type === "text") {
-                const text = document.getElementById("textAnswer").value.trim();
+                const text = document.getElementById("textAnswer").value;
                 answerEntry.answer = text;
                 answers.push(answerEntry);
             }
@@ -443,21 +374,10 @@ loadQuestion(currentQuestionIndex);
         function prevQuestion() {
             if (historyStack.length === 0) return;
 
-            currentQuestionIndex = historyStack.pop();
-
-            // 直前の質問に対応する回答だけ削除（fieldsのときは複数回pop）
-            const prevQuestion = questions[currentQuestionIndex];
-            if (prevQuestion.fields) {
-                for (let i = 0; i < prevQuestion.fields.length; i++) {
-                    answers.pop();
-                }
-            } else {
-                answers.pop();
-            }
-
+            currentQuestionIndex = historyStack.pop(); // ひとつ前の index に戻る
+            answers.pop(); // 最後の回答も削除（必要に応じて複数 pop する）
             loadQuestion(currentQuestionIndex);
         }
-
 
         function displayThankYouMessage() {
             const questionContainer = document.getElementById("questionContainer");
@@ -482,21 +402,16 @@ loadQuestion(currentQuestionIndex);
         headers: {
             "Content-Type": "application/json"
         },
-        body: JSON.stringify({ answers })
+        body: JSON.stringify({ answers: answers })
     })
     .then(response => response.json())
     .then(data => {
-        console.log("送信結果:", data);
-        if (data.status !== "success") {
-            alert("送信エラーが発生しました。もう一度お試しください。");
-        }
+        console.log("送信成功:", data);
     })
     .catch(err => {
         console.error("送信エラー:", err);
-        alert("送信に失敗しました。ネットワーク接続を確認してください。");
     });
 }
-
 
         document.addEventListener("DOMContentLoaded", () => {
             loadQuestion(currentQuestionIndex);

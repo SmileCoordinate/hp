@@ -79,31 +79,31 @@ textarea {
 .pc {
     display: block !important;
 }
-
+/*調整*/
 @keyframes morphRotate {
     0% {
         border-radius: 65% 55% 50% 60% / 60% 55% 50% 65%;
-        transform: rotate(0deg) scale(1);
+        transform: translate(0%,0%) rotate(0deg) scale(1);
     }
 
     25% {
         border-radius: 55% 60% 50% 65% / 55% 60% 50% 65%;
-        transform: rotate(90deg) scale(0.95);
+        transform: translate(50%,20%) rotate(90deg) scale(0.95);
     }
 
     50% {
         border-radius: 60% 50% 65% 55% / 55% 65% 50% 60%;
-        transform: rotate(180deg) scale(1.04);
+        transform: translate(50%,100%) rotate(180deg) scale(1.04);
     }
 
     75% {
         border-radius: 55% 65% 55% 60% / 65% 55% 60% 65%;
-        transform: rotate(270deg) scale(0.95);
+        transform: translate(-30%,40%) rotate(270deg) scale(0.95);
     }
 
     100% {
         border-radius: 65% 55% 50% 60% / 60% 55% 50% 65%;
-        transform: rotate(360deg) scale(1);
+        transform: translate(0%,0%) rotate(360deg) scale(1);
     }
 }
 
@@ -704,12 +704,10 @@ footer {
     }
 
     body .bg {
-        position: fixed;
-        width: 350px;
-        height: 350px;
-        top: 80%;
+        width: 300px;
+        height: 300px;
+        top: 50%;
         left: 30%;
-        filter: blur(20px);
         animation: morphRotate 30s infinite linear;
     }
 
@@ -737,19 +735,15 @@ footer {
         left: 0;
     }
 
-    h3,
-    ul,
-    ol {
-        font-size: clamp(1.8rem, 1.571rem + 1.14vw, 2rem);
-    }
-
     h3 {
+        font-size: clamp(1.8rem, 1.571rem + 1.14vw, 2rem);
         left: 0;
         margin: 0 auto;
     }
 
     ul,
     ol {
+        font-size: clamp(1.6rem, 1.371rem + 1.14vw, 1.8rem);
         width: fit-content;
     }
 
@@ -867,7 +861,7 @@ footer {
         border-radius: 0;
         background: rgba(245, 245, 245, 0.2);
         -webkit-backdrop-filter: blur(3px);
-        backdrop-filter: blur(3px);
+        backdrop-filter: blur(20px);
         border: none;
         box-shadow: none;
     }
@@ -959,7 +953,7 @@ footer {
 
     .voice ul {
         width: 80%;
-        min-height: 350px;
+        height: 90vmin;
         margin-top: 2rem;
     }
 

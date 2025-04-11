@@ -33,7 +33,7 @@
 }
 
 #tab--five #modal--third {
-   padding: 10vmin 15em;
+   padding: 10vmin 10em;
 }
 #modal--third h2 {
    font-size: clamp(2rem, 1.84rem + 0.8vw, 2.8rem);
@@ -97,6 +97,7 @@
 }
 
 .modal p {
+   width: 100%;
    line-height: 2.7rem;
    margin-bottom: 2vmin;
 }
@@ -186,9 +187,6 @@ font-size: clamp(3.8rem, 3.467rem + 0.44vw, 4rem);
    #modal--second {
       transform: translate(-50%, -10%);
    }
-   .modal p {
-      width: 100%;
-   }
    .price {
       width: 100%;
       margin: 3% auto;
@@ -244,6 +242,9 @@ font-size: clamp(3.8rem, 3.467rem + 0.44vw, 4rem);
    }
 
    /* モーダルのスタイル */
+   #tab--five #modal--third {
+      padding: 10vmin;
+   }
    #tab--five .modal {
       padding: 10vmin 2.5em;
    }
@@ -256,8 +257,10 @@ font-size: clamp(3.8rem, 3.467rem + 0.44vw, 4rem);
       box-shadow: 0 3px 10px 0px rgba(0, 0, 0, 0.5);
    }
 
+   .modal h3 {
+      font-size: clamp(1.6rem, 1.371rem + 1.14vw, 1.8rem);
+   }
    .modal p {
-      width: 100%;
       line-height: 1.8;
    }
 
