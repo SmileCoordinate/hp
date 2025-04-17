@@ -15,8 +15,8 @@ Version: 2023
    z-index: 1;
 }
 
-#navArea img {
-   width: 20%;
+.nav-img {
+   width: 5em;
 }
 
 nav {
@@ -29,7 +29,7 @@ nav {
 	height: 45svh;
 	border-left: 1px solid var(--hover);
 	border-bottom: 1px solid var(--hover);
-	background-color: rgba(255, 255, 255, 0.75);
+	background-color: rgba(255, 255, 255, 0.5);
 	-webkit-backdrop-filter: blur(10px);
 	backdrop-filter: blur(6px);
 	box-shadow: -2px 1px 5px rgba(46, 46, 46, 0.5);
@@ -122,12 +122,13 @@ nav img:hover {
 	position: fixed;
 	top: 0;
 	right: 0%;
-	width: 21vmin;
-	height: 17vmin;
+	width: 6em;
+	height: 5em;
 	padding: 0;
 	transition: all 1.0s;
 	cursor: pointer;
 	align-items: center;
+	-webkit-backdrop-filter: blur(5px);
 	backdrop-filter: blur(5px);
 	border-bottom: 7.5px solid var(--sub);
 	border-left: 7.5px solid var(--sub);
@@ -138,9 +139,9 @@ nav img:hover {
 }
 .toggle_btn span {
 	display: flex;
-	margin-top: 7vmin;
-	left: 3vmin;
-	width: 9vmin;
+	margin-top: 2.25em;
+	left: 1em;
+	width: 2.5em;
 	height: 3px;
 	background-image: linear-gradient(90deg, transparent, var(--hover) 0%, transparent);
 	background-repeat: no-repeat;
@@ -200,11 +201,15 @@ nav img:hover {
 	right: 0;
 	width: 100%;
 	height: 100%;
+	-webkit-backdrop-filter: blur(3px);
+	backdrop-filter: blur(3px);
 	border-bottom-left-radius: 20px;
 	cursor: pointer;
+	background: rgba(255, 255, 200, 0.25);
+
 	transition: all .2s ease;
 }
-@media screen and (min-width: 501px) and (max-width: 1299px) {
+@media screen and (min-width: 501px) and (max-width: 1000px) {
 	nav {
 		width: clamp(35%, 40%, 50%);
 		height: 60svh;
@@ -263,17 +268,9 @@ nav img:hover {
 	}
 	/*=	.toggle_btn	=*/
 	.toggle_btn {
-		right: 0;
-		width: 18vmin;
-		height: 14vmin;
 		transition: all 1.0s;
 	}
-	.toggle_btn span {
-		margin-top: 6vmin;
-		left: 3vmin;
-		width: 7vmin;
-		height: 3px;
-	}
+
 	.toggle_btn span:nth-child(1) {
 		animation: equalizer0 8500ms infinite;
 	}
@@ -293,13 +290,11 @@ nav img:hover {
 		bottom: 30%;
 	}
 	.open .toggle_btn span {
-		width: 6.5vmin;
-		left: 4vmin;
 		bottom: -2vmin;
 		transform: rotate(-225deg);
 	}
 	.open .toggle_btn span:nth-child(1) {
-		transform: translate(0, 1.5vmin) rotate(-225deg);
+		transform: translate(0, 0.5em) rotate(-225deg);
 		animation: unset;
 	}
 	.open .toggle_btn span:nth-child(2) {
@@ -311,19 +306,21 @@ nav img:hover {
 		transform: translate(0, -1vmin) rotate(-225deg);
 		animation: unset;
 	}
-	/*= #mask =*/
-	#mask {
-		display: none;
+}
+
+@media screen and (min-width: 1001px) and (max-width: 1299px) {
+	nav {
+		width: clamp(35%, 30%, 100%);
 	}
-	.open #mask {
-		display: block;
-		position: fixed;
-		top: 0;
-		right: 0;
-		width: 100%;
-		height: 100%;
-		background: rgba(255, 227, 184, 0.2);
-		cursor: pointer;
-		transition: all .2s ease;
+	.nav-img {
+		width: 7em;
 	}
+	.toggle_btn {
+		width: 7.5em;
+		height: 6.5em;
+	}
+.toggle_btn span {
+	margin-top: 3.25em;
+	width: 3.5em;
+}
 }

@@ -39,7 +39,7 @@ git push -u origin main
 git config --global commit.gpgsign true
 
 //変更メモ
-git commit --amend -S -m "jquery=>javascript"
+git commit --amend -S -m "modal nav"
 git push origin main --force-with-lease
 
 git add memo.yaml
