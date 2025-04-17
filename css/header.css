@@ -38,6 +38,7 @@ nav {
 	overflow-y: auto;
 	-webkit-overflow-scrolling: touch;
 	transition: .5s ease;
+	z-index: 1;
 }
 
 #navArea .inner ul li a {
@@ -133,6 +134,7 @@ nav img:hover {
 	box-shadow:inset -1px 1px 0 var(--hover);
 	border-bottom-left-radius: 25px;
 	box-shadow: 1px 1px 5px rgba(46, 46, 46, 0.35), inset 1px -1px 0 var(--hover);
+	z-index: 10;
 }
 .toggle_btn span {
 	display: flex;

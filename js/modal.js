@@ -1,29 +1,51 @@
-// jQuery の競合を避ける方法 (noConflict を利用)
-jQuery.noConflict();
-(function ($) {
-   $(function () {
-      // モーダルを開く関数
-      function openModal(modalId) {
-         $("#" + modalId).addClass("show");
-         $(".modal-overlay").addClass("show");
-      }
 
-      // モーダルを閉じる関数
-      function closeModal() {
-         $(".modal").removeClass("show");
-         $(".modal-overlay").removeClass("show");
-      }
+document.addEventListener('DOMContentLoaded', function () {
 
-      // ボタンをクリックしてモーダルを開く
-      $(".button").on("click", function (e) {
-         e.preventDefault(); // デフォルト動作を無効化
-         const modalId = $(this).data("modal");
+   // モーダルを開く関数
+   function openModal(modalId) {
+      const modal = document.getElementById(modalId);
+      const overlay = modal?.previousElementSibling;
+
+      if (modal && overlay?.classList.contains('modal-overlay')) {
+         modal.classList.add('show');
+         overlay.classList.add('show');
+      }
+   }
+
+   // モーダルを閉じる関数（単一対象）
+   function closeModal(modalElement) {
+      modalElement.classList.remove('show');
+      const overlay = modalElement.previousElementSibling;
+      if (overlay && overlay.classList.contains('modal-overlay')) {
+         overlay.classList.remove('show');
+      }
+   }
+
+   // 開くボタン処理
+   document.querySelectorAll('.button[data-modal]').forEach(function (button) {
+      button.addEventListener('click', function (e) {
+         e.preventDefault();
+         const modalId = button.getAttribute('data-modal');
          openModal(modalId);
       });
-
-      // モーダルの背景や閉じるボタンをクリックして閉じる
-      $(".modal-overlay, .close").on("click", function () {
-         closeModal();
-      });
    });
-})(jQuery);
+
+   // 各モーダルに閉じるイベントを追加（オーバーレイと close）
+   document.querySelectorAll('.modal').forEach(function (modal) {
+      const overlay = modal.previousElementSibling;
+      const closeBtn = modal.querySelector('.close');
+
+      if (overlay && overlay.classList.contains('modal-overlay')) {
+         overlay.addEventListener('click', function () {
+            closeModal(modal);
+         });
+      }
+
+      if (closeBtn) {
+         closeBtn.addEventListener('click', function () {
+            closeModal(modal);
+         });
+      }
+   });
+
+});

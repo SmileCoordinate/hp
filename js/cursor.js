@@ -1,99 +1,92 @@
-//cursor
-(function ($) {
-    $(document).ready(function () {
-        // 遅れてついてくるストーカー要素
-        var stalker = $("#stalker");
-        // リンクと.accordion-wrapにホバーした時にクラス追加、離れたらクラス削除
-        $("a,button,.accordion-wrap,.step").hover(
-            function () {
-                stalker.addClass('stalker--hover');
-            },
-            function () {
-                stalker.removeClass('stalker--hover');
-            }
-        );
+document.addEventListener('DOMContentLoaded', function () {
+    const stalker = document.getElementById('stalker');
+    const hoverTargets = document.querySelectorAll('a, button, .accordion-wrap, .step');
+    const noticeBar = document.querySelector('.notice-bar');
 
-        // 初期表示されるカーソルを非表示にする
-        stalker.css("opacity", "0");
+    // 初期表示：カーソル非表示
+    if (stalker) stalker.style.opacity = '0';
 
-        // mousemoveイベントでカーソル要素を移動させる
-        $(document).on("mousemove", function (e) {
-            var x = e.clientX;
-            var y = e.clientY;
-            setTimeout(function () {
-                stalker.css({
-                    "opacity": "1",
-                    "top": y + "px",
-                    "left": x + "px",
-                    "z-index": "10000"
-                });
-            }, 50);
+    // hover イベント
+    hoverTargets.forEach(target => {
+        target.addEventListener('mouseenter', () => {
+            stalker?.classList.add('stalker--hover');
         });
-
-        // キーを押したとき
-        $(window).on('keydown', function (e) {
-            var keyCode = e.keyCode;
-
-            if (keyCode == 16 || keyCode == 44 || keyCode == 91 || keyCode == 92) {
-                $('img').hide();
-                return false;
-            }
-        });
-
-        // キーを離したとき
-        $(window).on('keyup', function () {
-            $('img').show();
+        target.addEventListener('mouseleave', () => {
+            stalker?.classList.remove('stalker--hover');
         });
     });
 
-    $(document).ready(function () {
-        var noticeBar = $('.notice-bar');
-
-        $(window).scroll(function () {
-            if ($(this).scrollTop() > 100) { // スクロール位置が100ピクセルを超えたら
-                noticeBar.addClass('hidden'); // バーを非表示にするためのクラスを追加
-            } else {
-                noticeBar.removeClass('hidden'); // それ以外の場合はバーを表示するためのクラスを削除
+    // マウス移動でストーカー位置更新
+    document.addEventListener('mousemove', function (e) {
+        const x = e.clientX;
+        const y = e.clientY;
+        setTimeout(() => {
+            if (stalker) {
+                stalker.style.opacity = '1';
+                stalker.style.top = `${y}px`;
+                stalker.style.left = `${x}px`;
+                stalker.style.zIndex = '10000';
             }
-        });
+        }, 50);
     });
-})(jQuery);
 
-
-(function () {
-    window.addEventListener('load', function () {
-        let elementsToShow = document.querySelectorAll('.fade_bottom');
-        let ticking = false;
-
-        function isVisible(element) {
-            let elementRect = element.getBoundingClientRect();
-            let elementTop = elementRect.top;
-            let elementBottom = elementRect.bottom;
-
-            return (elementTop < window.innerHeight * 0.8) && (elementBottom > 0.2);
-        }
-
-        function checkScroll() {
-            elementsToShow.forEach(function (element) {
-                if (isVisible(element)) {
-                    element.classList.add('visible');
-                } else {
-                    element.classList.remove('visible');
-                }
+    // 特定のキー押下で画像を非表示
+    window.addEventListener('keydown', function (e) {
+        const hideKeys = [16, 44, 91, 92];
+        if (hideKeys.includes(e.keyCode)) {
+            document.querySelectorAll('img').forEach(img => {
+                img.style.display = 'none';
             });
-            ticking = false;
         }
-
-        function onScroll() {
-            if (!ticking) {
-                ticking = true;
-                requestAnimationFrame(checkScroll);
-            }
-        }
-
-        window.addEventListener('scroll', onScroll, { passive: true });
-        window.addEventListener('resize', checkScroll);
-
-        checkScroll(); // 初回チェック
     });
-})();
+
+    // キーを離したときに画像を再表示
+    window.addEventListener('keyup', function () {
+        document.querySelectorAll('img').forEach(img => {
+            img.style.display = '';
+        });
+    });
+
+    // スクロール時の notice-bar の表示制御
+    window.addEventListener('scroll', function () {
+        if (!noticeBar) return;
+        if (window.scrollY > 100) {
+            noticeBar.classList.add('hidden');
+        } else {
+            noticeBar.classList.remove('hidden');
+        }
+    }, { passive: true });
+});
+
+// fade_bottom 要素の表示判定
+window.addEventListener('load', function () {
+    const elementsToShow = document.querySelectorAll('.fade_bottom');
+    let ticking = false;
+
+    function isVisible(element) {
+        const rect = element.getBoundingClientRect();
+        return (rect.top < window.innerHeight * 0.8) && (rect.bottom > window.innerHeight * 0.2);
+    }
+
+    function checkScroll() {
+        elementsToShow.forEach(el => {
+            if (isVisible(el)) {
+                el.classList.add('visible');
+            } else {
+                el.classList.remove('visible');
+            }
+        });
+        ticking = false;
+    }
+
+    function onScroll() {
+        if (!ticking) {
+            ticking = true;
+            requestAnimationFrame(checkScroll);
+        }
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', checkScroll);
+    checkScroll(); // 初回チェック
+});
