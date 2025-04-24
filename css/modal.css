@@ -119,24 +119,29 @@
 }
 
 .profile {
-   width: 80%;
-   display: flex;
-   align-items: start;
-   justify-content: flex-start;
-   margin: 0 auto;
-   gap: 2em;
+   width: 100%;
+   display: block;
+   margin: 0 auto 20%;
+   border-bottom: 5px solid;
 }
-.profile li {
+#modal--first li {
    font-weight: 500;
    line-height: 2;
    position: relative;
 }
 @media screen and (min-width: 1300px) {
+   .profile {
+      width: 80%;
+      display: flex;
+      align-items: start;
+      justify-content: flex-start;
+      gap: 2em;
+   }
    .profile li {
       font-size: clamp(1.4rem, 0.561rem + 1.03vw, 1.8rem);
    }
 }
-.profile li::before {
+#modal--first li::before {
    content: "";
    width: 10px;
    height: 10px;
@@ -211,10 +216,6 @@ font-size: clamp(3.8rem, 3.467rem + 0.44vw, 4rem);
    #modal--first p {
       width: 100%;
    }
-   .profile {
-      width: 100%;
-      display: block;
-   }
    #tab--five #modal--third {
       padding: 10vmin 8vmin;
       transform: translate(-50%, -40%);
@@ -282,10 +283,6 @@ font-size: clamp(3.8rem, 3.467rem + 0.44vw, 4rem);
       line-height: 3;
       margin: 10% auto 0;
       border-top: 1px solid;
-   }
-   .profile {
-      width: 100%;
-      display: block;
    }
    .profile ul {
       margin: 0;
