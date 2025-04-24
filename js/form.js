@@ -1,34 +1,51 @@
 document.addEventListener("DOMContentLoaded", function () {
+  const inputs = document.querySelectorAll(".input-text");
   const modal = document.getElementById('thanksModal');
-  const closeButton = modal.querySelector('.close');
+  const closeButton = document.querySelector('.close');
   const contactForm = document.getElementById('contactForm');
 
   modal.style.display = "none";
 
+  function toggleLabel(input) {
+    if (input.value.trim() !== "") {
+      input.classList.add("not-empty");
+    } else {
+      input.classList.remove("not-empty");
+    }
+  }
+
+  inputs.forEach(input => {
+    toggleLabel(input);
+    input.addEventListener("input", () => toggleLabel(input));
+  });
+
   contactForm.addEventListener("submit", function (e) {
     e.preventDefault();
+    const form = e.target;
+    const formData = new FormData(form);
 
-    const formDataObj = {
-      inquiryType: contactForm.querySelector('input[name="inquiryType"]:checked')?.value,
-      name: contactForm.querySelector('input[name="name"]').value,
-      email: contactForm.querySelector('input[name="email"]').value,
-      message: contactForm.querySelector('textarea[name="message"]').value
-    };
-
-    fetch("https://script.google.com/macros/s/AKfycby34PNkIIuU4-PClH3lA6VEiDZRhH5MFmI95xhnbvn-qWbLA4VOpUaqHdhbjn4--hfG/exec", {
+    // 送信処理
+    fetch(form.action, {
       method: 'POST',
-      headers: {
-        'Content-Type': 'application/json'
-      },
-      body: JSON.stringify(formDataObj)
-    }).then(response => response.text()).then(data => {
-      console.log("Response:", data);
-      modal.style.display = "block";
-      modal.classList.add("show");
-      contactForm.reset();
-    }).catch(error => {
-      alert('送信に失敗しました。');
-      console.error("Fetch error:", error);
+      body: formData
+    })
+    .then(response => response.text())
+    .then(text => {
+      if (text.includes("Successfully submitted")) {
+        modal.style.display = "block";
+        modal.classList.add("show");
+        form.reset();
+        document.querySelectorAll('.input-text').forEach(input => {
+          input.classList.remove('not-empty');
+        });
+      } else {
+        alert('送信エラー：' + text);
+        console.error('サーバーエラー内容:', text);
+      }
+    })
+    .catch(error => {
+      alert('通信エラー: ' + error);
+      console.error('Fetchエラー:', error);
     });
   });
 
