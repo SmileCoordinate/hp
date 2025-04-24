@@ -127,9 +127,14 @@
    gap: 2em;
 }
 .profile li {
-   font-size: clamp(1.4rem, 0.561rem + 1.03vw, 1.8rem);
    font-weight: 500;
    line-height: 2;
+   position: relative;
+}
+@media screen and (min-width: 1300px) {
+   .profile li {
+      font-size: clamp(1.4rem, 0.561rem + 1.03vw, 1.8rem);
+   }
 }
 .profile li::before {
    content: "";
@@ -137,8 +142,8 @@
    height: 10px;
    background: var(--hover);
    position: absolute;
-   left: 0;
-   top: 0;
+   left: -1em;
+   top: 0.75em;
    border-radius: 3px;
 }
 
