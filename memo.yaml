@@ -38,8 +38,10 @@ git push -u origin main
 
 git config --global commit.gpgsign true
 
+
+
 //変更メモ
-git commit --amend -S -m "modal nav"
+git commit --amend -S -m "プロフィール"
 git push origin main --force-with-lease
 
 git add memo.yaml
@@ -48,3 +50,4 @@ git push origin main --force-with-lease
 
 
 残り＝自分診断 内容>未
+
