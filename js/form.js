@@ -18,15 +18,10 @@ document.addEventListener("DOMContentLoaded", function () {
   contactForm.addEventListener("submit", function (e) {
     e.preventDefault();
     const formData = new FormData(contactForm);
-    const data = {};
-    formData.forEach((value, key) => data[key] = value);
 
-    fetch("https://script.google.com/macros/s/AKfycbwL6-C5v8cmcG_QUy9fbRx0VhwKMK6xC1dSgom77yofRPlcinuClsV2eFqDtwzvRUHd/exec", {
+    fetch(contactForm.action, {
       method: "POST",
-      headers: {
-        "Content-Type": "application/json"
-      },
-      body: JSON.stringify(data)
+      body: formData,
     })
     .then(response => {
       if (response.ok) {
