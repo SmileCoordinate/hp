@@ -27,6 +27,7 @@ document.addEventListener("DOMContentLoaded", function () {
     // 送信処理
     fetch(form.action, {
       method: 'POST',
+      body: formData
     }).then(response => {
       if (response.ok) {
         submitted = true;  // 送信成功時に submitted を true にする
