@@ -41,7 +41,7 @@ git config --global commit.gpgsign true
 
 
 //変更メモ
-git commit --amend -S -m "プロフィール form"
+git commit --amend -S -m "プロフィール"
 git push origin main --force-with-lease
 
 git add memo.yaml
