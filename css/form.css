@@ -117,6 +117,12 @@ input:-webkit-autofill:focus {
    top: 0.75rem;
    transition: transform 0.2s ease-in-out;
 }
+
+.contact-form .label span {
+   font-size: 1.2rem;
+   color: var(--hover);
+}
+
 .contact-form .submit-btn {
    font-family: "Zen Maru Gothic", serif;
    width: 100%;
@@ -275,7 +281,7 @@ input:-webkit-autofill:focus {
       top: 13.75%;
       line-height: 2;
    }
-   .contact-form .label-test {
+   .contact-form .label-text {
       top: 6.5%;
    }
    .contact-form .submit-btn {

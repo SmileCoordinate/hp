@@ -100,8 +100,12 @@
 }
 
 .modal p {
-   line-height: 2.7rem;
+   width: 100%;
    margin-bottom: 2vmin;
+   line-height: 2;
+}
+#modal--first p {
+   width: 80%;
 }
 
 /* 閉じるボタン */
@@ -114,9 +118,13 @@
    cursor: pointer;
 }
 
-.modal p {
-   width: 100%;
-   line-height: 1.8;
+.profile {
+   width: 80%;
+   display: flex;
+   align-items: start;
+   justify-content: flex-start;
+   margin: 0 auto;
+   gap: 2em;
 }
 
 /*service step*/
@@ -267,7 +275,6 @@ font-size: clamp(3.8rem, 3.467rem + 0.44vw, 4rem);
       font-size: clamp(1.6rem, 1.371rem + 1.14vw, 1.8rem);
    }
    .modal p {
-      width: 100%;
       line-height: 1.8;
    }
 
