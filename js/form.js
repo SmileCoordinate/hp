@@ -24,14 +24,13 @@ document.addEventListener("DOMContentLoaded", function () {
     const form = e.target;
     const formData = new FormData(form);
 
-    // 送信処理
-    fetch(form.action, {
-      method: 'POST',
-      body: formData
-    })
-    .then(response => response.text())
-    .then(text => {
-      if (text.includes("Successfully submitted")) {
+  fetch(form.action, {
+    method: 'POST',
+    body: formData
+  }).then(response => response.text())
+    .then(result => {
+      if (result.includes("Successfully submitted")) {
+        // 送信成功
         modal.style.display = "block";
         modal.classList.add("show");
         form.reset();
@@ -39,13 +38,12 @@ document.addEventListener("DOMContentLoaded", function () {
           input.classList.remove('not-empty');
         });
       } else {
-        alert('送信エラー：' + text);
-        console.error('サーバーエラー内容:', text);
+        alert("送信に問題が発生しました。");
+        console.error("送信エラー:", result);
       }
-    })
-    .catch(error => {
-      alert('通信エラー: ' + error);
-      console.error('Fetchエラー:', error);
+    }).catch(error => {
+      alert("送信に問題が発生しました（ネットワークエラーの可能性）。");
+      console.error("ネットワークエラー:", error);
     });
   });
 
