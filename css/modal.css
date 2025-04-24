@@ -105,7 +105,7 @@
    line-height: 2;
 }
 #modal--first p {
-   width: 80%;
+   width: 100%;
 }
 
 /* 閉じるボタン */
@@ -130,6 +130,9 @@
    position: relative;
 }
 @media screen and (min-width: 1300px) {
+   #modal--first p {
+      width: 80%;
+   }
    .profile {
       width: 80%;
       display: flex;
@@ -213,9 +216,6 @@ font-size: clamp(3.8rem, 3.467rem + 0.44vw, 4rem);
 
 
 @media screen and (min-width: 601px) and (max-width: 1299px) {
-   #modal--first p {
-      width: 100%;
-   }
    #tab--five #modal--third {
       padding: 10vmin 8vmin;
       transform: translate(-50%, -40%);
@@ -276,9 +276,6 @@ font-size: clamp(3.8rem, 3.467rem + 0.44vw, 4rem);
       box-shadow: 0 2px 5px rgba(46, 46, 46, 0.5);
    }
 
-   #modal--first p {
-      width: 100%;
-   }
    #modal--first h3 {
       line-height: 3;
       margin: 10% auto 0;
