@@ -26,25 +26,26 @@ document.addEventListener("DOMContentLoaded", function () {
 
     // 送信処理
     fetch(form.action, {
-      method: 'POST',
-      body: formData
-    }).then(response => {
-      if (response.ok) {
-        submitted = true;  // 送信成功時に submitted を true にする
-        modal.style.display = "block";  // モーダルを表示
-        modal.classList.add("show");
-        form.reset();  // フォームをリセット
-        document.querySelectorAll('.input-text').forEach(input => {
-          input.classList.remove('not-empty');
-        });
-      } else {
-        alert('送信に問題が発生しました。サーバーからエラーが返されました。');
-        console.error('送信エラー:', response);
-      }
-    }).catch(error => {
-      alert('送信に問題が発生しました。ネットワークエラーの可能性があります。');
-      console.error('ネットワークエラー:', error);  // エラーをコンソールに出力
-    });
+  method: 'POST',
+  body: formData
+}).then(response => response.text())  // ← textとして受け取る
+  .then(text => {
+    if (text.includes("Successfully submitted")) {
+      submitted = true;
+      modal.style.display = "block";
+      modal.classList.add("show");
+      form.reset();
+      document.querySelectorAll('.input-text').forEach(input => {
+        input.classList.remove('not-empty');
+      });
+    } else {
+      alert('送信に問題が発生しました。\nサーバーメッセージ: ' + text);
+      console.error('サーバーレスポンス:', text);
+    }
+  }).catch(error => {
+    alert('ネットワークエラーの可能性があります。');
+    console.error('Fetchエラー:', error);
+  });
   });
 
   closeButton.onclick = () => {
