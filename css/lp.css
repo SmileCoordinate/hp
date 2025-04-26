@@ -751,12 +751,6 @@ footer {
     .share h2 span {
         font-size: 2rem;
     }
-    .share h2 span {
-        display: block;
-        width: 65%;
-        line-height: 1.2;
-        margin: 0 auto;
-    }
 
     h3 {
         font-size: clamp(1.8rem, 1.571rem + 1.14vw, 2rem);

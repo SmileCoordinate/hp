@@ -150,8 +150,7 @@
     }
 
     .step .tab {
-        height: 64px;
-        padding: 15px 5px;
+        height: 66px;
     }
 
     .step .content-wrapper {
@@ -169,14 +168,14 @@
     }
 
     .step img {
-        width: 17vmin;
+        width: 13vmin;
         right: 3%;
         bottom: 3%;
     }
 
     .step:last-child img {
-        width: 29vmin;
-        bottom: -2%;
+        width: 22vmin;
+        bottom: -1%;
         right: 4%;
     }
 
