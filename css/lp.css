@@ -245,6 +245,12 @@ a {
     font-style: normal;
 }
 
+.service h2 span,
+.share h2 span {
+    font-size: 2.4rem;
+    line-height: 4rem;
+}
+
 h3 {
     font-size: clamp(2rem, 0.667rem + 1.78vw, 2.8rem);
     font-family: "Comic Sans", "Roboto", sans-serif;
@@ -736,9 +742,16 @@ footer {
         margin: 0 auto;
         left: 0;
     }
-    .service h2,
-    .share h2 {
+    .service h2 span,
+    .share h2 span {
+        font-size: 2.4rem;
         line-height: 4rem;
+    }
+    .share h2 span {
+        display: block;
+        width: 65%;
+        line-height: 1.2;
+        margin: 0 auto;
     }
 
     h3 {
