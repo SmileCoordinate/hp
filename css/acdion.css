@@ -50,17 +50,21 @@
       }
 
       .accordion-text {
-         overflow: hidden;
+         overflow: auto;
          max-height: 0;
          transition: max-height 0.5s ease;
       }
 
+      .accordion-text ul {
+         margin: 2vmin 0;
+      }
       .accordion-text li {
          font-weight: 900;
+         margin: 0;
+         padding-left: 1em;
       }
 
-      .accordion-text p,
-      .accordion-text li {
+      .accordion-text p {
          margin: 0;
          width: 100%;
          padding: 1em 1em 2em;

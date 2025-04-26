@@ -104,7 +104,7 @@
 }
 
 .step.active .content-wrapper {
-    height: 95%;
+    height: 100%;
     padding: 3.5em 1em 0;
 }
 
@@ -120,12 +120,13 @@
 }
 
 .step:last-child img {
-    width: 19vmin;
-    bottom: -4%;
+    width: 16vmin;
+    bottom: -2%;
 }
 
 .step p {
     font-size: clamp(1.6rem, 1.181rem + 0.52vw, 1.8rem);
+    font-family: sans-serif;
     font-weight: 600;
     width: 80%;
     margin: 0 auto;
