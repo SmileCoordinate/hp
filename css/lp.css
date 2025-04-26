@@ -83,27 +83,27 @@ textarea {
 @keyframes morphRotate {
     0% {
         border-radius: 65% 55% 50% 60% / 60% 55% 50% 65%;
-        transform: translate(0%,0%) rotate(0deg) scale(1);
+        transform: rotate(0deg) scale(1);
     }
 
     25% {
         border-radius: 55% 60% 50% 65% / 55% 60% 50% 65%;
-        transform: translate(50%,20%) rotate(90deg) scale(0.95);
+        transform: rotate(90deg) scale(0.95);
     }
 
     50% {
         border-radius: 60% 50% 65% 55% / 55% 65% 50% 60%;
-        transform: translate(50%,100%) rotate(180deg) scale(1.04);
+        transform: rotate(180deg) scale(1.04);
     }
 
     75% {
         border-radius: 55% 65% 55% 60% / 65% 55% 60% 65%;
-        transform: translate(-30%,40%) rotate(270deg) scale(0.95);
+        transform: rotate(270deg) scale(0.95);
     }
 
     100% {
         border-radius: 65% 55% 50% 60% / 60% 55% 50% 65%;
-        transform: translate(0%,0%) rotate(360deg) scale(1);
+        transform: rotate(360deg) scale(1);
     }
 }
 
@@ -261,7 +261,7 @@ li {
 
 p {
     font-style: normal;
-    font-size: clamp(1.6rem, 1.56rem + 0.2vw, 1.8rem);
+    font-size: clamp(1.6rem, 0.761rem + 1.03vw, 2rem);
     font-weight: 500;
     width: 65%;
     line-height: 2;

@@ -130,7 +130,8 @@
    position: relative;
 }
 @media screen and (min-width: 1300px) {
-   #modal--first p {
+   #modal--first p,
+   #modal--second p {
       width: 80%;
    }
    .profile {
