@@ -30,7 +30,7 @@
     position: relative;
     min-width: 250px;
     width: 300px;
-    height: 39vmin;
+    height: 95%;
     cursor: pointer;
 }
 
@@ -104,19 +104,19 @@
 }
 
 .step.active .content-wrapper {
-    height: 35vmin;
-    padding: 4em 1em 0;
+    height: 95%;
+    padding: 3.5em 1em 0;
 }
 
 .step.active .content {
     opacity: 1;
 }
 
-
 .step img {
-    width: 11vmin;
+    width: 9vmin;
     right: 3%;
     bottom: 3%;
+    z-index: -1;
 }
 
 .step:last-child img {
@@ -145,19 +145,19 @@
         padding: 0.5rem 0 1rem;
         min-width: 250px;
         width: 300px;
-        height: 75vmin;
+        height: 45svh;
         min-height: 250px;
     }
 
     .step .tab {
-        width: 215px;
         height: 60px;
+        padding: 15px 5px;
     }
 
     .step .content-wrapper {
         border-radius: 10px;
         top: -40px;
-        width: 85%;
+        width: 90%;
         height: 38pt;
         margin: 0 auto;
         padding: 0 1.5rem;
@@ -165,14 +165,14 @@
     }
 
     .step.active .content-wrapper {
-        height: 65vmin;
+        height: 95%;
         padding-top: 3.5em;
     }
 
     .step img {
         width: 17vmin;
         right: 3%;
-        bottom: 4%;
+        bottom: 3%;
     }
 
     .step:last-child img {

@@ -171,7 +171,7 @@ ol,
     font-size: clamp(2rem, 1.333rem + 0.89vw, 2.4rem);
 }
 
-.self-diagnosis ul p,
+.share ul p,
 .service .point,
 li {
     font-size: clamp(1.8rem, 1.467rem + 0.44vw, 2rem);
@@ -510,9 +510,9 @@ section,
 
 .service .point {
     position: relative;
-    font-weight: 600;
+    line-height: 1.8;
     width: 65%;
-    margin: 0 auto;
+    margin: 10vmin auto 0;
 }
 
 .service h3 {
@@ -524,7 +524,7 @@ section,
 }
 
 /*======self-diagnosis*/
-.self-diagnosis ul {
+.share ul {
     width: 65%;
     margin-top: 1em;
     padding: 0.5em 1em;
@@ -732,8 +732,13 @@ footer {
     }
 
     h2 {
+        text-align: center;
         margin: 0 auto;
         left: 0;
+    }
+    .service h2,
+    .share h2 {
+        line-height: 4rem;
     }
 
     h3 {
@@ -925,9 +930,7 @@ footer {
     }
 
     .service .point {
-        font-weight: 600;
         width: 80%;
-        margin: 2vmin auto;
     }
 
     .service h3 {
@@ -935,12 +938,12 @@ footer {
     }
 
     /*=====self-diagnosis*/
-    .self-diagnosis ul {
+    .share ul {
         width: 90%;
         padding: 1em 0.5em;
     }
 
-    .self-diagnosis ul li {
+    .share ul li {
         font-weight: 300;
         width: 85%;
         margin: 0 auto;
