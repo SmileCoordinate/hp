@@ -516,9 +516,10 @@ section,
 }
 
 .service h3 {
+    font-size: clamp(2rem, 1.161rem + 1.03vw, 2.4rem);
     width: 65%;
     text-align: left;
-    margin: 0 auto;
+    margin: 10vmin auto 0;
     position: relative;
 }
 
