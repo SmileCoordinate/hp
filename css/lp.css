@@ -518,7 +518,7 @@ section,
     position: relative;
     line-height: 1.8;
     width: 65%;
-    margin: 10vmin auto 0;
+    margin: 10vmin auto;
 }
 
 .service h3 {
