@@ -517,8 +517,10 @@ section,
 .service .point {
     position: relative;
     line-height: 1.8;
-    width: 65%;
+    width: 75%;
     margin: 10vmin auto;
+    border: 1px solid;
+    padding: 5%;
 }
 
 .service h3 {
@@ -945,7 +947,7 @@ footer {
     }
 
     .service .point {
-        width: 80%;
+        width: 90%;
     }
 
     .service h3 {
