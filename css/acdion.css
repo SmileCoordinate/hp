@@ -25,9 +25,24 @@
    width: fit-content;
    margin: 0 auto;
 }
+.steps h3::before {
+   display: none;
+}
 
 .steps::-webkit-scrollbar {
    height: 2px;
+}
+
+.steps img {
+   width: 9vmin;
+   right: 3%;
+   bottom: 3%;
+   z-index: -1;
+}
+
+.steps:last-child img {
+   width: 16vmin;
+   bottom: -2%;
 }
 
 
@@ -171,4 +186,15 @@
             top: -4%;
             z-index: 10;
          }
+         .steps img {
+            width: 13vmin;
+            right: 3%;
+            bottom: 3%;
+        }
+    
+        .steps:last-child img {
+            width: 22vmin;
+            bottom: -1%;
+            right: 4%;
+        }
       }

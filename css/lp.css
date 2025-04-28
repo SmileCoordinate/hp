@@ -494,6 +494,7 @@ section,
 }
 
 .sentence h2 {
+    font-size: clamp(2.4rem, 1.561rem + 1.03vw, 2.8rem);
     margin: 0 auto;
     line-height: 2;
 }
@@ -545,7 +546,7 @@ section,
     content: "";
     position: absolute;
     left: 25%;
-    top: -20%;
+    top: -50%;
     width: 50%;
     height: 1px;
     background: var(--bg);
