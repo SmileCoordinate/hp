@@ -1,6 +1,5 @@
 .steps {
    display: grid;
-   gap: 4rem;
    position: relative;
    overflow-y: scroll;
    padding: 2vmin 3vmin;
@@ -21,6 +20,11 @@
    touch-action: pan-y;
     縦スクロールのみ許可 */
 }
+.steps .accordion-header {
+   height: 80px;
+   padding: 0 2.5rem;
+}
+
 .steps .accordion-item h3 {
    width: fit-content;
    margin: 0 auto;
@@ -34,7 +38,7 @@
 }
 
 .steps .accordion-item img {
-   width: 9vmin;
+   width: 5vmin;
    right: 3%;
    bottom: 3%;
 }
@@ -147,6 +151,9 @@
       @media screen and (max-width: 600px) {
          .steps {
             height: 350px;
+         }
+         .steps .accordion-header {
+            height: 65px;
          }
          .accordion-wrap {
             width: 93%;
