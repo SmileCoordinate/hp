@@ -2,11 +2,12 @@
     display: flex;
     gap: 4rem;
     position: relative;
-    overflow-x: scroll;
+    overflow-y: scroll;
     padding: 2vmin 3vmin;
-    overflow-y: hidden;
+    overflow-x: hidden;
     scroll-behavior: smooth;
     width: 90%;
+    height: 500px;
     transform: translate(11%,0%);
     border: 1px solid var(--hover);
     border-right: none;
@@ -20,10 +21,15 @@
     touch-action: pan-y;
      縦スクロールのみ許可 */
 }
+.steps h3 {
+    width: fit-content;
+    margin: 0 auto;
+}
 
 .steps::-webkit-scrollbar {
     height: 2px;
 }
+
 
 .step {
     position: relative;
