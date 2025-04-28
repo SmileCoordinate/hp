@@ -1,5 +1,5 @@
 .steps {
-   display: flex;
+   display: grid;
    gap: 4rem;
    position: relative;
    overflow-y: scroll;

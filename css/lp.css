@@ -321,9 +321,10 @@ img {
 }
 
 .top-img--one {
-    width: 40vmin;
-    top: 2%;
-    right: -15%;
+    width: 38vmin;
+    top: -4%;
+    right: -20%;
+    z-index: -1;
 }
 
 .top-img--two {
@@ -492,13 +493,11 @@ section,
     align-content: center;
 }
 
-.sentence ul {
+.sentence h2 {
+    margin: 0 auto;
     line-height: 2;
 }
 
-.sentence li {
-    font-weight: 600;
-}
 
 /*.service {
     height: 140svh;
@@ -544,7 +543,10 @@ section,
 }
 .point h3::before {
     content: "";
-    width: 10%;
+    position: absolute;
+    left: 25%;
+    top: -20%;
+    width: 50%;
     height: 1px;
     background: var(--bg);
     margin: 0 auto;
