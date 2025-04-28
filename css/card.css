@@ -1,6 +1,5 @@
 .steps {
-    display: grid;
-    grid-auto-flow: column;
+    display: flex;
     gap: 4rem;
     position: relative;
     overflow-x: scroll;
