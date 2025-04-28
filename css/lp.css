@@ -144,7 +144,7 @@ body {
     width: 100%;
     color: var(--text);
     background-color: var(--bg);
-    background: url("../img/bg-img.webp") no-repeat center / cover;
+    background: url("../img/bg-img.png") no-repeat center / cover;
     overflow-x: hidden;
 
     /* モバイル用の背景スクロール対応 */
