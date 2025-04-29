@@ -5,9 +5,9 @@
    padding: 2vmin 3vmin;
    overflow-x: hidden;
    scroll-behavior: smooth;
-   width: 90%;
+   width: 95%;
    height: 500px;
-   transform: translate(11%,0%);
+   transform: translate(5.5%,0%);
    border: 1px solid var(--hover);
    border-right: none;
    box-shadow: inset 1px 1px 5px rgba(46, 46, 46, 0.65);
@@ -27,6 +27,7 @@
 
 .steps .accordion-item h3 {
    width: fit-content;
+   text-align: center;
    margin: 0 auto;
 }
 .steps .accordion-item h3::before {
@@ -48,6 +49,10 @@
    bottom: -2%;
 }
 
+.steps .accordion-item .fa {
+   top: -50%;
+   right: -5%;
+}
 
 /*==アコーディオン==*/
       .accordion-wrap {
