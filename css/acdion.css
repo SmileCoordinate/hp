@@ -41,13 +41,14 @@
 
 .steps .accordion-item img {
    width: 6vmin;
-   right: 0;
-   bottom: 3%;
+   left: 0;
+   bottom: 0%;
 }
 
 .steps .accordion-wrap:last-child .accordion-item img {
    width: 9vmin;
-   bottom: -2%;
+   left: -1.5%;
+   bottom: -14%;
 }
 
 .steps .accordion-item .fa {
