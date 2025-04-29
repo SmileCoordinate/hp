@@ -45,6 +45,9 @@
    bottom: 0%;
 }
 
+.steps .accordion-wrap:first-child .accordion-item img {
+   transform: scale(-1, 1);
+}
 .steps .accordion-wrap:last-child .accordion-item img {
    width: 9vmin;
    left: -1.5%;
