@@ -168,9 +168,6 @@ input:-webkit-autofill:focus {
 .align-center:last-child {
    margin-top: 1em;
 }
-.align-center h3 {
-   font-family: 'Hachi Maru Pop';
-}
 .align-center p {
    width: 100%;
    margin: 0;

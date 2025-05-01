@@ -259,6 +259,13 @@ h3 {
     text-align: center;
 }
 
+.service h3 span {
+    font-size: 1.8rem;
+    position: absolute;
+    top: 0;
+    left: 0;
+}
+
 h3,
 li {
     font-weight: 300;
@@ -670,7 +677,7 @@ footer {
     width: 100%;
     padding: 0.5rem 0;
     position: absolute;
-    bottom: 0;
+    bottom: 0.35%;
 }
 
 @media screen and (min-width: 1300px) {
@@ -999,7 +1006,7 @@ footer {
 
     .voice ul {
         width: 80%;
-        height: 90vmin;
+        height: 100vmin;
         margin-top: 2rem;
     }
 
@@ -1024,7 +1031,7 @@ footer {
         width: 22%;
         height: 21vmin;
         right: 4%;
-        bottom: 10%;
+        bottom: 9%;
     }
 
     .voice li {
