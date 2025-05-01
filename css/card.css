@@ -20,11 +20,9 @@
 
 .steps::after {
     content: "左右にスクロールできます。";
-    width: 50px;
-    height: 10px;
     position: absolute;
     bottom: 1%;
-    left: 0;
+    left: 1%;
     pointer-events: none;
  }
  
@@ -39,27 +37,17 @@
 
 
 .step {
+    font-size: clamp(2rem, 1.92rem + 0.4vw, 2.4rem);
     position: relative;
     min-width: 250px;
     width: 300px;
     height: 95%;
+    border-radius: 10px;
     cursor: pointer;
+    box-shadow: 0 2px 3px 0 rgba(46, 46, 46, 0.63);
 }
 
-.step .tab {
-    width: 235px;
-    height: 63px;
-    padding: 15px 10px;
-    font-size: clamp(2rem, 1.92rem + 0.4vw, 2.4rem);
-    font-weight: bold;
-    color: var(--text);
-    text-align: center;
-    margin: 0 auto;
-    position: relative;
-    z-index: 2;
-}
-
-.card--first {
+.card--bg {
     background: url("../img/tab-bg--first.webp");
     background-size: cover;
     background-position: top left;
@@ -75,53 +63,6 @@
     background: url("../img/tab-bg--three.webp");
     background-size: cover;
     background-position: top left;
-}
-
-.step .content-wrapper {
-    border-radius: 10px;
-    position: relative;
-    top: -40px;
-    transition: max-height 0.45s ease, padding 0.4s ease;
-    background-repeat: no-repeat;
-    width: 95%;
-    height: 42pt;
-    margin: 0 auto;
-    padding: 0 1.5rem;
-    max-height: 100%;
-    overflow: hidden;
-    z-index: 0;
-}
-
-.tab-bg--first {
-    background: url("../img/card-bg--first.webp");
-    background-size: cover;
-    background-position: top left;
-}
-
-.tab-bg--tow {
-    background: url("../img/card-bg--tow.webp");
-    background-size: cover;
-    background-position: top left;
-}
-
-.tab-bg--three {
-    background: url("../img/card-bg--three.webp");
-    background-size: cover;
-    background-position: top left;
-}
-
-.step .content {
-    opacity: 0;
-    transition: opacity 0.5s ease;
-}
-
-.step.active .content-wrapper {
-    height: 100%;
-    padding: 3.5em 1em 0;
-}
-
-.step.active .content {
-    opacity: 1;
 }
 
 .step img {

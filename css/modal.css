@@ -8,7 +8,7 @@
    position: relative;
    display: block;
    text-align: center;
-   margin: 1vmin auto;
+   margin: 2vmin auto 1vmin;
    padding: 1rem 1rem 0.75rem;
    color: var(--text);
    background: var(--bg);
