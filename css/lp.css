@@ -253,14 +253,10 @@ a {
 
 h3 {
     font-size: clamp(2rem, 0.667rem + 1.78vw, 2.8rem);
-    font-family: "Comic Sans", "Roboto", sans-serif;
+    font-family: system-ui;
     width: fit-content;
     margin: 0 auto;
     text-align: center;
-}
-
-.service h3 span {
-    font-size: 2rem;
 }
 
 h3,
@@ -296,7 +292,6 @@ li {
 }
 
 a {
-    font-family: "Roboto", sans-serif;
     padding: 0.25rem 0.5rem;
     transition: all 0.3s ease;
     z-index: 10;
@@ -429,9 +424,7 @@ main {
     position: relative;
     width: 40%;
     margin-left: 5vmin;
-    border-top-left-radius: 10px;
-    border-top-right-radius: 10px;
-    background: rgba(255, 255, 255, 0.35);
+    background: rgba(255, 255, 255, 0.5);
     -webkit-backdrop-filter: blur(15px);
     backdrop-filter: blur(15px);
     border-left: 0.5px solid var(--hover);
@@ -550,6 +543,7 @@ section,
 .point h3 {
     width: 100%;
 }
+
 .point h3::before {
     content: "";
     position: absolute;
@@ -559,6 +553,10 @@ section,
     height: 1px;
     background: var(--bg);
     margin: 0 auto;
+}
+
+.point .bgfont_h2 {
+    font-size: 1.8rem;
 }
 
 /*======self-diagnosis*/
@@ -711,7 +709,7 @@ footer {
     .stalker--hover::after {
         content: "クリック";
         color: var(--sub);
-        font-family: sans-serif;
+        font-family: system-ui;
         font-size: clamp(0.85rem, 0.767rem + 0.11vw, 0.9rem);
         font-weight: 600;
         letter-spacing: -0.1rem;

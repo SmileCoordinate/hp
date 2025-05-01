@@ -1,6 +1,6 @@
 .steps {
     display: flex;
-    gap: 4rem;
+    gap: 4em;
     position: relative;
     padding: 2vmin 3vmin;
     overflow-y: hidden;
