@@ -98,12 +98,6 @@
       /*== アコーディオンEND ==*/
 
       @media screen and (max-width: 600px) {
-         .steps {
-            height: 350px;
-         }
-         .steps .accordion-header {
-            height: 65px;
-         }
          .accordion-wrap {
             width: 93%;
             padding: 0.75rem;

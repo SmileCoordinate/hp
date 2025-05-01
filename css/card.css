@@ -19,7 +19,7 @@
 }
 
 .steps::after {
-    content: "横にスクロールできます。⇀";
+    content: "横にスクロールできます ⇀";
     position: absolute;
     bottom: 1%;
     left: 1%;
@@ -28,8 +28,7 @@
  
 .steps h3 {
     font-size: clamp(1.8rem, 0.542rem + 1.55vw, 2.4rem);
-    width: fit-content;
-    margin: 0 auto;
+    margin-top: 0;
 }
 
 .steps::-webkit-scrollbar {
@@ -77,16 +76,17 @@
 
 @media screen and (max-width: 600px) {
     .steps {
-        gap: 0;
-        width: 100%;
-        transform: translate(5%,0%);
+        gap: 2em;
+        padding: 2em;
+        height: 420px;
     }
+    .steps::after {
+        left: 1em;
+     }
 
     .step {
-        padding: 0.5rem 0 1rem;
-        min-width: 250px;
-        width: 300px;
-        min-height: 250px;
+        min-width: 240px;
+        min-height: 330px;
     }
 
     .step .tab {
@@ -120,8 +120,6 @@
     }
 
     .step p {
-        width: 85%;
-        margin: 0 auto;
         letter-spacing: 0.03rem;
     }
 
