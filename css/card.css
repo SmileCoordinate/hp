@@ -19,7 +19,7 @@
 }
 
 .steps::after {
-    content: "左右にスクロールできます。";
+    content: "横にスクロールできます。⇀";
     position: absolute;
     bottom: 1%;
     left: 1%;
@@ -40,27 +40,16 @@
     font-size: clamp(2rem, 1.92rem + 0.4vw, 2.4rem);
     position: relative;
     min-width: 250px;
-    width: 300px;
-    height: 95%;
-    border-radius: 10px;
+    width: 65%;
+    height: 90%;
+    padding: 1em 2em;
+    border-radius: 15px;
     cursor: pointer;
     box-shadow: 0 2px 3px 0 rgba(46, 46, 46, 0.63);
 }
 
 .card--bg {
-    background: url("../img/tab-bg--first.webp");
-    background-size: cover;
-    background-position: top left;
-}
-
-.card--tow {
-    background: url("../img/tab-bg--tow.webp");
-    background-size: cover;
-    background-position: top left;
-}
-
-.card--three {
-    background: url("../img/tab-bg--three.webp");
+    background: url("../img/bg-img.png");
     background-size: cover;
     background-position: top left;
 }
@@ -81,8 +70,8 @@
     font-size: clamp(1.6rem, 1.181rem + 0.52vw, 1.8rem);
     font-family: sans-serif;
     font-weight: 600;
-    width: 80%;
-    margin: 0 auto;
+    width: 100%;
+    margin: 10% auto 0;
     letter-spacing: 0.15rem;
     line-height: 1.6;
 }

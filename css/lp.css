@@ -259,6 +259,10 @@ h3 {
     text-align: center;
 }
 
+.service h3 span {
+    font-size: 2rem;
+}
+
 h3,
 li {
     font-weight: 300;
