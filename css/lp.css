@@ -305,6 +305,11 @@ a {
     height: 10px;
 }
 
+hr {
+    width: 50%;
+    margin: 20% auto;
+}
+
 img {
     width: 25vmin;
     max-width: 100%;
