@@ -93,9 +93,13 @@
 @media screen and (max-width: 600px) {
     .steps {
         gap: 2em;
-        padding:n 2em;
+        padding: 2em;
         height: 420px;
     }
+    
+.steps h3 {
+    font-size: clamp(1.8rem, 1.343rem + 2.29vw, 2.2rem);
+}
     .steps::after {
         left: 1em;
      }
