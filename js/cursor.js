@@ -59,7 +59,7 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // fade_bottom 要素の表示判定
-window.addEventListener('load', function () {
+document.addEventListener('DOMContentLoaded', function () {
     const elementsToShow = document.querySelectorAll('.fade_bottom');
     let ticking = false;
 
@@ -88,5 +88,5 @@ window.addEventListener('load', function () {
 
     window.addEventListener('scroll', onScroll, { passive: true });
     window.addEventListener('resize', checkScroll);
-    checkScroll(); // 初回チェック
+    checkScroll(); // 初回チェックのみ実行
 });

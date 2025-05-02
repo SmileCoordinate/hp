@@ -541,7 +541,7 @@ section,
     font-size: clamp(2rem, 1.161rem + 1.03vw, 2.4rem);
     font-weight: 500;
     width: 65%;
-    margin: 10vmin auto;
+    margin: 10vmin auto 0;
     position: relative;
 }
 
