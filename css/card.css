@@ -28,6 +28,7 @@
  
 .steps h3 {
     font-size: clamp(1.8rem, 0.542rem + 1.55vw, 2.4rem);
+    width: 100%;
     margin-top: 0;
 }
 
@@ -53,14 +54,14 @@
 }
 
 .step img {
-    width: 9vmin;
+    width: 25%;
     right: 3%;
-    bottom: 3%;
+    bottom: 2%;
 }
 
 .step:last-child img {
-    width: 16vmin;
-    bottom: -2%;
+    width: 45%;
+    bottom: -3%;
 }
 
 .step p {
@@ -74,10 +75,25 @@
 }
 
 
+@media screen and (min-width: 600px) and (max-width: 1299px) {
+    .step {
+        min-width: 280px;
+        height: 80%;
+    }
+    .step img {
+        width: 9vmin;
+        right: 3%;
+        bottom: 3%;
+    }
+    
+    .step:last-child img {
+        bottom: -2%;
+    }
+}
 @media screen and (max-width: 600px) {
     .steps {
         gap: 2em;
-        padding: 2em;
+        padding:n 2em;
         height: 420px;
     }
     .steps::after {
@@ -108,15 +124,9 @@
     }
 
     .step img {
-        width: 13vmin;
-        right: 3%;
-        bottom: 3%;
-    }
-
-    .step:last-child img {
-        width: 22vmin;
-        bottom: -1%;
-        right: 4%;
+        width: 24%;
+        right: 1%;
+        bottom: 1%;
     }
 
     .step p {

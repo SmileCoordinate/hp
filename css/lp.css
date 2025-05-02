@@ -622,8 +622,8 @@ section,
     margin-bottom: 3rem;
     border-bottom: 1px solid;
     padding: 1rem;
-    line-height: 1.6;
-    letter-spacing: 0.1rem;
+    line-height: 1.8;
+    letter-spacing: 0.03rem;
 }
 
 .btn {
@@ -953,17 +953,16 @@ footer {
     }
 
     /*====Section*/
-    /*====top*/
     section {
         padding-left: 0.5em;
         padding-right: 0.5em;
     }
 
     .sentence {
-        min-height: 60svh;
+        min-height: 50svh;
     }
 
-    .sentence ul {
+    .sentence h2 {
         width: 80%;
     }
 

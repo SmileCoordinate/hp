@@ -310,8 +310,7 @@ font-size: clamp(3.8rem, 3.467rem + 0.44vw, 4rem);
    }
 
    .modal p .br {
-      height: 5px;
-      border-top: 1px solid var(--text);
+      height: 10px;
    }
 
    /* モーダルが表示されるとき */
