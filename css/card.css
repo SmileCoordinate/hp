@@ -148,6 +148,7 @@
         height: 420px;
     }
     .step {
+        padding: 2em;
         min-width: 240px;
         height: 330px;
     }
