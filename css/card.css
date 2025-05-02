@@ -30,7 +30,6 @@
     font-size: clamp(1.8rem, 0.542rem + 1.55vw, 2.4rem);
     width: 100%;
     margin-top: 0;
-    margin-bottom: 1vmin;
 }
 
 .steps::-webkit-scrollbar {
