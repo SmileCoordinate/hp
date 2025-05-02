@@ -261,8 +261,7 @@ h3 {
 
 .service h3 span {
     font-size: 1.8rem;
-    top: 0;
-    left: 0;
+    line-height: 1.2;
 }
 
 h3,
@@ -1091,6 +1090,10 @@ footer {
 
     h2 {
         font-size: clamp(2.8rem, 1.939rem + 2.29vw, 3.8rem);
+    }
+
+    .service h3 span {
+        font-size: clamp(1.6rem, 1.256rem + 0.92vw, 2rem);
     }
 
     h3,
