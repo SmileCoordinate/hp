@@ -83,8 +83,8 @@
         font-size: clamp(2rem, 1.656rem + 0.92vw, 2.4rem);
     }
     .step {
-        min-width: 280px;
-        height: 80%;
+        min-width: 300px;
+        height: 82%;
     }
     
     .step:last-child img {
