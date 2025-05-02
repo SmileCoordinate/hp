@@ -91,15 +91,7 @@
         bottom: -2%;
     }
 }
-@media screen and (max-width: 400px) {
-    .steps {
-        height: 420px;
-    }
-    .step {
-        min-width: 240px;
-        min-height: 330px;
-    }
-}
+
 @media screen and (max-width: 600px) {
     .steps {
         gap: 2em;
@@ -118,6 +110,7 @@
     .step {
         min-width: 280px;
         min-height: 350px;
+        height: 80%;
     }
 
     .step .tab {
@@ -148,4 +141,14 @@
         letter-spacing: 0.03rem;
     }
 
+}
+
+@media screen and (max-width: 400px) {
+    .steps {
+        height: 420px;
+    }
+    .step {
+        min-width: 240px;
+        height: 330px;
+    }
 }
