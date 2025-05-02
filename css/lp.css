@@ -747,7 +747,7 @@ footer {
     body .bg {
         width: 350px;
         height: 350px;
-        bottom: -15%;
+        bottom: -25%;
         left: 30%;
         animation: morphRotate 30s infinite linear;
     }
@@ -1069,7 +1069,7 @@ footer {
     body .bg {
         width: 60vmin;
         height: 58vmin;
-        bottom: -40%;
+        bottom: -30%;
         left: 20%;
     }
 
