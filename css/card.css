@@ -91,11 +91,21 @@
         bottom: -2%;
     }
 }
+@media screen and (max-width: 400px) {
+    .steps {
+        height: 420px;
+    }
+    .step {
+        min-width: 240px;
+        min-height: 330px;
+    }
+}
 @media screen and (max-width: 600px) {
     .steps {
         gap: 2em;
         padding: 2em;
-        height: 420px;
+        min-height: 420px;
+        height: 80svh;
     }
     
 .steps h3 {
