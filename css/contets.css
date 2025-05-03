@@ -5,6 +5,16 @@ h1 {
     margin: 0 auto;
 }
 
+ul {
+    width: 60%;
+    font-weight: 600;
+    margin: 5% auto;
+}
+
+li {
+    font-weight: 400;
+}
+
 main {
     width: 50%;
     margin-left: 30%;

@@ -243,8 +243,7 @@ a {
     font-style: normal;
 }
 
-.service h2 span,
-.share h2 span {
+h2 span {
     font-size: 1.8rem;
     line-height: 4rem;
 }
@@ -771,8 +770,7 @@ footer {
     .share h2 {
         line-height: 1;
     }
-    .service h2 span,
-    .share h2 span {
+    h2 span {
         font-size: 2rem;
     }
 
