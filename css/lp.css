@@ -775,10 +775,11 @@ footer {
         text-align: center;
         margin: 0 auto;
         left: 0;
+        line-height: 2;
     }
     .service h2,
     .share h2 {
-        line-height: 4rem;
+        line-height: 1;
     }
     .service h2 span,
     .share h2 span {
@@ -958,7 +959,7 @@ footer {
     }
 
     .sentence {
-        min-height: 50svh;
+        min-height: 60svh;
     }
 
     .sentence h2 {
