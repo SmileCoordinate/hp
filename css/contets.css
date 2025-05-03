@@ -5,6 +5,10 @@ h1 {
     margin: 0 auto;
 }
 
+h3 {
+    font-weight: 500;
+}
+
 ul {
     width: 60%;
     font-weight: 600;
@@ -34,4 +38,9 @@ main {
     width: 30vmin;
     bottom: 30%;
     left: 30%;
+}
+
+
+.about-us h3 {
+    margin-top: 7vmin;
 }
