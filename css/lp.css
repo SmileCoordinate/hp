@@ -539,24 +539,21 @@ section,
     font-size: clamp(2rem, 1.161rem + 1.03vw, 2.4rem);
     font-weight: 500;
     width: 65%;
-    margin: 10vmin auto 0;
     position: relative;
 }
 
 .point h3 {
     width: 100%;
-    margin-bottom: 1vmin;
+    margin: 6vmin auto 1vmin;
 }
 
-.point h3::before {
+.point .br {
     content: "";
-    position: absolute;
-    left: 25%;
-    top: -50%;
+    display: block;
     width: 50%;
     height: 1px;
-    background: var(--bg);
-    margin: 0 auto;
+    background: var(--accent);
+    margin: 5vmin auto;
 }
 
 .point .bgfont_h2 {
@@ -979,6 +976,10 @@ footer {
 
     .service .point {
         width: 90%;
+    }
+
+    .point .br {
+        margin: 6vmin auto;
     }
 
     .service h3 {
