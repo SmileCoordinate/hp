@@ -1,8 +1,8 @@
 .steps {
     display: flex;
-    gap: 4em;
+    gap: 2em;
     position: relative;
-    padding: 2vmin 3vmin;
+    padding: 2.5em 3em;
     margin: 2vmin 0;
     overflow-y: hidden;
     overflow-x: scroll;
@@ -40,7 +40,7 @@
 
 .step {
     position: relative;
-    min-width: 34vmin;
+    min-width: 300px;
     height: 90%;
     padding: 2.5em 2em;
     border-radius: 15px;
@@ -95,7 +95,7 @@
 
 @media screen and (max-width: 600px) {
     .steps {
-        gap: 2em;
+        gap: 1.5em;
         padding: 2em;
         min-height: 420px;
         height: 60svh;
@@ -150,7 +150,7 @@
     }
     .step {
         padding: 2em;
-        min-width: 240px;
-        height: 330px;
+        min-width: 250px;
+        height: 350px;
     }
 }
