@@ -274,6 +274,7 @@ h4 {
 }
 
 p {
+    /* font-feature-settings: "palt"; */
     font-style: normal;
     font-size: clamp(1.6rem, 0.761rem + 1.03vw, 2rem);
     font-weight: 500;
