@@ -3,6 +3,7 @@
     gap: 4em;
     position: relative;
     padding: 2vmin 3vmin;
+    margin: 2vmin 0;
     overflow-y: hidden;
     overflow-x: scroll;
     scroll-behavior: smooth;

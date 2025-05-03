@@ -757,7 +757,6 @@ footer {
         border-bottom: none;
         display: block;
         background: url("../img/sp-bg.webp") no-repeat left top / cover;
-        background-attachment: fixed;
     }
 
     body::before {
