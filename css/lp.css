@@ -456,12 +456,14 @@ section,
 
 /*====TOP section pc left*/
 .main-visual {
-    font-weight: 600;
     position: relative;
-    width: 45%;
+    width: 30%;
     height: 100svh;
-    transform: translate(25%, 0%);
+    margin: 20vmin 0 0 10%;
     z-index: -1;
+}
+.main-visual p {
+    width: 100%;
 }
 
 
