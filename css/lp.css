@@ -460,7 +460,8 @@ section,
     position: relative;
     width: 30%;
     height: 100svh;
-    margin: 20vmin 0 0 10%;
+    padding-top: 20vmin;
+    margin-left: 10%;
     z-index: -1;
 }
 .main-visual p {
@@ -846,6 +847,7 @@ footer {
     .img--start {
         width: 45vmin;
         top: 50%;
+        left: 0;
         display: block;
         position: relative;
         margin: 0 auto;
@@ -919,7 +921,6 @@ footer {
         height: 65svh;
         transform: none;
         margin: 0 auto;
-        padding-top: 20vmin;
     }
 
     .main-visual::before {
@@ -1114,20 +1115,16 @@ footer {
         height: 65svh;
         transform: none;
         margin: 0 auto;
-        padding-top: 20vmin;
-    }
-
-    .main-visual h1 {
-        margin: 0;
     }
 
     .main-visual p {
-        width: 80%;
+        width: 100%;
     }
 
     .img--start {
-        width: 35vmin;
-        left: 10vmin;
+        width: 30vmin;
+        left: 25%;
+        bottom: 0;
     }
 }
 
