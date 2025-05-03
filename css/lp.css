@@ -464,14 +464,6 @@ section,
     z-index: -1;
 }
 
-.main-visual h1 {
-    margin: 0;
-    margin-top: 20vmin;
-}
-
-.main-visual p {
-    margin: 0;
-}
 
 .overlay--tow {
     position: relative;
@@ -489,7 +481,6 @@ section,
 
 .overlay--tow p {
     width: 100%;
-    margin: 0;
     margin-left: 1%;
 }
 
