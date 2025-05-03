@@ -15,3 +15,13 @@ main {
     margin: 20vmin auto 0;
     z-index: 1;
 }
+
+.main-visual p {
+    width: fit-content;
+}
+
+.img--start {
+    width: 30vmin;
+    bottom: 30%;
+    left: 30%;
+}
