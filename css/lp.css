@@ -542,7 +542,6 @@ section,
 }
 
 .point .br {
-    display: block;
     position: relative;
     width: 50%;
     height: 1px;
@@ -979,7 +978,7 @@ footer {
     }
 
     .point .br {
-        margin: 6vmin auto;
+        margin: 15% auto;
     }
 
     .service h3 {

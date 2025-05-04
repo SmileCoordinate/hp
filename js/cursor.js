@@ -1,6 +1,6 @@
 document.addEventListener('DOMContentLoaded', function () {
     const stalker = document.getElementById('stalker');
-    const hoverTargets = document.querySelectorAll('a, button, .accordion-wrap, .step');
+    const hoverTargets = document.querySelectorAll('a, button, .accordion-wrap');
     const noticeBar = document.querySelector('.notice-bar');
 
     // 初期表示：カーソル非表示
