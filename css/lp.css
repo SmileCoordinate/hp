@@ -748,6 +748,13 @@ footer {
         border-bottom: none;
         display: block;
         background: url("../img/sp-bg.webp") no-repeat left top / cover;
+        @supports (background-attachment: fixed) {
+            background-attachment: fixed;
+        }
+    
+        @supports not (background-attachment: fixed) {
+            background-attachment: scroll;
+        }    
     }
 
     body::before {
@@ -762,6 +769,7 @@ footer {
     }
 
     h2 {
+        font-size: clamp(2rem, 1.543rem + 2.29vw, 2.4rem);
         text-align: center;
         margin: 0 auto;
         left: 0;
@@ -770,9 +778,7 @@ footer {
     .service h2,
     .share h2 {
         line-height: 1;
-    }
-    h2 span {
-        font-size: 2rem;
+        margin-bottom: 2vmin;
     }
 
     h3 {
@@ -797,6 +803,7 @@ footer {
     }
 
     p {
+        font-size: clamp(1.4rem, 1.171rem + 1.14vw, 1.6rem);
         width: 80%;
         line-height: 1.6;
     }
