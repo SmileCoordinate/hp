@@ -542,8 +542,8 @@ section,
 }
 
 .point .br {
-    content: "";
     display: block;
+    position: relative;
     width: 50%;
     height: 1px;
     background: var(--accent);
