@@ -797,7 +797,7 @@ footer {
     p {
         font-size: clamp(1.4rem, 1.171rem + 1.14vw, 1.6rem);
         width: 80%;
-        line-height: 1.6;
+        line-height: 2;
     }
 
     a {
