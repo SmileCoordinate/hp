@@ -523,7 +523,7 @@ section,
     position: relative;
     line-height: 1.8;
     width: 85%;
-    margin: 10vmin auto;
+    margin: 10vmin auto 0;
     padding: 7%;
     border-radius: 20px;
     box-shadow: 0 2px 5px rgba(46, 46, 46, 0.3);
