@@ -19,8 +19,6 @@ git remote set-url origin https://github.com/SmileCoordinate/hp.git
 https://github.com/SmileCoordinate/hp.git
 
 git push origin main
-Password
-
 
 git remote set-url origin git@github.com:SmileCoordinate/hp.git
 git push origin main

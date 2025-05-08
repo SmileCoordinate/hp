@@ -1,4 +1,4 @@
-# Smile Coordinate（すまいるこーでぃねーと）
+# [Smile Coordinate（すまいるこーでぃねーと）](https://smilecoordinate.github.io/hp/)
 
 Smile Coordinate Web サイト
 お悩み相談やコーチングをお申込みいただけます。
