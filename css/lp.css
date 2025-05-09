@@ -184,7 +184,7 @@ body::before {
     position: fixed;
     border-top: 1vw solid var(--sub);
     border-right: 1vw solid var(--sub);
-    border-bottom: none;
+    border-bottom: none;/* mobile tab */
     z-index: 10;
     pointer-events: none;
     /* クリックを無効化 */
@@ -745,8 +745,6 @@ footer {
     }
 
     body {
-        border: none;
-        border-bottom: none;
         display: block;
         background: url("../img/sp-bg.webp") no-repeat left top / cover;
     }
@@ -1125,5 +1123,13 @@ footer {
         width: 30vmin;
         left: 25%;
         bottom: 0;
+    }
+}
+
+
+@media screen and (max-width: 1299px) {
+    body::after {
+        border-left: 1px solid var(--hover);
+        border-bottom: 1px solid var(--hover);
     }
 }
