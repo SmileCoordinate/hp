@@ -34,21 +34,30 @@ li {
     width: fit-content;
 }
 
-.img--start {
+.about-us h3 {
+    margin-top: 7vmin;
+}
+
+@media screen and(min-width:1300px) and (max-width:1920px) {
+main {
+    width: 40%;
+    margin-left: 55vmin;
+}   
+}
+
+
+@media screen and (max-width:600px) {
+    h1 {
+        font-size: clamp(2rem, 1.086rem + 4.57vw, 2.8rem);
+    }
+
+    .main-visual h1 {
+        width: 85%;
+    }
+    .img--start {
     width: 30vmin;
     bottom: 30%;
     left: 30%;
 }
 
-
-.about-us h3 {
-    margin-top: 7vmin;
-}
-
-@media screen and(min-width:1300px) and (max-width:1920px) {   
-main {
-    width: 40%;
-    margin-left: 55vmin;
-}
-    
 }
