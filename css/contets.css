@@ -30,10 +30,6 @@ li {
     z-index: 1;
 }
 
-.main-visual p {
-    width: fit-content;
-}
-
 .about-us h3 {
     margin-top: 7vmin;
 }
@@ -42,7 +38,13 @@ li {
 main {
     width: 40%;
     margin-left: 55vmin;
-}   
+}
+.main-visual p {
+    width: fit-content;
+}
+.img--start {
+    left: 25%;
+}
 }
 
 
@@ -50,7 +52,6 @@ main {
     h1 {
         font-size: clamp(2rem, 1.086rem + 4.57vw, 2.8rem);
     }
-
     .main-visual h1 {
         width: 85%;
     }
