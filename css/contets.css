@@ -14,9 +14,13 @@ h3 {
 }
 
 main ul {
-    width: 60%;
+    width: 75%;
     font-weight: 600;
     margin: 5% auto;
+}
+
+ul,ol {
+    font-family: sans-serif;
 }
 
 li {
@@ -29,7 +33,9 @@ li {
     margin: 0 auto;
     z-index: 1;
 }
-
+.sentence {
+    padding: 10em 0;
+}
 .about-us h3 {
     margin-top: 7vmin;
 }
@@ -38,6 +44,9 @@ li {
 main {
     width: 40%;
     margin-left: 55vmin;
+}
+main ul {
+    width: 60%;
 }
 .main-visual p {
     width: fit-content;
