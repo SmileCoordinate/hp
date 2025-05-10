@@ -185,10 +185,10 @@ input:-webkit-autofill:focus {
    background: rgba(255, 255, 200, 0.25);
    transition: opacity 0.4s ease-in-out;
    width: 90vw;
-   height: 100vh;
-   top: 50%;
+   height: 100%;
+   top: 0;
    left: 10%;
-   transform: translate(-50%, -50%);
+   transform: translate(-45%, 0%);
    -webkit-backdrop-filter: blur(10px);
    backdrop-filter: blur(10px);
    border-radius: 20px;
@@ -294,7 +294,7 @@ input:-webkit-autofill:focus {
    /*===================== モーダルウィンドウ =====================*/
    #thanksModal {
       width: 100%;
-      top: 20%;
+      top: 0%;
       left: 0%;
       transform: translate(0%, 0%);
    }
@@ -387,9 +387,9 @@ input:-webkit-autofill:focus {
    /*===================== モーダルウィンドウ =====================*/
    #thanksModal {
       width: 100vw;
-      height: 100vh;
       top: 0%;
       left: 0%;
+      padding: 10vmin 2.5em;
       transform: translate(-50%, -50%);
       -webkit-backdrop-filter: blur(10px);
       backdrop-filter: blur(10px);
@@ -397,16 +397,15 @@ input:-webkit-autofill:focus {
    }
    #thanksModal .modal-content {
       width: 90vw;
-      height: 60vh;
+      height: auto;
+      padding: 3em 0;
       transform: translate(-50%, -50%);
       background: rgba(245, 252, 246, 0.83);
-      -webkit-backdrop-filter: blur(6px);
-      backdrop-filter: blur(6.5px);
       border: 1px solid var(--bg);
    }
 
    #thanksModal.show {
-      transform: translate(0%,45%);
+      transform: translate(0%,0%);
       background: rgba(255, 255, 200, 0.25);
    }
 
@@ -418,19 +417,8 @@ input:-webkit-autofill:focus {
       margin: 0 auto;
    }
    #thanksModal .close {
-      color: var(--base);
-      font-weight: bold;
-      float: right;
-      position: absolute;
-      top: 10%;
-      right: 20%;
-   }
-   #thanksModal .close:hover,
-   #thanksModal .close:focus {
-      color: var(--main);
-      text-shadow: 0 1px 2px var(--base);
-      text-decoration: none;
-      cursor: pointer;
+      top: 2.5%;
+      right: 6.5%;
    }
    /*===================== モーダルウィンドウ =====================*/
 }

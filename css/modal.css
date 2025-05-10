@@ -293,9 +293,6 @@ font-size: clamp(3.8rem, 3.467rem + 0.44vw, 4rem);
    #tab--five #modal--third {
       padding: 10vmin;
    }
-   #tab--five .modal {
-      padding: 10vmin 2.5em;
-   }
 
    .modal {
       height: 60vh;
