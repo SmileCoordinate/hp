@@ -596,13 +596,17 @@
         method="POST">
 
         <div class="form-field col align-center">
-          <h3>問い合わせフォーム</h3>
+          <h3>
+            申し込み
+            <br>
+            問い合わせフォーム
+          </h3>
           <div class="radio-group">
             <label>
-              <input type="radio" name="inquiryType" value="相談" required> ご相談
+              <input type="radio" name="inquiryType" value="申込" required> 申し込み
             </label>
             <label>
-              <input type="radio" name="inquiryType" value="申込" required> お申し込み
+              <input type="radio" name="inquiryType" value="問い合わせ" required> 問い合わせ
             </label>
           </div>
         </div>
@@ -624,8 +628,8 @@
           </div>
 
           <div class="form-field col x-100">
-            <textarea id="message" name="message" class="input-text" required></textarea>
-            <label for="message" class="label label-text">お問い合わせ内容<span>必須</span></label>
+            <textarea id="message" name="message" class="input-text"></textarea>
+            <label for="message" class="label label-text">お問い合わせ内容<br><span style="color: var(--text);">先に伝えておきたいことがあればご入力ください。</span></label>
           </div>
         </div>
 
