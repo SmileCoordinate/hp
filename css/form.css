@@ -98,6 +98,7 @@ input:-webkit-autofill:focus {
    outline: none;
 }
 .contact-form .input-text:focus+.label,
+.contact-form .input-text:focus+.label span,
 .contact-form .input-text.not-empty+.label {
    font-size: clamp(1.4rem, 1.067rem + 0.44vw, 1.6rem);
    transform: translateY(-1.85rem);
@@ -123,8 +124,9 @@ input:-webkit-autofill:focus {
    transition: all 0.3s ease;
 }
 
-.contact-form .input-text:focus+.label span {
-   display: none;
+.contact-form .input-text:focus+.label-text span {
+   font-size: 1rem;
+   color: rgba(46, 46, 46, 0.25)
 }
 
 .contact-form .submit-btn {
