@@ -121,6 +121,7 @@ input:-webkit-autofill:focus {
 .contact-form .label span {
    font-size: 1.2rem;
    color: var(--hover);
+   transition: all 0.3s ease;
 }
 
 .contact-form .input-text:focus+.label span {
