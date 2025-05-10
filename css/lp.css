@@ -542,7 +542,7 @@ section,
     margin: 6vmin auto 1vmin;
 }
 
-.point .br {
+.point br {
     position: relative;
     width: 50%;
     height: 1px;
