@@ -303,7 +303,6 @@ a {
 }
 
 .line-break {
-    content: "";
     display: block;
     height: 10px;
 }
@@ -543,9 +542,8 @@ section,
 }
 
 .point .line-break {
-    display: block;
     width: 50px;
-    height: 10px;
+    height: 1px;
     background: var(--accent);
     margin: 5vmin auto;
 }
