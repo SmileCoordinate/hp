@@ -124,9 +124,10 @@ input:-webkit-autofill:focus {
    transition: all 0.3s ease;
 }
 
+.contact-form .input-text:focus+.label span,
 .contact-form .input-text:focus+.label-text span {
    font-size: 1rem;
-   color: rgba(46, 46, 46, 0.25)
+   color: rgba(46, 46, 46, 0.2)
 }
 
 .contact-form .submit-btn {
