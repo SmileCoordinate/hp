@@ -115,12 +115,16 @@ input:-webkit-autofill:focus {
    position: absolute;
    left: 1vmin;
    top: 0.75rem;
-   transition: transform 0.2s ease-in-out;
+   transition: all 0.3s ease-in-out;
 }
 
 .contact-form .label span {
    font-size: 1.2rem;
    color: var(--hover);
+}
+
+.contact-form .input-text.not-empty span+.label {
+   display: none;
 }
 
 .contact-form .submit-btn {
@@ -364,6 +368,10 @@ input:-webkit-autofill:focus {
       top: 5.75%;
       line-height: 2;
    }
+   .contact-form .label-text {
+      list-style: 1.2;
+   }
+
    .contact-form .submit-btn {
       height: 25pt;
       padding: 0;
