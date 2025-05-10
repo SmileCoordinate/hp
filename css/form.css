@@ -360,7 +360,6 @@ input:-webkit-autofill:focus {
       font-size: clamp(1.4rem, 1.171rem + 1.14vw, 1.6rem);
    }
    .contact-form .label {
-      color: rgba(46, 46, 46, 0.75);
       left: 2.75%;
       top: 5.75%;
       line-height: 2;
