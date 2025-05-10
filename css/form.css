@@ -91,7 +91,7 @@ input:-webkit-autofill:focus {
 }
 .contact-form #message {
    width: 100%;
-   height: 120pt;
+   height: 150pt;
    margin: 0 auto;
    padding-top: 1rem;
 }
@@ -270,9 +270,6 @@ input:-webkit-autofill:focus {
       height: 40pt;
       padding-left: 1rem;
    }
-   .contact-form #message {
-      width: 100%;
-   }
    .contact-form .label {
       left: 2.75%;
       top: 13.75%;
@@ -353,7 +350,6 @@ input:-webkit-autofill:focus {
       background: var(--sub);
    }
    .contact-form #message {
-      width: 100%;
       line-height: 1.4;
       letter-spacing: 0.01rem;
    }
