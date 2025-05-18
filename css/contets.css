@@ -7,6 +7,7 @@ h1 {
 
 h2 {
     font-size: clamp(2.4rem, 1.561rem + 1.03vw, 2.8rem);
+    position: relative;
 }
 
 h3 {
@@ -56,6 +57,8 @@ li {
     position: fixed;
     top: 2vmin;
     left: 50%;
+    color: var(--hover);
+    text-shadow: 0 1px 2px rgba(46, 46, 46, 0.75);
 }
 
 @media screen and (min-width: 1300px) and (max-width: 1920px) {
@@ -74,10 +77,22 @@ main ul {
 }
 }
 
+@media screen and (min-width: 601px) and (max-width: 1299px) {
+    .main-visual p {
+        width: fit-content;
+    }
+    .contents-form {
+        left: 50vmin;
+    }
+}
+
 
 @media screen and (max-width:600px) {
     h1 {
         font-size: clamp(2rem, 1.086rem + 4.57vw, 2.8rem);
+    }
+    .contents-form {
+        left: 35vmin;
     }
     .main-visual h1 {
         width: 85%;
