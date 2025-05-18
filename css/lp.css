@@ -246,7 +246,7 @@ a {
 
 h2 span {
     font-size: 1.8rem;
-    line-height: 4rem;
+    line-height: 1.4;
 }
 
 h3 {
@@ -495,7 +495,7 @@ section,
 .sentence h2 {
     font-size: clamp(2.4rem, 1.561rem + 1.03vw, 2.8rem);
     margin: 0 auto;
-    line-height: 2;
+    line-height: 1;
 }
 
 
