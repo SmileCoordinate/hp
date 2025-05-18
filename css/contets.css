@@ -47,6 +47,12 @@ li {
     border-top-right-radius: 40px;
 }
 
+.contents-form {
+    position: absolute;
+    top: 2vmin;
+    left: 50%;
+}
+
 @media screen and (min-width: 1300px) and (max-width: 1920px) {
 main {
     width: 40%;
@@ -74,5 +80,9 @@ main ul {
     .main-visual p {
     width: 85%;
 }
+.share {
+    border-radius: 0;
+}
+
 
 }
