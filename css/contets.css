@@ -36,8 +36,13 @@ li {
 .sentence {
     padding: 10em 0;
 }
+
 .about-us h3 {
     margin-top: 7vmin;
+}
+
+.service .point {
+    margin: 0 auto;
 }
 
 .share {
