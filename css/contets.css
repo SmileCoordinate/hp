@@ -48,7 +48,7 @@ li {
 }
 
 .contents-form {
-    position: absolute;
+    position: fixed;
     top: 2vmin;
     left: 50%;
 }
