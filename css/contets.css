@@ -16,6 +16,7 @@ footer .img {
 
 .contents-form {
     font-size: 1.6rem;
+    width: fit-content;
     position: fixed;
     top: 2vmin;
     right: 2%;
