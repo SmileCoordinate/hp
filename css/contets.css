@@ -69,8 +69,7 @@ li {
 }
 
 .contents-form {
-    font-size: 2rem;
-    writing-mode: vertical-rl;
+    font-size: 1.6rem;
     position: fixed;
     top: 2vmin;
     right: 2%;
@@ -88,10 +87,14 @@ li {
         border: 1px solid var(--hover);
     }
 
+    .contents-form {
+        font-size: 2rem;
+        writing-mode: vertical-rl;
+    }
 
     main {
         width: 40%;
-        margin-left: 55vmin;
+        margin: 0 auto;
     }
 
     main ul {
