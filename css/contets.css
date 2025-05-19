@@ -1,7 +1,21 @@
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 100;
+}
+
+header .img {
+    display: flex;
+    position: relative;
+    left: 2%;
+}
+
 body::before {
     border: 1vw solid var(--sub);
 }
 body::after {
+    width: 98%;
     border: 1px solid var(--hover);
 }
 
