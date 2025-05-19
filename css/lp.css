@@ -492,7 +492,7 @@ section,
     align-content: center;
 }
 
-.sentence h2 {
+.top .sentence h2 {
     font-size: clamp(2.4rem, 1.561rem + 1.03vw, 2.8rem);
     margin: 0 auto;
     line-height: 1;
