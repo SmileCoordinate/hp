@@ -675,6 +675,7 @@
       </ul>
 
     </section>
+    <!-- Footer -->
     <footer>
       <div class="img">
         <a href="https://note.com/smile_coordinate" target="_blank"><img src="./img/logo.png" alt="note,blog"
@@ -683,6 +684,16 @@
             height="36" border="0" loading="lazy"></a>
       </div>
 
+      <div class="foot">&copy; <span id="year"></span>
+        Smile Coordinate
+      </div>
+      <script>
+        function toggleAccordion(element) {
+          element.classList.toggle("active");
+        }
+
+        document.getElementById('year').textContent = new Date().getFullYear();
+      </script>
     </footer>
   </main>
 </body>
