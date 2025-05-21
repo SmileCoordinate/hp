@@ -744,6 +744,14 @@ footer {
     body {
         display: block;
         background: url("../img/sp-bg.webp") no-repeat left top / cover;
+
+        @supports (background-attachment: fixed) {
+            background-attachment: fixed;
+        }
+
+        @supports not (background-attachment: fixed) {
+            background-attachment: scroll;
+        }
     }
 
     body::before {
