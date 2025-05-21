@@ -56,15 +56,16 @@
 .modal-overlay {
    width: 100vw;
    height: 100%;
-   position: absolute;
-   top: 50%;
-   left: 0%;
+   position: fixed;
+   top: 0;
+   left: 0;
    z-index: 999;
    opacity: 0;
    background: rgba(255, 255, 200, 0.25);
    -webkit-backdrop-filter: blur(10px);
    backdrop-filter: blur(10px);
    transform: translate(-50%, -50%) scale(1);
+   transform: none;
    visibility: hidden;
    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
 }
@@ -83,20 +84,16 @@
    top: 50%;
    left: 50%;
    background-color: var(--sub);
-   transform: translate(-50%, 0%) scale(0.5);
+   transform: translate(-50%, -50%) scale(0.5);
    box-shadow: 0 3px 10px 0px rgba(0, 0, 0, 0.5);
    transition: opacity 0.3s ease-in-out, transform 0.3s ease-in-out, visibility 0.3s;
 }
 
-/* モーダルが表示されるとき */
-#modal--second {
-   transform: translate(-50%, -15%);
-}
-
+/* モーダル表示 */
 .show {
    opacity: 1;
    visibility: visible;
-   transform: translate(-50%, -50%);
+   transform: translate(-50%, -50%) scale(1);
 }
 
 .modal p {
@@ -128,11 +125,13 @@
    line-height: 2;
    position: relative;
 }
+
 @media screen and (min-width: 1300px) {
    #modal--first p,
    #modal--second p {
       width: 80%;
    }
+
    .profile {
       width: 80%;
       display: flex;
@@ -144,6 +143,7 @@
       font-size: clamp(1.4rem, 0.561rem + 1.03vw, 1.8rem);
    }
 }
+
 #modal--first li::before {
    content: "";
    width: 10px;
@@ -156,62 +156,8 @@
 }
 
 /*service step*/
-.modal .close,
-.site-p h2 {
-font-size: clamp(3.8rem, 3.467rem + 0.44vw, 4rem);
-}
-.site-p h2 {
-   margin: 0 auto;
-}
-
-.site-p h2 span {
-   position: relative;
-   left: -5%;
-}
-
-.price {
-   width: fit-content;
-   margin: 3% auto;
-   display: flex;
-   align-items: flex-start;
-   justify-content: center;
-   gap: 2rem;
-}
-
-.price .price-card--first,
-.price .price-card--second,
-.price .price-card--third {
-   width: 100%;
-   height: 25vmin;
-   padding: 2rem;
-   align-items: center;
-   background: linear-gradient(200deg, #ffd59e8e, #ffbfa485 45%, #ffa9a97e 70%);
-   box-shadow: 0 2px 3px rgba(46, 46, 46, 0.5);
-   border-radius: 20px;
-   transition: all 0.5s ease-in-out;
-}
-
-.price .price-card--first:hover,
-.price .price-card--second:hover,
-.price .price-card--third:hover {
-   transform: scale(1.05);
-}
-
-.price h2 {
-   font-size: clamp(2.8rem, 2.467rem + 0.44vw, 3rem);
-   text-align: center;
-   margin: 0 auto 4%;
-}
-
-.price p {
-   font-weight: 600;
-   width: 70%;
-   text-align: left;
-   line-height: 1;
-}
-
-.price p span {
-   font-size: clamp(1.6rem, 1.267rem + 0.44vw, 1.8rem);
+.modal .close {
+   font-size: clamp(3.8rem, 3.467rem + 0.44vw, 4rem);
 }
 
 
@@ -227,47 +173,8 @@ font-size: clamp(3.8rem, 3.467rem + 0.44vw, 4rem);
    #modal--second {
       transform: translate(-50%, -10%);
    }
-   .price {
-      width: 100%;
-      margin: 3% auto;
-      display: grid;
-      justify-content: normal;
-      gap: 2rem;
-   }
-
-   .price .price-card--first,
-   .price .price-card--second,
-   .price .price-card--third {
-      height: fit-content;
-      padding: 0.5rem 3rem 1.5rem;
-      align-items: center;
-      flex-direction: column;
-      justify-content: center;
-      background: linear-gradient(200deg, #ffd59e8e, #ffbfa485 45%, #ffa9a97e 70%);
-      box-shadow: 0 2px 3px rgba(46, 46, 46, 0.5);
-      border-radius: 20px;
-   }
-
-   .price .price-card--first:active,
-   .price .price-card--second:active,
-   .price .price-card--third:active {
-      transform: scale(1.05);
-   }
-
-   .price h2 {
-      text-align: center;
-      margin: 0 auto;
-      line-height: 2;
-   }
-
-   .price p {
-      font-weight: 600;
-      width: 26vmin;
-      margin: 0 auto;
-      text-align: left;
-      line-height: 2;
-   }
 }
+
 @media screen and (max-width: 600px) {
    .button {
       font-size: clamp(1.6rem, 1.371rem + 1.14vw, 1.8rem);
@@ -284,11 +191,6 @@ font-size: clamp(3.8rem, 3.467rem + 0.44vw, 4rem);
       margin: 0;
    }
 
-   /* モーダルの背景 */
-   .modal-overlay {
-      transform: translate(0%, -50%);
-   }
-
    /* モーダルのスタイル */
    #tab--five #modal--third {
       padding: 10vmin;
@@ -298,6 +200,7 @@ font-size: clamp(3.8rem, 3.467rem + 0.44vw, 4rem);
       height: 60vh;
       width: 90vw;
       transform: translate(-50%, 50%);
+      transform: translate(-50%, -50%) scale(0.5);
       box-shadow: 0 3px 10px 0px rgba(0, 0, 0, 0.5);
    }
 
@@ -312,12 +215,8 @@ font-size: clamp(3.8rem, 3.467rem + 0.44vw, 4rem);
    /* モーダルが表示されるとき */
    .modal.show {
       transform: translate(-50%, -35%);
+      transform: translate(-50%, -50%) scale(1);
    }
-   #modal--second {
-      height: 70vh;
-      transform: translate(-50%, -20%);
-   }
-
    /* 閉じるボタン */
    .modal .close {
       font-size: clamp(3.8rem, 3.343rem + 2.29vw, 4.2rem);
@@ -325,54 +224,4 @@ font-size: clamp(3.8rem, 3.467rem + 0.44vw, 4rem);
       right: 1rem;
    }
 
-   .site-p h2,
-   .price h2 {
-      font-size: clamp(1.8rem, 1.571rem + 1.14vw, 2rem);
-   }
-
-   .site-p h2 span,
-   .price p span {
-      font-size: clamp(1.4rem, 1.171rem + 1.14vw, 1.6rem);
-   }
-
-   .price {
-      width: 100%;
-      margin: 3% auto;
-      display: grid;
-      justify-content: normal;
-      gap: 2rem;
-   }
-
-   .price .price-card--first,
-   .price .price-card--second,
-   .price .price-card--third {
-      height: fit-content;
-      padding: 0.5rem 3rem 1.5rem;
-      align-items: center;
-      flex-direction: column;
-      justify-content: center;
-      background: linear-gradient(200deg, #ffd59e8e, #ffbfa485 45%, #ffa9a97e 70%);
-      box-shadow: 0 2px 3px rgba(46, 46, 46, 0.5);
-      border-radius: 20px;
-   }
-
-   .price .price-card--first:active,
-   .price .price-card--second:active,
-   .price .price-card--third:active {
-      transform: scale(1.05);
-   }
-
-   .price h2 {
-      text-align: center;
-      margin: 0 auto;
-      line-height: 1.6;
-   }
-
-   .price p {
-      font-weight: 600;
-      width: 100%;
-      text-align: left;
-      margin: 0 auto;
-      line-height: 1.8;
-   }
 }
