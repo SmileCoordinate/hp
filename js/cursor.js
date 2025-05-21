@@ -59,34 +59,34 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 // fade_bottom 要素の表示判定
-////document.addEventListener('DOMContentLoaded', function () {
-////    const elementsToShow = document.querySelectorAll('.fade_bottom');
-////    let ticking = false;
-////
-////    function isVisible(element) {
-////        const rect = element.getBoundingClientRect();
-////        return (rect.top < window.innerHeight * 0.8) && (rect.bottom > window.innerHeight * 0.2);
-////    }
-////
-////    function checkScroll() {
-////        elementsToShow.forEach(el => {
-////            if (isVisible(el)) {
-////                el.classList.add('visible');
-////            } else {
-////                el.classList.remove('visible');
-////            }
-////        });
-////        ticking = false;
-////    }
-////
-////    function onScroll() {
-////        if (!ticking) {
-////            ticking = true;
-////            requestAnimationFrame(checkScroll);
-////        }
-////    }
-////
-////    window.addEventListener('scroll', onScroll, { passive: true });
-////    window.addEventListener('resize', checkScroll);
-////    checkScroll(); // 初回チェックのみ実行
-////});
+document.addEventListener('DOMContentLoaded', function () {
+    const elementsToShow = document.querySelectorAll('.fade_bottom');
+    let ticking = false;
+
+    function isVisible(element) {
+        const rect = element.getBoundingClientRect();
+        return (rect.top < window.innerHeight * 0.8) && (rect.bottom > window.innerHeight * 0.2);
+    }
+
+    function checkScroll() {
+        elementsToShow.forEach(el => {
+            if (isVisible(el)) {
+                el.classList.add('visible');
+            } else {
+                el.classList.remove('visible');
+            }
+        });
+        ticking = false;
+    }
+
+    function onScroll() {
+        if (!ticking) {
+            ticking = true;
+            requestAnimationFrame(checkScroll);
+        }
+    }
+
+    window.addEventListener('scroll', onScroll, { passive: true });
+    window.addEventListener('resize', checkScroll);
+    checkScroll(); // 初回チェックのみ実行
+});
