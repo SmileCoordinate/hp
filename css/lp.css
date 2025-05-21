@@ -146,15 +146,7 @@ body {
     background-position: center;
     background-repeat: no-repeat;
     overflow-x: hidden;
-
-    /* モバイル用の背景スクロール対応 */
-    @supports (background-attachment: fixed) {
-        background-attachment: fixed;
-    }
-
-    @supports not (background-attachment: fixed) {
-        background-attachment: scroll;
-    }
+    -webkit-overflow-scrolling: touch;
 }
 
 /*font-size*/
@@ -744,14 +736,7 @@ footer {
     body {
         display: block;
         background: url("../img/sp-bg.webp") no-repeat left top / cover;
-
-        @supports (background-attachment: fixed) {
-            background-attachment: fixed;
-        }
-
-        @supports not (background-attachment: fixed) {
-            background-attachment: scroll;
-        }
+        background-attachment: scroll; /* iPhone用 */
     }
 
     body::before {
@@ -912,7 +897,8 @@ footer {
         border-radius: 0;
         background: rgba(245, 245, 245, 0.2);
         -webkit-backdrop-filter: blur(3px);
-        backdrop-filter: blur(20px);
+        backdrop-filter: blur(10px);
+        background: none;
         border: none;
         box-shadow: none;
     }
