@@ -206,18 +206,6 @@
       margin: 0;
    }
 
-   /* モーダルのスタイル */
-   #tab--five #modal--third {
-      padding: 10vmin;
-   }
-
-   #modal--third .show {
-      transform: translate(0%, 75%);
-   }
-   #modal--third .modal.show {
-      transform: translate(-50%, 35%) scale(1);
-   }
-
    .modal-overlay {
       width: 100vw;
    }
@@ -252,6 +240,18 @@
       font-size: clamp(3.8rem, 3.343rem + 2.29vw, 4.2rem);
       top: 0;
       right: 1rem;
+   }
+
+   /* モーダルのスタイル */
+   #tab--five #modal--third {
+      padding: 10vmin;
+   }
+
+   #tab--five .modal-overlay {
+      transform: translate(0%, 75%);
+   }
+   #tab--five .show {
+      transform: translate(-50%, 35%) scale(1);
    }
 
 }
