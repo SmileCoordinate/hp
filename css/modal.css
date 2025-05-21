@@ -54,9 +54,9 @@
 
 /* モーダルの背景 */
 .modal-overlay {
-   width: 55vw;
-   height: 100%;
-   position: fixed;
+   width: 70vw;
+   height: 100vh;
+   position: absolute;
    top: 0;
    left: 0;
    z-index: 999;
@@ -79,8 +79,8 @@
    opacity: 0;
    visibility: hidden;
    overflow-y: auto;
-   top: 50%;
-   left: 50%;
+   top: 20%;
+   left: 0;
    background-color: var(--sub);
    transform: translate(-50%, -50%);
    box-shadow: 0 3px 10px 0px rgba(0, 0, 0, 0.5);
@@ -91,7 +91,7 @@
 .show {
    opacity: 1;
    visibility: visible;
-   transform: translate(-50%, -50%);
+   transform: translate(-50%, 50%);
 }
 
 .modal p {
@@ -118,6 +118,7 @@
    display: block;
    margin: 0 auto 20%;
 }
+
 #modal--first li {
    font-weight: 500;
    line-height: 2;
@@ -197,7 +198,6 @@
    .modal {
       height: 60vh;
       width: 90vw;
-      transform: translate(-50%, 50%);
       transform: translate(-50%, -50%) scale(0.5);
       box-shadow: 0 3px 10px 0px rgba(0, 0, 0, 0.5);
    }
@@ -212,8 +212,7 @@
 
    /* モーダルが表示されるとき */
    .modal.show {
-      transform: translate(-50%, -35%);
-      transform: translate(-50%, -50%) scale(1);
+      transform: translate(-50%, 0%) scale(1);
    }
    /* 閉じるボタン */
    .modal .close {
