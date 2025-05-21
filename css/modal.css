@@ -211,6 +211,13 @@
       padding: 10vmin;
    }
 
+   #modal--third .show {
+      transform: translate(0%, 75%);
+   }
+   #modal--third .modal.show {
+      transform: translate(-50%, 35%) scale(1);
+   }
+
    .modal-overlay {
       width: 100vw;
    }
