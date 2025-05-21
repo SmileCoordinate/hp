@@ -216,8 +216,8 @@
    .modal {
       height: 60vh;
       width: 90vw;
-      top: 35%;
-      left: 50%;
+      top: 25%;
+      left: 5vw;
       transform: translate(-50%, -50%) scale(0.5);
       box-shadow: 0 3px 10px 0px rgba(0, 0, 0, 0.5);
    }
@@ -247,11 +247,8 @@
       padding: 10vmin;
    }
 
-   #tab--five .modal-overlay {
-      transform: translate(0%, 75%);
-   }
    #tab--five .show {
-      transform: translate(-50%, 35%) scale(1);
+      transform: translate(0%, 75%) scale(1);
    }
 
 }
