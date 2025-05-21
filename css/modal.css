@@ -214,6 +214,9 @@
    .modal-overlay {
       width: 100vw;
    }
+   .show {
+      transform: translate(0%, 30%);
+   }
 
    .modal {
       height: 60vh;
