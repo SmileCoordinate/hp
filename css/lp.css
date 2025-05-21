@@ -741,11 +741,15 @@ footer {
         animation: morphRotate 30s infinite linear;
     }
 
-    body {
+    .mobile-bg {
         display: block;
-        background: url("../img/sp-bg.webp") no-repeat left top / cover;
-        background-attachment: scroll; /* iPhone用 */
         position: fixed;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100vh;
+        background: url("/assets/img/fixed.jpg") center/cover no-repeat;
+        z-index:-1;
     }
 
     body::before {
