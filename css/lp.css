@@ -755,12 +755,14 @@ footer {
     body::before {
         border: 3vw solid var(--sub);
         box-shadow: inset 0px 1px 4px rgba(46, 46, 46, 0.85);
+        display: none;
     }
 
     body::after {
         top: 2.75vw;
         left: 2.75vw;
         width: 94.5vw;
+        display: none;
     }
 
     h2 {
