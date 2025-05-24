@@ -719,7 +719,6 @@ footer {
     }
 }
 
-
 @media screen and (max-width: 600px) {
     .pc {
         display: none !important;
@@ -1054,6 +1053,11 @@ footer {
     }
 }
 
+@media screen and (max-height: 568px) {
+    .sentence {
+        min-height: 100svh;
+    }
+}
 
 @media screen and (min-width: 601px) and (max-width: 1299px) {
     .pc {
