@@ -46,18 +46,12 @@
   img-src 'self' data: https://smilecoordinate.github.io https://www.googletagmanager.com;
   object-src 'none';
   ">
-  <!-- XSS 対策: iframe 埋め込み防止 
-  <script>
+  <!-- XSS 対策: iframe 埋め込み防止 -->
+   <script>
     if (window.top !== window.self) {
-      window.addEventListener('DOMContentLoaded', function () {
-        const body = document.body;
-        if (body) {
-          body.innerHTML = ""; // iframe なら中身を消す
-        }
-      });
+      window.top.location = window.location.href;
     }
-  </script>-->
-
+  </script>
 
   <title>Smile Coordinate | 思い込みを手放し、本来の自分へ再構築</title>
   <!-- font zen gothic -->

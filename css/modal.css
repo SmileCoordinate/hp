@@ -40,6 +40,10 @@
    padding: 10vmin 10em;
 }
 
+#modal--first h3 {
+   font-weight: bold;
+}
+
 #modal--third h2 {
    font-size: clamp(2rem, 1.84rem + 0.8vw, 2.8rem);
    margin: 0 auto;
