@@ -86,7 +86,7 @@
    opacity: 0;
    visibility: hidden;
    overflow-y: auto;
-   bottom: 20%;
+   bottom: 15%;
    left: 0;
    background-color: var(--sub);
    transform: translate(-50%, -50%);
@@ -171,21 +171,15 @@
 
 
 @media screen and (min-width: 601px) and (max-width: 1299px) {
+.modal {
+   width: 105%;
+   transform: translate(-2.5%, -50%);
+}
+   .show {
+      transform: translate(-2.5%, 0%);
+   }
    #tab--five #modal--third {
       padding: 10vmin 8vmin;
-      transform: translate(-50%, -40%);
-   }
-
-   .modal-overlay {
-      transform: translate(0%, 30%);
-   }
-
-   .show {
-      transform: translate(9%, 40%);
-   }
-
-   #modal--second {
-      transform: translate(-50%, -10%);
    }
 }
 
