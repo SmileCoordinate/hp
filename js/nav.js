@@ -1,32 +1,48 @@
 window.onload = function () {
    console.log("JavaScript is running...");
    const listItems = document.querySelectorAll(".navigation ul li");
+   const sections = document.querySelectorAll("section");
 
-   console.log("Found list items:", listItems.length);
-
-   if (listItems.length === 0) {
-      console.error("No list items found! Check your HTML structure.");
+   if (listItems.length === 0 || sections.length === 0) {
+      console.error("List items or sections not found.");
       return;
    }
 
+   // クリック時に active を変更
    function activeLink(event) {
       let target = event.target;
-
-      // クリックした要素が `<li>` でなければ親要素を探す
       while (target.tagName !== "LI" && target !== document.body) {
          target = target.parentElement;
       }
-
       if (target.tagName === "LI") {
-         // 現在の active を削除 → すぐに新しい active を追加
          listItems.forEach((item) => item.classList.remove("active"));
          target.classList.add("active");
-         console.log("Active class added to:", target);
       }
    }
 
    listItems.forEach((item) => {
       item.addEventListener("click", activeLink);
+   });
+
+   // スクロール時に active を更新
+   window.addEventListener("scroll", () => {
+      let current = "";
+
+      sections.forEach((section) => {
+         const sectionTop = section.offsetTop;
+         const sectionHeight = section.offsetHeight;
+         if (pageYOffset >= sectionTop - sectionHeight / 3) {
+            current = section.getAttribute("id");
+         }
+      });
+
+      listItems.forEach((li) => {
+         const a = li.querySelector("a");
+         if (a && a.getAttribute("href") === "#" + current) {
+            listItems.forEach((item) => item.classList.remove("active"));
+            li.classList.add("active");
+         }
+      });
    });
 
    console.log("Event listeners added to navigation items.");
