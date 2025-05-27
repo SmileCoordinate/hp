@@ -109,12 +109,12 @@
 }
 .navigation ul li a .title,
 .navigation ul li .nav-bot .title {
-   padding-left: 7px;
    height: 60px;
+   padding-left: 7px;
    line-height: 60px;
    white-space: nowrap;
 }
 .navigation ul li:hover .icon ion-icon,
 .navigation ul li.active .icon ion-icon {
-   transform: scale(1.25);
+   transform: scale(1.5);
 }
