@@ -1,22 +1,31 @@
 window.onload = function () {
    console.log("JavaScript is running...");
-   const listItems = document.querySelectorAll(".navigation ul li");
-   const sections = document.querySelectorAll("section");
 
-   if (listItems.length === 0 || sections.length === 0) {
-      console.error("List items or sections not found.");
+   const listItems = document.querySelectorAll(".navigation ul li");
+   const sectionIds = [
+      "#tab--one", "#tab--tow", "#tab--three", "#tab--four",
+      "#tab--five", "#tab--six", "#tab--seven"
+   ];
+   const sections = sectionIds.map(id => document.querySelector(id));
+
+   if (listItems.length === 0) {
+      console.error("No list items found! Check your HTML structure.");
       return;
    }
 
-   // クリック時に active を変更
+   // クリックで active を切り替え
    function activeLink(event) {
       let target = event.target;
+
+      // 親LIまでたどる
       while (target.tagName !== "LI" && target !== document.body) {
          target = target.parentElement;
       }
+
       if (target.tagName === "LI") {
          listItems.forEach((item) => item.classList.remove("active"));
          target.classList.add("active");
+         console.log("Active class added to:", target);
       }
    }
 
@@ -24,26 +33,21 @@ window.onload = function () {
       item.addEventListener("click", activeLink);
    });
 
-   // スクロール時に active を更新
+   // スクロールで active を更新
    window.addEventListener("scroll", () => {
-      let current = "";
+      let scrollY = window.pageYOffset;
 
-      sections.forEach((section) => {
-         const sectionTop = section.offsetTop;
+      sections.forEach((section, index) => {
+         if (!section) return; // null セクションを除外
+         const sectionTop = section.offsetTop - 100; // 調整可
          const sectionHeight = section.offsetHeight;
-         if (pageYOffset >= sectionTop - sectionHeight / 3) {
-            current = section.getAttribute("id");
-         }
-      });
 
-      listItems.forEach((li) => {
-         const a = li.querySelector("a");
-         if (a && a.getAttribute("href") === "#" + current) {
-            listItems.forEach((item) => item.classList.remove("active"));
-            li.classList.add("active");
+         if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+            listItems.forEach(item => item.classList.remove("active"));
+            if (listItems[index]) listItems[index].classList.add("active");
          }
       });
    });
 
-   console.log("Event listeners added to navigation items.");
+   console.log("Event listeners added to navigation items and scroll.");
 };
