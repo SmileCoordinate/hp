@@ -114,7 +114,9 @@
    line-height: 60px;
    white-space: nowrap;
 }
-.navigation ul li:hover .icon ion-icon,
+.navigation ul li:hover .icon ion-icon {
+   transform: scale(1.25);
+}
 .navigation ul li.active .icon ion-icon {
    transform: scale(1.5);
 }
