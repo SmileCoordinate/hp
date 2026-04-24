@@ -3,12 +3,9 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>WebGL Fog Loading Improved</title>
+  <title>WebGL Fog Loading Layered</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
+    * { box-sizing: border-box; }
     html, body {
       margin: 0;
       width: 100%;
@@ -16,10 +13,10 @@
     }
 
     body {
-      font-family: "Helvetica Neue", Arial, sans-serif;
-      background: #111;
-      color: #fff;
       overflow: hidden;
+      font-family: "Helvetica Neue", Arial, sans-serif;
+      background: #0f0f10;
+      color: #fff;
     }
 
     main {
@@ -31,23 +28,26 @@
       text-align: center;
       padding: 24px;
       background:
-        radial-gradient(circle at center, rgba(255,255,255,0.05), rgba(0,0,0,0.0) 35%),
-        linear-gradient(180deg, #111 0%, #1a1a1a 100%);
+        linear-gradient(rgba(0,0,0,0.28), rgba(0,0,0,0.38)),
+        url("https://images.unsplash.com/photo-1500530855697-b586d89ba3ee?auto=format&fit=crop&w=1600&q=80")
+        center / cover no-repeat;
     }
 
     .hero h1 {
       margin: 0 0 16px;
-      font-size: clamp(40px, 9vw, 100px);
+      font-size: clamp(42px, 8vw, 100px);
       font-weight: 500;
       letter-spacing: 0.08em;
       line-height: 1.05;
+      text-shadow: 0 4px 30px rgba(0,0,0,0.35);
     }
 
     .hero p {
       margin: 0;
       font-size: clamp(14px, 2vw, 18px);
+      opacity: 0.82;
       letter-spacing: 0.08em;
-      opacity: 0.7;
+      text-shadow: 0 4px 20px rgba(0,0,0,0.3);
     }
 
     #loading {
@@ -55,7 +55,7 @@
       inset: 0;
       z-index: 9999;
       overflow: hidden;
-      background: transparent;
+      background: rgba(255,255,255,0.02);
       opacity: 1;
       transition: opacity 1s ease;
     }
@@ -79,17 +79,18 @@
       top: 50%;
       transform: translate(-50%, -50%);
       z-index: 2;
-      text-align: center;
       pointer-events: none;
+      text-align: center;
       mix-blend-mode: screen;
     }
 
     .loading-copy p {
       margin: 0;
       font-size: 12px;
-      letter-spacing: 0.35em;
+      letter-spacing: 0.38em;
       text-transform: uppercase;
-      color: rgba(255,255,255,0.45);
+      color: rgba(255,255,255,0.56);
+      text-shadow: 0 0 20px rgba(255,255,255,0.12);
     }
   </style>
 </head>
@@ -104,7 +105,7 @@
   <main>
     <section class="hero">
       <h1>Paradigm Nature</h1>
-      <p>靄がほどけるように、視界が開いていく。</p>
+      <p>空気の膜がほどけるように、視界が開いていく。</p>
     </section>
   </main>
 
@@ -112,13 +113,13 @@
     (() => {
       const loading = document.getElementById("loading");
       const canvas = document.getElementById("fogCanvas");
-      const gl = canvas.getContext("webgl", { alpha: true });
+      const gl = canvas.getContext("webgl", { alpha: true, antialias: true });
 
       if (!gl) {
         setTimeout(() => {
           loading.classList.add("is-hidden");
           setTimeout(() => loading.remove(), 1000);
-        }, 1500);
+        }, 1800);
         return;
       }
 
@@ -141,7 +142,7 @@
         uniform float u_progress;
 
         float random(vec2 st) {
-          return fract(sin(dot(st.xy, vec2(12.9898, 78.233))) * 43758.5453123);
+          return fract(sin(dot(st.xy, vec2(12.9898,78.233))) * 43758.5453123);
         }
 
         float noise(vec2 st) {
@@ -160,22 +161,28 @@
                + (d - b) * u.x * u.y;
         }
 
-        mat2 rotate2d(float angle) {
-          float s = sin(angle);
-          float c = cos(angle);
+        mat2 rot(float a) {
+          float s = sin(a);
+          float c = cos(a);
           return mat2(c, -s, s, c);
         }
 
         float fbm(vec2 st) {
-          float value = 0.0;
-          float amplitude = 0.5;
-
-          for (int i = 0; i < 7; i++) {
-            value += amplitude * noise(st);
-            st = rotate2d(0.45) * st * 2.0 + 0.12;
-            amplitude *= 0.5;
+          float v = 0.0;
+          float a = 0.5;
+          for (int i = 0; i < 6; i++) {
+            v += a * noise(st);
+            st = rot(0.45) * st * 2.0 + 0.15;
+            a *= 0.5;
           }
-          return value;
+          return v;
+        }
+
+        float layeredFog(vec2 p, vec2 flowA, vec2 flowB, float scaleA, float scaleB, float biasA, float biasB) {
+          float large = fbm(p * scaleA + flowA);
+          float detail = fbm(p * scaleB + flowB);
+          float fog = large * biasA + detail * biasB;
+          return fog;
         }
 
         void main() {
@@ -183,44 +190,60 @@
           vec2 p = uv * 2.0 - 1.0;
           p.x *= u_resolution.x / u_resolution.y;
 
-          // 流れを作る
-          vec2 flow1 = vec2(u_time * 0.10, -u_time * 0.03);
-          vec2 flow2 = vec2(-u_time * 0.05, u_time * 0.08);
-          vec2 flow3 = vec2(u_time * 0.03, u_time * 0.02);
+          // 奥の大きな霧
+          vec2 backFlow1 = vec2(u_time * 0.055, -u_time * 0.015);
+          vec2 backFlow2 = vec2(-u_time * 0.020, u_time * 0.035);
+          float fogBack = layeredFog(p, backFlow1, backFlow2, 1.1, 2.3, 0.72, 0.28);
 
-          float base = fbm(p * 1.2 + flow1);
-          float detail = fbm(p * 2.4 + flow2);
-          float wispy = fbm(p * 4.5 + flow3);
+          // 手前の細かい霧
+          vec2 frontFlow1 = vec2(-u_time * 0.090, u_time * 0.040);
+          vec2 frontFlow2 = vec2(u_time * 0.045, -u_time * 0.070);
+          float fogFront = layeredFog(p + 1.8, frontFlow1, frontFlow2, 1.9, 4.2, 0.62, 0.38);
 
-          float fog = base * 0.6 + detail * 0.3 + wispy * 0.1;
+          fogBack = smoothstep(0.30, 0.82, fogBack);
+          fogFront = smoothstep(0.38, 0.88, fogFront);
 
-          // 密度を強調
-          fog = smoothstep(0.35, 0.82, fog);
+          // 中央に少し膜感
+          float center = 1.0 - smoothstep(0.0, 1.25, length(p));
+          fogBack += center * 0.12;
 
-          // 周辺に少し厚み
-          float vignette = 1.0 - smoothstep(0.1, 1.2, length(p));
-          fog += vignette * 0.18;
+          // 消失ノイズ
+          float breakBack = fbm(p * 2.5 + vec2(-u_time * 0.04, u_time * 0.03));
+          float breakFront = fbm(p * 4.0 + vec2(u_time * 0.05, -u_time * 0.06));
 
-          // 消失用ノイズ
-          float breakup = fbm(p * 3.2 + vec2(-u_time * 0.06, u_time * 0.04));
-          float tear = smoothstep(
-            0.15 + u_progress * 0.95,
-            0.75 + u_progress * 0.95,
-            breakup + fog * 0.35
+          float dissolveBack = smoothstep(
+            0.08 + u_progress * 0.85,
+            0.70 + u_progress * 0.95,
+            breakBack + fogBack * 0.25
           );
 
-          // ただ透明になるのではなく、ノイズで崩して消す
-          float alpha = fog * (1.0 - tear);
+          float dissolveFront = smoothstep(
+            -0.02 + u_progress * 0.92,
+            0.62 + u_progress * 1.02,
+            breakFront + fogFront * 0.40
+          );
 
-          // 最終盤で全体もやや薄くする
-          alpha *= (1.0 - smoothstep(0.72, 1.0, u_progress));
+          float alphaBack = fogBack * (1.0 - dissolveBack);
+          float alphaFront = fogFront * (1.0 - dissolveFront);
 
-          // 輪郭を柔らかく
-          alpha = pow(alpha, 1.15);
-          alpha = clamp(alpha, 0.0, 0.95);
+          // 最後に全体を抜く
+          float globalFade = 1.0 - smoothstep(0.78, 1.0, u_progress);
+          alphaBack *= globalFade;
+          alphaFront *= globalFade;
 
-          // 白ではなく少し冷たい霧色
-          vec3 color = vec3(0.95, 0.97, 1.0);
+          // 前後2層を合成
+          float alpha = alphaBack * 0.65 + alphaFront * 0.95;
+
+          // 周辺に少し残す
+          float edge = 1.0 - smoothstep(0.15, 1.35, length(p));
+          alpha += edge * 0.08;
+
+          alpha = pow(alpha, 1.08);
+          alpha = clamp(alpha, 0.0, 0.96);
+
+          vec3 backColor = vec3(0.92, 0.95, 1.0);
+          vec3 frontColor = vec3(1.0, 1.0, 1.0);
+          vec3 color = mix(backColor, frontColor, clamp(fogFront, 0.0, 1.0));
 
           gl_FragColor = vec4(color, alpha);
         }
@@ -279,19 +302,22 @@
 
       function resize() {
         const dpr = Math.min(window.devicePixelRatio || 1, 2);
-        const width = Math.floor(window.innerWidth * dpr);
-        const height = Math.floor(window.innerHeight * dpr);
+        const w = Math.floor(window.innerWidth * dpr);
+        const h = Math.floor(window.innerHeight * dpr);
 
-        canvas.width = width;
-        canvas.height = height;
+        if (canvas.width !== w || canvas.height !== h) {
+          canvas.width = w;
+          canvas.height = h;
+        }
+
         canvas.style.width = window.innerWidth + "px";
         canvas.style.height = window.innerHeight + "px";
-        gl.viewport(0, 0, width, height);
+        gl.viewport(0, 0, w, h);
       }
 
       let start = performance.now();
-      const holdDuration = 800;
-      const revealDuration = 3000;
+      const holdDuration = 1000;
+      const revealDuration = 3600;
       let finished = false;
 
       function render(now) {
@@ -300,10 +326,10 @@
         resize();
 
         const elapsed = now - start;
-        let progress = 0;
+        let progress = 0.0;
 
         if (elapsed > holdDuration) {
-          progress = Math.min((elapsed - holdDuration) / revealDuration, 1);
+          progress = Math.min((elapsed - holdDuration) / revealDuration, 1.0);
         }
 
         gl.clearColor(0, 0, 0, 0);
@@ -323,7 +349,7 @@
 
         gl.drawArrays(gl.TRIANGLES, 0, 6);
 
-        if (progress >= 1) {
+        if (progress >= 1.0) {
           loading.classList.add("is-hidden");
           finished = true;
           setTimeout(() => loading.remove(), 1000);
