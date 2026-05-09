@@ -49,3 +49,6 @@ git push origin main --force-with-lease
 
 残り＝自分診断 内容>未
 
+
+Form修正
+送信できない（保管場所変更後の修正してない？）
